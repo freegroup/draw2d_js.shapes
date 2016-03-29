@@ -52,9 +52,9 @@ var scanDirectory = function (path) {
 var processFiles=function(path){
 
     var json = fs.read(path);
-    var code = fs.read("template.js");
-    fs.write("inject.js", "var json="+json+";\n"+code);
-    if (page.injectJs('inject.js')) {
+    var code = fs.read("batch/template.js");
+    fs.write("batch/exporter.js", "var json="+json+";\n"+code);
+    if (page.injectJs('batch/exporter.js')) {
         waitFor({
             check: function () {
                 return page.evaluate(function () {
@@ -65,7 +65,7 @@ var processFiles=function(path){
                 var jsCode = page.evaluate(function () {return code;});
                 var img    = page.evaluate(function () {return img;});
 
-                var package = path.replace("./org/","").replace(/\//g,"_").replace(/\.shape/,"");
+                var package = path.replace("./shapes/org/","").replace(/\//g,"_").replace(/\.shape/,"");
                 jsCode = jsCode.replace(/testShape/g,package);
                 fs.write(path.replace(".shape",".js"), jsCode);
                 fs.write(path.replace(".shape",".png"), atob(img), "wb");
@@ -94,7 +94,7 @@ page.viewportSize = { width: 900, height: 900 };
 
 page.open('http://freegroup.github.io/draw2d_js.app.shape_designer/', function(status) {
     if (status === "success") {
-        scanDirectory("./org");
+        scanDirectory("./shapes/org");
         if(filesToProcess.length>0){
             processFiles(filesToProcess.pop());
         }

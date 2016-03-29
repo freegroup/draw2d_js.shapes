@@ -2,14 +2,14 @@
 //                                                        
 // http://www.draw2d.org                                  
 //                                                        
-// Mon Mar 28 2016 12:41:41 GMT+0200 (CEST)                                         
+// Tue Mar 29 2016 11:02:43 GMT+0200 (CEST)                                         
 //                                                        
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({           
+var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({           
                                                           
-       NAME: "draw2d_circuit_gate_AND",                           
+       NAME: "draw2d_circuit_gate_empty",                           
                                                           
        init:function(attr, setter, getter)                
        {                                                  

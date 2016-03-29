@@ -2,14 +2,14 @@
 //                                                        
 // http://www.draw2d.org                                  
 //                                                        
-// Mon Mar 28 2016 12:41:41 GMT+0200 (CEST)                                         
+// Tue Mar 29 2016 11:02:44 GMT+0200 (CEST)                                         
 //                                                        
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({           
+var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({           
                                                           
-       NAME: "draw2d_circuit_gate_empty",                           
+       NAME: "draw2d_circuit_gate_AND",                           
                                                           
        init:function(attr, setter, getter)                
        {                                                  
@@ -48,6 +48,11 @@ var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({
             // Rectangle                                 
             shape = this.canvas.paper.path('M5.5 0.5L54.5 0.5L54.5 61.5L5.5 61.5Z');                    
             shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});                       
+            set.push(shape);                              
+                                               
+            // Label                                 
+            shape = this.canvas.paper.text(0,0,'&');                    
+            shape.attr({"x":19,"y":29,"text-anchor":"start","text":"&","font-family":"\"Arial\"","font-size":30,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});                       
             set.push(shape);                              
                                                
             return set;                                   

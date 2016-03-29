@@ -1,0 +1,14 @@
+{
+  "name": "shapes",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Andreas Herz <a.herz@freegroup.de>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/freegroup/draw2d_js.shapes",
+  "moduleType": [],
+  "dependencies": {
+    "shufflejs": "^3.1.1"
+  }
+}
