@@ -2,7 +2,7 @@
 //                                                        
 // http://www.draw2d.org                                  
 //                                                        
-// Tue Mar 29 2016 11:02:43 GMT+0200 (CEST)                                         
+// Tue Mar 29 2016 12:10:54 GMT+0200 (CEST)                                         
 //                                                        
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    

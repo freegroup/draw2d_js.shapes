@@ -9,6 +9,13 @@
     "grunt-contrib-nodeunit": "~0.4.1"
   },
   "dependencies": {
-    "grunt-shell": "^1.2.1"
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-gh-pages": "^1.0.0",
+    "grunt-shell": "^1.2.1",
+    "jshint-stylish": "^2.1.0"
   }
 }
