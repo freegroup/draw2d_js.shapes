@@ -26,6 +26,12 @@ module.exports = function(grunt) {
         ],
         dest: './dist/assets/javascript/dependencies.js'
       },
+      shapes: {
+        src: [
+            "./shapes/**/*.js"
+        ],
+        dest: './dist/assets/shapes/index.js'
+      },
       application: {
         src: [
             "./src/assets/javascript/loader.js"
@@ -132,7 +138,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-gh-pages');
 
     grunt.registerTask('generate', 'Generates JSON file with all shape files', function() {
-        // List all files in the templates directory.
+        // List all SHAPE files in the templates directory.
+        //
         var list = [];
         var shapes = grunt.file.expand({filter: "isFile", cwd: "./dist/assets/shapes"},["**/*.shape"]);
         shapes.forEach(function(shape){
@@ -145,7 +152,6 @@ module.exports = function(grunt) {
         });
         var projectFile = "./dist/assets/shapes/index.json";
         grunt.file.write(projectFile, JSON.stringify(list, null, 2));//serialize it back to file
-
     });
 
   // Default task.
