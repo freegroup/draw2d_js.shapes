@@ -5,6 +5,7 @@
     <title></title>
 
     <link rel="stylesheet" href="assets/stylesheets/main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,700,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
 
     <SCRIPT src="./assets/javascript/dependencies.js"></SCRIPT>
     <SCRIPT src="./assets/javascript/app.js"></SCRIPT>
@@ -20,11 +21,12 @@
 
 <div class="header">
     <div class="strip">
-        <span class="project-owner">Draw2D project</span>
-        <span class="start">Start drawing now</span>
+        <a href="http://www.draw2d.org" target="_blank" class="project-owner">Draw2D project</a>
+        <a href="http://freegroup.github.io/draw2d_js.app.shape_designer/" target="_blank" class="start">Start drawing now</a>
+        <img  class="logo" src="assets/images/shape_logo.png">
    </div>
 
-    <div class="title">Beautiful free Draw2D stencil</div>
+    <div id="title" class="title">Beautiful free Draw2D stencil</div>
     <input class="filter" id="shape-filter" type="text" placeholder="Filter..." autofocus >
 </div>
 
@@ -32,6 +34,7 @@
 
     </div>
 
+    <a href="https://github.com/freegroup/draw2d_js.shapes" target="_blank"><img  class="github" src="assets/images/octocat.svg" title="clone this site on github"></a>
 </body>
 
 <script id="shapeTemplate" type="text/x-jsrender">
@@ -42,7 +45,7 @@
           <div class="keep-ratio four-three">
             <img src="./assets/shapes/{{:name}}.png" height="120" />
           </div>
-          <figcaption class="picture-item__title">{{:name}}</figcaption>
+          <figcaption class="picture-item__title"><a target="_blank" href="./assets/shapes/{{:name}}.js">{{:name}}</a></figcaption>
         </figure>
     </div>
 
