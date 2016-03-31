@@ -35,13 +35,19 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      application: {
-        expand: true,
-        cwd: 'src/',
-        src: ['**/*.html', 'assets/images/**/*'],
-        dest: 'dist/'
-      },
-      shape: {
+        application: {
+            expand: true,
+            cwd: 'src/',
+            src: ['**/*.html', 'assets/images/**/*'],
+            dest: 'dist/'
+        },
+        ionicons:{
+            expand: true,
+            cwd: 'bower_components/Ionicons/',
+            src: ['./css/*', "./fonts/*"],
+            dest: './dist/lib/ionicons'
+        },
+        shape: {
             expand: true,
             flatten: false,
             cwd: 'shapes',
@@ -51,7 +57,7 @@ module.exports = function(grunt) {
               // transform the filePath to fileName. /org/draw2d/digital/AND.png -> draw2d_digital_AND.png
               return dest + "/"+src.replace("org/","").replace(/\//g,"_");
             }
-      }
+        }
 
     },
 
