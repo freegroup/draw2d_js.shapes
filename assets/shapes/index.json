@@ -1,0 +1,27 @@
+[
+  {
+    "name": "draw2d_Basic",
+    "tags": [
+      "draw2d",
+      "Basic"
+    ]
+  },
+  {
+    "name": "draw2d_circuit_gate_AND",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "gate",
+      "AND"
+    ]
+  },
+  {
+    "name": "draw2d_circuit_gate_empty",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "gate",
+      "empty"
+    ]
+  }
+]
