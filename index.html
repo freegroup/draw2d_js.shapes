@@ -5,7 +5,9 @@
     <title></title>
 
     <link rel="stylesheet" href="assets/stylesheets/main.css" />
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,700,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="./lib/ionicons/css/ionicons.min.css" />
 
     <SCRIPT src="./assets/javascript/dependencies.js"></SCRIPT>
     <SCRIPT src="./assets/javascript/app.js"></SCRIPT>
@@ -45,7 +47,10 @@
           <div class="keep-ratio four-three">
             <img src="./assets/shapes/{{:name}}.png" height="120" />
           </div>
-          <figcaption class="picture-item__title"><a target="_blank" href="./assets/shapes/{{:name}}.js">{{:name}}.js</a></figcaption>
+          <figcaption class="picture-item__title">{{:name}}<br>
+          <a ="_blank" href="./assets/shapes/{{:name}}.js" class="ion-code-download"></a>
+          <a target="_blank" href="http://freegroup.github.io/draw2d_js.app.shape_designer?file={{:name}}.shape" class="ion-edit"></a>
+          </figcaption>
         </figure>
     </div>
 
