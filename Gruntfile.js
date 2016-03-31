@@ -21,6 +21,7 @@ module.exports = function(grunt) {
           './bower_components/jquery/dist/jquery.min.js',
           './bower_components/modernizr/modernizr.js',
           './bower_components/jsrender/jsrender.min.js',
+          './bower_components/shine/dist/shine.min.js',
           './bower_components/shufflejs/dist/jquery.shuffle.min.js'
         ],
         dest: './dist/assets/javascript/dependencies.js'
@@ -142,8 +143,8 @@ module.exports = function(grunt) {
     });
 
   // Default task.
-  grunt.registerTask('default', ['generate','shell', 'jshint', 'concat', 'less', 'copy']);
-  grunt.registerTask('publish', ['jshint', 'concat', 'less', 'copy', 'gh-pages']);
+  grunt.registerTask('default', ['shell', 'jshint', 'concat', 'less', 'copy','generate']);
+  grunt.registerTask('publish', ['shell', 'jshint', 'concat', 'less', 'copy', 'generate','gh-pages']);
 
 
 

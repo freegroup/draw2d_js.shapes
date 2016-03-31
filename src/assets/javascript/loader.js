@@ -21,5 +21,23 @@ function loadIndex(){
             });
         });
 
+        var config = new shinejs.Config({
+            numSteps: 10,
+            opacity: 0.1,
+            opacityPow:3.4,
+            offset:0.23,
+            offsetPow:3.8,
+            blur:59,
+            blurPow:1,
+            shadowRGB: new shinejs.Color(0,0,0)
+        });
+
+        var shine = new Shine(document.getElementById('title'), config);
+        window.addEventListener('mousemove', function(event) {
+            shine.light.position.x = event.clientX;
+            shine.light.position.y = event.clientY;
+            shine.draw();
+        }, false);
+
     });
 }
