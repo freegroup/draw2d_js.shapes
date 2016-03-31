@@ -2,18 +2,18 @@
 //                                                        
 // http://www.draw2d.org                                  
 //                                                        
-// Tue Mar 29 2016 12:10:54 GMT+0200 (CEST)                                         
+// Thu Mar 31 2016 13:23:46 GMT+0200 (CEST)                                         
 //                                                        
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({           
+var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({            
                                                           
        NAME: "draw2d_circuit_gate_empty",                           
                                                           
        init:function(attr, setter, getter)                
        {                                                  
-         this._super( $.extend({width:60,height:61},attr), setter, getter);
+         this._super( $.extend({stroke:0, bgColor:null, width:60,height:61},attr), setter, getter);
          var port;                                        
          // Port                                    
          port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 18.0327868852459)); 

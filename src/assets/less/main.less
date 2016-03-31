@@ -1,0 +1,69 @@
+@import "colors.less";
+
+
+body{
+  margin:0px;
+  padding:0px;
+  font-family: sans-serif;
+}
+
+.header{
+  height:200px;
+  background-color:gray;
+  font-size:40px;
+  margin-bottom:20px;
+  text-align:center;
+  background: -webkit-linear-gradient(300deg,#061827,#2293ec);
+  background: linear-gradient(150deg,#061827,#2293ec);
+  border-bottom: 10px solid @tintColor;
+
+  .strip{
+    padding: .8em 2em .9em;
+    width: 100%;
+    background: rgba(0,0,0,.1);
+    font-size: 20px;
+    color: white;
+    clear:both;
+    display:inline-block;
+
+    .project-owner{
+      float:left;
+    }
+
+    .start{
+      float:right;
+    }
+
+  }
+
+
+  .filter{
+    font-size: 23px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 5px;
+    font-weight: 100;
+    width: 350px;
+    outline: none;
+  }
+
+  .title{
+    font-size: 50px;
+    color: white;
+    font-weight: 100;
+  }
+
+}
+
+.figure-wrap{
+  border:1px solid rgba(0,0,0,0.03);
+  text-align: center;
+  cursor:pointer;
+}
+
+
+.figure-wrap:hover{
+  border:1px solid @tintColor;
+}
+

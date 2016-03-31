@@ -32,7 +32,7 @@ if (!String.prototype.endsWith) {
     };
 }
 
-var filesToProcess = []
+var filesToProcess = [];
 
 var scanDirectory = function (path) {
     if (fs.exists(path) && fs.isFile(path)) {
@@ -64,17 +64,19 @@ var processFiles=function(path){
             success: function () {
                 var jsCode = page.evaluate(function () {return code;});
                 var img    = page.evaluate(function () {return img;});
-
                 var package = path.replace("./shapes/org/","").replace(/\//g,"_").replace(/\.shape/,"");
+                var pngFilePath = path.replace(".shape",".png");
+                var jsFilePath  = path.replace(".shape",".js");
+
                 jsCode = jsCode.replace(/testShape/g,package);
-                fs.write(path.replace(".shape",".js"), jsCode);
-                fs.write(path.replace(".shape",".png"), atob(img), "wb");
+
+                fs.write(jsFilePath, jsCode);
+                fs.write(pngFilePath, atob(img), "wb");
 
                 if(filesToProcess.length>0){
                     processFiles(filesToProcess.pop());
                 }
                 else{
-                    console.log("done...");
                     phantom.exit(0);
                 }
             },

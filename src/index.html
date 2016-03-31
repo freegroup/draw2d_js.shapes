@@ -3,58 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+
+    <link rel="stylesheet" href="assets/stylesheets/main.css" />
+
     <SCRIPT src="./assets/javascript/dependencies.js"></SCRIPT>
     <SCRIPT src="./assets/javascript/app.js"></SCRIPT>
 
     <script>
 
         $(document).ready(function() {
-            var $grid = $('#grid'),
-                    $sizer = $grid.find('.shuffle__sizer');
-
-            $grid.shuffle({
-                itemSelector: '.picture-item',
-                sizer: $sizer
-            });
+            loadIndex();
         });
     </script>
 </head>
-<body>
+<body class="basic">
 
+<div class="header">
+    <div class="strip">
+        <span class="project-owner">Draw2D project</span>
+        <span class="start">Start drawing now</span>
+   </div>
 
-<div id="grid" class="row-fluid">
-    <figure class="span3 picture-item" data-groups='["photography"]'>
-        <img src="/img/baseball.png" height="145" width="230" />
-        <div class="picture-item__details">
-            <figcaption class="picture-item__title">Baseball</figcaption>
-            <p class="picture-item__tags">photography</p>
-        </div>
-    </figure>
-    <figure class="span6 picture-item" data-groups='["wallpaper","3d"]'>
-        <img src="/img/tennis-ball.png" height="145" width="230" />
-        <div class="picture-item__details">
-            <figcaption class="picture-item__title">Tennis</figcaption>
-            <p class="picture-item__tags">wallpaper, 3d</p>
-        </div>
-        <p class="picture-item__description">Some description here.</p>
-    </figure>
-    <figure class="span3 picture-item" data-groups='["wallpaper","3d"]'>
-        <img src="/img/imac.png" height="145" width="230" />
-        <div class="picture-item__details">
-            <figcaption class="picture-item__title">iMac</figcaption>
-            <p class="picture-item__tags">wallpaper, 3d</p>
-        </div>
-    </figure>
-    <figure class="span3 picture-item picture-item--h2" data-groups='["graphics"]'>
-        <img src="/img/master-chief.png" height="145" width="230" />
-        <div class="picture-item__details">
-            <figcaption class="picture-item__title">Master Chief</figcaption>
-            <p class="picture-item__tags">graphics</p>
-        </div>
-        <p class="picture-item__description">Some description here.</p>
-    </figure>
+    <div class="title">Beautiful free Draw2D stencil</div>
+    <input class="filter" id="shape-filter" type="text" placeholder="Filter..." autofocus >
 </div>
 
+    <div id="grid" class="row-fluid m-row">
+
+    </div>
 
 </body>
+
+<script id="shapeTemplate" type="text/x-jsrender">
+{{for shapes}}
+
+    <div class="span3 m-span3 figure-wrap">
+        <figure>
+          <div class="keep-ratio four-three">
+            <img src="./assets/shapes/{{:name}}.png" height="120" />
+          </div>
+          <figcaption class="picture-item__title">{{:name}}</figcaption>
+        </figure>
+    </div>
+
+
+{{/for}}
+</script>
+
+
 </html>

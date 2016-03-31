@@ -20,15 +20,17 @@ module.exports = function(grunt) {
         src: [
           './bower_components/jquery/dist/jquery.min.js',
           './bower_components/modernizr/modernizr.js',
+          './bower_components/jsrender/jsrender.min.js',
           './bower_components/shufflejs/dist/jquery.shuffle.min.js'
         ],
         dest: './dist/assets/javascript/dependencies.js'
       },
       application: {
         src: [
+            "./src/assets/javascript/loader.js"
         ],
         dest: './dist/assets/javascript/app.js'
-      },
+      }
     },
 
     copy: {
@@ -42,8 +44,8 @@ module.exports = function(grunt) {
             expand: true,
             flatten: false,
             cwd: 'shapes',
-            src: ['**/*.png'],
-            dest: './dist/assets/images/',
+            src: ['**/*.png', '**/*.js', '**/*.shape'],
+            dest: './dist/assets/shapes/',
             rename: function(dest, src) {
               // transform the filePath to fileName. /org/draw2d/digital/AND.png -> draw2d_digital_AND.png
               return dest + "/"+src.replace("org/","").replace(/\//g,"_");
@@ -59,7 +61,9 @@ module.exports = function(grunt) {
         },
         files: {
           "./dist/assets/stylesheets/main.css": [
-            "./src/assets/less/main.less"
+              "./src/assets/less/normalize.less",
+              "./src/assets/less/shuffel.less",
+              "./src/assets/less/main.less"
           ]
         }
       }
@@ -120,8 +124,27 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-gh-pages');
 
+    grunt.registerTask('generate', 'Generates JSON file with all shape files', function() {
+        // List all files in the templates directory.
+        var list = [];
+        var shapes = grunt.file.expand({filter: "isFile", cwd: "./dist/assets/shapes"},["**/*.shape"]);
+        shapes.forEach(function(shape){
+            var name = shape.replace(".shape","");
+            var tags = name.split("_");
+            list.push({
+                name:name,
+                tags:tags
+            });
+        });
+        var projectFile = "./dist/assets/shapes/index.json";
+        grunt.file.write(projectFile, JSON.stringify(list, null, 2));//serialize it back to file
+
+    });
+
   // Default task.
-  grunt.registerTask('default', ['shell', 'jshint', 'concat', 'less', 'copy']);
+  grunt.registerTask('default', ['generate','shell', 'jshint', 'concat', 'less', 'copy']);
   grunt.registerTask('publish', ['jshint', 'concat', 'less', 'copy', 'gh-pages']);
+
+
 
 };
