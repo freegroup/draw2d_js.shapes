@@ -2,7 +2,7 @@
 //                                                        
 // http://www.draw2d.org                                  
 //                                                        
-// Thu Mar 31 2016 22:41:45 GMT+0200 (CEST)                                         
+// Sun Apr 03 2016 20:09:25 GMT+0200 (CEST)                                         
 //                                                        
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
@@ -27,6 +27,7 @@ var draw2d_Basic = draw2d.SetFigure.extend({
          port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(95.09803921568627, 50)); 
          port.setConnectionDirection(1);      
          port.setBackgroundColor("#C02B1D");            
+         this.persistPorts=false;                         
        },                                                 
                                                           
        createShapeElement : function()                    
@@ -62,7 +63,7 @@ var draw2d_Basic = draw2d.SetFigure.extend({
 //                                                        
 // http://www.draw2d.org                                  
 //                                                        
-// Thu Mar 31 2016 22:41:45 GMT+0200 (CEST)                                         
+// Sun Apr 03 2016 20:09:24 GMT+0200 (CEST)                                         
 //                                                        
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
@@ -87,6 +88,7 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
          port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(91.66666666666667, 50)); 
          port.setConnectionDirection(1);      
          port.setBackgroundColor("#C02B1D");            
+         this.persistPorts=false;                         
        },                                                 
                                                           
        createShapeElement : function()                    
@@ -127,7 +129,7 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
 //                                                        
 // http://www.draw2d.org                                  
 //                                                        
-// Thu Mar 31 2016 22:41:44 GMT+0200 (CEST)                                         
+// Sun Apr 03 2016 20:09:24 GMT+0200 (CEST)                                         
 //                                                        
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
@@ -152,6 +154,7 @@ var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({
          port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(91.66666666666667, 50)); 
          port.setConnectionDirection(1);      
          port.setBackgroundColor("#C02B1D");            
+         this.persistPorts=false;                         
        },                                                 
                                                           
        createShapeElement : function()                    
