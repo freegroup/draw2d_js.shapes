@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f7bf13b-62f6-437e-952d-5e310d5b8e76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/AND.js" afterPath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/AND.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/org/draw2d/Basic.js" afterPath="$PROJECT_DIR$/shapes/org/draw2d/Basic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/HighLowSource.js" afterPath="$PROJECT_DIR$/shapes/org/draw2d/circuit/HighLowSource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/empty.js" afterPath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/empty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch/template.js" afterPath="$PROJECT_DIR$/batch/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="4f7bf13b-62f6-437e-952d-5e310d5b8e76" name="Default" comment="" />
     <ignored path="shapes.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
