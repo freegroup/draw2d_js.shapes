@@ -1,5 +1,5 @@
 
-app.view.clear();
+app.fileNew();
 var code = null;
 var img  = null;
 var reader = new draw2d.io.json.Reader();

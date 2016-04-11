@@ -108,6 +108,8 @@ draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
          this._super(attr, setter, getter);
 
 
+        this.setResizeable(false);
+        
         var _this = this;
         
         this.value = false;
