@@ -12,19 +12,6 @@ module.exports = function(grunt) {
       }
     },
 
-      gitcommit: {
-          task: {
-              options: {
-                  message: 'Generated code',
-                  noVerify: true,
-                  noStatus: false
-              },
-              files: {
-                  src: ['*.*']
-              }
-          }
-      },
-
     // Task configuration
     concat: {
       options: {
@@ -149,7 +136,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-gh-pages');
-  grunt.loadNpmTasks('grunt-git');
 
     grunt.registerTask('generate', 'Generates JSON file with all shape files', function() {
         // List all SHAPE files in the templates directory.
@@ -168,11 +154,9 @@ module.exports = function(grunt) {
         grunt.file.write(projectFile, JSON.stringify(list, null, 2));//serialize it back to file
     });
 
-  // Default task.
-  grunt.registerTask('default', ['shell', 'jshint', 'concat', 'less', 'copy','generate']);
+    // Default task.
+    grunt.registerTask('default', ['shell', 'jshint', 'concat', 'less', 'copy','generate']);
     grunt.registerTask('publish', ['shell', 'jshint', 'concat', 'less', 'copy', 'generate','gh-pages']);
-
-    grunt.registerTask('commit', ['gitcommit']);
 
 
 
