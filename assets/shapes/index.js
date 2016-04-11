@@ -91,6 +91,39 @@ var draw2d_Basic = draw2d.SetFigure.extend({
       }
    }
 });
+
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_Basic = draw2d_Basic.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+
+        var _this = this;
+        
+        this.value = false;
+        this.on("click",function(){            
+            _this.value = !_this.value;
+            _this.layerShow("low" , !_this.value, 100);
+            _this.layerShow("high",  _this.value, 100);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+
+        this.on("added",function(){
+            _this.layerShow("low" , !_this.value);
+            _this.layerShow("high",  _this.value);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+    }
+
+});
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -186,6 +219,39 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
       }
    }
 });
+
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+
+        var _this = this;
+        
+        this.value = false;
+        this.on("click",function(){            
+            _this.value = !_this.value;
+            _this.layerShow("low" , !_this.value, 100);
+            _this.layerShow("high",  _this.value, 100);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+
+        this.on("added",function(){
+            _this.layerShow("low" , !_this.value);
+            _this.layerShow("high",  _this.value);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+    }
+
+});
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -270,6 +336,26 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
            });
       }
    }
+});
+
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_Led = draw2d_circuit_Led.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+         this.getInputPort(0).on("change:value", function(emitter, event){
+             console.log(event);
+         });
+    }
+
 });
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
@@ -369,6 +455,39 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
       }
    }
 });
+
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+
+        var _this = this;
+        
+        this.value = false;
+        this.on("click",function(){            
+            _this.value = !_this.value;
+            _this.layerShow("low" , !_this.value, 100);
+            _this.layerShow("high",  _this.value, 100);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+
+        this.on("added",function(){
+            _this.layerShow("low" , !_this.value);
+            _this.layerShow("high",  _this.value);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+    }
+
+});
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -461,4 +580,37 @@ var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({
            });
       }
    }
+});
+
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_gate_empty = draw2d_circuit_gate_empty.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+
+        var _this = this;
+        
+        this.value = false;
+        this.on("click",function(){            
+            _this.value = !_this.value;
+            _this.layerShow("low" , !_this.value, 100);
+            _this.layerShow("high",  _this.value, 100);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+
+        this.on("added",function(){
+            _this.layerShow("low" , !_this.value);
+            _this.layerShow("high",  _this.value);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+    }
+
 });

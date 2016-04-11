@@ -83,3 +83,23 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
       }
    }
 });
+
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_Led = draw2d_circuit_Led.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+         this.getInputPort(0).on("change:value", function(emitter, event){
+             console.log(event);
+         });
+    }
+
+});

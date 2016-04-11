@@ -93,3 +93,36 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
       }
    }
 });
+
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+
+        var _this = this;
+        
+        this.value = false;
+        this.on("click",function(){            
+            _this.value = !_this.value;
+            _this.layerShow("low" , !_this.value, 100);
+            _this.layerShow("high",  _this.value, 100);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+
+        this.on("added",function(){
+            _this.layerShow("low" , !_this.value);
+            _this.layerShow("high",  _this.value);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+    }
+
+});
