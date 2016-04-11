@@ -1,36 +1,5 @@
 [
   {
-    "type": "shape_designer.figure.ExtPort",
-    "id": "2cb8d067-9762-fc9f-072a-97ebe892d623",
-    "x": 54.21239999999989,
-    "y": 12.763812499999858,
-    "width": 10,
-    "height": 10,
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        var _this = this;\n        \n        this.value = false;\n        this.on(\"click\",function(){\n            _this.value = !_this.value;\n            \n            _this.layerShow(\"low\" , !_this.value,100);\n            _this.layerShow(\"high\",  _this.value,100);\n        });\n    }\n\n});"
-    },
-    "cssClass": "shape_designer_figure_ExtPort",
-    "ports": [],
-    "bgColor": "#C02B1D",
-    "color": "#1B1B1B",
-    "stroke": 1,
-    "dasharray": null,
-    "filters": [
-      {
-        "name": "shape_designer.filter.PositionFilter"
-      },
-      {
-        "name": "shape_designer.filter.PortDirectionFilter"
-      },
-      {
-        "name": "shape_designer.filter.PortTypeFilter"
-      }
-    ]
-  },
-  {
     "type": "shape_designer.figure.ExtPolygon",
     "id": "ae26bdb8-6dc7-667d-fb80-0d3267da2b52",
     "x": 3967.8938000000003,
@@ -40,7 +9,8 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Rectangle"
+      "baseClass": "draw2d.SetFigure",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        var _this = this;\n        \n        this.value = false;\n        this.on(\"click\",function(){\n            _this.value = !_this.value;\n            \n            _this.layerShow(\"low\" , !_this.value,100);\n            _this.layerShow(\"high\",  _this.value,100);\n        });\n    }\n\n});"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -233,6 +203,38 @@
       },
       {
         "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "a7226c25-6977-dc19-375d-c2e8b61dbb47",
+    "x": 4021.8938000000003,
+    "y": 3994.5889875,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Port",
+      "type": "Output",
+      "direction": 1
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#C02B1D",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
       }
     ]
   }
