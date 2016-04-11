@@ -281,10 +281,10 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
-        // Circle
+        // circle
         shape = this.canvas.paper.ellipse();
         shape.attr({"rx":15,"ry":16,"cx":24,"cy":16,"stroke":"none","stroke-width":0,"fill":"#95C06A","opacity":1});
-        shape.data("name","Circle");
+        shape.data("name","circle");
         
 
         return this.canvas.paper.setFinish();
@@ -342,7 +342,12 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
          this._super(attr, setter, getter);
 
          this.getInputPort(0).on("change:value", function(emitter, event){
-             console.log(event);
+             if(event.value){
+                 _this.shapeAttr("circle",{fill:"#FF0000"});
+             }
+             else{
+                _this.shapeAttr("circle",{fill:"#00FF00"});
+             }
          });
     }
 
