@@ -2,7 +2,7 @@
   {
     "type": "shape_designer.figure.ExtPolygon",
     "id": "ae26bdb8-6dc7-667d-fb80-0d3267da2b52",
-    "x": 3967.8938000000003,
+    "x": 3968,
     "y": 3982.5,
     "width": 55,
     "height": 35,
@@ -10,7 +10,7 @@
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        console.log(\"init\");\n        var _this = this;\n        \n        this.value = false;\n        this.on(\"click\",function(){\n            console.log(\"click\");\n            _this.value = !_this.value;\n            \n            _this.layerShow(\"low\" , !_this.value, 100);\n            _this.layerShow(\"high\",  _this.value, 100);\n        });\n        \n        this.on(\"added\",function(){\n            console.log(\"added\");\n            _this.layerShow(\"low\" , !_this.value);\n            _this.layerShow(\"high\",  _this.value);\n        });\n    }\n\n});"
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    }\n\n});"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -21,99 +21,99 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 4005.5415194415377,
+        "x": 4005.6477194415374,
         "y": 3982.6214952732485
       },
       {
-        "x": 4005.5415194415377,
+        "x": 4005.6477194415374,
         "y": 3982.5
       },
       {
-        "x": 3967.8938000000003,
+        "x": 3968,
         "y": 3982.5
       },
       {
-        "x": 3967.8938000000003,
+        "x": 3968,
         "y": 4017.5
       },
       {
-        "x": 4005.5415194415377,
+        "x": 4005.6477194415374,
         "y": 4017.5
       },
       {
-        "x": 4005.5415194415377,
+        "x": 4005.6477194415374,
         "y": 4017.3785047267515
       },
       {
-        "x": 4007.914261784652,
+        "x": 4008.0204617846516,
         "y": 4017.17874456094
       },
       {
-        "x": 4010.9663931236464,
+        "x": 4011.072593123646,
         "y": 4016.3917672752923
       },
       {
-        "x": 4013.830143449297,
+        "x": 4013.9363434492966,
         "y": 4015.1067344356215
       },
       {
-        "x": 4016.4184991570846,
+        "x": 4016.5246991570843,
         "y": 4013.3626911145016
       },
       {
-        "x": 4018.6528143686046,
+        "x": 4018.7590143686043,
         "y": 4011.212629185713
       },
       {
-        "x": 4020.465200546765,
+        "x": 4020.571400546765,
         "y": 4008.721877192983
       },
       {
-        "x": 4021.8005892546626,
+        "x": 4021.9067892546623,
         "y": 4005.9661153752263
       },
       {
-        "x": 4022.61840538214,
+        "x": 4022.7246053821395,
         "y": 4003.0290761607916
       },
       {
-        "x": 4022.8938000000003,
+        "x": 4023,
         "y": 4000
       },
       {
-        "x": 4022.61840538214,
+        "x": 4022.7246053821395,
         "y": 3996.9709238392084
       },
       {
-        "x": 4021.8005892546626,
+        "x": 4021.9067892546623,
         "y": 3994.0338846247737
       },
       {
-        "x": 4020.465200546765,
+        "x": 4020.571400546765,
         "y": 3991.278122807017
       },
       {
-        "x": 4018.6528143686046,
+        "x": 4018.7590143686043,
         "y": 3988.787370814287
       },
       {
-        "x": 4016.4184991570846,
+        "x": 4016.5246991570843,
         "y": 3986.6373088854984
       },
       {
-        "x": 4013.830143449297,
+        "x": 4013.9363434492966,
         "y": 3984.8932655643785
       },
       {
-        "x": 4010.9663931236464,
+        "x": 4011.072593123646,
         "y": 3983.6082327247077
       },
       {
-        "x": 4007.914261784652,
+        "x": 4008.0204617846516,
         "y": 3982.82125543906
       },
       {
-        "x": 4005.5415194415377,
+        "x": 4005.6477194415374,
         "y": 3982.6214952732485
       }
     ],
@@ -133,7 +133,7 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "7184f27c-fe19-1ea6-c937-2279662769d9",
-    "x": 3973.9484875000003,
+    "x": 3974.0546875,
     "y": 3985.9921875,
     "width": 29.4375,
     "height": 21.265625,
@@ -171,7 +171,7 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "c91a0c87-7a87-a846-f700-3919df7b615d",
-    "x": 3973.9484875000003,
+    "x": 3974.0546875,
     "y": 3985.9921875,
     "width": 29.4375,
     "height": 21.265625,
@@ -209,7 +209,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "a7226c25-6977-dc19-375d-c2e8b61dbb47",
-    "x": 4021.8938000000003,
+    "x": 4022,
     "y": 3994.5889875,
     "width": 10,
     "height": 10,
