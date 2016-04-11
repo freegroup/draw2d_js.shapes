@@ -97,6 +97,7 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
+         var _this = this;
          this.getInputPort(0).on("change:value", function(emitter, event){
              if(event.value){
                  _this.shapeAttr("circle",{fill:"#FF0000"});

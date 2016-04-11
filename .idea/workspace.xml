@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f7bf13b-62f6-437e-952d-5e310d5b8e76" name="Default" comment="" />
+    <list default="true" id="4f7bf13b-62f6-437e-952d-5e310d5b8e76" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/Led.js" afterPath="$PROJECT_DIR$/shapes/org/draw2d/circuit/Led.js" />
+    </list>
     <ignored path="shapes.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -37,7 +39,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1460413378000" expanded="true" signature="3825:3846" placeholder="[...]" />
+                <marker date="1460413378000" expanded="true" signature="3825:3850" placeholder="{&quot;id&quot;: &quot;cb5a8277-c846-c45d-61d8-ed9e4c06db21&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -929,7 +934,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1460412832000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1460413129000" expanded="true" signature="-1:-1" placeholder="//..." />
           </folding>
         </state>
       </provider>
@@ -939,7 +944,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1460412833000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1460413130000" expanded="true" signature="-1:-1" placeholder="//..." />
           </folding>
         </state>
       </provider>
@@ -991,7 +996,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1460413378000" expanded="true" signature="3825:3846" placeholder="[...]" />
+            <marker date="1460413378000" expanded="true" signature="3825:3850" placeholder="{&quot;id&quot;: &quot;cb5a8277-c846-c45d-61d8-ed9e4c06db21&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
