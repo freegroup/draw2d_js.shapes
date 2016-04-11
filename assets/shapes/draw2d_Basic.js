@@ -114,6 +114,9 @@ draw2d_Basic = draw2d_Basic.extend({
             _this.layerShow("low" , !_this.value, 100);
             _this.layerShow("high",  _this.value, 100);
             _this.getOutputPort(0).setValue(_this.value);
+            _this.getOutputPort(0).getConnections().each(function(i,c){
+                c.getTarget().setValue(_this.value);
+            });
         });
 
         this.on("added",function(){
