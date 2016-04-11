@@ -106,6 +106,8 @@ draw2d_circuit_gate_empty = draw2d_circuit_gate_empty.extend({
          this._super(attr, setter, getter);
 
 
+        this.setResizeable(false);
+        
         var _this = this;
         
         this.value = false;

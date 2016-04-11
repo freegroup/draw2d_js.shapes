@@ -106,6 +106,8 @@ draw2d_Basic = draw2d_Basic.extend({
          this._super(attr, setter, getter);
 
 
+        this.setResizeable(false);
+        
         var _this = this;
         
         this.value = false;
@@ -237,6 +239,8 @@ draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
          this._super(attr, setter, getter);
 
 
+        this.setResizeable(false);
+        
         var _this = this;
         
         this.value = false;
@@ -476,6 +480,8 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
          this._super(attr, setter, getter);
 
 
+        this.setResizeable(false);
+        
         var _this = this;
         
         this.value = false;
@@ -605,6 +611,8 @@ draw2d_circuit_gate_empty = draw2d_circuit_gate_empty.extend({
          this._super(attr, setter, getter);
 
 
+        this.setResizeable(false);
+        
         var _this = this;
         
         this.value = false;

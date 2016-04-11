@@ -106,6 +106,8 @@ draw2d_Basic = draw2d_Basic.extend({
          this._super(attr, setter, getter);
 
 
+        this.setResizeable(false);
+        
         var _this = this;
         
         this.value = false;
