@@ -2,15 +2,15 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "2cb8d067-9762-fc9f-072a-97ebe892d623",
-    "x": 4022.1062,
-    "y": 3995.2638125,
+    "x": 54.21239999999989,
+    "y": 12.763812499999858,
     "width": 10,
     "height": 10,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    }\n\n});"
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        var _this = this;\n        \n        this.value = false;\n        this.on(\"click\",function(){\n            _this.value = !_this.value;\n            \n            _this.layerShow(\"low\" , !_this.value,100);\n            _this.layerShow(\"high\",  _this.value,100);\n        });\n    }\n\n});"
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
