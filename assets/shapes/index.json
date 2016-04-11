@@ -7,6 +7,22 @@
     ]
   },
   {
+    "name": "draw2d_circuit_HighLowSource",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "HighLowSource"
+    ]
+  },
+  {
+    "name": "draw2d_circuit_Led",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "Led"
+    ]
+  },
+  {
     "name": "draw2d_circuit_gate_AND",
     "tags": [
       "draw2d",
