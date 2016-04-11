@@ -344,10 +344,10 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
          var _this = this;
          this.getInputPort(0).on("change:value", function(emitter, event){
              if(event.value){
-                 _this.shapeAttr("circle",{fill:"#FF0000"});
+                 _this.layerAttr("circle",{fill:"#FF0000"});
              }
              else{
-                _this.shapeAttr("circle",{fill:"#00FF00"});
+                _this.layerAttr("circle",{fill:"#00FF00"});
              }
          });
     }
