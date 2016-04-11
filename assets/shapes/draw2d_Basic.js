@@ -105,27 +105,7 @@ draw2d_Basic = draw2d_Basic.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
-
-        this.setResizeable(false);
-        
-        var _this = this;
-        
-        this.value = false;
-        this.on("click",function(){            
-            _this.value = !_this.value;
-            _this.layerShow("low" , !_this.value, 100);
-            _this.layerShow("high",  _this.value, 100);
-            _this.getOutputPort(0).setValue(_this.value);
-            _this.getOutputPort(0).getConnections().each(function(i,c){
-                c.getTarget().setValue(_this.value);
-            });
-        });
-
-        this.on("added",function(){
-            _this.layerShow("low" , !_this.value);
-            _this.layerShow("high",  _this.value);
-            _this.getOutputPort(0).setValue(_this.value);
-        });
+         // your special code here
     }
 
 });
