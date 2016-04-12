@@ -286,6 +286,26 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
         shape.attr({"rx":15,"ry":16,"cx":24,"cy":16,"stroke":"#1B1B1B","stroke-width":2,"fill":"#FFFFFF","opacity":1});
         shape.data("name","circle");
         
+        // Line_shadow
+        shape = this.canvas.paper.path('M3995.5 3989.5L4014.5,4010.5');
+        shape.attr({"stroke-width":null,"stroke":"none"});
+        shape.data("name","Line_shadow");
+        
+        // Line
+        shape = this.canvas.paper.path('M3995.5 3989.5L4014.5,4010.5');
+        shape.attr({});
+        shape.data("name","Line");
+        
+        // Line_shadow
+        shape = this.canvas.paper.path('M4014.5 3990.5L3994.5,4010.5');
+        shape.attr({"stroke-width":null,"stroke":"none"});
+        shape.data("name","Line_shadow");
+        
+        // Line
+        shape = this.canvas.paper.path('M4014.5 3990.5L3994.5,4010.5');
+        shape.attr({});
+        shape.data("name","Line");
+        
 
         return this.canvas.paper.setFinish();
    },
@@ -341,15 +361,25 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
+         this.attr({resizeable:false});
          var _this = this;
+ 
          this.getInputPort(0).on("change:value", function(emitter, event){
-             if(event.value){
-                 _this.layerAttr("circle",{fill:"#FF0000"});
-             }
-             else{
-                _this.layerAttr("circle",{fill:"#00FF00"});
-             }
+             _this._state(event.value);
          });
+         
+         this.on("added",function(){
+            _this._state(false);
+         });
+    },
+    
+    _state:function(flag){
+         if(flag){
+             this.layerAttr("circle",{fill:"#FF0000"});
+         }
+         else{
+            this.layerAttr("circle",{fill:"#00FF00"});
+         }
     }
 
 });
