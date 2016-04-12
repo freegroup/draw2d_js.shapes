@@ -11,10 +11,10 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:64,height:35},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:60.641999999999825,height:63.5},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(92.1875, 48.82567857142801));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(91.75488935061506, 48.81889763779528));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#C02B1D");
      this.persistPorts=false;
@@ -23,8 +23,8 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 64;
-      this.originalHeight= 35;
+      this.originalWidth = 60.641999999999825;
+      this.originalHeight= 63.5;
       return shape;
    },
 
@@ -33,23 +33,38 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L64,0 L64,35 L0,35");
+        shape = this.canvas.paper.path("M0,0 L60.641999999999825,0 L60.641999999999825,63.5 L0,63.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
-        // undefined
-        shape = this.canvas.paper.path('M38.5,0.5Q37.64771944153745,0.12149527324845621 37.5, 0.5L37.5,0.5Q37.64771944153745,0 33.5, 0.5L4.5,0.5Q0,0 0.5, 4.5L0.5,31.5Q0,35 4.5, 35.5L33.5,35.5Q37.64771944153745,35 37.5, 34.5L37.5,34.5Q37.64771944153745,34.878504726751544 38.5, 34.5L38.5,34.5Q40.020461784651616,34.678744560939776 41.5, 34.5L41.5,34.5Q43.07259312364613,33.891767275292295 44.5, 33.5L44.5,33.5Q45.9363434492966,32.60673443562155 47.5, 31.5L47.5,31.5Q48.52469915708434,30.86269111450156 49.5, 29.5L49.5,29.5Q50.75901436860431,28.712629185713013 51.5, 27.5L51.5,27.5Q52.571400546764835,26.2218771929829 53.5, 24.5L53.5,24.5Q53.90678925466227,23.46611537522631 54.5, 21.5L54.5,21.5Q54.72460538213954,20.529076160791647 54.5, 19.5L54.5,19.5Q55,17.5 54.5, 15.5L54.5,15.5Q54.72460538213954,14.470923839208353 54.5, 13.5L54.5,13.5Q53.90678925466227,11.533884624773691 53.5, 10.5L53.5,10.5Q52.571400546764835,8.778122807017098 51.5, 7.5L51.5,7.5Q50.75901436860431,6.287370814286987 49.5, 5.5L49.5,5.5Q48.52469915708434,4.137308885498442 47.5, 3.5L47.5,3.5Q45.9363434492966,2.393265564378453 44.5, 1.5L44.5,1.5Q43.07259312364613,1.1082327247077046 41.5, 0.5L41.5,0.5Q40.020461784651616,0.3212554390602236 38.5, 0.5L38.5,0.5');
-        shape.attr({"stroke":"#303030","stroke-width":2,"fill":"none","opacity":1});
-        shape.data("name","undefined");
+        // Label
+        shape = this.canvas.paper.text(0,0,'1');
+        shape.attr({"x":4,"y":14,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'0');
+        shape.attr({"x":4,"y":49.5,"text-anchor":"start","text":"0","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // high_shadow
+        shape = this.canvas.paper.path('M4039.5 3995.5L4002.5,3979.5');
+        shape.attr({"stroke-width":null,"stroke":"none"});
+        shape.data("name","high_shadow");
         
         // high
-        shape = this.canvas.paper.text(0,0,'High');
-        shape.attr({"x":10.0546875,"y":17.4921875,"text-anchor":"start","text":"High","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#E3103A","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape = this.canvas.paper.path('M4039.5 3995.5L4002.5,3979.5');
+        shape.attr({});
         shape.data("name","high");
         
+        // low_shadow
+        shape = this.canvas.paper.path('M4037.5 3996.5L4001.5,4011.5');
+        shape.attr({"stroke-width":null,"stroke":"none"});
+        shape.data("name","low_shadow");
+        
         // low
-        shape = this.canvas.paper.text(0,0,'Low');
-        shape.attr({"x":10.0546875,"y":17.4921875,"text-anchor":"start","text":"Low","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#1911F7","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape = this.canvas.paper.path('M4037.5 3996.5L4001.5,4011.5');
+        shape.attr({});
         shape.data("name","low");
         
 
