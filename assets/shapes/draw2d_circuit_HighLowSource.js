@@ -44,12 +44,12 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
         
         // high
         shape = this.canvas.paper.text(0,0,'High');
-        shape.attr({"x":10.0546875,"y":16.4921875,"text-anchor":"start","text":"High","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#E3103A","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":10.0546875,"y":17.4921875,"text-anchor":"start","text":"High","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#E3103A","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","high");
         
         // low
         shape = this.canvas.paper.text(0,0,'Low');
-        shape.attr({"x":10.0546875,"y":16.4921875,"text-anchor":"start","text":"Low","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#1911F7","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":10.0546875,"y":17.4921875,"text-anchor":"start","text":"Low","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#1911F7","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","low");
         
 
