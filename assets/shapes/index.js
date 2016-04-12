@@ -155,12 +155,12 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
         
         // high
         shape = this.canvas.paper.text(0,0,'High');
-        shape.attr({"x":10.0546875,"y":16.4921875,"text-anchor":"start","text":"High","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#E3103A","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":10.0546875,"y":17.4921875,"text-anchor":"start","text":"High","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#E3103A","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","high");
         
         // low
         shape = this.canvas.paper.text(0,0,'Low');
-        shape.attr({"x":10.0546875,"y":16.4921875,"text-anchor":"start","text":"Low","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#1911F7","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":10.0546875,"y":17.4921875,"text-anchor":"start","text":"Low","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#1911F7","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","low");
         
 
@@ -283,7 +283,7 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
         
         // circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15,"ry":16,"cx":24,"cy":16,"stroke":"none","stroke-width":0,"fill":"#95C06A","opacity":1});
+        shape.attr({"rx":15,"ry":16,"cx":24,"cy":16,"stroke":"#1B1B1B","stroke-width":2,"fill":"#FFFFFF","opacity":1});
         shape.data("name","circle");
         
 
@@ -407,7 +407,7 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
         
         // Label
         shape = this.canvas.paper.text(0,0,'&');
-        shape.attr({"x":19,"y":29,"text-anchor":"start","text":"&","font-family":"\"Arial\"","font-size":30,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":19,"y":30,"text-anchor":"start","text":"&","font-family":"\"Arial\"","font-size":30,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
 
