@@ -1,4 +1,8 @@
-## Tests
+dependencies:
+  pre:
+    - git config user.email "a.herz@freegroup.de"
+    - git config user.name "FreeGroup"
+
 
 ## Deployment options
 
