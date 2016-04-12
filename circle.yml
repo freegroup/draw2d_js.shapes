@@ -5,6 +5,4 @@ deployment:
   default:
     branch: [master]
     commands:
-      - git config user.email "a.herz@freegroup.de"
-      - git config user.name "FreeGroup"
       - grunt publish
