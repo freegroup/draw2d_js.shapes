@@ -1,0 +1,9 @@
+## Tests
+
+## Deployment options
+
+deployment:
+  default:
+    branch: [master]
+    commands:
+      - grunt publish
