@@ -15,9 +15,9 @@
     },
     "cssClass": "shape_designer_figure_PolyCircle",
     "ports": [],
-    "bgColor": "#FFFFFF",
+    "bgColor": "#95C06A",
     "color": "#1B1B1B",
-    "stroke": 2,
+    "stroke": 0,
     "radius": 0,
     "dasharray": null,
     "blur": 0,
@@ -27,9 +27,6 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
-      },
-      {
-        "name": "shape_designer.filter.StrokeFilter"
       }
     ]
   },

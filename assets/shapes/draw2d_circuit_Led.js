@@ -39,7 +39,7 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
         
         // circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15,"ry":16,"cx":24,"cy":16,"stroke":"#1B1B1B","stroke-width":2,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"rx":15,"ry":16,"cx":24,"cy":16,"stroke":"none","stroke-width":0,"fill":"#95C06A","opacity":1});
         shape.data("name","circle");
         
 
