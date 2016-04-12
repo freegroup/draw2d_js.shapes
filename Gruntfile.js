@@ -119,6 +119,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     'gh-pages': {
       options: {
         base: 'dist',
@@ -127,7 +128,7 @@ module.exports = function(grunt) {
               email: 'a.herz@freegroup.de'
           }
       },
-      src: ['**']
+      src: ['**/*']
     }
   });
 
@@ -139,8 +140,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-gh-pages');
-
-    grunt.registerTask('generate', 'Generates JSON file with all shape files', function() {
+  grunt.registerTask('generate', 'Generates JSON file with all shape files', function() {
         // List all SHAPE files in the templates directory.
         //
         var list = [];
@@ -155,12 +155,9 @@ module.exports = function(grunt) {
         });
         var projectFile = "./dist/assets/shapes/index.json";
         grunt.file.write(projectFile, JSON.stringify(list, null, 2));//serialize it back to file
-    });
+  });
 
     // Default task.
     grunt.registerTask('default', ['shell', 'jshint', 'concat', 'less', 'copy','generate']);
-    grunt.registerTask('publish', ['shell', 'jshint', 'concat', 'less', 'copy', 'generate','gh-pages']);
-
-
-
+    grunt.registerTask('publish', ['shell', 'jshint', 'concat', 'less', 'copy','generate','gh-pages']);
 };
