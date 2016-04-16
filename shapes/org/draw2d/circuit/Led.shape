@@ -36,8 +36,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "f4d5683a-7c42-8771-5df4-e4e9da5b8b46",
-    "x": 3980.5,
-    "y": 3995,
+    "x": 3985.5,
+    "y": 3995.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -81,12 +81,16 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 3995.1104000000005,
-        "y": 3989.1824000000015
+        "x": 3994.6104000000005,
+        "y": 3989.6824000000015
       },
       {
-        "x": 4014.3424000000023,
-        "y": 4010.811199999999
+        "x": 4004.2264000000014,
+        "y": 4000.4968000000003
+      },
+      {
+        "x": 4013.8424000000023,
+        "y": 4011.311199999999
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
@@ -118,7 +122,7 @@
       },
       {
         "x": 3994.7832,
-        "y": 4010.6550999999995
+        "y": 4011.9637
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
