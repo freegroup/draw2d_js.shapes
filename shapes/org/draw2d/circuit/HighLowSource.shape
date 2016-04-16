@@ -2,8 +2,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "12ca8dfe-851d-2d1d-a379-c39edd42bf5a",
-    "x": 3984,
-    "y": 3964.0889875,
+    "x": 3989,
+    "y": 3966.0889875,
     "width": 29.4375,
     "height": 21,
     "alpha": 1,
@@ -23,7 +23,7 @@
     "text": "1",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 16,
+    "fontSize": 11,
     "fontColor": "#080808",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
@@ -42,8 +42,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "645eb539-f8e8-758b-8dcb-86c234c7ae30",
-    "x": 3984,
-    "y": 3999.5889875,
+    "x": 3988.5,
+    "y": 3987.5889875,
     "width": 29.4375,
     "height": 21,
     "alpha": 1,
@@ -61,7 +61,7 @@
     "text": "0",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 16,
+    "fontSize": 12,
     "fontColor": "#080808",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
@@ -80,8 +80,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "a7226c25-6977-dc19-375d-c2e8b61dbb47",
-    "x": 4034.642,
-    "y": 3990.0889875,
+    "x": 4021.7259999999997,
+    "y": 3983.5889875,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -125,12 +125,12 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4039.5705000000007,
-        "y": 3995.323500000001
+        "x": 4027.298300000001,
+        "y": 3988.535900000003
       },
       {
-        "x": 4002.999,
-        "y": 3979.9725
+        "x": 4001.8573999999994,
+        "y": 3977.1805000000004
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
@@ -157,12 +157,12 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4037.3129999999996,
-        "y": 3996.2265
+        "x": 4026.2531999999974,
+        "y": 3988.7973
       },
       {
-        "x": 4001.6445000000003,
-        "y": 4011.5775000000003
+        "x": 4001.1445000000003,
+        "y": 3998.4402999999984
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
