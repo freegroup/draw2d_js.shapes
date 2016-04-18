@@ -11,10 +11,10 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:43.5,height:43.5},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:46.5,height:43.5},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(88.50574712643677, 51.72413793103448));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(89.24731182795698, 51.72413793103448));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      this.persistPorts=false;
@@ -23,7 +23,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 43.5;
+      this.originalWidth = 46.5;
       this.originalHeight= 43.5;
       return shape;
    },
@@ -33,7 +33,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L43.5,0 L43.5,43.5 L0,43.5");
+        shape = this.canvas.paper.path("M0,0 L46.5,0 L46.5,43.5 L0,43.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -49,7 +49,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":5,"ry":5,"cx":38,"cy":22,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"rx":3,"ry":3.5,"cx":39,"cy":22.5,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
         shape.data("name","Circle");
         
         // high_shadow

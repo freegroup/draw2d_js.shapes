@@ -80,7 +80,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "91f5e31e-98a2-25ae-2ec2-64ecb245e1ce",
-    "x": 4022,
+    "x": 4025,
     "y": 3983.5889875,
     "width": 10,
     "height": 10,
@@ -112,10 +112,10 @@
   {
     "type": "shape_designer.figure.PolyCircle",
     "id": "ebdd310c-c836-43a2-bb4f-0e3e8e631fb6",
-    "x": 4021.5,
-    "y": 3983.0889875,
-    "width": 10,
-    "height": 10,
+    "x": 4024.5,
+    "y": 3985.0889875,
+    "width": 6,
+    "height": 7,
     "alpha": 1,
     "angle": 0,
     "userData": {
