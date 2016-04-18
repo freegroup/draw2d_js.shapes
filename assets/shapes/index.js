@@ -46,7 +46,7 @@ var draw2d_Basic = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // undefined
-        shape = this.canvas.paper.path('M4.5,4.5Q4,0 8.5, 0.5L93.5,0.5Q97,0 97.5, 4.5L97.5,106.5Q97,110 93.5, 110.5L8.5,110.5Q4,110 4.5, 106.5L4.5,4.5');
+        shape = this.canvas.paper.path('M4,4Q4,0 8, 0L93,0Q97,0 97, 4L97,106Q97,110 93, 110L8,110Q4,110 4, 106L4,4');
         shape.attr({"fill":"79-#d9d9d9-#f0f0f0","stroke":"#303030","stroke-width":1,"opacity":1});
         shape.data("name","undefined");
         
@@ -122,10 +122,10 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:43.6881999999996,height:43.5},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:43.5,height:43.5},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(88.1244821256091, 51.72413793103448));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(88.50574712643677, 51.72413793103448));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      this.persistPorts=false;
@@ -134,7 +134,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 43.6881999999996;
+      this.originalWidth = 43.5;
       this.originalHeight= 43.5;
       return shape;
    },
@@ -144,7 +144,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L43.6881999999996,0 L43.6881999999996,43.5 L0,43.5");
+        shape = this.canvas.paper.path("M0,0 L43.5,0 L43.5,43.5 L0,43.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -160,7 +160,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":3.8440999999997985,"ry":3.8440999999997985,"cx":39.8440999999998,"cy":22.3440999999998,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"rx":5,"ry":5,"cx":38,"cy":22,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
         shape.data("name","Circle");
         
         // high_shadow
@@ -453,7 +453,7 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M5.5,3.5Q5,0 8.5, 0.5L51.5,0.5Q54,0 54.5, 3.5L54.5,58.5Q54,61 51.5, 61.5L8.5,61.5Q5,61 5.5, 58.5L5.5,3.5');
+        shape = this.canvas.paper.path('M5,3Q5,0 8, 0L51,0Q54,0 54, 3L54,58Q54,61 51, 61L8,61Q5,61 5, 58L5,3');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
@@ -569,7 +569,7 @@ var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M5.5 0.5L54.5 0.5L54.5 61.5L5.5 61.5Z');
+        shape = this.canvas.paper.path('M5 0L54 0L54 61L5 61Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
