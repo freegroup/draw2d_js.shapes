@@ -39,27 +39,27 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
         
         // circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15,"ry":16,"cx":19,"cy":16,"stroke":"#1B1B1B","stroke-width":2,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"rx":15,"ry":16,"cx":19,"cy":16,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","circle");
         
         // Line_shadow
         shape = this.canvas.paper.path('M9.5 5.5L18.5,16.5L28.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M9.5 5.5L18.5,16.5L28.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M29.5 6.5L9.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape = this.canvas.paper.path('M29.5 5.5L9.5,27.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M29.5 6.5L9.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape = this.canvas.paper.path('M29.5 5.5L9.5,27.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
 
@@ -131,10 +131,10 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
     
     _state:function(flag){
          if(flag){
-             this.layerAttr("circle",{fill:"#FF0000"});
+             this.layerAttr("circle",{fill:"#ff5252"});
          }
          else{
-            this.layerAttr("circle",{fill:"#00FF00"});
+            this.layerAttr("circle",{fill:"#009688"});
          }
     }
 
