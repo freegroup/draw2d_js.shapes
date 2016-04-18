@@ -122,19 +122,19 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:43.22599999999966,height:43.5},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:42.5,height:43.5},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(88.43288761393596, 51.72413793103448));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(88.23529411764706, 51.72413793103448));
      port.setConnectionDirection(1);
-     port.setBackgroundColor("#C02B1D");
+     port.setBackgroundColor("#37B1DE");
      this.persistPorts=false;
    },
 
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 43.22599999999966;
+      this.originalWidth = 42.5;
       this.originalHeight= 43.5;
       return shape;
    },
@@ -144,7 +144,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L43.22599999999966,0 L43.22599999999966,43.5 L0,43.5");
+        shape = this.canvas.paper.path("M0,0 L42.5,0 L42.5,43.5 L0,43.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
