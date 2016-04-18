@@ -111,6 +111,14 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
          this._super(attr, setter, getter);
 
          // your special code here
+    },
+    
+    calculate:function()
+    {
+        i1 = this.getInputPort(0);
+        i2 = this.getInputPort(1);
+        o1 = this.getOutputPort(0);
+        
+        o1.setValue(i1.getValue() & i2.getValue());
     }
-
 });
