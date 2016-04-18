@@ -80,7 +80,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "91f5e31e-98a2-25ae-2ec2-64ecb245e1ce",
-    "x": 4021,
+    "x": 4022,
     "y": 3983.5889875,
     "width": 10,
     "height": 10,
@@ -157,11 +157,11 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4026.2531999999974,
+        "x": 4027.2531999999974,
         "y": 3988.7973
       },
       {
-        "x": 4001.1445000000003,
+        "x": 4002.1445000000003,
         "y": 3998.4402999999984
       }
     ],
