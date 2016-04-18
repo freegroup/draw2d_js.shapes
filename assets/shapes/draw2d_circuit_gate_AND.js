@@ -16,15 +16,15 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
      // Port
      port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 18.0327868852459));
      port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
+     port.setBackgroundColor("#1C9BAB");
      // Port
      port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 83.60655737704919));
      port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
+     port.setBackgroundColor("#1C9BAB");
      // Port
      port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(91.66666666666667, 50));
      port.setConnectionDirection(1);
-     port.setBackgroundColor("#C02B1D");
+     port.setBackgroundColor("#1C9BAB");
      this.persistPorts=false;
    },
 
@@ -46,13 +46,13 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M5.5 0.5L54.5 0.5L54.5 61.5L5.5 61.5Z');
+        shape = this.canvas.paper.path('M5.5,3.5Q5,0 8.5, 0.5L51.5,0.5Q54,0 54.5, 3.5L54.5,58.5Q54,61 51.5, 61.5L8.5,61.5Q5,61 5.5, 58.5L5.5,3.5');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
         // Label
         shape = this.canvas.paper.text(0,0,'&');
-        shape.attr({"x":19,"y":30,"text-anchor":"start","text":"&","font-family":"\"Arial\"","font-size":30,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":22,"y":31,"text-anchor":"start","text":"&","font-family":"\"Arial\"","font-size":28,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
 
