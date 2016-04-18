@@ -124,6 +124,7 @@ draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
 
 
         this.setResizeable(false);
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
         
         var _this = this;
         
