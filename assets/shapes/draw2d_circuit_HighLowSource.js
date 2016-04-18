@@ -11,10 +11,10 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:42.5,height:43.5},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:43.5,height:43.5},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(88.23529411764706, 51.72413793103448));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(88.50574712643677, 51.72413793103448));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      this.persistPorts=false;
@@ -23,7 +23,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 42.5;
+      this.originalWidth = 43.5;
       this.originalHeight= 43.5;
       return shape;
    },
@@ -33,7 +33,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L42.5,0 L42.5,43.5 L0,43.5");
+        shape = this.canvas.paper.path("M0,0 L43.5,0 L43.5,43.5 L0,43.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -58,12 +58,12 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
         shape.data("name","high");
         
         // low_shadow
-        shape = this.canvas.paper.path('M37.5 22.5L12.5,32.5');
+        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","low_shadow");
         
         // low
-        shape = this.canvas.paper.path('M37.5 22.5L12.5,32.5');
+        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","low");
         
