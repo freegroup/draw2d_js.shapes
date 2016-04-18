@@ -112,10 +112,10 @@
   {
     "type": "shape_designer.figure.PolyCircle",
     "id": "ebdd310c-c836-43a2-bb4f-0e3e8e631fb6",
-    "x": 4024.5,
-    "y": 3984.5889875,
-    "width": 7.688199999999597,
-    "height": 7.688199999999597,
+    "x": 4021.5,
+    "y": 3983.0889875,
+    "width": 10,
+    "height": 10,
     "alpha": 1,
     "angle": 0,
     "userData": {
