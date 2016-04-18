@@ -118,6 +118,7 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
          this._super(attr, setter, getter);
 
          this.attr({resizeable:false});
+         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
          var _this = this;
  
          this.getInputPort(0).on("change:value", function(emitter, event){
