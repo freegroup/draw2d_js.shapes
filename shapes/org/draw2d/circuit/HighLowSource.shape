@@ -110,6 +110,35 @@
     ]
   },
   {
+    "type": "shape_designer.figure.PolyCircle",
+    "id": "ebdd310c-c836-43a2-bb4f-0e3e8e631fb6",
+    "x": 4024.5,
+    "y": 3984.5889875,
+    "width": 7.688199999999597,
+    "height": 7.688199999999597,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Circle"
+    },
+    "cssClass": "shape_designer_figure_PolyCircle",
+    "ports": [],
+    "bgColor": "#000000",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
     "type": "shape_designer.figure.ExtLine",
     "id": "f55452eb-ac0f-5674-92c4-0337ae6cc418",
     "alpha": 1,
@@ -125,11 +154,11 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4027.298300000001,
+        "x": 4027.798300000001,
         "y": 3988.535900000003
       },
       {
-        "x": 4001.8573999999994,
+        "x": 4002.3573999999994,
         "y": 3977.1805000000004
       }
     ],
