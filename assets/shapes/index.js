@@ -122,10 +122,10 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:43.5,height:43.5},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:43.6881999999996,height:43.5},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(88.50574712643677, 51.72413793103448));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(88.1244821256091, 51.72413793103448));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      this.persistPorts=false;
@@ -134,7 +134,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 43.5;
+      this.originalWidth = 43.6881999999996;
       this.originalHeight= 43.5;
       return shape;
    },
@@ -144,7 +144,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L43.5,0 L43.5,43.5 L0,43.5");
+        shape = this.canvas.paper.path("M0,0 L43.6881999999996,0 L43.6881999999996,43.5 L0,43.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -158,13 +158,18 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
         shape.attr({"x":4,"y":32.5,"text-anchor":"start","text":"0","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
+        // Circle
+        shape = this.canvas.paper.ellipse();
+        shape.attr({"rx":3.8440999999997985,"ry":3.8440999999997985,"cx":39.8440999999998,"cy":22.3440999999998,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.data("name","Circle");
+        
         // high_shadow
-        shape = this.canvas.paper.path('M38.5 22.5L13.5,11.5');
+        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","high_shadow");
         
         // high
-        shape = this.canvas.paper.path('M38.5 22.5L13.5,11.5');
+        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","high");
         
