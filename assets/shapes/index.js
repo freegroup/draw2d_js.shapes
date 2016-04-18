@@ -275,7 +275,7 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
      // Port
      port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(14.705882352941178, 51.5625));
      port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
+     port.setBackgroundColor("#1C9BAB");
      this.persistPorts=false;
    },
 
@@ -302,12 +302,12 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
         shape.data("name","circle");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M9.5 5.5L18.5,16.5L28.5,27.5');
+        shape = this.canvas.paper.path('M9.5 5.5L19.5,16.5L28.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M9.5 5.5L18.5,16.5L28.5,27.5');
+        shape = this.canvas.paper.path('M9.5 5.5L19.5,16.5L28.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
