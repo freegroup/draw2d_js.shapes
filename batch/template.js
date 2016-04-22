@@ -29,6 +29,9 @@ reader.unmarshal(app.view,json);
         var canvas    = new draw2d.Canvas("test_canvas");
         var test = new testShape();
         canvas.add( test,400,160);
+        canvas.commonPorts.each(function(i,p){
+            p.setVisible(false);
+        });
         canvas.getBoundingBox= function(){
             var xCoords = [];
             var yCoords = [];
