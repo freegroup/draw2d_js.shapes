@@ -5,9 +5,9 @@
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({            
+var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_HighLowSource",
+   NAME: "draw2d_circuit_switch_HighLow",
 
    init:function(attr, setter, getter)
    {
@@ -122,7 +122,7 @@ var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
+draw2d_circuit_switch_HighLow = draw2d_circuit_switch_HighLow.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
@@ -154,5 +154,5 @@ draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
     }
 
 });
-draw2d_circuit_HighLowSource.logic="calculate: function () {\n}";
-draw2d_circuit_HighLowSource.github="./shapes/org/draw2d/circuit/HighLowSource.shape";
+draw2d_circuit_switch_HighLow.logic="calculate: function () {\n}";
+draw2d_circuit_switch_HighLow.github="./shapes/org/draw2d/circuit/switch/HighLow.shape";

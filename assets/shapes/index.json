@@ -1,24 +1,10 @@
 [
   {
-    "name": "draw2d_Basic",
-    "tags": [
-      "draw2d",
-      "Basic"
-    ]
-  },
-  {
-    "name": "draw2d_circuit_HighLowSource",
+    "name": "draw2d_circuit_display_Led",
     "tags": [
       "draw2d",
       "circuit",
-      "HighLowSource"
-    ]
-  },
-  {
-    "name": "draw2d_circuit_Led",
-    "tags": [
-      "draw2d",
-      "circuit",
+      "display",
       "Led"
     ]
   },
@@ -40,12 +26,12 @@
     ]
   },
   {
-    "name": "draw2d_circuit_gate_empty",
+    "name": "draw2d_circuit_switch_HighLow",
     "tags": [
       "draw2d",
       "circuit",
-      "gate",
-      "empty"
+      "switch",
+      "HighLow"
     ]
   }
 ]

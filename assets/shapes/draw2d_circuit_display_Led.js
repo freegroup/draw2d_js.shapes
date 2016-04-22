@@ -5,9 +5,9 @@
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_Led = draw2d.SetFigure.extend({            
+var draw2d_circuit_display_Led = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_Led",
+   NAME: "draw2d_circuit_display_Led",
 
    init:function(attr, setter, getter)
    {
@@ -112,7 +112,7 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_Led = draw2d_circuit_Led.extend({
+draw2d_circuit_display_Led = draw2d_circuit_display_Led.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
@@ -140,4 +140,4 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
     }
 
 });
-draw2d_circuit_Led.github="./shapes/org/draw2d/circuit/Led.shape";
+draw2d_circuit_display_Led.github="./shapes/org/draw2d/circuit/display/Led.shape";

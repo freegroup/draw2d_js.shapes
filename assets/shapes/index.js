@@ -5,279 +5,9 @@
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_Basic = draw2d.SetFigure.extend({            
+var draw2d_circuit_display_Led = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_Basic",
-
-   init:function(attr, setter, getter)
-   {
-     this._super( $.extend({stroke:0, bgColor:null, width:102,height:110},attr), setter, getter);
-     var port;
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(4.901960784313725, 24.545454545454543));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(4.901960784313725, 71.81818181818181));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(95.09803921568627, 50));
-     port.setConnectionDirection(1);
-     port.setBackgroundColor("#C02B1D");
-     this.persistPorts=false;
-   },
-
-   createShapeElement : function()
-   {
-      var shape = this._super();
-      this.originalWidth = 102;
-      this.originalHeight= 110;
-      return shape;
-   },
-
-   createSet: function()
-   {
-       this.canvas.paper.setStart();
-
-        // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L102,0 L102,110 L0,110");
-        shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
-        shape.data("name","BoundingBox");
-        
-        // undefined
-        shape = this.canvas.paper.path('M4,4Q4,0 8, 0L93,0Q97,0 97, 4L97,106Q97,110 93, 110L8,110Q4,110 4, 106L4,4');
-        shape.attr({"fill":"79-#d9d9d9-#f0f0f0","stroke":"#303030","stroke-width":1,"opacity":1});
-        shape.data("name","undefined");
-        
-
-        return this.canvas.paper.setFinish();
-   },
-
-   applyAlpha: function()
-   {
-   },
-
-   layerAttr: function(name, attributes)
-   {
-     this.svgNodes.forEach(function(shape){
-             if(shape.data("name")===name){
-                  shape.attr(attributes);
-             }
-     });
-   },
-
-   layerShow: function(name, flag, duration)
-   {
-      if(duration){
-        this.svgNodes.forEach(function(node){
-            if(node.data("name")===name){
-                if(flag){
-                    node.attr({ opacity : 0 }).show().animate({ opacity : 1 }, duration);
-                }
-                else{
-                    node.animate({ opacity : 0 }, duration, function () { this.hide() });
-                }
-            }
-        });
-      }
-      else{
-          this.svgNodes.forEach(function(node){
-              if(node.data("name")===name){
-                   if(flag){node.show();}
-                   else{node.hide();}
-               }
-           });
-      }
-   }
-});
-
-/**
- * by 'Draw2D Shape Designer'
- *
- * Custom JS code to tweak the standard behaviour of the generated
- * shape. add your custome code and event handler here.
- *
- *
- */
-draw2d_Basic = draw2d_Basic.extend({
-
-    init: function(attr, setter, getter){
-         this._super(attr, setter, getter);
-
-         // your special code here
-    }
-
-});
-draw2d_Basic.github="./shapes/org/draw2d/Basic.shape";
-// Generated Code for the Draw2D touch HTML5 lib
-//                                                        
-// http://www.draw2d.org                                  
-//                                                        
-// Go to the Designer http://www.draw2d.org               
-// to design your own shape or download user generated    
-//                                                        
-var draw2d_circuit_HighLowSource = draw2d.SetFigure.extend({            
-
-   NAME: "draw2d_circuit_HighLowSource",
-
-   init:function(attr, setter, getter)
-   {
-     this._super( $.extend({stroke:0, bgColor:null, width:46.5,height:43.5},attr), setter, getter);
-     var port;
-     // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(89.24731182795698, 51.72413793103448));
-     port.setConnectionDirection(1);
-     port.setBackgroundColor("#37B1DE");
-     this.persistPorts=false;
-   },
-
-   createShapeElement : function()
-   {
-      var shape = this._super();
-      this.originalWidth = 46.5;
-      this.originalHeight= 43.5;
-      return shape;
-   },
-
-   createSet: function()
-   {
-       this.canvas.paper.setStart();
-
-        // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L46.5,0 L46.5,43.5 L0,43.5");
-        shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
-        shape.data("name","BoundingBox");
-        
-        // Label
-        shape = this.canvas.paper.text(0,0,'1');
-        shape.attr({"x":4.5,"y":11,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":11,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
-        shape.data("name","Label");
-        
-        // Label
-        shape = this.canvas.paper.text(0,0,'0');
-        shape.attr({"x":4,"y":32.5,"text-anchor":"start","text":"0","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
-        shape.data("name","Label");
-        
-        // Circle
-        shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":3,"ry":3.5,"cx":39,"cy":22.5,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
-        shape.data("name","Circle");
-        
-        // high_shadow
-        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
-        shape.data("name","high_shadow");
-        
-        // high
-        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
-        shape.data("name","high");
-        
-        // low_shadow
-        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
-        shape.data("name","low_shadow");
-        
-        // low
-        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
-        shape.data("name","low");
-        
-
-        return this.canvas.paper.setFinish();
-   },
-
-   applyAlpha: function()
-   {
-   },
-
-   layerAttr: function(name, attributes)
-   {
-     this.svgNodes.forEach(function(shape){
-             if(shape.data("name")===name){
-                  shape.attr(attributes);
-             }
-     });
-   },
-
-   layerShow: function(name, flag, duration)
-   {
-      if(duration){
-        this.svgNodes.forEach(function(node){
-            if(node.data("name")===name){
-                if(flag){
-                    node.attr({ opacity : 0 }).show().animate({ opacity : 1 }, duration);
-                }
-                else{
-                    node.animate({ opacity : 0 }, duration, function () { this.hide() });
-                }
-            }
-        });
-      }
-      else{
-          this.svgNodes.forEach(function(node){
-              if(node.data("name")===name){
-                   if(flag){node.show();}
-                   else{node.hide();}
-               }
-           });
-      }
-   }
-});
-
-/**
- * by 'Draw2D Shape Designer'
- *
- * Custom JS code to tweak the standard behaviour of the generated
- * shape. add your custome code and event handler here.
- *
- *
- */
-draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
-
-    init: function(attr, setter, getter){
-         this._super(attr, setter, getter);
-
-
-        this.setResizeable(false);
-        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
-        
-        var _this = this;
-        
-        this.value = false;
-        this.on("click",function(){            
-            _this.value = !_this.value;
-            _this.layerShow("low" , !_this.value, 100);
-            _this.layerShow("high",  _this.value, 100);
-            _this.getOutputPort(0).setValue(_this.value);
-        });
-
-        this.on("added",function(){
-            _this.layerShow("low" , !_this.value);
-            _this.layerShow("high",  _this.value);
-            _this.getOutputPort(0).setValue(_this.value);
-        });
-    },
-    
-    calculate: function()
-    {
-        // do nothing per default;
-    }
-
-});
-draw2d_circuit_HighLowSource.logic="calculate: function () {\n}";
-draw2d_circuit_HighLowSource.github="./shapes/org/draw2d/circuit/HighLowSource.shape";
-// Generated Code for the Draw2D touch HTML5 lib
-//                                                        
-// http://www.draw2d.org                                  
-//                                                        
-// Go to the Designer http://www.draw2d.org               
-// to design your own shape or download user generated    
-//                                                        
-var draw2d_circuit_Led = draw2d.SetFigure.extend({            
-
-   NAME: "draw2d_circuit_Led",
+   NAME: "draw2d_circuit_display_Led",
 
    init:function(attr, setter, getter)
    {
@@ -382,7 +112,7 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_Led = draw2d_circuit_Led.extend({
+draw2d_circuit_display_Led = draw2d_circuit_display_Led.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
@@ -410,7 +140,7 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
     }
 
 });
-draw2d_circuit_Led.github="./shapes/org/draw2d/circuit/Led.shape";
+draw2d_circuit_display_Led.github="./shapes/org/draw2d/circuit/display/Led.shape";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -544,118 +274,6 @@ draw2d_circuit_gate_AND.github="./shapes/org/draw2d/circuit/gate/AND.shape";
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({            
-
-   NAME: "draw2d_circuit_gate_empty",
-
-   init:function(attr, setter, getter)
-   {
-     this._super( $.extend({stroke:0, bgColor:null, width:60,height:61},attr), setter, getter);
-     var port;
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 18.0327868852459));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 83.60655737704919));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(91.66666666666667, 50));
-     port.setConnectionDirection(1);
-     port.setBackgroundColor("#C02B1D");
-     this.persistPorts=false;
-   },
-
-   createShapeElement : function()
-   {
-      var shape = this._super();
-      this.originalWidth = 60;
-      this.originalHeight= 61;
-      return shape;
-   },
-
-   createSet: function()
-   {
-       this.canvas.paper.setStart();
-
-        // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L60,0 L60,61 L0,61");
-        shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
-        shape.data("name","BoundingBox");
-        
-        // Rectangle
-        shape = this.canvas.paper.path('M5 0L54 0L54 61L5 61Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","Rectangle");
-        
-
-        return this.canvas.paper.setFinish();
-   },
-
-   applyAlpha: function()
-   {
-   },
-
-   layerAttr: function(name, attributes)
-   {
-     this.svgNodes.forEach(function(shape){
-             if(shape.data("name")===name){
-                  shape.attr(attributes);
-             }
-     });
-   },
-
-   layerShow: function(name, flag, duration)
-   {
-      if(duration){
-        this.svgNodes.forEach(function(node){
-            if(node.data("name")===name){
-                if(flag){
-                    node.attr({ opacity : 0 }).show().animate({ opacity : 1 }, duration);
-                }
-                else{
-                    node.animate({ opacity : 0 }, duration, function () { this.hide() });
-                }
-            }
-        });
-      }
-      else{
-          this.svgNodes.forEach(function(node){
-              if(node.data("name")===name){
-                   if(flag){node.show();}
-                   else{node.hide();}
-               }
-           });
-      }
-   }
-});
-
-/**
- * by 'Draw2D Shape Designer'
- *
- * Custom JS code to tweak the standard behaviour of the generated
- * shape. add your custome code and event handler here.
- *
- *
- */
-draw2d_circuit_gate_empty = draw2d_circuit_gate_empty.extend({
-
-    init: function(attr, setter, getter){
-         this._super(attr, setter, getter);
-
-         // your special code here
-    }
-
-});
-draw2d_circuit_gate_empty.github="./shapes/org/draw2d/circuit/gate/empty.shape";
-// Generated Code for the Draw2D touch HTML5 lib
-//                                                        
-// http://www.draw2d.org                                  
-//                                                        
-// Go to the Designer http://www.draw2d.org               
-// to design your own shape or download user generated    
-//                                                        
 var draw2d_circuit_gateOR = draw2d.SetFigure.extend({            
 
    NAME: "draw2d_circuit_gateOR",
@@ -775,3 +393,161 @@ draw2d_circuit_gateOR = draw2d_circuit_gateOR.extend({
 });
 draw2d_circuit_gateOR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}";
 draw2d_circuit_gateOR.github="./shapes/org/draw2d/circuit/gateOR.shape";
+// Generated Code for the Draw2D touch HTML5 lib
+//                                                        
+// http://www.draw2d.org                                  
+//                                                        
+// Go to the Designer http://www.draw2d.org               
+// to design your own shape or download user generated    
+//                                                        
+var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({            
+
+   NAME: "draw2d_circuit_switch_HighLow",
+
+   init:function(attr, setter, getter)
+   {
+     this._super( $.extend({stroke:0, bgColor:null, width:46.5,height:43.5},attr), setter, getter);
+     var port;
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(89.24731182795698, 51.72413793103448));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     this.persistPorts=false;
+   },
+
+   createShapeElement : function()
+   {
+      var shape = this._super();
+      this.originalWidth = 46.5;
+      this.originalHeight= 43.5;
+      return shape;
+   },
+
+   createSet: function()
+   {
+       this.canvas.paper.setStart();
+
+        // BoundingBox
+        shape = this.canvas.paper.path("M0,0 L46.5,0 L46.5,43.5 L0,43.5");
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
+        shape.data("name","BoundingBox");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'1');
+        shape.attr({"x":4.5,"y":11,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":11,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'0');
+        shape.attr({"x":4,"y":32.5,"text-anchor":"start","text":"0","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Circle
+        shape = this.canvas.paper.ellipse();
+        shape.attr({"rx":3,"ry":3.5,"cx":39,"cy":22.5,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.data("name","Circle");
+        
+        // high_shadow
+        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape.data("name","high_shadow");
+        
+        // high
+        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape.data("name","high");
+        
+        // low_shadow
+        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape.data("name","low_shadow");
+        
+        // low
+        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape.data("name","low");
+        
+
+        return this.canvas.paper.setFinish();
+   },
+
+   applyAlpha: function()
+   {
+   },
+
+   layerAttr: function(name, attributes)
+   {
+     this.svgNodes.forEach(function(shape){
+             if(shape.data("name")===name){
+                  shape.attr(attributes);
+             }
+     });
+   },
+
+   layerShow: function(name, flag, duration)
+   {
+      if(duration){
+        this.svgNodes.forEach(function(node){
+            if(node.data("name")===name){
+                if(flag){
+                    node.attr({ opacity : 0 }).show().animate({ opacity : 1 }, duration);
+                }
+                else{
+                    node.animate({ opacity : 0 }, duration, function () { this.hide() });
+                }
+            }
+        });
+      }
+      else{
+          this.svgNodes.forEach(function(node){
+              if(node.data("name")===name){
+                   if(flag){node.show();}
+                   else{node.hide();}
+               }
+           });
+      }
+   }
+});
+
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_switch_HighLow = draw2d_circuit_switch_HighLow.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+
+        this.setResizeable(false);
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+        
+        var _this = this;
+        
+        this.value = false;
+        this.on("click",function(){            
+            _this.value = !_this.value;
+            _this.layerShow("low" , !_this.value, 100);
+            _this.layerShow("high",  _this.value, 100);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+
+        this.on("added",function(){
+            _this.layerShow("low" , !_this.value);
+            _this.layerShow("high",  _this.value);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+    },
+    
+    calculate: function()
+    {
+        // do nothing per default;
+    }
+
+});
+draw2d_circuit_switch_HighLow.logic="calculate: function () {\n}";
+draw2d_circuit_switch_HighLow.github="./shapes/org/draw2d/circuit/switch/HighLow.shape";
