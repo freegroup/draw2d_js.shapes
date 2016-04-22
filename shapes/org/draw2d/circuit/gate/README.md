@@ -1,1 +1,0 @@
-Logic gates for the circuit simulator
