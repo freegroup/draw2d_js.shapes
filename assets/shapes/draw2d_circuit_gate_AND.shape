@@ -2,8 +2,8 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "c55dd135-15db-7c71-5efa-f6761c073e66",
-    "x": 322,
-    "y": 124,
+    "x": 3975,
+    "y": 3969.5,
     "width": 49,
     "height": 61,
     "alpha": 1,
@@ -22,20 +22,20 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 322,
-        "y": 124
+        "x": 3975,
+        "y": 3969.5
       },
       {
-        "x": 371,
-        "y": 124
+        "x": 4024,
+        "y": 3969.5
       },
       {
-        "x": 371,
-        "y": 185
+        "x": 4024,
+        "y": 4030.5
       },
       {
-        "x": 322,
-        "y": 185
+        "x": 3975,
+        "y": 4030.5
       }
     ],
     "blur": 0,
@@ -60,8 +60,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "592a8604-e0a9-8913-445d-621078e5ae97",
-    "x": 317,
-    "y": 130,
+    "x": 3970,
+    "y": 3975.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -95,8 +95,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "5fc48f01-fecb-0d5f-ed4f-81a4bc26ae63",
-    "x": 317,
-    "y": 170,
+    "x": 3970,
+    "y": 4015.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -130,8 +130,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "7c8a6215-ce17-6a10-c85b-b97fd0de466c",
-    "x": 367,
-    "y": 149.5,
+    "x": 4020,
+    "y": 3995,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -165,8 +165,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "0a4705bb-c6fd-7a26-332f-6972e8683949",
-    "x": 335,
-    "y": 135,
+    "x": 3988,
+    "y": 3980.5,
     "width": 30.350000381469727,
     "height": 23,
     "alpha": 1,
