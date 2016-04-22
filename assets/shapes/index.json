@@ -18,6 +18,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_gate_NAND",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "gate",
+      "NAND"
+    ]
+  },
+  {
     "name": "draw2d_circuit_gate_NOR",
     "tags": [
       "draw2d",
