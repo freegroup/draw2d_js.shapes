@@ -9,6 +9,14 @@
     ]
   },
   {
+    "name": "draw2d_circuit_gateOR",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "gateOR"
+    ]
+  },
+  {
     "name": "draw2d_circuit_gate_AND",
     "tags": [
       "draw2d",
