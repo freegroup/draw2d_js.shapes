@@ -109,6 +109,7 @@ draw2d_Basic = draw2d_Basic.extend({
     }
 
 });
+draw2d_Basic.github="./shapes/org/draw2d/Basic.shape";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -260,6 +261,7 @@ draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
     }
 
 });
+draw2d_circuit_HighLowSource.github="./shapes/org/draw2d/circuit/HighLowSource.shape";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -402,6 +404,7 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
     }
 
 });
+draw2d_circuit_Led.github="./shapes/org/draw2d/circuit/Led.shape";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -526,7 +529,8 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
         o1.setValue(i1.getValue() & i2.getValue());
     }
 });
-draw2d_circuit_gate_AND.logic="calculate: function () {\n    i1 = this.getInputPort(0);\n    i2 = this.getInputPort(1);\n    o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}"
+draw2d_circuit_gate_AND.logic="calculate: function () {\n    i1 = this.getInputPort(0);\n    i2 = this.getInputPort(1);\n    o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}";
+draw2d_circuit_gate_AND.github="./shapes/org/draw2d/circuit/gate/AND.shape";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -638,3 +642,4 @@ draw2d_circuit_gate_empty = draw2d_circuit_gate_empty.extend({
     }
 
 });
+draw2d_circuit_gate_empty.github="./shapes/org/draw2d/circuit/gate/empty.shape";

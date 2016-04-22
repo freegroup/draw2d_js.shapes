@@ -149,3 +149,4 @@ draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
     }
 
 });
+draw2d_circuit_HighLowSource.github="./shapes/org/draw2d/circuit/HighLowSource.shape";
