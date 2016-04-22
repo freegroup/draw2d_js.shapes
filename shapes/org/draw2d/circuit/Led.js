@@ -11,19 +11,19 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:39,height:32},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:36,height:32},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(12.820512820512821, 50));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(13.88888888888889, 51.5625));
      port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
+     port.setBackgroundColor("#1C9BAB");
      this.persistPorts=false;
    },
 
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 39;
+      this.originalWidth = 36;
       this.originalHeight= 32;
       return shape;
    },
@@ -33,33 +33,33 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L39,0 L39,32 L0,32");
+        shape = this.canvas.paper.path("M0,0 L36,0 L36,32 L0,32");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15,"ry":16,"cx":24,"cy":16,"stroke":"#1B1B1B","stroke-width":2,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"rx":15,"ry":16,"cx":21,"cy":16,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","circle");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M14.5 5.5L33.5,26.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape = this.canvas.paper.path('M11.5 5.5L21.5,16.5L30.5,27.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M14.5 5.5L33.5,26.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape = this.canvas.paper.path('M11.5 5.5L21.5,16.5L30.5,27.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M34.5 6.5L14.5,26.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape = this.canvas.paper.path('M31.5 5.5L11.5,27.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M34.5 6.5L14.5,26.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape = this.canvas.paper.path('M31.5 5.5L11.5,27.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
 
@@ -118,6 +118,7 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
          this._super(attr, setter, getter);
 
          this.attr({resizeable:false});
+         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
          var _this = this;
  
          this.getInputPort(0).on("change:value", function(emitter, event){
@@ -131,10 +132,10 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
     
     _state:function(flag){
          if(flag){
-             this.layerAttr("circle",{fill:"#FF0000"});
+             this.layerAttr("circle",{fill:"#ff5252"});
          }
          else{
-            this.layerAttr("circle",{fill:"#00FF00"});
+            this.layerAttr("circle",{fill:"#009688"});
          }
     }
 

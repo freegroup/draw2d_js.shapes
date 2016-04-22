@@ -14,17 +14,17 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:60,height:61},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 18.0327868852459));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 18.0327868852459));
      port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
+     port.setBackgroundColor("#1C9BAB");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 83.60655737704919));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 83.60655737704919));
      port.setConnectionDirection(3);
-     port.setBackgroundColor("#C02B1D");
+     port.setBackgroundColor("#1C9BAB");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(91.66666666666667, 50));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(91.66666666666667, 50));
      port.setConnectionDirection(1);
-     port.setBackgroundColor("#C02B1D");
+     port.setBackgroundColor("#1C9BAB");
      this.persistPorts=false;
    },
 
@@ -46,13 +46,13 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M5 0L54 0L54 61L5 61Z');
+        shape = this.canvas.paper.path('M5,3Q5,0 8, 0L51,0Q54,0 54, 3L54,58Q54,61 51, 61L8,61Q5,61 5, 58L5,3');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
         // Label
         shape = this.canvas.paper.text(0,0,'&');
-        shape.attr({"x":19,"y":29,"text-anchor":"start","text":"&","font-family":"\"Arial\"","font-size":30,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":22,"y":31,"text-anchor":"start","text":"&","font-family":"\"Arial\"","font-size":28,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
 
@@ -111,6 +111,15 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
          this._super(attr, setter, getter);
 
          // your special code here
+    },
+    
+    calculate:function()
+    {
+        i1 = this.getInputPort(0);
+        i2 = this.getInputPort(1);
+        o1 = this.getOutputPort(0);
+        
+        o1.setValue(i1.getValue() & i2.getValue());
     }
-
 });
+draw2d_circuit_gate_AND.logic="calculate: function () {\n    i1 = this.getInputPort(0);\n    i2 = this.getInputPort(1);\n    o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}"

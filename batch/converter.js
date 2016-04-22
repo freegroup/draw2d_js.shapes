@@ -3,6 +3,47 @@ var fs      = require('fs');
 var system  = require('system');
 var page    = webPage.create();
 
+var acorn = require('acorn');
+var escodegen = require('escodegen');
+var estraverse = require("estraverse");
+
+
+var calculateNode = null;
+function dumpCalculate(node) {
+    try {
+        if (node.key.name == "calculate") {
+            if (node.value.type = "FunctionExpression") {
+                calculateNode = node;
+            }
+        }
+    }
+    catch(exc){}
+    return node;
+}
+
+function escapeString(string) {
+    return ('' + string).replace(/["'\\\n\r\u2028\u2029]/g, function (character) {
+        // Escape all characters not included in SingleStringCharacters and
+        // DoubleStringCharacters on
+        // http://www.ecma-international.org/ecma-262/5.1/#sec-7.8.4
+        switch (character) {
+            case '"':
+            case "'":
+            case '\\':
+                return '\\' + character;
+            // Four possible LineTerminator characters need to be escaped:
+            case '\n':
+                return '\\n';
+            case '\r':
+                return '\\r';
+            case '\u2028':
+                return '\\u2028';
+            case '\u2029':
+                return '\\u2029'
+        }
+    })
+}
+
 function waitFor ($config) {
     $config._start = $config._start || new Date();
 
@@ -69,6 +110,32 @@ var processFiles=function(path){
                 var jsFilePath  = path.replace(".shape",".js");
 
                 jsCode = jsCode.replace(/testShape/g,package);
+
+                // Extract the "calculate" method from the shape and add them as "readable" property to the shape
+                // This property is used in the DigitalTrainingStudio as context information to the shape
+                // itself
+                //
+                (function(){
+                    calculateNode = null;
+                    var ast = acorn.parse(jsCode);
+
+                    estraverse.traverse(ast, {
+                        enter: function (node) {
+                            switch (node.type) {
+                                case "Property":
+                                    dumpCalculate(node);
+                                    break;
+                            }
+                        }
+                    });
+
+                    if (calculateNode != null) {
+                        var modified_code = escodegen.generate(calculateNode);
+                        console.log(modified_code);
+                        jsCode = jsCode+"\n"+package+".logic=\""+escapeString(modified_code)+"\"";
+                    }
+                })();
+
 
                 fs.write(jsFilePath, jsCode);
                 fs.write(pngFilePath, atob(img), "wb");
