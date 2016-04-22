@@ -258,9 +258,15 @@ draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
             _this.layerShow("high",  _this.value);
             _this.getOutputPort(0).setValue(_this.value);
         });
+    },
+    
+    calculate: function()
+    {
+        // do nothing per default;
     }
 
 });
+draw2d_circuit_HighLowSource.logic="calculate: function () {\n}";
 draw2d_circuit_HighLowSource.github="./shapes/org/draw2d/circuit/HighLowSource.shape";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
@@ -522,14 +528,14 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
     
     calculate:function()
     {
-        i1 = this.getInputPort(0);
-        i2 = this.getInputPort(1);
-        o1 = this.getOutputPort(0);
+        var i1 = this.getInputPort(0);
+        var i2 = this.getInputPort(1);
+        var o1 = this.getOutputPort(0);
         
         o1.setValue(i1.getValue() & i2.getValue());
     }
 });
-draw2d_circuit_gate_AND.logic="calculate: function () {\n    i1 = this.getInputPort(0);\n    i2 = this.getInputPort(1);\n    o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}";
+draw2d_circuit_gate_AND.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}";
 draw2d_circuit_gate_AND.github="./shapes/org/draw2d/circuit/gate/AND.shape";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        

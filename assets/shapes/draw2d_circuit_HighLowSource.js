@@ -146,7 +146,13 @@ draw2d_circuit_HighLowSource = draw2d_circuit_HighLowSource.extend({
             _this.layerShow("high",  _this.value);
             _this.getOutputPort(0).setValue(_this.value);
         });
+    },
+    
+    calculate: function()
+    {
+        // do nothing per default;
     }
 
 });
+draw2d_circuit_HighLowSource.logic="calculate: function () {\n}";
 draw2d_circuit_HighLowSource.github="./shapes/org/draw2d/circuit/HighLowSource.shape";
