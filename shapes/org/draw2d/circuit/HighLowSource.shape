@@ -2,15 +2,15 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "12ca8dfe-851d-2d1d-a379-c39edd42bf5a",
-    "x": 3989,
-    "y": 3966.0889875,
+    "x": 3977.25,
+    "y": 3978.25,
     "width": 29.4375,
     "height": 21,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n\n        this.setResizeable(false);\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n        \n        var _this = this;\n        \n        this.value = false;\n        this.on(\"click\",function(){            \n            _this.value = !_this.value;\n            _this.layerShow(\"low\" , !_this.value, 100);\n            _this.layerShow(\"high\",  _this.value, 100);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n\n        this.on(\"added\",function(){\n            _this.layerShow(\"low\" , !_this.value);\n            _this.layerShow(\"high\",  _this.value);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n    }\n\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n\n        this.setResizeable(false);\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n        \n        var _this = this;\n        \n        this.value = false;\n        this.on(\"click\",function(){            \n            _this.value = !_this.value;\n            _this.layerShow(\"low\" , !_this.value, 100);\n            _this.layerShow(\"high\",  _this.value, 100);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n\n        this.on(\"added\",function(){\n            _this.layerShow(\"low\" , !_this.value);\n            _this.layerShow(\"high\",  _this.value);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n    }\n    \n    calculate: function()\n    {\n        // do nothing per default;\n    }\n\n});",
       "name": "Label"
     },
     "cssClass": "shape_designer_figure_ExtLabel",
@@ -42,8 +42,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "645eb539-f8e8-758b-8dcb-86c234c7ae30",
-    "x": 3988.5,
-    "y": 3987.5889875,
+    "x": 3976.75,
+    "y": 3999.75,
     "width": 29.4375,
     "height": 21,
     "alpha": 1,
@@ -80,8 +80,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "91f5e31e-98a2-25ae-2ec2-64ecb245e1ce",
-    "x": 4025,
-    "y": 3983.5889875,
+    "x": 4013.25,
+    "y": 3995.75,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -112,8 +112,8 @@
   {
     "type": "shape_designer.figure.PolyCircle",
     "id": "ebdd310c-c836-43a2-bb4f-0e3e8e631fb6",
-    "x": 4024.5,
-    "y": 3985.0889875,
+    "x": 4012.75,
+    "y": 3997.25,
     "width": 6,
     "height": 7,
     "alpha": 1,
@@ -154,12 +154,12 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4027.798300000001,
-        "y": 3988.535900000003
+        "x": 4016.048300000001,
+        "y": 4000.6969125000032
       },
       {
-        "x": 4002.3573999999994,
-        "y": 3977.1805000000004
+        "x": 3990.6073999999994,
+        "y": 3989.3415125000006
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
@@ -186,12 +186,12 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4027.2531999999974,
-        "y": 3988.7973
+        "x": 4015.5031999999974,
+        "y": 4000.9583125000004
       },
       {
-        "x": 4002.1445000000003,
-        "y": 3998.4402999999984
+        "x": 3990.3945000000003,
+        "y": 4010.6013124999986
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
