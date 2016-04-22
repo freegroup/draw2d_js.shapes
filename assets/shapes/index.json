@@ -18,6 +18,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_gate_NOR",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "gate",
+      "NOR"
+    ]
+  },
+  {
     "name": "draw2d_circuit_gate_OR",
     "tags": [
       "draw2d",
