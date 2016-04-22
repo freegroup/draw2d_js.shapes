@@ -11,18 +11,18 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:60,height:61},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:68,height:61},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 18.0327868852459));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(7.352941176470589, 18.0327868852459));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 83.60655737704919));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(7.352941176470589, 83.60655737704919));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(91.66666666666667, 50));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(92.64705882352942, 50));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      this.persistPorts=false;
@@ -31,7 +31,7 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 60;
+      this.originalWidth = 68;
       this.originalHeight= 61;
       return shape;
    },
@@ -41,7 +41,7 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L60,0 L60,61 L0,61");
+        shape = this.canvas.paper.path("M0,0 L68,0 L68,61 L0,61");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -54,6 +54,11 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
         shape = this.canvas.paper.text(0,0,'>1');
         shape.attr({"x":17,"y":31,"text-anchor":"start","text":">1","font-family":"\"Arial\"","font-size":28,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
+        
+        // Circle
+        shape = this.canvas.paper.ellipse();
+        shape.attr({"rx":6,"ry":6,"cx":56,"cy":30.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","opacity":1});
+        shape.data("name","Circle");
         
 
         return this.canvas.paper.setFinish();
@@ -119,8 +124,8 @@ draw2d_circuit_gate_NOR = draw2d_circuit_gate_NOR.extend({
         var i2 = this.getInputPort(1);
         var o1 = this.getOutputPort(0);
         
-        o1.setValue(i1.getValue() | i2.getValue());
+        !o1.setValue(!(i1.getValue() | i2.getValue));
     }
 });
-draw2d_circuit_gate_NOR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() | i2.getValue());\n}";
+draw2d_circuit_gate_NOR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    !o1.setValue(!(i1.getValue() | i2.getValue));\n}";
 draw2d_circuit_gate_NOR.github="./shapes/org/draw2d/circuit/gate/NOR.shape";
