@@ -140,3 +140,4 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
     }
 
 });
+draw2d_circuit_Led.github="./shapes/org/draw2d/circuit/Led.shape";

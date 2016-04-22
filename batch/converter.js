@@ -129,11 +129,16 @@ var processFiles=function(path){
                         }
                     });
 
+                    // add the "calculate" code as text to the shape
+                    //
                     if (calculateNode != null) {
                         var modified_code = escodegen.generate(calculateNode);
-                        console.log(modified_code);
-                        jsCode = jsCode+"\n"+package+".logic=\""+escapeString(modified_code)+"\"";
+                        jsCode = jsCode+"\n"+package+".logic=\""+escapeString(modified_code)+"\";";
                     }
+
+                    // add the github path as text to the shape
+                    //
+                    jsCode = jsCode+"\n"+package+".github=\""+path+"\";";
                 })();
 
 

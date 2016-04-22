@@ -109,3 +109,4 @@ draw2d_Basic = draw2d_Basic.extend({
     }
 
 });
+draw2d_Basic.github="./shapes/org/draw2d/Basic.shape";

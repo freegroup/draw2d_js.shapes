@@ -122,4 +122,5 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
         o1.setValue(i1.getValue() & i2.getValue());
     }
 });
-draw2d_circuit_gate_AND.logic="calculate: function () {\n    i1 = this.getInputPort(0);\n    i2 = this.getInputPort(1);\n    o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}"
+draw2d_circuit_gate_AND.logic="calculate: function () {\n    i1 = this.getInputPort(0);\n    i2 = this.getInputPort(1);\n    o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}";
+draw2d_circuit_gate_AND.github="./shapes/org/draw2d/circuit/gate/AND.shape";

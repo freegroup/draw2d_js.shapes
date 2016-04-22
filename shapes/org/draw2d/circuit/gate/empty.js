@@ -109,3 +109,4 @@ draw2d_circuit_gate_empty = draw2d_circuit_gate_empty.extend({
     }
 
 });
+draw2d_circuit_gate_empty.github="./shapes/org/draw2d/circuit/gate/empty.shape";
