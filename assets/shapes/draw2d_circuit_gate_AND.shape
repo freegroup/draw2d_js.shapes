@@ -10,7 +10,7 @@
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n    \n    calculate:function()\n    {\n        i1 = this.getInputPort(0);\n        i2 = this.getInputPort(1);\n        o1 = this.getOutputPort(0);\n        \n        o1.setValue(i1.getValue() & i2.getValue());\n    }\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n    \n    calculate:function()\n    {\n        var i1 = this.getInputPort(0);\n        var i2 = this.getInputPort(1);\n        var o1 = this.getOutputPort(0);\n        \n        o1.setValue(i1.getValue() & i2.getValue());\n    }\n});",
       "name": "Rectangle"
     },
     "cssClass": "shape_designer_figure_PolyRect",
