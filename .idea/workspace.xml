@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f7bf13b-62f6-437e-952d-5e310d5b8e76" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/Basic.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/Basic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/Basic.shape" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/HighLowSource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/HighLowSource.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/Led.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/Led.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/AND.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/AND.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/empty.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/empty.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/empty.shape" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/HighLowSource.shape" afterPath="$PROJECT_DIR$/shapes/org/draw2d/circuit/switch/HighLow.shape" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/Led.shape" afterPath="$PROJECT_DIR$/shapes/org/draw2d/circuit/display/Led.shape" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shapes/org/draw2d/circuit/gateOR.shape" afterPath="" />
     </list>
     <ignored path="shapes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -175,6 +160,7 @@
         <option value="$PROJECT_DIR$/transpilar/generator.js" />
         <option value="$PROJECT_DIR$/shapes/org/draw2d/circuit/gate/AND.js" />
         <option value="$PROJECT_DIR$/batch/converter.js" />
+        <option value="$PROJECT_DIR$/shapes/org/draw2d/circuit/display/Led.shape" />
       </list>
     </option>
   </component>
