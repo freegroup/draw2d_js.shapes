@@ -26,6 +26,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_gate_OR",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "gate",
+      "OR"
+    ]
+  },
+  {
     "name": "draw2d_circuit_switch_HighLow",
     "tags": [
       "draw2d",
