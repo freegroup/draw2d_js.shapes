@@ -51,8 +51,8 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
         shape.data("name","Rectangle");
         
         // Label
-        shape = this.canvas.paper.text(0,0,'&');
-        shape.attr({"x":22,"y":31,"text-anchor":"start","text":"&","font-family":"\"Arial\"","font-size":28,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape = this.canvas.paper.text(0,0,'>1');
+        shape.attr({"x":17,"y":31,"text-anchor":"start","text":">1","font-family":"\"Arial\"","font-size":28,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
 
@@ -119,8 +119,8 @@ draw2d_circuit_gate_OR = draw2d_circuit_gate_OR.extend({
         var i2 = this.getInputPort(1);
         var o1 = this.getOutputPort(0);
         
-        o1.setValue(i1.getValue() & i2.getValue());
+        o1.setValue(i1.getValue() | i2.getValue());
     }
 });
-draw2d_circuit_gate_OR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}";
+draw2d_circuit_gate_OR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() | i2.getValue());\n}";
 draw2d_circuit_gate_OR.github="./shapes/org/draw2d/circuit/gate/OR.shape";
