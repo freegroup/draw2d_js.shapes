@@ -46,7 +46,7 @@ var draw2d_Basic = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // undefined
-        shape = this.canvas.paper.path('M4.5,4.5Q4,0 8.5, 0.5L93.5,0.5Q97,0 97.5, 4.5L97.5,106.5Q97,110 93.5, 110.5L8.5,110.5Q4,110 4.5, 106.5L4.5,4.5');
+        shape = this.canvas.paper.path('M4,4Q4,0 8, 0L93,0Q97,0 97, 4L97,106Q97,110 93, 110L8,110Q4,110 4, 106L4,4');
         shape.attr({"fill":"79-#d9d9d9-#f0f0f0","stroke":"#303030","stroke-width":1,"opacity":1});
         shape.data("name","undefined");
         

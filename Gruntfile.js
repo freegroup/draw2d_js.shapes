@@ -1,7 +1,7 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-  // Project configuration.
+    // Project configuration.
   grunt.initConfig({
     shell: {
       phantom: {
@@ -82,6 +82,7 @@ module.exports = function(grunt) {
       }
     },
 
+
     // configure jshint to validate js files -----------------------------------
     jshint: {
       options: {
@@ -140,6 +141,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-gh-pages');
+
   grunt.registerTask('generate', 'Generates JSON file with all shape files', function() {
         // List all SHAPE files in the templates directory.
         //

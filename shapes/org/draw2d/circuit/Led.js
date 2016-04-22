@@ -39,8 +39,28 @@ var draw2d_circuit_Led = draw2d.SetFigure.extend({
         
         // circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15,"ry":16,"cx":24,"cy":16,"stroke":"none","stroke-width":0,"fill":"#95C06A","opacity":1});
+        shape.attr({"rx":15,"ry":16,"cx":24,"cy":16,"stroke":"#1B1B1B","stroke-width":2,"fill":"#FFFFFF","opacity":1});
         shape.data("name","circle");
+        
+        // Line_shadow
+        shape = this.canvas.paper.path('M14.5 5.5L33.5,26.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape.data("name","Line_shadow");
+        
+        // Line
+        shape = this.canvas.paper.path('M14.5 5.5L33.5,26.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape.data("name","Line");
+        
+        // Line_shadow
+        shape = this.canvas.paper.path('M34.5 6.5L14.5,26.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape.data("name","Line_shadow");
+        
+        // Line
+        shape = this.canvas.paper.path('M34.5 6.5L14.5,26.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape.data("name","Line");
         
 
         return this.canvas.paper.setFinish();
@@ -97,15 +117,25 @@ draw2d_circuit_Led = draw2d_circuit_Led.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
+         this.attr({resizeable:false});
          var _this = this;
+ 
          this.getInputPort(0).on("change:value", function(emitter, event){
-             if(event.value){
-                 _this.layerAttr("circle",{fill:"#FF0000"});
-             }
-             else{
-                _this.layerAttr("circle",{fill:"#00FF00"});
-             }
+             _this._state(event.value);
          });
+         
+         this.on("added",function(){
+            _this._state(false);
+         });
+    },
+    
+    _state:function(flag){
+         if(flag){
+             this.layerAttr("circle",{fill:"#FF0000"});
+         }
+         else{
+            this.layerAttr("circle",{fill:"#00FF00"});
+         }
     }
 
 });

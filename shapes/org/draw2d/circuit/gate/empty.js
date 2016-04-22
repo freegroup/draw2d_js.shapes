@@ -46,7 +46,7 @@ var draw2d_circuit_gate_empty = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M5.5 0.5L54.5 0.5L54.5 61.5L5.5 61.5Z');
+        shape = this.canvas.paper.path('M5 0L54 0L54 61L5 61Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
