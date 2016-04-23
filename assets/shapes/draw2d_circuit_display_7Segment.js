@@ -154,13 +154,30 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
 draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
 
     init: function(attr, setter, getter){
-         this._super(attr, setter, getter);
+        this._super(attr, setter, getter);
 
-         this.attr({resizeable:false});
-         console.log(this.getInputPort("port_a"));
+        this.attr({resizeable:false});
+        // ensure that the ports has the same order as the segments
+        //
+        this.portLockup = [];
+        this.portLockup.push({ p:this.getPort("port_a"), s:"seg_a"});
+        this.portLockup.push({ p:this.getPort("port_b"), s:"seg_b"});
+        this.portLockup.push({ p:this.getPort("port_c"), s:"seg_c"});
+        this.portLockup.push({ p:this.getPort("port_d"), s:"seg_d"});
+        this.portLockup.push({ p:this.getPort("port_e"), s:"seg_e"});
+        this.portLockup.push({ p:this.getPort("port_f"), s:"seg_r"});
+        this.portLockup.push({ p:this.getPort("port_g"), s:"seg_g"});
         
-        
+    },
+    
+    calculate:function()
+    {
+        var _this = this;
+        this.portLockup.forEach(function(element, index){
+            _this.layerShow(element.s, p.getValue());
+        });
     }
 
 });
+draw2d_circuit_display_7Segment.logic="calculate: function () {\n    var _this = this;\n    this.portLockup.forEach(function (element, index) {\n        _this.layerShow(element.s, p.getValue());\n    });\n}";
 draw2d_circuit_display_7Segment.github="./shapes/org/draw2d/circuit/display/7Segment.shape";
