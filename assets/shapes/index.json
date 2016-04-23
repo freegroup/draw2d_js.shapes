@@ -1,5 +1,14 @@
 [
   {
+    "name": "draw2d_circuit_display_7Segment",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "display",
+      "7Segment"
+    ]
+  },
+  {
     "name": "draw2d_circuit_display_Led",
     "tags": [
       "draw2d",
