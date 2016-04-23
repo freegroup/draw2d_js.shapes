@@ -14,32 +14,32 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:72.3095000000003,height:102},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(13.829441498005046, 5.791568627451031));
-     port.setConnectionDirection();
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(13.829441498005046, 5.791568627451031));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(12.446497348204542, 20.098039215686274));
-     port.setConnectionDirection();
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(12.446497348204542, 20.098039215686274));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(11.063553198404037, 34.80392156862745));
-     port.setConnectionDirection();
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(11.063553198404037, 34.80392156862745));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(10.372081123503785, 49.509803921568626));
-     port.setConnectionDirection();
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(10.372081123503785, 49.509803921568626));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(9.680609048603532, 64.2156862745098));
-     port.setConnectionDirection();
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(9.680609048603532, 64.2156862745098));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.297664898803028, 78.92156862745098));
-     port.setConnectionDirection();
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(8.297664898803028, 78.92156862745098));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(6.914720749002523, 93.62745098039215));
-     port.setConnectionDirection();
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(6.914720749002523, 93.62745098039215));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      this.persistPorts=false;
    },
