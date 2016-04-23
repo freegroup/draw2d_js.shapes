@@ -174,10 +174,10 @@ draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
     {
         var _this = this;
         this.portLockup.forEach(function(element, index){
-            _this.layerShow(element.s, p.getValue());
+            _this.layerShow(element.s, element.p.getValue());
         });
     }
 
 });
-draw2d_circuit_display_7Segment.logic="calculate: function () {\n    var _this = this;\n    this.portLockup.forEach(function (element, index) {\n        _this.layerShow(element.s, p.getValue());\n    });\n}";
+draw2d_circuit_display_7Segment.logic="calculate: function () {\n    var _this = this;\n    this.portLockup.forEach(function (element, index) {\n        _this.layerShow(element.s, element.p.getValue());\n    });\n}";
 draw2d_circuit_display_7Segment.github="./shapes/org/draw2d/circuit/display/7Segment.shape";
