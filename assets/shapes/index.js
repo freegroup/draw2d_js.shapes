@@ -157,7 +157,8 @@ draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
          this._super(attr, setter, getter);
 
          this.attr({resizeable:false});
- 
+         console.log(this.getInputPort("port_a"));
+        
         
     }
 
