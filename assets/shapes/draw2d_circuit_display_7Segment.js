@@ -11,34 +11,34 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:72.3095000000003,height:102},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:NaN,height:Infinity},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(13.829441498005046, 5.791568627451031));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(NaN, 0));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(12.446497348204542, 20.098039215686274));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(NaN, 0));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(11.063553198404037, 34.80392156862745));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(NaN, 0));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(10.372081123503785, 49.509803921568626));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(NaN, 0));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(9.680609048603532, 64.2156862745098));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(NaN, 0));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.297664898803028, 78.92156862745098));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(NaN, 0));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(6.914720749002523, 93.62745098039215));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(NaN, 0));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      this.persistPorts=false;
@@ -47,8 +47,8 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 72.3095000000003;
-      this.originalHeight= 102;
+      this.originalWidth = NaN;
+      this.originalHeight= Infinity;
       return shape;
    },
 
@@ -57,14 +57,54 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L72.3095000000003,0 L72.3095000000003,102 L0,102");
+        shape = this.canvas.paper.path("M0,0 LNaN,0 LNaN,Infinity L0,Infinity");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // circle
-        shape = this.canvas.paper.path('M13.19606143306055 0L72.3095000000003 4.547473508864641e-13L66.17511433060645 102L7.309500000000298 102Z');
+        shape = this.canvas.paper.path('MNaN 0LNaN 4.547473508864641e-13LNaN 102LNaN 102Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","circle");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('MNaN NaNLNaN NaNLNaN NaNLNaN NaNZ');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('MNaN 6LNaN 6LNaN 12LNaN 12Z');
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('MNaN 48.5LNaN 48.5LNaN 54.5LNaN 54.5Z');
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('MNaN 92LNaN 92LNaN 98LNaN 98Z');
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('MNaN 14LNaN 14.218615937502818LNaN 46LNaN 46Z');
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('MNaN 56.5LNaN 56.71861593750282LNaN 88.5LNaN 88.5Z');
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('MNaN 13.407400000000052LNaN 13.62601593750287LNaN 45.40740000000005LNaN 45.40740000000005Z');
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('MNaN 56.5LNaN 56.71861593750282LNaN 88.5LNaN 88.5Z');
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
+        shape.data("name","Rectangle");
         
 
         return this.canvas.paper.setFinish();
