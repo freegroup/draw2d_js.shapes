@@ -11,27 +11,30 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:60,height:61},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:49,height:61},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 18.0327868852459));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 18.0327868852459));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
+     port.setName("Port");
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(8.333333333333334, 83.60655737704919));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 83.60655737704919));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
+     port.setName("Port");
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(91.66666666666667, 50));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.04081632653062, 50));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
+     port.setName("Port");
      this.persistPorts=false;
    },
 
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 60;
+      this.originalWidth = 49;
       this.originalHeight= 61;
       return shape;
    },
@@ -41,18 +44,18 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L60,0 L60,61 L0,61");
+        shape = this.canvas.paper.path("M0,0 L49,0 L49,61 L0,61");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M5,3Q5,0 8, 0L51,0Q54,0 54, 3L54,58Q54,61 51, 61L8,61Q5,61 5, 58L5,3');
+        shape = this.canvas.paper.path('M0,3Q0,0 3, 0L46,0Q49,0 49, 3L49,58Q49,61 46, 61L3,61Q0,61 0, 58L0,3');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
         // Label
         shape = this.canvas.paper.text(0,0,'>1');
-        shape.attr({"x":17,"y":31,"text-anchor":"start","text":">1","font-family":"\"Arial\"","font-size":28,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":12,"y":31,"text-anchor":"start","text":">1","font-family":"\"Arial\"","font-size":28,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
 
