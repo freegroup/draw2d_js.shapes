@@ -72,12 +72,12 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
         shape.data("name","seg_a");
         
         // seg_b
-        shape = this.canvas.paper.path('M62.991241562955565 14L67.89649999999983 14.218615937502818L65.8017584370441 46L60.89649999999983 46Z');
+        shape = this.canvas.paper.path('M62.991241562955565 13.5L67.89649999999983 13.718615937502818L65.8017584370441 45.5L60.89649999999983 45.5Z');
         shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
         shape.data("name","seg_b");
         
         // seg_c
-        shape = this.canvas.paper.path('M60.09474156295573 56.5L65 56.71861593750282L62.90525843704427 88.5L58 88.5Z');
+        shape = this.canvas.paper.path('M60.09474156295573 57L65 57.21861593750282L62.90525843704427 89L58 89Z');
         shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
         shape.data("name","seg_c");
         
@@ -87,7 +87,7 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
         shape.data("name","seg_d");
         
         // seg_e
-        shape = this.canvas.paper.path('M16.594741562955733 56.5L21.5 56.71861593750282L19.405258437044267 88.5L14.5 88.5Z');
+        shape = this.canvas.paper.path('M16.594741562955733 57L21.5 57.21861593750282L19.405258437044267 89L14.5 89Z');
         shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
         shape.data("name","seg_e");
         
