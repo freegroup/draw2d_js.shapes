@@ -742,20 +742,20 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:33,height:40},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:31,height:40},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 20));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 22.5));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.0303030303030303, 80));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 78.75));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(100, 51.25));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(116.12903225806451, 50));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
@@ -765,7 +765,7 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 33;
+      this.originalWidth = 31;
       this.originalHeight= 40;
       return shape;
    },
@@ -775,7 +775,7 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L33,0 L33,40 L0,40");
+        shape = this.canvas.paper.path("M0,0 L31,0 L31,40 L0,40");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -786,7 +786,7 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
         
         // Label
         shape = this.canvas.paper.text(0,0,'>1');
-        shape.attr({"x":6,"y":21,"text-anchor":"start","text":">1","font-family":"\"Arial\"","font-size":20,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":4,"y":20.5,"text-anchor":"start","text":">1","font-family":"\"Arial\"","font-size":20,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
 

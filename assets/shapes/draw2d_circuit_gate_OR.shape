@@ -2,8 +2,8 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "c55dd135-15db-7c71-5efa-f6761c073e66",
-    "x": 3975,
-    "y": 3969.5,
+    "x": 3983.6015625,
+    "y": 3980.5,
     "width": 30,
     "height": 40,
     "alpha": 1,
@@ -22,20 +22,20 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 3975,
-        "y": 3969.5
+        "x": 3983.6015625,
+        "y": 3980.5
       },
       {
-        "x": 4005,
-        "y": 3969.5
+        "x": 4013.6015625,
+        "y": 3980.5
       },
       {
-        "x": 4005,
-        "y": 4009.5
+        "x": 4013.6015625,
+        "y": 4020.5
       },
       {
-        "x": 3975,
-        "y": 4009.5
+        "x": 3983.6015625,
+        "y": 4020.5
       }
     ],
     "blur": 0,
@@ -60,8 +60,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "592a8604-e0a9-8913-445d-621078e5ae97",
-    "x": 3970,
-    "y": 3972.5,
+    "x": 3977.6015625,
+    "y": 3984.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -95,8 +95,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "5fc48f01-fecb-0d5f-ed4f-81a4bc26ae63",
-    "x": 3969,
-    "y": 3996.5,
+    "x": 3977.6015625,
+    "y": 4007,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -130,8 +130,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "7c8a6215-ce17-6a10-c85b-b97fd0de466c",
-    "x": 4003,
-    "y": 3985,
+    "x": 4014.6015625,
+    "y": 3995.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -165,8 +165,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "0a4705bb-c6fd-7a26-332f-6972e8683949",
-    "x": 3977,
-    "y": 3974.5,
+    "x": 3983.6015625,
+    "y": 3985,
     "width": 30.350000381469727,
     "height": 23,
     "alpha": 1,
