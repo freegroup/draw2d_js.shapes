@@ -10,7 +10,7 @@
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         this.attr({resizeable:false});\n         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n         var _this = this;\n \n         this.getInputPort(0).on(\"change:value\", function(emitter, event){\n             _this._state(event.value);\n         });\n         \n         this.on(\"added\",function(){\n            _this._state(false);\n         });\n    },\n    \n    _state:function(flag){\n         if(flag){\n             this.layerAttr(\"circle\",{fill:\"#ff5252\"});\n         }\n         else{\n            this.layerAttr(\"circle\",{fill:\"#009688\"});\n         }\n    }\n\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         this.attr({resizeable:false});\n \n        \n    }\n\n});",
       "name": "circle"
     },
     "cssClass": "shape_designer_figure_PolyRect",
@@ -64,7 +64,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Port",
+      "name": "port_a",
       "type": "Input",
       "direction": 3
     },
@@ -96,7 +96,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Port",
+      "name": "port_b",
       "type": "Input",
       "direction": 3
     },
@@ -128,7 +128,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Port",
+      "name": "port_c",
       "type": "Input",
       "direction": 3
     },
@@ -160,7 +160,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Port",
+      "name": "port_d",
       "type": "Input",
       "direction": 3
     },
@@ -192,7 +192,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Port",
+      "name": "port_e",
       "type": "Input",
       "direction": 3
     },
@@ -224,7 +224,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Port",
+      "name": "port_f",
       "type": "Input",
       "direction": 3
     },
@@ -256,7 +256,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Port",
+      "name": "port_g",
       "type": "Input",
       "direction": 3
     },
@@ -288,7 +288,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Rectangle"
+      "name": "seg_a"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -313,106 +313,6 @@
       {
         "x": 3989.6382499999995,
         "y": 3961
-      }
-    ],
-    "blur": 0,
-    "filters": [
-      {
-        "name": "shape_designer.filter.PositionFilter"
-      },
-      {
-        "name": "shape_designer.filter.SizeFilter"
-      },
-      {
-        "name": "shape_designer.filter.FillColorFilter"
-      }
-    ]
-  },
-  {
-    "type": "shape_designer.figure.PolyRect",
-    "id": "eb4e5e94-eab9-39e7-a307-6a271932dfe7",
-    "x": 3987.2417499999997,
-    "y": 3997.5,
-    "width": 36,
-    "height": 6,
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "name": "Rectangle"
-    },
-    "cssClass": "shape_designer_figure_PolyRect",
-    "ports": [],
-    "bgColor": "#C21B7A",
-    "color": "#303030",
-    "stroke": 0,
-    "radius": 0,
-    "dasharray": null,
-    "vertices": [
-      {
-        "x": 3987.2417499999997,
-        "y": 3997.5
-      },
-      {
-        "x": 4023.2417499999997,
-        "y": 3997.5
-      },
-      {
-        "x": 4023.2417499999997,
-        "y": 4003.5
-      },
-      {
-        "x": 3987.2417499999997,
-        "y": 4003.5
-      }
-    ],
-    "blur": 0,
-    "filters": [
-      {
-        "name": "shape_designer.filter.PositionFilter"
-      },
-      {
-        "name": "shape_designer.filter.SizeFilter"
-      },
-      {
-        "name": "shape_designer.filter.FillColorFilter"
-      }
-    ]
-  },
-  {
-    "type": "shape_designer.figure.PolyRect",
-    "id": "fd5912e2-4ecf-04f1-4741-f6e5cb37fc57",
-    "x": 3984.34525,
-    "y": 4041,
-    "width": 36,
-    "height": 6,
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "name": "Rectangle"
-    },
-    "cssClass": "shape_designer_figure_PolyRect",
-    "ports": [],
-    "bgColor": "#C21B7A",
-    "color": "#303030",
-    "stroke": 0,
-    "radius": 0,
-    "dasharray": null,
-    "vertices": [
-      {
-        "x": 3984.34525,
-        "y": 4041
-      },
-      {
-        "x": 4020.34525,
-        "y": 4041
-      },
-      {
-        "x": 4020.34525,
-        "y": 4047
-      },
-      {
-        "x": 3984.34525,
-        "y": 4047
       }
     ],
     "blur": 0,
@@ -438,7 +338,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Rectangle"
+      "name": "seg_b"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -488,7 +388,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Rectangle"
+      "name": "seg_c"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -530,6 +430,106 @@
   },
   {
     "type": "shape_designer.figure.PolyRect",
+    "id": "fd5912e2-4ecf-04f1-4741-f6e5cb37fc57",
+    "x": 3984.34525,
+    "y": 4041,
+    "width": 36,
+    "height": 6,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "seg_d"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#C21B7A",
+    "color": "#303030",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 3984.34525,
+        "y": 4041
+      },
+      {
+        "x": 4020.34525,
+        "y": 4041
+      },
+      {
+        "x": 4020.34525,
+        "y": 4047
+      },
+      {
+        "x": 3984.34525,
+        "y": 4047
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "8d4726fc-0658-e625-d540-dd9afa0499e1",
+    "x": 3978.34525,
+    "y": 4005.5,
+    "width": 7,
+    "height": 32,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "seg_e"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#C21B7A",
+    "color": "#303030",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 3980.4399915629556,
+        "y": 4005.5
+      },
+      {
+        "x": 3985.34525,
+        "y": 4005.718615937503
+      },
+      {
+        "x": 3983.250508437044,
+        "y": 4037.5
+      },
+      {
+        "x": 3978.34525,
+        "y": 4037.5
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
     "id": "911aa829-bc52-dcb1-0ddd-8544e7d6f502",
     "x": 3980.84525,
     "y": 3962.4074,
@@ -538,7 +538,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Rectangle"
+      "name": "seg_f"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -580,15 +580,15 @@
   },
   {
     "type": "shape_designer.figure.PolyRect",
-    "id": "8d4726fc-0658-e625-d540-dd9afa0499e1",
-    "x": 3978.34525,
-    "y": 4005.5,
-    "width": 7,
-    "height": 32,
+    "id": "eb4e5e94-eab9-39e7-a307-6a271932dfe7",
+    "x": 3987.2417499999997,
+    "y": 3997.5,
+    "width": 36,
+    "height": 6,
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Rectangle"
+      "name": "seg_g"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -599,20 +599,20 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 3980.4399915629556,
-        "y": 4005.5
+        "x": 3987.2417499999997,
+        "y": 3997.5
       },
       {
-        "x": 3985.34525,
-        "y": 4005.718615937503
+        "x": 4023.2417499999997,
+        "y": 3997.5
       },
       {
-        "x": 3983.250508437044,
-        "y": 4037.5
+        "x": 4023.2417499999997,
+        "y": 4003.5
       },
       {
-        "x": 3978.34525,
-        "y": 4037.5
+        "x": 3987.2417499999997,
+        "y": 4003.5
       }
     ],
     "blur": 0,
