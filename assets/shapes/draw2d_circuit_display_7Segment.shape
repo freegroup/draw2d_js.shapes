@@ -280,59 +280,6 @@
   },
   {
     "type": "shape_designer.figure.PolyRect",
-    "id": "3f682bb5-a8d3-917e-235f-833d365a7ac7",
-    "x": 3858.7086,
-    "y": 3746.6126999999997,
-    "width": 37.365299999999934,
-    "height": 5,
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "name": "Rectangle"
-    },
-    "cssClass": "shape_designer_figure_PolyRect",
-    "ports": [],
-    "bgColor": "#FFFFFF",
-    "color": "#303030",
-    "stroke": 1,
-    "radius": 0,
-    "dasharray": null,
-    "vertices": [
-      {
-        "x": 3858.7086,
-        "y": null
-      },
-      {
-        "x": 3896.0739,
-        "y": null
-      },
-      {
-        "x": 3896.0739,
-        "y": null
-      },
-      {
-        "x": 3858.7086,
-        "y": null
-      }
-    ],
-    "blur": 0,
-    "filters": [
-      {
-        "name": "shape_designer.filter.PositionFilter"
-      },
-      {
-        "name": "shape_designer.filter.SizeFilter"
-      },
-      {
-        "name": "shape_designer.filter.StrokeFilter"
-      },
-      {
-        "name": "shape_designer.filter.FillColorFilter"
-      }
-    ]
-  },
-  {
-    "type": "shape_designer.figure.PolyRect",
     "id": "140f034a-e8f1-c743-9f44-4c6e9715d53f",
     "x": 3886.0943999999995,
     "y": 3800.5,
