@@ -4,8 +4,8 @@
     "id": "c55dd135-15db-7c71-5efa-f6761c073e66",
     "x": 3975,
     "y": 3969.5,
-    "width": 49,
-    "height": 61,
+    "width": 30,
+    "height": 40,
     "alpha": 1,
     "angle": 0,
     "userData": {
@@ -26,16 +26,16 @@
         "y": 3969.5
       },
       {
-        "x": 4024,
+        "x": 4005,
         "y": 3969.5
       },
       {
-        "x": 4024,
-        "y": 4030.5
+        "x": 4005,
+        "y": 4009.5
       },
       {
         "x": 3975,
-        "y": 4030.5
+        "y": 4009.5
       }
     ],
     "blur": 0,
@@ -61,7 +61,7 @@
     "type": "shape_designer.figure.ExtPort",
     "id": "592a8604-e0a9-8913-445d-621078e5ae97",
     "x": 3970,
-    "y": 3975.5,
+    "y": 3973.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -96,7 +96,7 @@
     "type": "shape_designer.figure.ExtPort",
     "id": "5fc48f01-fecb-0d5f-ed4f-81a4bc26ae63",
     "x": 3970,
-    "y": 4015.5,
+    "y": 3995.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -130,8 +130,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "7c8a6215-ce17-6a10-c85b-b97fd0de466c",
-    "x": 4020,
-    "y": 3995,
+    "x": 4001.328125,
+    "y": 3984.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -165,8 +165,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "0a4705bb-c6fd-7a26-332f-6972e8683949",
-    "x": 3988,
-    "y": 3980.5,
+    "x": 3980,
+    "y": 3974.5,
     "width": 30.350000381469727,
     "height": 23,
     "alpha": 1,
@@ -184,7 +184,7 @@
     "text": "&",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 28,
+    "fontSize": 20,
     "fontColor": "#080808",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
