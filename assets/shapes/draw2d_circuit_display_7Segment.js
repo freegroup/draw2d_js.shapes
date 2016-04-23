@@ -11,20 +11,44 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:36,height:32},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:72.3095000000003,height:102},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(13.88888888888889, 51.5625));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#1C9BAB");
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(13.829441498005046, 5.791568627451031));
+     port.setConnectionDirection();
+     port.setBackgroundColor("#37B1DE");
+     // Port
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(12.446497348204542, 20.098039215686274));
+     port.setConnectionDirection();
+     port.setBackgroundColor("#37B1DE");
+     // Port
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(11.063553198404037, 34.80392156862745));
+     port.setConnectionDirection();
+     port.setBackgroundColor("#37B1DE");
+     // Port
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(10.372081123503785, 49.509803921568626));
+     port.setConnectionDirection();
+     port.setBackgroundColor("#37B1DE");
+     // Port
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(9.680609048603532, 64.2156862745098));
+     port.setConnectionDirection();
+     port.setBackgroundColor("#37B1DE");
+     // Port
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(8.297664898803028, 78.92156862745098));
+     port.setConnectionDirection();
+     port.setBackgroundColor("#37B1DE");
+     // Port
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(6.914720749002523, 93.62745098039215));
+     port.setConnectionDirection();
+     port.setBackgroundColor("#37B1DE");
      this.persistPorts=false;
    },
 
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 36;
-      this.originalHeight= 32;
+      this.originalWidth = 72.3095000000003;
+      this.originalHeight= 102;
       return shape;
    },
 
@@ -33,34 +57,14 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L36,0 L36,32 L0,32");
+        shape = this.canvas.paper.path("M0,0 L72.3095000000003,0 L72.3095000000003,102 L0,102");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // circle
-        shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15,"ry":16,"cx":21,"cy":16,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape = this.canvas.paper.path('M13.19606143306055 0L72.3095000000003 4.547473508864641e-13L66.17511433060645 102L7.309500000000298 102Z');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","circle");
-        
-        // Line_shadow
-        shape = this.canvas.paper.path('M11.5 5.5L21.5,16.5L30.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
-        shape.data("name","Line_shadow");
-        
-        // Line
-        shape = this.canvas.paper.path('M11.5 5.5L21.5,16.5L30.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
-        shape.data("name","Line");
-        
-        // Line_shadow
-        shape = this.canvas.paper.path('M31.5 5.5L11.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
-        shape.data("name","Line_shadow");
-        
-        // Line
-        shape = this.canvas.paper.path('M31.5 5.5L11.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
-        shape.data("name","Line");
         
 
         return this.canvas.paper.setFinish();
