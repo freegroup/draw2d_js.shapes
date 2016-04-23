@@ -172,7 +172,7 @@ draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
         this.portLockup.push({ p:this.getPort("port_c"), s:"seg_c"});
         this.portLockup.push({ p:this.getPort("port_d"), s:"seg_d"});
         this.portLockup.push({ p:this.getPort("port_e"), s:"seg_e"});
-        this.portLockup.push({ p:this.getPort("port_f"), s:"seg_r"});
+        this.portLockup.push({ p:this.getPort("port_f"), s:"seg_f"});
         this.portLockup.push({ p:this.getPort("port_g"), s:"seg_g"});
         
     },
