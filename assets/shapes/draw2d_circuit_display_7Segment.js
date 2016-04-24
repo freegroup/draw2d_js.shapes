@@ -75,7 +75,7 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
         
         // seg_a
         shape = this.canvas.paper.path('M18.483499999999367 6L54.48349999999937 6L54.48349999999937 12L18.483499999999367 12Z');
-        shape.attr({"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
+        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","opacity":1});
         shape.data("name","seg_a");
         
         // seg_b
@@ -181,10 +181,10 @@ draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
     {
         var _this = this;
         this.portLockup.forEach(function(element, index){
-            _this.layerShow(element.s, element.p.getValue());
+            _this.layerAttr(element.s, { bgColor:element.p.getValue()?"#ff0000":null});
         });
     }
 
 });
-draw2d_circuit_display_7Segment.logic="calculate: function () {\n    var _this = this;\n    this.portLockup.forEach(function (element, index) {\n        _this.layerShow(element.s, element.p.getValue());\n    });\n}";
+draw2d_circuit_display_7Segment.logic="calculate: function () {\n    var _this = this;\n    this.portLockup.forEach(function (element, index) {\n        _this.layerAttr(element.s, { bgColor: element.p.getValue() ? \'#ff0000\' : null });\n    });\n}";
 draw2d_circuit_display_7Segment.github="./shapes/org/draw2d/circuit/display/7Segment.shape";
