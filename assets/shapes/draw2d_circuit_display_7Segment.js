@@ -181,10 +181,10 @@ draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
     {
         var _this = this;
         this.portLockup.forEach(function(element, index){
-            _this.layerAttr(element.s, { bgColor:element.p.getValue()?"#ff0000":null});
+            _this.layerAttr(element.s, { fill:element.p.getValue()?"#ff0000":null});
         });
     }
 
 });
-draw2d_circuit_display_7Segment.logic="calculate: function () {\n    var _this = this;\n    this.portLockup.forEach(function (element, index) {\n        _this.layerAttr(element.s, { bgColor: element.p.getValue() ? \'#ff0000\' : null });\n    });\n}";
+draw2d_circuit_display_7Segment.logic="calculate: function () {\n    var _this = this;\n    this.portLockup.forEach(function (element, index) {\n        _this.layerAttr(element.s, { fill: element.p.getValue() ? \'#ff0000\' : null });\n    });\n}";
 draw2d_circuit_display_7Segment.github="./shapes/org/draw2d/circuit/display/7Segment.shape";
