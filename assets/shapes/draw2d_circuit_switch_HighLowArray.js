@@ -172,7 +172,12 @@ draw2d_circuit_switch_HighLowArray = draw2d_circuit_switch_HighLowArray.extend({
         this.setResizeable(false);
         
         this.on("click",function(emitter, event){
-            console.log(event);
+            var h = emitter.getHeight();
+            var modh = h/8;
+            var index = (event.relY/modh)|0;
+            var port = emitter.getOutputPort(index);
+            port.setValue(!port.getValue());
+            emitter.layerAttr("rect0"+(index+1), {fill:port.getValue()?"#ff0000":null});
         });
     },
     
