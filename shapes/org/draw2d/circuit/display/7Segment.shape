@@ -18,7 +18,7 @@
     "bgColor": "#FFFFFF",
     "color": "#303030",
     "stroke": 1,
-    "radius": 4,
+    "radius": 2,
     "dasharray": null,
     "vertices": [
       {
