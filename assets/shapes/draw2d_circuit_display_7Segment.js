@@ -116,6 +116,19 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
    {
    },
 
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
+   },
+
    layerAttr: function(name, attributes)
    {
      this.svgNodes.forEach(function(shape){

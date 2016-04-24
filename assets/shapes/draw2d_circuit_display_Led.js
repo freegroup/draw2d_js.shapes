@@ -71,6 +71,19 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
    {
    },
 
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
+   },
+
    layerAttr: function(name, attributes)
    {
      this.svgNodes.forEach(function(shape){
@@ -133,10 +146,10 @@ draw2d_circuit_display_Led = draw2d_circuit_display_Led.extend({
     
     _state:function(flag){
          if(flag){
-             this.layerAttr("circle",{fill:"#ff5252"});
+             this.layerAttr("circle",{fill:"#C21B7A"});
          }
          else{
-            this.layerAttr("circle",{fill:"#009688"});
+            this.layerAttr("circle",{fill:"#f0f0f0"});
          }
     }
 

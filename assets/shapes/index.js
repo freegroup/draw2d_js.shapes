@@ -116,6 +116,19 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
    {
    },
 
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
+   },
+
    layerAttr: function(name, attributes)
    {
      this.svgNodes.forEach(function(shape){
@@ -261,6 +274,19 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
    {
    },
 
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
+   },
+
    layerAttr: function(name, attributes)
    {
      this.svgNodes.forEach(function(shape){
@@ -323,10 +349,10 @@ draw2d_circuit_display_Led = draw2d_circuit_display_Led.extend({
     
     _state:function(flag){
          if(flag){
-             this.layerAttr("circle",{fill:"#ff5252"});
+             this.layerAttr("circle",{fill:"#C21B7A"});
          }
          else{
-            this.layerAttr("circle",{fill:"#009688"});
+            this.layerAttr("circle",{fill:"#f0f0f0"});
          }
     }
 
@@ -398,6 +424,19 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
 
    applyAlpha: function()
    {
+   },
+
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
    },
 
    layerAttr: function(name, attributes)
@@ -534,6 +573,19 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
    {
    },
 
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
+   },
+
    layerAttr: function(name, attributes)
    {
      this.svgNodes.forEach(function(shape){
@@ -668,6 +720,19 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
    {
    },
 
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
+   },
+
    layerAttr: function(name, attributes)
    {
      this.svgNodes.forEach(function(shape){
@@ -795,6 +860,19 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
 
    applyAlpha: function()
    {
+   },
+
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
    },
 
    layerAttr: function(name, attributes)
@@ -939,6 +1017,19 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
 
    applyAlpha: function()
    {
+   },
+
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
    },
 
    layerAttr: function(name, attributes)
@@ -1138,6 +1229,19 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
 
    applyAlpha: function()
    {
+   },
+
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
    },
 
    layerAttr: function(name, attributes)

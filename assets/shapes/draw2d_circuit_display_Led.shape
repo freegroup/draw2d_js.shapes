@@ -2,7 +2,7 @@
   {
     "type": "shape_designer.figure.PolyCircle",
     "id": "224a7916-067e-710f-bc40-d0ff40f3e7e4",
-    "x": 3989.5,
+    "x": 3985,
     "y": 3984,
     "width": 30,
     "height": 32,
@@ -10,7 +10,7 @@
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         this.attr({resizeable:false});\n         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n         var _this = this;\n \n         this.getInputPort(0).on(\"change:value\", function(emitter, event){\n             _this._state(event.value);\n         });\n         \n         this.on(\"added\",function(){\n            _this._state(false);\n         });\n    },\n    \n    _state:function(flag){\n         if(flag){\n             this.layerAttr(\"circle\",{fill:\"#ff5252\"});\n         }\n         else{\n            this.layerAttr(\"circle\",{fill:\"#009688\"});\n         }\n    }\n\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         this.attr({resizeable:false});\n         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n         var _this = this;\n \n         this.getInputPort(0).on(\"change:value\", function(emitter, event){\n             _this._state(event.value);\n         });\n         \n         this.on(\"added\",function(){\n            _this._state(false);\n         });\n    },\n    \n    _state:function(flag){\n         if(flag){\n             this.layerAttr(\"circle\",{fill:\"#C21B7A\"});\n         }\n         else{\n            this.layerAttr(\"circle\",{fill:\"#f0f0f0\"});\n         }\n    }\n\n});",
       "name": "circle"
     },
     "cssClass": "shape_designer_figure_PolyCircle",
@@ -36,7 +36,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "f4d5683a-7c42-8771-5df4-e4e9da5b8b46",
-    "x": 3983.5,
+    "x": 3979,
     "y": 3995.5,
     "width": 10,
     "height": 10,
@@ -84,15 +84,15 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 3995.0221000000006,
+        "x": 3990.5221000000006,
         "y": 3989.6824000000015
       },
       {
-        "x": 4004.6381000000015,
+        "x": 4000.1381000000015,
         "y": 4000.4968000000003
       },
       {
-        "x": 4014.2541000000024,
+        "x": 4009.7541000000024,
         "y": 4011.311199999999
       }
     ],
@@ -120,11 +120,11 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4015.4443000000006,
+        "x": 4010.9443000000006,
         "y": 3989.0627000000013
       },
       {
-        "x": 3994.7832,
+        "x": 3990.2832,
         "y": 4011.9637
       }
     ],
