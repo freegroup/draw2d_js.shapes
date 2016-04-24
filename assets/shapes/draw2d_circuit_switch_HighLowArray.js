@@ -170,28 +170,16 @@ draw2d_circuit_switch_HighLowArray = draw2d_circuit_switch_HighLowArray.extend({
 
 
         this.setResizeable(false);
-        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
         
-        var _this = this;
-        
-        this.value = false;
-        this.on("click",function(){            
-            _this.value = !_this.value;
-            _this.layerShow("low" , !_this.value, 100);
-            _this.layerShow("high",  _this.value, 100);
-            _this.getOutputPort(0).setValue(_this.value);
-        });
-
-        this.on("added",function(){
-            _this.layerShow("low" , !_this.value);
-            _this.layerShow("high",  _this.value);
-            _this.getOutputPort(0).setValue(_this.value);
+        this.on("click",function(emitter, event){
+            console.log(event);
         });
     },
     
     calculate: function()
     {
-        // do nothing per default;
+    
+        
     }
 
 });
