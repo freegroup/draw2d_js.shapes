@@ -298,7 +298,7 @@
     "bgColor": "#C21B7A",
     "color": "#D6D6D6",
     "stroke": 1,
-    "radius": 0,
+    "radius": 1,
     "dasharray": null,
     "vertices": [
       {
@@ -331,6 +331,9 @@
       },
       {
         "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -349,9 +352,9 @@
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
     "bgColor": "#C21B7A",
-    "color": "#303030",
-    "stroke": 0,
-    "radius": 0,
+    "color": "#D6D6D6",
+    "stroke": 1,
+    "radius": 1,
     "dasharray": null,
     "vertices": [
       {
@@ -381,6 +384,12 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -399,9 +408,9 @@
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
     "bgColor": "#C21B7A",
-    "color": "#303030",
-    "stroke": 0,
-    "radius": 0,
+    "color": "#D6D6D6",
+    "stroke": 1,
+    "radius": 1,
     "dasharray": null,
     "vertices": [
       {
@@ -431,6 +440,12 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -449,9 +464,9 @@
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
     "bgColor": "#C21B7A",
-    "color": "#303030",
-    "stroke": 0,
-    "radius": 0,
+    "color": "#D6D6D6",
+    "stroke": 1,
+    "radius": 1,
     "dasharray": null,
     "vertices": [
       {
@@ -481,6 +496,12 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -499,9 +520,9 @@
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
     "bgColor": "#C21B7A",
-    "color": "#303030",
-    "stroke": 0,
-    "radius": 0,
+    "color": "#D6D6D6",
+    "stroke": 1,
+    "radius": 1,
     "dasharray": null,
     "vertices": [
       {
@@ -531,6 +552,12 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -549,9 +576,9 @@
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
     "bgColor": "#C21B7A",
-    "color": "#303030",
-    "stroke": 0,
-    "radius": 0,
+    "color": "#D6D6D6",
+    "stroke": 1,
+    "radius": 2,
     "dasharray": null,
     "vertices": [
       {
@@ -581,6 +608,12 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -599,9 +632,9 @@
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
     "bgColor": "#C21B7A",
-    "color": "#303030",
-    "stroke": 0,
-    "radius": 0,
+    "color": "#D6D6D6",
+    "stroke": 1,
+    "radius": 1,
     "dasharray": null,
     "vertices": [
       {
@@ -631,6 +664,12 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   }
