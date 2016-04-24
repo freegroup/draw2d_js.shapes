@@ -177,7 +177,7 @@ draw2d_circuit_switch_HighLowArray = draw2d_circuit_switch_HighLowArray.extend({
             var index = (event.relY/modh)|0;
             var port = emitter.getOutputPort(index);
             port.setValue(!port.getValue());
-            emitter.layerAttr("rect0"+(index+1), {fill:port.getValue()?"#ff0000":null});
+            emitter.layerAttr("rect0"+(index+1), {fill:port.getValue()?"#C21B7A":null});
         });
     },
     
