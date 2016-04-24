@@ -1032,46 +1032,46 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
    {
      this._super( $.extend({stroke:0, bgColor:null, width:20,height:160},attr), setter, getter);
      var port;
-     // Port
+     // port01
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 6.24381249999999));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     // Port
+     port.setName("port01");
+     // port02
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 19.375));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     // Port
+     port.setName("port02");
+     // port03
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 31.25));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     // Port
+     port.setName("port03");
+     // port04
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 43.75));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     // Port
+     port.setName("port04");
+     // port05
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 56.122437500000046));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     // Port
+     port.setName("port05");
+     // port06
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 68.72787499999987));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     // Port
+     port.setName("port06");
+     // port07
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 81.1621875000003));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     // Port
+     port.setName("port07");
+     // port08
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 93.93256250000007));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("port08");
      this.persistPorts=false;
    },
 
@@ -1092,45 +1092,45 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
-        // Label
+        // rect01
         shape = this.canvas.paper.path('M20 20L0 20L0 0L20 0Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","Label");
+        shape.data("name","rect01");
         
-        // Rectangle
+        // rect02
         shape = this.canvas.paper.path('M20 40L0 40L0 20L20 20Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","Rectangle");
+        shape.data("name","rect02");
         
-        // Rectangle
+        // rect03
         shape = this.canvas.paper.path('M20 60L0 60L0 40L20 40Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","Rectangle");
+        shape.data("name","rect03");
         
-        // Rectangle
+        // rect04
         shape = this.canvas.paper.path('M20 80L0 80L0 60L20 60Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","Rectangle");
+        shape.data("name","rect04");
         
-        // Rectangle
+        // rect05
         shape = this.canvas.paper.path('M20 100L0 100L0 80L20 80Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","Rectangle");
+        shape.data("name","rect05");
         
-        // Rectangle
+        // rect06
         shape = this.canvas.paper.path('M20 120L0 120L0 100L20 100Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","Rectangle");
+        shape.data("name","rect06");
         
-        // Rectangle
+        // rect07
         shape = this.canvas.paper.path('M20 140L0 140L0 120L20 120Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","Rectangle");
+        shape.data("name","rect07");
         
-        // Rectangle
+        // rect08
         shape = this.canvas.paper.path('M20 160L0 160L0 140L20 140Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","Rectangle");
+        shape.data("name","rect08");
         
 
         return this.canvas.paper.setFinish();
