@@ -61,5 +61,14 @@
       "switch",
       "HighLow"
     ]
+  },
+  {
+    "name": "draw2d_circuit_switch_HighLowArray",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "switch",
+      "HighLowArray"
+    ]
   }
 ]
