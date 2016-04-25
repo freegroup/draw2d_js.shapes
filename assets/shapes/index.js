@@ -201,6 +201,7 @@ draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
 });
 draw2d_circuit_display_7Segment.logic="calculate: function () {\n    var _this = this;\n    this.portLockup.forEach(function (element, index) {\n        _this.layerAttr(element.s, { fill: element.p.getValue() ? \'#C21B7A\' : null });\n    });\n}";
 draw2d_circuit_display_7Segment.github="./shapes/org/draw2d/circuit/display/7Segment.shape";
+draw2d_circuit_display_7Segment.markdown="";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -358,6 +359,7 @@ draw2d_circuit_display_Led = draw2d_circuit_display_Led.extend({
 
 });
 draw2d_circuit_display_Led.github="./shapes/org/draw2d/circuit/display/Led.shape";
+draw2d_circuit_display_Led.markdown="";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -500,6 +502,7 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
 });
 draw2d_circuit_gate_AND.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}";
 draw2d_circuit_gate_AND.github="./shapes/org/draw2d/circuit/gate/AND.shape";
+draw2d_circuit_gate_AND.markdown="\n# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\nTherefore, the output is always 0 except when all the inputs are 1.\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  High      |\n\n";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -647,6 +650,7 @@ draw2d_circuit_gate_NAND = draw2d_circuit_gate_NAND.extend({
 });
 draw2d_circuit_gate_NAND.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(!(i1.getValue() & i2.getValue()));\n}";
 draw2d_circuit_gate_NAND.github="./shapes/org/draw2d/circuit/gate/NAND.shape";
+draw2d_circuit_gate_NAND.markdown="";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -794,6 +798,7 @@ draw2d_circuit_gate_NOR = draw2d_circuit_gate_NOR.extend({
 });
 draw2d_circuit_gate_NOR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(!(i1.getValue() | i2.getValue));\n}";
 draw2d_circuit_gate_NOR.github="./shapes/org/draw2d/circuit/gate/NOR.shape";
+draw2d_circuit_gate_NOR.markdown="";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -936,6 +941,7 @@ draw2d_circuit_gate_OR = draw2d_circuit_gate_OR.extend({
 });
 draw2d_circuit_gate_OR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() | i2.getValue());\n}";
 draw2d_circuit_gate_OR.github="./shapes/org/draw2d/circuit/gate/OR.shape";
+draw2d_circuit_gate_OR.markdown="";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -1108,6 +1114,7 @@ draw2d_circuit_switch_HighLow = draw2d_circuit_switch_HighLow.extend({
 });
 draw2d_circuit_switch_HighLow.logic="calculate: function () {\n}";
 draw2d_circuit_switch_HighLow.github="./shapes/org/draw2d/circuit/switch/HighLow.shape";
+draw2d_circuit_switch_HighLow.markdown="";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -1313,3 +1320,4 @@ draw2d_circuit_switch_HighLowArray = draw2d_circuit_switch_HighLowArray.extend({
 });
 draw2d_circuit_switch_HighLowArray.logic="calculate: function () {\n}";
 draw2d_circuit_switch_HighLowArray.github="./shapes/org/draw2d/circuit/switch/HighLowArray.shape";
+draw2d_circuit_switch_HighLowArray.markdown="";

@@ -145,3 +145,4 @@ draw2d_circuit_gate_NOR = draw2d_circuit_gate_NOR.extend({
 });
 draw2d_circuit_gate_NOR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(!(i1.getValue() | i2.getValue));\n}";
 draw2d_circuit_gate_NOR.github="./shapes/org/draw2d/circuit/gate/NOR.shape";
+draw2d_circuit_gate_NOR.markdown="";

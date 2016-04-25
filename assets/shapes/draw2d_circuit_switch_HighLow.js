@@ -170,3 +170,4 @@ draw2d_circuit_switch_HighLow = draw2d_circuit_switch_HighLow.extend({
 });
 draw2d_circuit_switch_HighLow.logic="calculate: function () {\n}";
 draw2d_circuit_switch_HighLow.github="./shapes/org/draw2d/circuit/switch/HighLow.shape";
+draw2d_circuit_switch_HighLow.markdown="";

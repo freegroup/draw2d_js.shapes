@@ -203,3 +203,4 @@ draw2d_circuit_switch_HighLowArray = draw2d_circuit_switch_HighLowArray.extend({
 });
 draw2d_circuit_switch_HighLowArray.logic="calculate: function () {\n}";
 draw2d_circuit_switch_HighLowArray.github="./shapes/org/draw2d/circuit/switch/HighLowArray.shape";
+draw2d_circuit_switch_HighLowArray.markdown="";

@@ -140,3 +140,4 @@ draw2d_circuit_gate_OR = draw2d_circuit_gate_OR.extend({
 });
 draw2d_circuit_gate_OR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() | i2.getValue());\n}";
 draw2d_circuit_gate_OR.github="./shapes/org/draw2d/circuit/gate/OR.shape";
+draw2d_circuit_gate_OR.markdown="";
