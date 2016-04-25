@@ -14,12 +14,12 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:30,height:40},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 22.5));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-1.6666666666666667, 22.5));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 77.5));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-1.6666666666666667, 77.5));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
@@ -140,4 +140,4 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
 });
 draw2d_circuit_gate_AND.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}";
 draw2d_circuit_gate_AND.github="./shapes/org/draw2d/circuit/gate/AND.shape";
-draw2d_circuit_gate_AND.markdown="# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\n\n**Therefore, the output is always 0 except when all the inputs are 1.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  `High`      |\n\n";
+draw2d_circuit_gate_AND.markdown="# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\n\n**Therefore, the output is always 0 except when all the inputs are 1.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  `High`    |\n\n";
