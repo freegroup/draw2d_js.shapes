@@ -103,8 +103,9 @@ var processFiles=function(path){
                 });
             },
             success: function () {
-                var jsCode = page.evaluate(function () {return code;});
-                var img    = page.evaluate(function () {return img;});
+                var jsCode   = page.evaluate(function () {return code;});
+                var markdown = page.evaluate(function () {return markdown;});
+                var img      = page.evaluate(function () {return img;});
                 var package = path.replace("./shapes/org/","").replace(/\//g,"_").replace(/\.shape/,"");
                 var pngFilePath = path.replace(".shape",".png");
                 var jsFilePath  = path.replace(".shape",".js");
@@ -139,6 +140,7 @@ var processFiles=function(path){
                     // add the github path as text to the shape
                     //
                     jsCode = jsCode+"\n"+package+".github=\""+path+"\";";
+                    jsCode = jsCode+"\n"+package+".markdown=\""+escapeString(markdown)+"\";";
                 })();
 
 

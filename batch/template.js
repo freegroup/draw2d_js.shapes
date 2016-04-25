@@ -2,9 +2,13 @@
 app.fileNew();
 var code = null;
 var img  = null;
+var markdown = "";
+
 var reader = new draw2d.io.json.Reader();
 reader.unmarshal(app.view,json);
 
+    markdown = app.getConfiguration("markdown");
+    markdown = markdown?markdown:"";
     var writer = new shape_designer.FigureWriter();
     writer.marshal(app.view, "testShape", function (js) {
         code = js;
