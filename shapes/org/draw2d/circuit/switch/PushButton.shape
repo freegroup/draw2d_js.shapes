@@ -2,8 +2,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "12ca8dfe-851d-2d1d-a379-c39edd42bf5a",
-    "x": 3979.5,
-    "y": 3978.5,
+    "x": 3973.984,
+    "y": 3989,
     "width": 29.4375,
     "height": 21,
     "alpha": 1,
@@ -11,7 +11,8 @@
     "userData": {
       "baseClass": "draw2d.SetFigure",
       "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n\n        this.setResizeable(false);\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n        \n        var _this = this;\n        \n        this.value = false;\n        this.on(\"click\",function(){            \n            _this.value = !_this.value;\n            _this.layerShow(\"low\" , !_this.value, 100);\n            _this.layerShow(\"high\",  _this.value, 100);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n\n        this.on(\"added\",function(){\n            _this.layerShow(\"low\" , !_this.value);\n            _this.layerShow(\"high\",  _this.value);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n    },\n    \n    calculate: function()\n    {\n        // do nothing per default;\n    }\n\n});",
-      "name": "Label"
+      "name": "Label",
+      "markdown": "# Header \n## Subheader \nbe nice and write a help file for your new \ncreated ***DigitalTrainingStudion*** shape. \n\n  - point 1\n  - point 2\n  - point 3"
     },
     "cssClass": "shape_designer_figure_ExtLabel",
     "ports": [],
@@ -23,45 +24,7 @@
     "text": "1",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 11,
-    "fontColor": "#080808",
-    "fontFamily": null,
-    "editor": "draw2d.ui.LabelInplaceEditor",
-    "filters": [
-      {
-        "name": "shape_designer.filter.PositionFilter"
-      },
-      {
-        "name": "shape_designer.filter.FontSizeFilter"
-      },
-      {
-        "name": "shape_designer.filter.FontColorFilter"
-      }
-    ]
-  },
-  {
-    "type": "shape_designer.figure.ExtLabel",
-    "id": "645eb539-f8e8-758b-8dcb-86c234c7ae30",
-    "x": 3979,
-    "y": 4000,
-    "width": 29.4375,
-    "height": 21,
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "name": "Label"
-    },
-    "cssClass": "shape_designer_figure_ExtLabel",
-    "ports": [],
-    "bgColor": "none",
-    "color": "#1B1B1B",
-    "stroke": 0,
-    "radius": 0,
-    "dasharray": null,
-    "text": "0",
-    "outlineStroke": 0,
-    "outlineColor": "none",
-    "fontSize": 12,
+    "fontSize": 14,
     "fontColor": "#080808",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
@@ -80,8 +43,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "91f5e31e-98a2-25ae-2ec2-64ecb245e1ce",
-    "x": 4015.5,
-    "y": 3996,
+    "x": 4028.5,
+    "y": 3995.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -112,9 +75,9 @@
   {
     "type": "shape_designer.figure.PolyCircle",
     "id": "ebdd310c-c836-43a2-bb4f-0e3e8e631fb6",
-    "x": 4015,
-    "y": 3997.5,
-    "width": 6,
+    "x": 4012.5,
+    "y": 3997,
+    "width": 7,
     "height": 7,
     "alpha": 1,
     "angle": 0,
@@ -139,44 +102,193 @@
     ]
   },
   {
-    "type": "shape_designer.figure.ExtLine",
-    "id": "f55452eb-ac0f-5674-92c4-0337ae6cc418",
+    "type": "shape_designer.figure.PolyCircle",
+    "id": "bc75fc89-f66d-4780-4af4-e7c98d0f7500",
+    "x": 3988.093375,
+    "y": 3997,
+    "width": 6.900000000000091,
+    "height": 7,
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "high"
+      "name": "Circle"
     },
-    "cssClass": "shape_designer_figure_ExtLine",
-    "stroke": 2,
-    "color": "#000000",
-    "outlineStroke": 0,
-    "outlineColor": "none",
-    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
-    "vertex": [
-      {
-        "x": 4018.298300000001,
-        "y": 4000.9469125000032
-      },
-      {
-        "x": 3992.8573999999994,
-        "y": 3989.5915125000006
-      }
-    ],
-    "router": "draw2d.layout.connection.VertexRouter",
-    "radius": "",
+    "cssClass": "shape_designer_figure_PolyCircle",
+    "ports": [],
+    "bgColor": "#000000",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "blur": 0,
     "filters": [
       {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPolygon",
+    "id": "3d1fb5d4-88a5-cf8e-d00c-ef5f2bb9f5a2",
+    "x": 3987.3928,
+    "y": 3977.016,
+    "width": 32,
+    "height": 13.735999999999876,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "off"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#FFFFFF",
+    "color": "#303030",
+    "stroke": 1,
+    "radius": 2,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4011.2192,
+        "y": 3985.752
+      },
+      {
+        "x": 4011.2192,
+        "y": 3977.016
+      },
+      {
+        "x": 3996.2192,
+        "y": 3977.016
+      },
+      {
+        "x": 3996.2192,
+        "y": 3985.752
+      },
+      {
+        "x": 3987.3928,
+        "y": 3985.752
+      },
+      {
+        "x": 3987.3928,
+        "y": 3990.752
+      },
+      {
+        "x": 4019.3928,
+        "y": 3990.752
+      },
+      {
+        "x": 4019.3928,
+        "y": 3985.752
+      },
+      {
+        "x": 4011.2192,
+        "y": 3985.752
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
         "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPolygon",
+    "id": "ba8f078d-3ff3-529c-5b92-298033420975",
+    "x": 3987.3928,
+    "y": 3983.016,
+    "width": 32,
+    "height": 13.735999999999876,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "on"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#FFFFFF",
+    "color": "#303030",
+    "stroke": 1,
+    "radius": 2,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4011.2192,
+        "y": 3991.752
+      },
+      {
+        "x": 4011.2192,
+        "y": 3983.016
+      },
+      {
+        "x": 3996.2192,
+        "y": 3983.016
+      },
+      {
+        "x": 3996.2192,
+        "y": 3991.752
+      },
+      {
+        "x": 3987.3928,
+        "y": 3991.752
+      },
+      {
+        "x": 3987.3928,
+        "y": 3996.752
+      },
+      {
+        "x": 4019.3928,
+        "y": 3996.752
+      },
+      {
+        "x": 4019.3928,
+        "y": 3991.752
+      },
+      {
+        "x": 4011.2192,
+        "y": 3991.752
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
   {
     "type": "shape_designer.figure.ExtLine",
-    "id": "a1abbce7-ea8a-540d-71b3-c4096b8f1b5c",
+    "id": "bd95e4af-e583-9a87-97c2-1332dec0144b",
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "low"
+      "name": "Line"
     },
     "cssClass": "shape_designer_figure_ExtLine",
     "stroke": 2,
@@ -186,12 +298,16 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4017.7531999999974,
-        "y": 4001.2083125000004
+        "x": 4017.1366,
+        "y": 4000.9529999999995
       },
       {
-        "x": 3992.6445000000003,
-        "y": 4010.8513124999986
+        "x": 4024.7928999999995,
+        "y": 4000.9529999999995
+      },
+      {
+        "x": 4032.4491999999996,
+        "y": 4000.9529999999995
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
