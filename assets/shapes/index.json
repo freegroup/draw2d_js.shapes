@@ -70,5 +70,14 @@
       "switch",
       "HighLowArray"
     ]
+  },
+  {
+    "name": "draw2d_circuit_switch_PushButton",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "switch",
+      "PushButton"
+    ]
   }
 ]
