@@ -1334,10 +1334,10 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:42,height:43.5},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:58.46519999999964,height:35.983999999999924},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(98.80952380952381, 51.72413793103448));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.79730848436411, 65.26233881725204));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("Port");
@@ -1347,8 +1347,8 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 42;
-      this.originalHeight= 43.5;
+      this.originalWidth = 58.46519999999964;
+      this.originalHeight= 35.983999999999924;
       return shape;
    },
 
@@ -1357,44 +1357,44 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L42,0 L42,43.5 L0,43.5");
+        shape = this.canvas.paper.path("M0,0 L58.46519999999964,0 L58.46519999999964,35.983999999999924 L0,35.983999999999924");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // Label
         shape = this.canvas.paper.text(0,0,'1');
-        shape.attr({"x":4.5,"y":11,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":11,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
-        shape.data("name","Label");
-        
-        // Label
-        shape = this.canvas.paper.text(0,0,'0');
-        shape.attr({"x":4,"y":32.5,"text-anchor":"start","text":"0","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":4,"y":23.983999999999924,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":14,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":3,"ry":3.5,"cx":39,"cy":22.5,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"rx":3.5,"ry":3.5,"cx":42.016000000000076,"cy":23.483999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
         shape.data("name","Circle");
         
-        // high_shadow
-        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
+        // Circle
+        shape = this.canvas.paper.ellipse();
+        shape.attr({"rx":3.4500000000000455,"ry":3.5,"cx":17.559375000000045,"cy":23.483999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.data("name","Circle");
+        
+        // off
+        shape = this.canvas.paper.path('M39.23520000000008,8.735999999999876Q37.23520000000008,8.735999999999876 37.23520000000008, 6.735999999999876L37.23520000000008,2Q37.23520000000008,0 35.23520000000008, 0L24.235200000000077,0Q22.235200000000077,0 22.235200000000077, 2L22.235200000000077,6.735999999999876Q22.235200000000077,8.735999999999876 20.235200000000077, 8.735999999999876L15.408800000000156,8.735999999999876Q13.408800000000156,8.735999999999876 13.408800000000156, 10.735999999999876L13.408800000000156,11.735999999999876Q13.408800000000156,13.735999999999876 15.408800000000156, 13.735999999999876L43.408800000000156,13.735999999999876Q45.408800000000156,13.735999999999876 45.408800000000156, 11.735999999999876L45.408800000000156,10.735999999999876Q45.408800000000156,8.735999999999876 43.408800000000156, 8.735999999999876L39.23520000000008,8.735999999999876');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.data("name","off");
+        
+        // on
+        shape = this.canvas.paper.path('M39.23520000000008,14.735999999999876Q37.23520000000008,14.735999999999876 37.23520000000008, 12.735999999999876L37.23520000000008,8Q37.23520000000008,6 35.23520000000008, 6L24.235200000000077,6Q22.235200000000077,6 22.235200000000077, 8L22.235200000000077,12.735999999999876Q22.235200000000077,14.735999999999876 20.235200000000077, 14.735999999999876L15.408800000000156,14.735999999999876Q13.408800000000156,14.735999999999876 13.408800000000156, 16.735999999999876L13.408800000000156,17.735999999999876Q13.408800000000156,19.735999999999876 15.408800000000156, 19.735999999999876L43.408800000000156,19.735999999999876Q45.408800000000156,19.735999999999876 45.408800000000156, 17.735999999999876L45.408800000000156,16.735999999999876Q45.408800000000156,14.735999999999876 43.408800000000156, 14.735999999999876L39.23520000000008,14.735999999999876');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.data("name","on");
+        
+        // Line_shadow
+        shape = this.canvas.paper.path('M43.5 23.5L50.5,23.5L58.5,23.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
-        shape.data("name","high_shadow");
+        shape.data("name","Line_shadow");
         
-        // high
-        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
+        // Line
+        shape = this.canvas.paper.path('M43.5 23.5L50.5,23.5L58.5,23.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
-        shape.data("name","high");
-        
-        // low_shadow
-        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
-        shape.data("name","low_shadow");
-        
-        // low
-        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
-        shape.data("name","low");
+        shape.data("name","Line");
         
 
         return this.canvas.paper.setFinish();
@@ -1493,4 +1493,4 @@ draw2d_circuit_switch_PushButton = draw2d_circuit_switch_PushButton.extend({
 });
 draw2d_circuit_switch_PushButton.logic="calculate: function () {\n}";
 draw2d_circuit_switch_PushButton.github="./shapes/org/draw2d/circuit/switch/PushButton.shape";
-draw2d_circuit_switch_PushButton.markdown="";
+draw2d_circuit_switch_PushButton.markdown="# Header \n## Subheader \nbe nice and write a help file for your new \ncreated ***DigitalTrainingStudion*** shape. \n\n  - point 1\n  - point 2\n  - point 3";
