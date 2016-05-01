@@ -1462,13 +1462,6 @@ draw2d_circuit_switch_HighLow = draw2d_circuit_switch_HighLow.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
-
-
-        this.add(new draw2d.shape.basic.Label({text:"Label", x:40, y:20}), new draw2d.layout.locator.DraggableLocator());
-
-        this.setResizeable(false);
-        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
-        
         var _this = this;
         
         this.value = false;
