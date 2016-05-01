@@ -483,21 +483,21 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
    {
      this._super( $.extend({stroke:0, bgColor:null, width:30,height:40},attr), setter, getter);
      var port;
-     // Port
+     // input01
      port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-1.6666666666666667, 22.5));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("Port");
-     // Port
+     port.setName("input01");
+     // input02
      port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-1.6666666666666667, 77.5));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("Port");
-     // Port
+     port.setName("input02");
+     // out
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(104.42708333333334, 50));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("Port");
+     port.setName("out");
      this.persistPorts=false;
    },
 
