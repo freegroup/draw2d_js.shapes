@@ -1084,21 +1084,21 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
    {
      this._super( $.extend({stroke:0, bgColor:null, width:31,height:40},attr), setter, getter);
      var port;
-     // Port
+     // input01
      port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 22.5));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("Port");
-     // Port
+     port.setName("input01");
+     // input02
      port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 78.75));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("Port");
-     // Port
+     port.setName("input02");
+     // output
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(116.12903225806451, 50));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("Port");
+     port.setName("output");
      this.persistPorts=false;
    },
 
@@ -1265,7 +1265,7 @@ draw2d_circuit_gate_OR = draw2d_circuit_gate_OR.extend({
 });
 draw2d_circuit_gate_OR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() | i2.getValue());\n}";
 draw2d_circuit_gate_OR.github="./shapes/org/draw2d/circuit/gate/OR.shape";
-draw2d_circuit_gate_OR.markdown="";
+draw2d_circuit_gate_OR.markdown="# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\n\n**Therefore, the output is always 0 except when all the inputs are 1.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  `High`    |\n\n";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
