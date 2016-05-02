@@ -231,6 +231,8 @@ draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
         this._super(attr, setter, getter);
 
         this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+
         // ensure that the ports has the same order as the segments
         //
         this.portLockup = [];
