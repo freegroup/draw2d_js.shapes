@@ -11,7 +11,8 @@
     "userData": {
       "baseClass": "draw2d.SetFigure",
       "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         this.attr({resizeable:false});\n         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n         var _this = this;\n \n         this.getInputPort(0).on(\"change:value\", function(emitter, event){\n             _this._state(event.value);\n         });\n         \n         this.on(\"added\",function(){\n            _this._state(false);\n         });\n    },\n    \n    _state:function(flag){\n         if(flag){\n             this.layerAttr(\"circle\",{fill:\"#C21B7A\"});\n         }\n         else{\n            this.layerAttr(\"circle\",{fill:\"#f0f0f0\"});\n         }\n    }\n\n});",
-      "name": "circle"
+      "name": "circle",
+      "markdown": "# High / Low Signal display\n\nsimple `HIGH`/ `LOW` display.\n\n    HIGH -> red\n \n    LOW -> gray"
     },
     "cssClass": "shape_designer_figure_PolyCircle",
     "ports": [],
