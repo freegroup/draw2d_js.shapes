@@ -852,7 +852,7 @@ draw2d_circuit_gate_NAND = draw2d_circuit_gate_NAND.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
-         // your special code here
+        this.attr({resizeable:false});
     },
     
     calculate:function()
@@ -1054,7 +1054,7 @@ draw2d_circuit_gate_NOR = draw2d_circuit_gate_NOR.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
-         // your special code here
+        this.attr({resizeable:false});
     },
     
     calculate:function()
@@ -1251,7 +1251,7 @@ draw2d_circuit_gate_OR = draw2d_circuit_gate_OR.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
-         // your special code here
+        this.attr({resizeable:false});
     },
     
     calculate:function()

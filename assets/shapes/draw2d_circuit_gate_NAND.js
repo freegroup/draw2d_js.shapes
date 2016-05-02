@@ -185,7 +185,7 @@ draw2d_circuit_gate_NAND = draw2d_circuit_gate_NAND.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
-         // your special code here
+        this.attr({resizeable:false});
     },
     
     calculate:function()
