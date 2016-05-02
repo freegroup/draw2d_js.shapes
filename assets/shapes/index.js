@@ -1463,6 +1463,8 @@ draw2d_circuit_switch_HighLow = draw2d_circuit_switch_HighLow.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
         var _this = this;
+
+        this.attr({resizeable:false});
         
         this.value = false;
         this.on("click",function(){            
