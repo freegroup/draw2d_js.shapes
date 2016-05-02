@@ -180,7 +180,7 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
-         // your special code here
+        this.attr({resizeable:false});
     },
     
     calculate:function()
