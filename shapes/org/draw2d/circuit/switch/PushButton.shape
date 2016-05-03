@@ -12,7 +12,7 @@
       "baseClass": "draw2d.SetFigure",
       "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n\n        this.setResizeable(false);\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n        \n        var _this = this;\n        \n        this.value = false;\n        this.on(\"mousedown\",function(){            \n            _this.layerShow(\"low\" , false, 100);\n            _this.layerShow(\"high\", true, 100);\n            _this.getOutputPort(0).setValue(true);\n        });\n        this.on(\"mouseup\",function(){            \n            _this.value = !_this.value;\n            _this.layerShow(\"low\" , true, 100);\n            _this.layerShow(\"high\", false, 100);\n            _this.getOutputPort(0).setValue(false);\n        });\n\n        this.on(\"added\",function(){\n            _this.layerShow(\"low\" , true);\n            _this.layerShow(\"high\", false);\n            _this.getOutputPort(0).setValue(false);\n        });\n    },\n    \n    calculate: function()\n    {\n        // do nothing per default;\n    }\n\n});",
       "name": "Label",
-      "markdown": "# Header \n## Subheader \nbe nice and write a help file for your new \ncreated ***DigitalTrainingStudion*** shape. \n\n  - point 1\n  - point 2\n  - point 3"
+      "markdown": "# Push Button\n\ntoggles the output if the user press \nthe mouse button down in the simulation mode."
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
