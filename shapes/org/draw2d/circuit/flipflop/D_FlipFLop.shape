@@ -4,13 +4,13 @@
     "id": "c55dd135-15db-7c71-5efa-f6761c073e66",
     "x": 3971.1400000000003,
     "y": 3975.358000000002,
-    "width": 60,
+    "width": 40,
     "height": 50,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n    },\n    \n    calculate:function()\n    {\n        var i1 = this.getInputPort(0);\n        var i2 = this.getInputPort(1);\n        var o1 = this.getOutputPort(0);\n        \n        o1.setValue(i1.getValue() & i2.getValue());\n    }\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.last_t = false;\n    },\n    \n    calculate:function()\n    {\n        var d = this.getInputPort(\"input_d\").getValue();\n        var t = this.getInputPort(\"input_t\").getValue();\n        \n        var q = this.getOutputPort(\"output_q\");\n        var q_ = this.getOutputPort(\"output_q_not\");\n        \n        var rising = this.last_t===false && t===true; \n        \n        console.log(rising);\n        if(rising===true){\n            q.setValue(d);\n        }\n        this.last_t = t;\n    }\n});",
       "name": "Rectangle",
       "markdown": "# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\n\n**Therefore, the output is always 0 except when all the inputs are 1.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  `High`    |\n\n"
     },
@@ -27,11 +27,11 @@
         "y": 3975.358000000002
       },
       {
-        "x": 4031.1400000000003,
+        "x": 4011.1400000000003,
         "y": 3975.358000000002
       },
       {
-        "x": 4031.1400000000003,
+        "x": 4011.1400000000003,
         "y": 4025.358000000002
       },
       {
@@ -61,14 +61,14 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "7c8a6215-ce17-6a10-c85b-b97fd0de466c",
-    "x": 4028.000125,
-    "y": 3983.114000000002,
+    "x": 4007.648125,
+    "y": 3980.248000000002,
     "width": 10,
     "height": 10,
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "out_q",
+      "name": "output_q",
       "type": "Output",
       "direction": 1
     },
@@ -99,8 +99,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "68aac6da-04da-9eea-260f-ab29020fcf6f",
-    "x": 3968.6400000000003,
-    "y": 3973.858000000002,
+    "x": 3969.6400000000003,
+    "y": 3974.358000000002,
     "width": 28.328125,
     "height": 21.359375,
     "alpha": 1,
@@ -135,48 +135,10 @@
     ]
   },
   {
-    "type": "shape_designer.figure.ExtLabel",
-    "id": "f2b43936-6984-0428-5d81-323fb04ab3f2",
-    "x": 3979.2163750000004,
-    "y": 3989.434312500002,
-    "width": 28.328125,
-    "height": 21.359375,
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "name": "Label"
-    },
-    "cssClass": "shape_designer_figure_ExtLabel",
-    "ports": [],
-    "bgColor": "none",
-    "color": "#1B1B1B",
-    "stroke": 0,
-    "radius": 0,
-    "dasharray": null,
-    "text": "T",
-    "outlineStroke": 0,
-    "outlineColor": "none",
-    "fontSize": 10,
-    "fontColor": "#080808",
-    "fontFamily": null,
-    "editor": "draw2d.ui.LabelInplaceEditor",
-    "filters": [
-      {
-        "name": "shape_designer.filter.PositionFilter"
-      },
-      {
-        "name": "shape_designer.filter.FontSizeFilter"
-      },
-      {
-        "name": "shape_designer.filter.FontColorFilter"
-      }
-    ]
-  },
-  {
     "type": "shape_designer.figure.ExtPort",
     "id": "5fc48f01-fecb-0d5f-ed4f-81a4bc26ae63",
-    "x": 3961.6400000000003,
-    "y": 3995.114000000002,
+    "x": 3962.6400000000003,
+    "y": 4011.793687500002,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -214,7 +176,7 @@
     "type": "shape_designer.figure.ExtPort",
     "id": "592a8604-e0a9-8913-445d-621078e5ae97",
     "x": 3962.6400000000003,
-    "y": 3978.748000000002,
+    "y": 3980.248000000002,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -250,62 +212,9 @@
   },
   {
     "type": "shape_designer.figure.PolyRect",
-    "id": "e440526c-44e4-a03c-ba52-c43ddc69d29a",
-    "x": 4021.4660000000003,
-    "y": 3999.936000000002,
-    "width": 9,
-    "height": 25,
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "name": "Rectangle"
-    },
-    "cssClass": "shape_designer_figure_PolyRect",
-    "ports": [],
-    "bgColor": "#000000",
-    "color": "#303030",
-    "stroke": 1,
-    "radius": 0,
-    "dasharray": null,
-    "vertices": [
-      {
-        "x": 4021.4660000000003,
-        "y": 3999.936000000002
-      },
-      {
-        "x": 4030.4660000000003,
-        "y": 3999.936000000002
-      },
-      {
-        "x": 4030.4660000000003,
-        "y": 4024.936000000002
-      },
-      {
-        "x": 4021.4660000000003,
-        "y": 4024.936000000002
-      }
-    ],
-    "blur": 0,
-    "filters": [
-      {
-        "name": "shape_designer.filter.PositionFilter"
-      },
-      {
-        "name": "shape_designer.filter.SizeFilter"
-      },
-      {
-        "name": "shape_designer.filter.StrokeFilter"
-      },
-      {
-        "name": "shape_designer.filter.FillColorFilter"
-      }
-    ]
-  },
-  {
-    "type": "shape_designer.figure.PolyRect",
     "id": "0b5993de-527b-2309-20d4-4519d5414943",
     "x": 3971.1400000000003,
-    "y": 3995.114000000002,
+    "y": 4011.485000000002,
     "width": 12.041999999999916,
     "height": 10.25799999999981,
     "alpha": 1,
@@ -315,23 +224,23 @@
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
-    "bgColor": "#171717",
+    "bgColor": "none",
     "color": "#303030",
-    "stroke": 0,
+    "stroke": 1,
     "radius": 0,
     "dasharray": null,
     "vertices": [
       {
         "x": 3971.1400000000003,
-        "y": 3995.114000000002
+        "y": 4011.485000000002
       },
       {
         "x": 3983.1820000000002,
-        "y": 4000.020000000001
+        "y": 4016.391000000001
       },
       {
         "x": 3971.1400000000003,
-        "y": 4005.3720000000017
+        "y": 4021.7430000000018
       }
     ],
     "blur": 0,
@@ -343,45 +252,127 @@
         "name": "shape_designer.filter.SizeFilter"
       },
       {
+        "name": "shape_designer.filter.StrokeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "078497de-04ae-57d8-a141-a3d4afacfe39",
+    "x": 4007.648125,
+    "y": 4011.793687500002,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "output_q_not",
+      "type": "Output",
+      "direction": 1
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#1C9BAB",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      },
+      {
         "name": "shape_designer.filter.FillColorFilter"
       }
     ]
   },
   {
-    "type": "shape_designer.figure.ExtLine",
-    "id": "788a9b2a-0373-55e0-dd85-fcba2dbadca3",
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "08459b5e-14e9-38d5-14dc-4b24f166cd2d",
+    "x": 3993.9212500000003,
+    "y": 3974.858000000002,
+    "width": 28.328125,
+    "height": 21.359375,
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Line"
+      "name": "Label"
     },
-    "cssClass": "shape_designer_figure_ExtLine",
-    "stroke": 1,
-    "color": "#000000",
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "Q",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
-    "vertex": [
-      {
-        "x": 3982.6240000000007,
-        "y": 3975.743999999999
-      },
-      {
-        "x": 3982.8272000000006,
-        "y": 4025.1707999999976
-      }
-    ],
-    "router": "draw2d.layout.connection.VertexRouter",
-    "radius": "",
+    "fontSize": 10,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
     "filters": [
       {
-        "name": "shape_designer.filter.StrokeFilter"
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "eada3849-d35d-7391-47aa-888a2469513d",
+    "x": 3993.4212500000003,
+    "y": 4006.051600000002,
+    "width": 28.328125,
+    "height": 21.359375,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "Q",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 10,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
       }
     ]
   },
   {
     "type": "shape_designer.figure.ExtLine",
-    "id": "a116b409-edb7-e80d-956f-67ff3819c62f",
+    "id": "75ad5ac1-3b3f-7d01-8f6b-95e175688076",
     "alpha": 1,
     "angle": 0,
     "userData": {
@@ -395,48 +386,12 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4010.7627999999995,
-        "y": 3980.2976
+        "x": 3997.488,
+        "y": 4010.8563999999997
       },
       {
-        "x": 4025.238,
-        "y": 3980.258
-      },
-      {
-        "x": 4025.238,
-        "y": 3990.5159999999996
-      }
-    ],
-    "router": "draw2d.layout.connection.VertexRouter",
-    "radius": "",
-    "filters": [
-      {
-        "name": "shape_designer.filter.StrokeFilter"
-      }
-    ]
-  },
-  {
-    "type": "shape_designer.figure.ExtLine",
-    "id": "3d85b4f4-644c-8edd-080b-287c95984974",
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "name": "Line"
-    },
-    "cssClass": "shape_designer_figure_ExtLine",
-    "stroke": 1,
-    "color": "#000000",
-    "outlineStroke": 0,
-    "outlineColor": "none",
-    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
-    "vertex": [
-      {
-        "x": 4031.36,
-        "y": 3999.5980000000022
-      },
-      {
-        "x": 3990.773999999998,
-        "y": 4000.044000000002
+        "x": 4005.0148,
+        "y": 4010.8563999999997
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
