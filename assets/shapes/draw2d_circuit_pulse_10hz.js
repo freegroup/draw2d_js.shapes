@@ -229,4 +229,4 @@ draw2d_circuit_pulse_10hz = draw2d_circuit_pulse_10hz.extend({
 });
 draw2d_circuit_pulse_10hz.logic="calculate: function () {\n    this.getOutputPort(0).setValue(this.value);\n}";
 draw2d_circuit_pulse_10hz.github="./shapes/org/draw2d/circuit/pulse/10hz.shape";
-draw2d_circuit_pulse_10hz.markdown="# High / Low Signal display\n\nsimple `HIGH`/ `LOW` display.\n\n    HIGH -> red\n \n    LOW -> gray";
+draw2d_circuit_pulse_10hz.markdown="# Clock Signal\n\nIn electronics and especially synchronous digital circuits, \na clock signal is a particular type of signal that \noscillates between a `high` and a `low` state and is \nutilized like a metronome to coordinate actions \nof digital circuits.\n\nThe hertz (symbol `Hz`) is the unit of frequency in the \nInternational System of Units (SI) and is defined as \none cycle per second. \n\nIt is named for Heinrich Rudolf Hertz, the first person \nto provide conclusive proof of the existence of \nelectromagnetic waves.";
