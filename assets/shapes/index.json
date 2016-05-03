@@ -55,6 +55,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_gate_NOT",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "gate",
+      "NOT"
+    ]
+  },
+  {
     "name": "draw2d_circuit_gate_OR",
     "tags": [
       "draw2d",
