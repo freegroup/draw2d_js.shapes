@@ -491,22 +491,22 @@ var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:62.7199999999998,height:52.28399999999556},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:62.7199999999998,height:51.5},attr), setter, getter);
      var port;
      // out_q
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.61499521683659, 27.26646775304313));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.61499521683659, 27.68155339805798));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("out_q");
      port.setMaxFanOut(20);
      // input_t
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.188775510204092, 50.2180399357396));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.188775510204092, 50.98252427184438));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_t");
      port.setMaxFanOut(20);
      // input_d
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-1.594387755102046, 18.915920740572094));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-1.594387755102046, 19.203883495145384));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_d");
@@ -518,7 +518,7 @@ var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({
    {
       var shape = this._super();
       this.originalWidth = 62.7199999999998;
-      this.originalHeight= 52.28399999999556;
+      this.originalHeight= 51.5;
       return shape;
    },
 
@@ -527,7 +527,7 @@ var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L62.7199999999998,0 L62.7199999999998,52.28399999999556 L0,52.28399999999556");
+        shape = this.canvas.paper.path("M0,0 L62.7199999999998,0 L62.7199999999998,51.5 L0,51.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -557,22 +557,22 @@ var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({
         shape.data("name","Rectangle");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M13.484000000000378 1.885999999996784L13.930000000000291,52.28399999999556');
+        shape = this.canvas.paper.path('M13.984000000000378 1.885999999996784L14.187200000000303,51.312799999995605');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M13.484000000000378 1.885999999996784L13.930000000000291,52.28399999999556');
+        shape = this.canvas.paper.path('M13.984000000000378 1.885999999996784L14.187200000000303,51.312799999995605');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M41.8799999999992 5.9539999999979045L56.5979999999995,6.399999999997817L56.5979999999995,16.657999999997628');
+        shape = this.canvas.paper.path('M42.12279999999919 6.439599999997881L56.5979999999995,6.399999999997817L56.5979999999995,16.657999999997628');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M41.8799999999992 5.9539999999979045L56.5979999999995,6.399999999997817L56.5979999999995,16.657999999997628');
+        shape = this.canvas.paper.path('M42.12279999999919 6.439599999997881L56.5979999999995,6.399999999997817L56.5979999999995,16.657999999997628');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         

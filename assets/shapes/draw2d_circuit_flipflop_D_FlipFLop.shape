@@ -2,8 +2,8 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "c55dd135-15db-7c71-5efa-f6761c073e66",
-    "x": 3980.54,
-    "y": 3965,
+    "x": 3971.1400000000003,
+    "y": 3975.358000000002,
     "width": 60,
     "height": 50,
     "alpha": 1,
@@ -23,20 +23,20 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 3980.54,
-        "y": 3965
+        "x": 3971.1400000000003,
+        "y": 3975.358000000002
       },
       {
-        "x": 4040.54,
-        "y": 3965
+        "x": 4031.1400000000003,
+        "y": 3975.358000000002
       },
       {
-        "x": 4040.54,
-        "y": 4015
+        "x": 4031.1400000000003,
+        "y": 4025.358000000002
       },
       {
-        "x": 3980.54,
-        "y": 4015
+        "x": 3971.1400000000003,
+        "y": 4025.358000000002
       }
     ],
     "blur": 0,
@@ -61,8 +61,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "7c8a6215-ce17-6a10-c85b-b97fd0de466c",
-    "x": 4037.4001249999997,
-    "y": 3972.756,
+    "x": 4028.000125,
+    "y": 3983.114000000002,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -83,6 +83,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -96,8 +99,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "68aac6da-04da-9eea-260f-ab29020fcf6f",
-    "x": 3978.04,
-    "y": 3963.5,
+    "x": 3968.6400000000003,
+    "y": 3973.858000000002,
     "width": 28.328125,
     "height": 21.359375,
     "alpha": 1,
@@ -134,8 +137,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "f2b43936-6984-0428-5d81-323fb04ab3f2",
-    "x": 3988.616375,
-    "y": 3979.0763125,
+    "x": 3979.2163750000004,
+    "y": 3989.434312500002,
     "width": 28.328125,
     "height": 21.359375,
     "alpha": 1,
@@ -172,8 +175,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "5fc48f01-fecb-0d5f-ed4f-81a4bc26ae63",
-    "x": 3971.04,
-    "y": 3984.756,
+    "x": 3961.6400000000003,
+    "y": 3995.114000000002,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -194,6 +197,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -207,8 +213,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "592a8604-e0a9-8913-445d-621078e5ae97",
-    "x": 3972.04,
-    "y": 3968.39,
+    "x": 3962.6400000000003,
+    "y": 3978.748000000002,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -229,6 +235,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -242,8 +251,8 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "e440526c-44e4-a03c-ba52-c43ddc69d29a",
-    "x": 4030.866,
-    "y": 3989.578,
+    "x": 4021.4660000000003,
+    "y": 3999.936000000002,
     "width": 9,
     "height": 25,
     "alpha": 1,
@@ -260,20 +269,20 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 4030.866,
-        "y": 3989.578
+        "x": 4021.4660000000003,
+        "y": 3999.936000000002
       },
       {
-        "x": 4039.866,
-        "y": 3989.578
+        "x": 4030.4660000000003,
+        "y": 3999.936000000002
       },
       {
-        "x": 4039.866,
-        "y": 4014.578
+        "x": 4030.4660000000003,
+        "y": 4024.936000000002
       },
       {
-        "x": 4030.866,
-        "y": 4014.578
+        "x": 4021.4660000000003,
+        "y": 4024.936000000002
       }
     ],
     "blur": 0,
@@ -295,8 +304,8 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "0b5993de-527b-2309-20d4-4519d5414943",
-    "x": 3980.54,
-    "y": 3984.756,
+    "x": 3971.1400000000003,
+    "y": 3995.114000000002,
     "width": 12.041999999999916,
     "height": 10.25799999999981,
     "alpha": 1,
@@ -313,16 +322,16 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 3980.54,
-        "y": 3984.756
+        "x": 3971.1400000000003,
+        "y": 3995.114000000002
       },
       {
-        "x": 3992.582,
-        "y": 3989.661999999999
+        "x": 3983.1820000000002,
+        "y": 4000.020000000001
       },
       {
-        "x": 3980.54,
-        "y": 3995.0139999999997
+        "x": 3971.1400000000003,
+        "y": 4005.3720000000017
       }
     ],
     "blur": 0,
@@ -354,12 +363,12 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 3991.5240000000003,
-        "y": 3965.385999999997
+        "x": 3982.6240000000007,
+        "y": 3975.743999999999
       },
       {
-        "x": 3991.9700000000003,
-        "y": 4015.7839999999956
+        "x": 3982.8272000000006,
+        "y": 4025.1707999999976
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
@@ -386,16 +395,16 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4019.919999999999,
-        "y": 3969.453999999998
+        "x": 4010.7627999999995,
+        "y": 3980.2976
       },
       {
-        "x": 4034.6379999999995,
-        "y": 3969.899999999998
+        "x": 4025.238,
+        "y": 3980.258
       },
       {
-        "x": 4034.6379999999995,
-        "y": 3980.1579999999976
+        "x": 4025.238,
+        "y": 3990.5159999999996
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
@@ -422,12 +431,12 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 4040.7599999999998,
-        "y": 3989.2400000000002
+        "x": 4031.36,
+        "y": 3999.5980000000022
       },
       {
-        "x": 4000.1739999999977,
-        "y": 3989.686
+        "x": 3990.773999999998,
+        "y": 4000.044000000002
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
