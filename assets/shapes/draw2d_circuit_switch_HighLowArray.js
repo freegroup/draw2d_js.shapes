@@ -18,41 +18,49 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("port01");
+     port.setMaxFanOut(20);
      // port02
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 19.375));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("port02");
+     port.setMaxFanOut(20);
      // port03
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 31.25));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("port03");
+     port.setMaxFanOut(20);
      // port04
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 43.75));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("port04");
+     port.setMaxFanOut(20);
      // port05
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 56.122437500000046));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("port05");
+     port.setMaxFanOut(20);
      // port06
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 68.72787499999987));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("port06");
+     port.setMaxFanOut(20);
      // port07
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 81.1621875000003));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("port07");
+     port.setMaxFanOut(20);
      // port08
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 93.93256250000007));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("port08");
+     port.setMaxFanOut(20);
      this.persistPorts=false;
    },
 

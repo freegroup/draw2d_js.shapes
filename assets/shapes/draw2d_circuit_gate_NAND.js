@@ -18,16 +18,19 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input01");
+     port.setMaxFanOut(20);
      // input02
      port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 80));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input02");
+     port.setMaxFanOut(20);
      // output
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.4390243902439, 48.75));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output");
+     port.setMaxFanOut(20);
      this.persistPorts=false;
    },
 

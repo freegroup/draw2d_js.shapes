@@ -18,6 +18,7 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("Port");
+     port.setMaxFanOut(20);
      this.persistPorts=false;
    },
 
@@ -69,22 +70,22 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
         shape.data("name","Circle");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M73.5 23.5L81.5,23.5L89.5,23.5');
+        shape = this.canvas.paper.path('M73.7619749999999 23.936999999999443L81.41827499999954,23.936999999999443L89.07457499999964,23.936999999999443');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M73.5 23.5L81.5,23.5L89.5,23.5');
+        shape = this.canvas.paper.path('M73.7619749999999 23.936999999999443L81.41827499999954,23.936999999999443L89.07457499999964,23.936999999999443');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M33.5 23.5L41.5,23.5L49.5,23.5');
+        shape = this.canvas.paper.path('M33.76197499999989 23.936999999999443L41.41827499999954,23.936999999999443L49.07457499999964,23.936999999999443');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M33.5 23.5L41.5,23.5L49.5,23.5');
+        shape = this.canvas.paper.path('M33.76197499999989 23.936999999999443L41.41827499999954,23.936999999999443L49.07457499999964,23.936999999999443');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","Line");
         
