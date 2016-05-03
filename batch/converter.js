@@ -173,7 +173,12 @@ page.open('http://freegroup.github.io/draw2d_js.app.shape_designer/', function(s
     if (status === "success") {
         scanDirectory("./shapes/org");
         if(filesToProcess.length>0){
-            processFiles(filesToProcess.pop());
+            try {
+                processFiles(filesToProcess.pop());
+            }
+            catch(e){
+                console.log.error(e);
+            }
         }
     }
 });
