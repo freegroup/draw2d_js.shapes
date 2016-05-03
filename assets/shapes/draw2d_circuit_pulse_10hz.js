@@ -11,10 +11,10 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:30,height:32},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:33.671875,height:49.5},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 48.399999999999466));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(117.81902552204176, 70.68282828282794));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
@@ -25,8 +25,8 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 30;
-      this.originalHeight= 32;
+      this.originalWidth = 33.671875;
+      this.originalHeight= 49.5;
       return shape;
    },
 
@@ -35,14 +35,29 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L30,0 L30,32 L0,32");
+        shape = this.canvas.paper.path("M0,0 L33.671875,0 L33.671875,49.5 L0,49.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
-        // circle
-        shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15,"ry":16,"cx":15,"cy":16,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","circle");
+        // Rectangle
+        shape = this.canvas.paper.path('M33.671875 49.5L3.671875 49.5L3.671875 19.5L33.671875 19.5Z');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'10Hz');
+        shape.attr({"x":4,"y":11,"text-anchor":"start","text":"10Hz","font-family":"\"Arial\"","font-size":11,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Line_shadow
+        shape = this.canvas.paper.path('M6.119575000000168 41.672399999999925L13.426774999999907,41.672399999999925L13.426774999999907,28.884799999999814L24.387574999999742,28.884799999999814L24.387574999999742,41.21569999999974L30.324674999999843,41.21569999999974');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.data("name","Line_shadow");
+        
+        // Line
+        shape = this.canvas.paper.path('M6.119575000000168 41.672399999999925L13.426774999999907,41.672399999999925L13.426774999999907,28.884799999999814L24.387574999999742,28.884799999999814L24.387574999999742,41.21569999999974L30.324674999999843,41.21569999999974');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.data("name","Line");
         
 
         return this.canvas.paper.setFinish();
@@ -182,7 +197,8 @@ draw2d_circuit_pulse_10hz = draw2d_circuit_pulse_10hz.extend({
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
         this.hz = 10;
         this.running=false;
-        this.onStart();
+// only for test purpose        
+//        this.onStart();
     },
     
     calculate:function()
