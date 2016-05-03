@@ -169,6 +169,18 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
       }
    },
 
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
     /**
      * @method
      * Return an objects with all important attributes for XML or JSON serialization

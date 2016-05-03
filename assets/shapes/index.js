@@ -169,6 +169,18 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
       }
    },
 
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
     /**
      * @method
      * Return an objects with all important attributes for XML or JSON serialization
@@ -385,6 +397,18 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
       }
    },
 
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
     /**
      * @method
      * Return an objects with all important attributes for XML or JSON serialization
@@ -476,6 +500,7 @@ draw2d_circuit_display_Led = draw2d_circuit_display_Led.extend({
     }
 
 });
+draw2d_circuit_display_Led.logic="calculate: function () {\n}";
 draw2d_circuit_display_Led.github="./shapes/org/draw2d/circuit/display/Led.shape";
 draw2d_circuit_display_Led.markdown="# High / Low Signal display\n\nsimple `HIGH`/ `LOW` display.\n\n    HIGH -> red\n \n    LOW -> gray";
 // Generated Code for the Draw2D touch HTML5 lib
@@ -626,6 +651,18 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
       }
    },
 
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
     /**
      * @method
      * Return an objects with all important attributes for XML or JSON serialization
@@ -708,7 +745,6 @@ draw2d_circuit_flipflop_D_FlipFlop = draw2d_circuit_flipflop_D_FlipFlop.extend({
         
         var rising = this.last_t===false && t===true; 
         
-        console.log(rising);
         if(rising===true){
             q.setValue(d);
             q_.setValue(!d)
@@ -716,7 +752,7 @@ draw2d_circuit_flipflop_D_FlipFlop = draw2d_circuit_flipflop_D_FlipFlop.extend({
         this.last_t = t;
     }
 });
-draw2d_circuit_flipflop_D_FlipFlop.logic="calculate: function () {\n    var d = this.getInputPort(\'input_d\').getValue();\n    var t = this.getInputPort(\'input_t\').getValue();\n    var q = this.getOutputPort(\'output_q\');\n    var q_ = this.getOutputPort(\'output_q_not\');\n    var rising = this.last_t === false && t === true;\n    console.log(rising);\n    if (rising === true) {\n        q.setValue(d);\n        q_.setValue(!d);\n    }\n    this.last_t = t;\n}";
+draw2d_circuit_flipflop_D_FlipFlop.logic="calculate: function () {\n    var d = this.getInputPort(\'input_d\').getValue();\n    var t = this.getInputPort(\'input_t\').getValue();\n    var q = this.getOutputPort(\'output_q\');\n    var q_ = this.getOutputPort(\'output_q_not\');\n    var rising = this.last_t === false && t === true;\n    if (rising === true) {\n        q.setValue(d);\n        q_.setValue(!d);\n    }\n    this.last_t = t;\n}";
 draw2d_circuit_flipflop_D_FlipFlop.github="./shapes/org/draw2d/circuit/flipflop/D_FlipFlop.shape";
 draw2d_circuit_flipflop_D_FlipFlop.markdown="# D-FlipFlop\n\n## Description\n\nThe D FlipFLop is widely used. It is also known as a \n*data* or *delay* flip-flop.\n\nThe D flip-flop captures the value of the `D` input \nat a definite portion of the clock cycle (such \nas the rising edge of the clock). That captured \nvalue becomes the `Q` output. At other times, the \noutput Q does not change. The `D flip-flop` \ncan be viewed as a memory cell, a zero-order hold, \nor a delay line.\n\n\n## Logic table\n\n| Clock        | D       |  **Q***next*   |\n|:------------:|:-------:|:----------:|\n| Rising edge  | Low     |  **Low**       |\n| Rising edge  | High    |  **High**      |\n| non rising   | *       |  **Q***last*   |\n\n";
 // Generated Code for the Draw2D touch HTML5 lib
@@ -835,6 +871,18 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
            });
       }
    },
+
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
 
     /**
      * @method
@@ -1041,6 +1089,18 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
       }
    },
 
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
     /**
      * @method
      * Return an objects with all important attributes for XML or JSON serialization
@@ -1246,6 +1306,18 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
       }
    },
 
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
     /**
      * @method
      * Return an objects with all important attributes for XML or JSON serialization
@@ -1444,6 +1516,18 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
            });
       }
    },
+
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
 
     /**
      * @method
@@ -1644,6 +1728,18 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
       }
    },
 
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
     /**
      * @method
      * Return an objects with all important attributes for XML or JSON serialization
@@ -1727,6 +1823,199 @@ draw2d_circuit_gate_OR = draw2d_circuit_gate_OR.extend({
 draw2d_circuit_gate_OR.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() | i2.getValue());\n}";
 draw2d_circuit_gate_OR.github="./shapes/org/draw2d/circuit/gate/OR.shape";
 draw2d_circuit_gate_OR.markdown="# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\n\n**Therefore, the output is always 0 except when all the inputs are 1.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  `High`    |\n\n";
+// Generated Code for the Draw2D touch HTML5 lib
+//                                                        
+// http://www.draw2d.org                                  
+//                                                        
+// Go to the Designer http://www.draw2d.org               
+// to design your own shape or download user generated    
+//                                                        
+var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({            
+
+   NAME: "draw2d_circuit_pulse_50hz",
+
+   init:function(attr, setter, getter)
+   {
+     this._super( $.extend({stroke:0, bgColor:null, width:30,height:32},attr), setter, getter);
+     var port;
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 48.399999999999466));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#1C9BAB");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     this.persistPorts=false;
+   },
+
+   createShapeElement : function()
+   {
+      var shape = this._super();
+      this.originalWidth = 30;
+      this.originalHeight= 32;
+      return shape;
+   },
+
+   createSet: function()
+   {
+       this.canvas.paper.setStart();
+
+        // BoundingBox
+        shape = this.canvas.paper.path("M0,0 L30,0 L30,32 L0,32");
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
+        shape.data("name","BoundingBox");
+        
+        // circle
+        shape = this.canvas.paper.ellipse();
+        shape.attr({"rx":15,"ry":16,"cx":15,"cy":16,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.data("name","circle");
+        
+
+        return this.canvas.paper.setFinish();
+   },
+
+   applyAlpha: function()
+   {
+   },
+
+   layerGet: function(name, attributes)
+   {
+      var result=null;
+      this.svgNodes.some(function(shape){
+         if(shape.data("name")===name){
+            result=shape;
+         }
+         return result!==null;
+      });
+
+      return result;
+   },
+
+   layerAttr: function(name, attributes)
+   {
+     this.svgNodes.forEach(function(shape){
+             if(shape.data("name")===name){
+                  shape.attr(attributes);
+             }
+     });
+   },
+
+   layerShow: function(name, flag, duration)
+   {
+      if(duration){
+        this.svgNodes.forEach(function(node){
+            if(node.data("name")===name){
+                if(flag){
+                    node.attr({ opacity : 0 }).show().animate({ opacity : 1 }, duration);
+                }
+                else{
+                    node.animate({ opacity : 0 }, duration, function () { this.hide() });
+                }
+            }
+        });
+      }
+      else{
+          this.svgNodes.forEach(function(node){
+              if(node.data("name")===name){
+                   if(flag){node.show();}
+                   else{node.hide();}
+               }
+           });
+      }
+   },
+
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
+    /**
+     * @method
+     * Return an objects with all important attributes for XML or JSON serialization
+     *
+     * @returns {Object}
+     */
+    getPersistentAttributes : function()
+    {
+        var memento = this._super();
+
+        // add all decorations to the memento
+        //
+        memento.labels = [];
+        this.children.each(function(i,e){
+            var labelJSON = e.figure.getPersistentAttributes();
+            labelJSON.locator=e.locator.NAME;
+            memento.labels.push(labelJSON);
+        });
+
+        return memento;
+    },
+
+    /**
+     * @method
+     * Read all attributes from the serialized properties and transfer them into the shape.
+     *
+     * @param {Object} memento
+     * @returns
+     */
+    setPersistentAttributes : function(memento)
+    {
+        this._super(memento);
+
+        // remove all decorations created in the constructor of this element
+        //
+        this.resetChildren();
+
+        // and add all children of the JSON document.
+        //
+        $.each(memento.labels, $.proxy(function(i,json){
+            // create the figure stored in the JSON
+            var figure =  eval("new "+json.type+"()");
+
+            // apply all attributes
+            figure.attr(json);
+
+            // instantiate the locator
+            var locator =  eval("new "+json.locator+"()");
+
+            // add the new figure as child to this figure
+            this.add(figure, locator);
+        },this));
+    }
+});
+
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_pulse_50hz = draw2d_circuit_pulse_50hz.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+         this.attr({resizeable:false});
+         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+         var _this = this;
+    },
+    
+    calculate:function(flag){
+       
+    }
+
+});
+draw2d_circuit_pulse_50hz.logic="calculate: function (flag) {\n}";
+draw2d_circuit_pulse_50hz.github="./shapes/org/draw2d/circuit/pulse/50hz.shape";
+draw2d_circuit_pulse_50hz.markdown="# High / Low Signal display\n\nsimple `HIGH`/ `LOW` display.\n\n    HIGH -> red\n \n    LOW -> gray";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
@@ -1856,6 +2145,18 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
            });
       }
    },
+
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
 
     /**
      * @method
@@ -2129,6 +2430,18 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
       }
    },
 
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
     /**
      * @method
      * Return an objects with all important attributes for XML or JSON serialization
@@ -2233,10 +2546,10 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:89.07457499999964,height:34.483999999999924},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:45.35582499999964,height:27.483999999999924},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.17968567349375, 68.10114835865902));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(107.32450021579413, 87.26531800320183));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("Port");
@@ -2247,8 +2560,8 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 89.07457499999964;
-      this.originalHeight= 34.483999999999924;
+      this.originalWidth = 45.35582499999964;
+      this.originalHeight= 27.483999999999924;
       return shape;
    },
 
@@ -2257,57 +2570,37 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L89.07457499999964,0 L89.07457499999964,34.483999999999924 L0,34.483999999999924");
+        shape = this.canvas.paper.path("M0,0 L45.35582499999964,0 L45.35582499999964,27.483999999999924 L0,27.483999999999924");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // Label
-        shape = this.canvas.paper.text(0,0,'High');
-        shape.attr({"x":4,"y":22.483999999999924,"text-anchor":"start","text":"High","font-family":"\"Arial\"","font-size":13,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape = this.canvas.paper.ellipse();
+        shape.attr({"rx":4.5,"ry":4,"cx":4.5,"cy":22.983999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
         shape.data("name","Label");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4.5,"ry":4,"cx":48.21875,"cy":22.983999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
-        shape.data("name","Circle");
-        
-        // Circle
-        shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4.5,"ry":4,"cx":71.21875,"cy":23.483999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"rx":4.5,"ry":4,"cx":27.5,"cy":23.483999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
         shape.data("name","Circle");
         
         // low
-        shape = this.canvas.paper.path('M69.84457500000008,8.735999999999876Q67.84457500000008,8.735999999999876 67.84457500000008, 6.735999999999876L67.84457500000008,2Q67.84457500000008,0 65.84457500000008, 0L54.84457500000008,0Q52.84457500000008,0 52.84457500000008, 2L52.84457500000008,6.735999999999876Q52.84457500000008,8.735999999999876 50.84457500000008, 8.735999999999876L46.018175000000156,8.735999999999876Q44.018175000000156,8.735999999999876 44.018175000000156, 10.735999999999876L44.018175000000156,11.735999999999876Q44.018175000000156,13.735999999999876 46.018175000000156, 13.735999999999876L74.01817500000016,13.735999999999876Q76.01817500000016,13.735999999999876 76.01817500000016, 11.735999999999876L76.01817500000016,10.735999999999876Q76.01817500000016,8.735999999999876 74.01817500000016, 8.735999999999876L69.84457500000008,8.735999999999876');
+        shape = this.canvas.paper.path('M26.125825000000077,8.735999999999876Q24.125825000000077,8.735999999999876 24.125825000000077, 6.735999999999876L24.125825000000077,2Q24.125825000000077,0 22.125825000000077, 0L11.125825000000077,0Q9.125825000000077,0 9.125825000000077, 2L9.125825000000077,6.735999999999876Q9.125825000000077,8.735999999999876 7.125825000000077, 8.735999999999876L2.2994250000001557,8.735999999999876Q0.2994250000001557,8.735999999999876 0.2994250000001557, 10.735999999999876L0.2994250000001557,11.735999999999876Q0.2994250000001557,13.735999999999876 2.2994250000001557, 13.735999999999876L30.299425000000156,13.735999999999876Q32.299425000000156,13.735999999999876 32.299425000000156, 11.735999999999876L32.299425000000156,10.735999999999876Q32.299425000000156,8.735999999999876 30.299425000000156, 8.735999999999876L26.125825000000077,8.735999999999876');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","low");
         
         // high
-        shape = this.canvas.paper.path('M66.03257500000018,16.235999999999876Q64.22057500000028,16.235999999999876 64.98692190867477, 14.388647187036133L67.07822809132558,9.347352812963743Q67.84457500000008,7.5 65.84457500000008, 7.5L54.84457500000008,7.5Q52.84457500000008,7.5 53.34652239007231, 9.435987814424376L54.60762760992772,14.3000121855755Q55.10957499999995,16.235999999999876 53.10957499999995, 16.235999999999876L46.018175000000156,16.235999999999876Q44.018175000000156,16.235999999999876 44.018175000000156, 18.235999999999876L44.018175000000156,19.235999999999876Q44.018175000000156,21.235999999999876 46.018175000000156, 21.235999999999876L74.01817500000016,21.235999999999876Q76.01817500000016,21.235999999999876 76.01817500000016, 19.235999999999876L76.01817500000016,18.235999999999876Q76.01817500000016,16.235999999999876 74.01817500000016, 16.235999999999876L69.84457500000008,16.235999999999876Q67.84457500000008,16.235999999999876 66.03257500000018, 16.235999999999876L66.03257500000018,16.235999999999876');
+        shape = this.canvas.paper.path('M22.31382500000018,16.235999999999876Q20.50182500000028,16.235999999999876 21.26817190867477, 14.388647187036133L23.359478091325588,9.347352812963743Q24.125825000000077,7.5 22.125825000000077, 7.5L11.125825000000077,7.5Q9.125825000000077,7.5 9.62777239007231, 9.435987814424376L10.888877609927716,14.3000121855755Q11.39082499999995,16.235999999999876 9.39082499999995, 16.235999999999876L2.2994250000001557,16.235999999999876Q0.2994250000001557,16.235999999999876 0.2994250000001557, 18.235999999999876L0.2994250000001557,19.235999999999876Q0.2994250000001557,21.235999999999876 2.2994250000001557, 21.235999999999876L30.299425000000156,21.235999999999876Q32.299425000000156,21.235999999999876 32.299425000000156, 19.235999999999876L32.299425000000156,18.235999999999876Q32.299425000000156,16.235999999999876 30.299425000000156, 16.235999999999876L26.125825000000077,16.235999999999876Q24.125825000000077,16.235999999999876 22.31382500000018, 16.235999999999876L22.31382500000018,16.235999999999876');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","high");
         
-        // Circle
-        shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4.5,"ry":4,"cx":35.71875,"cy":22.983999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
-        shape.data("name","Circle");
-        
         // Line_shadow
-        shape = this.canvas.paper.path('M73.7619749999999 23.936999999999443L81.41827499999954,23.936999999999443L89.07457499999964,23.936999999999443');
+        shape = this.canvas.paper.path('M30.043224999999893 23.936999999999443L37.69952499999954,23.936999999999443L45.35582499999964,23.936999999999443');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M73.7619749999999 23.936999999999443L81.41827499999954,23.936999999999443L89.07457499999964,23.936999999999443');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
-        shape.data("name","Line");
-        
-        // Line_shadow
-        shape = this.canvas.paper.path('M33.76197499999989 23.936999999999443L41.41827499999954,23.936999999999443L49.07457499999964,23.936999999999443');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
-        shape.data("name","Line_shadow");
-        
-        // Line
-        shape = this.canvas.paper.path('M33.76197499999989 23.936999999999443L41.41827499999954,23.936999999999443L49.07457499999964,23.936999999999443');
+        shape = this.canvas.paper.path('M30.043224999999893 23.936999999999443L37.69952499999954,23.936999999999443L45.35582499999964,23.936999999999443');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","Line");
         
@@ -2364,6 +2657,18 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
            });
       }
    },
+
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
 
     /**
      * @method
@@ -2467,4 +2772,4 @@ draw2d_circuit_switch_PushButton = draw2d_circuit_switch_PushButton.extend({
 });
 draw2d_circuit_switch_PushButton.logic="calculate: function () {\n}";
 draw2d_circuit_switch_PushButton.github="./shapes/org/draw2d/circuit/switch/PushButton.shape";
-draw2d_circuit_switch_PushButton.markdown="# Header \n## Subheader \nbe nice and write a help file for your new \ncreated ***DigitalTrainingStudion*** shape. \n\n  - point 1\n  - point 2\n  - point 3";
+draw2d_circuit_switch_PushButton.markdown="# Push Button\n\ntoggles the output if the user press \nthe mouse button down in the simulation mode.";

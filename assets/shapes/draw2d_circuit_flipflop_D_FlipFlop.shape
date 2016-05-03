@@ -2,15 +2,15 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "c55dd135-15db-7c71-5efa-f6761c073e66",
-    "x": 3971.1400000000003,
-    "y": 3975.358000000002,
+    "x": 3980.75,
+    "y": 3974.4735124999997,
     "width": 40,
     "height": 50,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.last_t = false;\n    },\n    \n    calculate:function()\n    {\n        var d = this.getInputPort(\"input_d\").getValue();\n        var t = this.getInputPort(\"input_t\").getValue();\n        \n        var q = this.getOutputPort(\"output_q\");\n        var q_ = this.getOutputPort(\"output_q_not\");\n        \n        var rising = this.last_t===false && t===true; \n        \n        console.log(rising);\n        if(rising===true){\n            q.setValue(d);\n            q_.setValue(!d)\n        }\n        this.last_t = t;\n    }\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.last_t = false;\n    },\n    \n    calculate:function()\n    {\n        var d = this.getInputPort(\"input_d\").getValue();\n        var t = this.getInputPort(\"input_t\").getValue();\n        \n        var q = this.getOutputPort(\"output_q\");\n        var q_ = this.getOutputPort(\"output_q_not\");\n        \n        var rising = this.last_t===false && t===true; \n        \n        if(rising===true){\n            q.setValue(d);\n            q_.setValue(!d)\n        }\n        this.last_t = t;\n    }\n});",
       "name": "Rectangle",
       "markdown": "# D-FlipFlop\n\n## Description\n\nThe D FlipFLop is widely used. It is also known as a \n*data* or *delay* flip-flop.\n\nThe D flip-flop captures the value of the `D` input \nat a definite portion of the clock cycle (such \nas the rising edge of the clock). That captured \nvalue becomes the `Q` output. At other times, the \noutput Q does not change. The `D flip-flop` \ncan be viewed as a memory cell, a zero-order hold, \nor a delay line.\n\n\n## Logic table\n\n| Clock        | D       |  **Q***next*   |\n|:------------:|:-------:|:----------:|\n| Rising edge  | Low     |  **Low**       |\n| Rising edge  | High    |  **High**      |\n| non rising   | *       |  **Q***last*   |\n\n"
     },
@@ -23,20 +23,20 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 3971.1400000000003,
-        "y": 3975.358000000002
+        "x": 3980.75,
+        "y": 3974.4735124999997
       },
       {
-        "x": 4011.1400000000003,
-        "y": 3975.358000000002
+        "x": 4020.75,
+        "y": 3974.4735124999997
       },
       {
-        "x": 4011.1400000000003,
-        "y": 4025.358000000002
+        "x": 4020.75,
+        "y": 4024.4735124999997
       },
       {
-        "x": 3971.1400000000003,
-        "y": 4025.358000000002
+        "x": 3980.75,
+        "y": 4024.4735124999997
       }
     ],
     "blur": 0,
@@ -61,8 +61,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "7c8a6215-ce17-6a10-c85b-b97fd0de466c",
-    "x": 4007.648125,
-    "y": 3980.248000000002,
+    "x": 4017.258125,
+    "y": 3979.3635124999996,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -99,8 +99,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "68aac6da-04da-9eea-260f-ab29020fcf6f",
-    "x": 3969.6400000000003,
-    "y": 3974.358000000002,
+    "x": 3979.25,
+    "y": 3973.4735124999997,
     "width": 28.328125,
     "height": 21.359375,
     "alpha": 1,
@@ -137,8 +137,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "5fc48f01-fecb-0d5f-ed4f-81a4bc26ae63",
-    "x": 3962.6400000000003,
-    "y": 4011.793687500002,
+    "x": 3972.25,
+    "y": 4010.9091999999996,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -175,8 +175,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "592a8604-e0a9-8913-445d-621078e5ae97",
-    "x": 3962.6400000000003,
-    "y": 3980.248000000002,
+    "x": 3972.25,
+    "y": 3979.3635124999996,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -213,8 +213,8 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "0b5993de-527b-2309-20d4-4519d5414943",
-    "x": 3971.1400000000003,
-    "y": 4011.485000000002,
+    "x": 3980.75,
+    "y": 4010.6005124999997,
     "width": 12.041999999999916,
     "height": 10.25799999999981,
     "alpha": 1,
@@ -231,16 +231,16 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 3971.1400000000003,
-        "y": 4011.485000000002
+        "x": 3980.75,
+        "y": 4010.6005124999997
       },
       {
-        "x": 3983.1820000000002,
-        "y": 4016.391000000001
+        "x": 3992.792,
+        "y": 4015.5065124999987
       },
       {
-        "x": 3971.1400000000003,
-        "y": 4021.7430000000018
+        "x": 3980.75,
+        "y": 4020.8585124999995
       }
     ],
     "blur": 0,
@@ -259,8 +259,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "078497de-04ae-57d8-a141-a3d4afacfe39",
-    "x": 4007.648125,
-    "y": 4011.793687500002,
+    "x": 4017.258125,
+    "y": 4010.9091999999996,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -297,8 +297,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "08459b5e-14e9-38d5-14dc-4b24f166cd2d",
-    "x": 3993.9212500000003,
-    "y": 3974.858000000002,
+    "x": 4003.53125,
+    "y": 3973.9735124999997,
     "width": 28.328125,
     "height": 21.359375,
     "alpha": 1,
@@ -335,8 +335,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "eada3849-d35d-7391-47aa-888a2469513d",
-    "x": 3993.4212500000003,
-    "y": 4006.051600000002,
+    "x": 4003.03125,
+    "y": 4005.1671125,
     "width": 28.328125,
     "height": 21.359375,
     "alpha": 1,
@@ -386,12 +386,12 @@
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 3997.488,
-        "y": 4010.8563999999997
+        "x": 4007.0979999999995,
+        "y": 4009.9719124999974
       },
       {
-        "x": 4005.0148,
-        "y": 4010.8563999999997
+        "x": 4014.6247999999996,
+        "y": 4009.9719124999974
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",

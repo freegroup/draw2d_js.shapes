@@ -73,6 +73,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_pulse_50hz",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "pulse",
+      "50hz"
+    ]
+  },
+  {
     "name": "draw2d_circuit_switch_HighLow",
     "tags": [
       "draw2d",

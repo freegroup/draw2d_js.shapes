@@ -118,6 +118,18 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
       }
    },
 
+    calculate: function()
+    {
+    },
+
+    onStart: function()
+    {
+    },
+
+    onStop:function()
+    {
+    },
+
     /**
      * @method
      * Return an objects with all important attributes for XML or JSON serialization
@@ -209,5 +221,6 @@ draw2d_circuit_display_Led = draw2d_circuit_display_Led.extend({
     }
 
 });
+draw2d_circuit_display_Led.logic="calculate: function () {\n}";
 draw2d_circuit_display_Led.github="./shapes/org/draw2d/circuit/display/Led.shape";
 draw2d_circuit_display_Led.markdown="# High / Low Signal display\n\nsimple `HIGH`/ `LOW` display.\n\n    HIGH -> red\n \n    LOW -> gray";
