@@ -11,25 +11,31 @@ var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:62.7199999999998,height:51.5},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:41.5,height:53.69360000000006},attr), setter, getter);
      var port;
-     // out_q
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.61499521683659, 27.68155339805798));
+     // output_q
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(103.63403614457793, 20.281746800363283));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("out_q");
+     port.setName("output_q");
      port.setMaxFanOut(20);
      // input_t
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.188775510204092, 50.98252427184438));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 79.03304583786486));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_t");
      port.setMaxFanOut(20);
      // input_d
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-1.594387755102046, 19.203883495145384));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 20.281746800363283));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_d");
+     port.setMaxFanOut(20);
+     // output_q_not
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(103.63403614457793, 79.03304583786486));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#1C9BAB");
+     port.setName("output_q_not");
      port.setMaxFanOut(20);
      this.persistPorts=false;
    },
@@ -37,8 +43,8 @@ var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 62.7199999999998;
-      this.originalHeight= 51.5;
+      this.originalWidth = 41.5;
+      this.originalHeight= 53.69360000000006;
       return shape;
    },
 
@@ -47,12 +53,12 @@ var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L62.7199999999998,0 L62.7199999999998,51.5 L0,51.5");
+        shape = this.canvas.paper.path("M0,0 L41.5,0 L41.5,53.69360000000006 L0,53.69360000000006");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M2.5,2.5Q2.5,1.5 3.5, 1.5L61.5,1.5Q62.5,1.5 62.5, 2.5L62.5,50.5Q62.5,51.5 61.5, 51.5L3.5,51.5Q2.5,51.5 2.5, 50.5L2.5,2.5');
+        shape = this.canvas.paper.path('M1.5,2Q1.5,1 2.5, 1L40.5,1Q41.5,1 41.5, 2L41.5,50Q41.5,51 40.5, 51L2.5,51Q1.5,51 1.5, 50L1.5,2');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
@@ -61,48 +67,28 @@ var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({
         shape.attr({"x":4,"y":11,"text-anchor":"start","text":"D","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
+        // Rectangle
+        shape = this.canvas.paper.path('M1.5 37.12699999999995L13.541999999999916 42.03299999999899L1.5 47.38499999999976Z');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","opacity":1});
+        shape.data("name","Rectangle");
+        
         // Label
-        shape = this.canvas.paper.text(0,0,'T');
-        shape.attr({"x":14.576375000000098,"y":26.576312499999858,"text-anchor":"start","text":"T","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape = this.canvas.paper.text(0,0,'Q');
+        shape.attr({"x":28.28125,"y":11.5,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
-        // Rectangle
-        shape = this.canvas.paper.path('M52.82600000000002 26.077999999999975L61.82600000000002 26.077999999999975L61.82600000000002 51.077999999999975L52.82600000000002 51.077999999999975Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#000000","opacity":1});
-        shape.data("name","Rectangle");
-        
-        // Rectangle
-        shape = this.canvas.paper.path('M2.5 21.255999999999858L14.541999999999916 26.161999999998898L2.5 31.51399999999967Z');
-        shape.attr({"stroke":"none","stroke-width":0,"fill":"#171717","opacity":1});
-        shape.data("name","Rectangle");
+        // Label
+        shape = this.canvas.paper.text(0,0,'Q');
+        shape.attr({"x":27.78125,"y":42.69360000000006,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M13.984000000000378 1.885999999996784L14.187200000000303,51.312799999995605');
+        shape = this.canvas.paper.path('M27.8479999999995 36.49839999999767L35.374799999999595,36.49839999999767');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M13.984000000000378 1.885999999996784L14.187200000000303,51.312799999995605');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
-        shape.data("name","Line");
-        
-        // Line_shadow
-        shape = this.canvas.paper.path('M42.12279999999919 6.439599999997881L56.5979999999995,6.399999999997817L56.5979999999995,16.657999999997628');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
-        shape.data("name","Line_shadow");
-        
-        // Line
-        shape = this.canvas.paper.path('M42.12279999999919 6.439599999997881L56.5979999999995,6.399999999997817L56.5979999999995,16.657999999997628');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
-        shape.data("name","Line");
-        
-        // Line_shadow
-        shape = this.canvas.paper.path('M62.7199999999998 25.740000000000236L22.13399999999774,26.18600000000015');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
-        shape.data("name","Line_shadow");
-        
-        // Line
-        shape = this.canvas.paper.path('M62.7199999999998 25.740000000000236L22.13399999999774,26.18600000000015');
+        shape = this.canvas.paper.path('M27.8479999999995 36.49839999999767L35.374799999999595,36.49839999999767');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
@@ -229,17 +215,26 @@ draw2d_circuit_flipflop_D_FlipFLop = draw2d_circuit_flipflop_D_FlipFLop.extend({
          this._super(attr, setter, getter);
 
         this.attr({resizeable:false});
+        this.last_t = false;
     },
     
     calculate:function()
     {
-        var i1 = this.getInputPort(0);
-        var i2 = this.getInputPort(1);
-        var o1 = this.getOutputPort(0);
+        var d = this.getInputPort("input_d").getValue();
+        var t = this.getInputPort("input_t").getValue();
         
-        o1.setValue(i1.getValue() & i2.getValue());
+        var q = this.getOutputPort("output_q");
+        var q_ = this.getOutputPort("output_q_not");
+        
+        var rising = this.last_t===false && t===true; 
+        
+        console.log(rising);
+        if(rising===true){
+            q.setValue(d);
+        }
+        this.last_t = t;
     }
 });
-draw2d_circuit_flipflop_D_FlipFLop.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(i1.getValue() & i2.getValue());\n}";
+draw2d_circuit_flipflop_D_FlipFLop.logic="calculate: function () {\n    var d = this.getInputPort(\'input_d\').getValue();\n    var t = this.getInputPort(\'input_t\').getValue();\n    var q = this.getOutputPort(\'output_q\');\n    var q_ = this.getOutputPort(\'output_q_not\');\n    var rising = this.last_t === false && t === true;\n    console.log(rising);\n    if (rising === true) {\n        q.setValue(d);\n    }\n    this.last_t = t;\n}";
 draw2d_circuit_flipflop_D_FlipFLop.github="./shapes/org/draw2d/circuit/flipflop/D_FlipFLop.shape";
 draw2d_circuit_flipflop_D_FlipFLop.markdown="# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\n\n**Therefore, the output is always 0 except when all the inputs are 1.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  `High`    |\n\n";
