@@ -1,0 +1,75 @@
+[
+  {
+    "type": "shape_designer.figure.PolyCircle",
+    "id": "224a7916-067e-710f-bc40-d0ff40f3e7e4",
+    "x": 3985,
+    "y": 3984,
+    "width": 30,
+    "height": 32,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "baseClass": "draw2d.SetFigure",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n        this.hz = 10;\n        this.running=false;\n        this.onStart();\n    },\n    \n    calculate:function()\n    {\n       this.getOutputPort(0).setValue(this.value);\n    },\n    \n    onStart:function()\n    {\n        var _this = this;\n        this.running=true;\n        var tick = function() {\n            setTimeout(function() {\n                if(_this.running){\n                    requestAnimationFrame(tick);\n                }\n                _this.value = !_this.value;\n            }, 1000 / _this.hz);\n        }\n        tick();\n    },\n    \n    onStop:function()\n    {\n        this.running = false;\n    }\n\n});",
+      "name": "circle",
+      "markdown": "# High / Low Signal display\n\nsimple `HIGH`/ `LOW` display.\n\n    HIGH -> red\n \n    LOW -> gray"
+    },
+    "cssClass": "shape_designer_figure_PolyCircle",
+    "ports": [],
+    "bgColor": "#FFFFFF",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "radius": 0,
+    "dasharray": null,
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "f4d5683a-7c42-8771-5df4-e4e9da5b8b46",
+    "x": 4016,
+    "y": 3994.488,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Port",
+      "type": "Output",
+      "direction": 1
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#1C9BAB",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  }
+]
