@@ -83,6 +83,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -118,6 +121,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -151,6 +157,9 @@
     "filters": [
       {
         "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
       },
       {
         "name": "shape_designer.filter.PortDirectionFilter"

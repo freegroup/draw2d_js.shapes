@@ -11,22 +11,16 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:40,height:40},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:40,height:42.5},attr), setter, getter);
      var port;
      // input01
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 20));
+     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 54.11764705882353));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input01");
      port.setMaxFanOut(20);
-     // input02
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-2.5, 80));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#1C9BAB");
-     port.setName("input02");
-     port.setMaxFanOut(20);
      // output
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.5, 51.25));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.5, 54.11764705882353));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output");
@@ -38,7 +32,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
    {
       var shape = this._super();
       this.originalWidth = 40;
-      this.originalHeight= 40;
+      this.originalHeight= 42.5;
       return shape;
    },
 
@@ -47,23 +41,23 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L40,0 L40,40 L0,40");
+        shape = this.canvas.paper.path("M0,0 L40,0 L40,42.5 L0,42.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M0,3Q0,0 3, 0L27,0Q30,0 30, 3L30,37Q30,40 27, 40L3,40Q0,40 0, 37L0,3');
+        shape = this.canvas.paper.path('M0,5.5Q0,2.5 3, 2.5L27,2.5Q30,2.5 30, 5.5L30,39.5Q30,42.5 27, 42.5L3,42.5Q0,42.5 0, 39.5L0,5.5');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
         // Label
-        shape = this.canvas.paper.text(0,0,'>1');
-        shape.attr({"x":4,"y":21,"text-anchor":"start","text":">1","font-family":"\"Arial\"","font-size":20,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape = this.canvas.paper.text(0,0,'1');
+        shape.attr({"x":10,"y":16,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":20,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":6,"ry":6,"cx":34,"cy":20.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","opacity":1});
+        shape.attr({"rx":6,"ry":6,"cx":34,"cy":23,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","opacity":1});
         shape.data("name","Circle");
         
 
@@ -194,12 +188,11 @@ draw2d_circuit_gate_NOT = draw2d_circuit_gate_NOT.extend({
     calculate:function()
     {
         var i1 = this.getInputPort(0);
-        var i2 = this.getInputPort(1);
         var o1 = this.getOutputPort(0);
         
-        o1.setValue(!(i1.getValue() | i2.getValue));
+        o1.setValue(!i1.getValue());
     }
 });
-draw2d_circuit_gate_NOT.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var i2 = this.getInputPort(1);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(!(i1.getValue() | i2.getValue));\n}";
+draw2d_circuit_gate_NOT.logic="calculate: function () {\n    var i1 = this.getInputPort(0);\n    var o1 = this.getOutputPort(0);\n    o1.setValue(!i1.getValue());\n}";
 draw2d_circuit_gate_NOT.github="./shapes/org/draw2d/circuit/gate/NOT.shape";
-draw2d_circuit_gate_NOT.markdown="# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\n\n**Therefore, the output is always 0 except when all the inputs are 1.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  `High`    |\n\n";
+draw2d_circuit_gate_NOT.markdown="# NOT Gate\n\n## Description\nIn digital logic, an inverter or `NOT gate` is a logic \ngate which implements logical negation.\n\n\n## Logic table\n\n| INPUT   |  OUTPUT    |\n|:-------:|:----------:|\n| Low     |  High      |\n| High    |  Low       |\n\n";
