@@ -485,9 +485,9 @@ draw2d_circuit_display_Led.markdown="# High / Low Signal display\n\nsimple `HIGH
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({            
+var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_flipflop_D_FlipFLop",
+   NAME: "draw2d_circuit_flipflop_D_FlipFlop",
 
    init:function(attr, setter, getter)
    {
@@ -689,7 +689,7 @@ var draw2d_circuit_flipflop_D_FlipFLop = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_flipflop_D_FlipFLop = draw2d_circuit_flipflop_D_FlipFLop.extend({
+draw2d_circuit_flipflop_D_FlipFlop = draw2d_circuit_flipflop_D_FlipFlop.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
@@ -716,9 +716,9 @@ draw2d_circuit_flipflop_D_FlipFLop = draw2d_circuit_flipflop_D_FlipFLop.extend({
         this.last_t = t;
     }
 });
-draw2d_circuit_flipflop_D_FlipFLop.logic="calculate: function () {\n    var d = this.getInputPort(\'input_d\').getValue();\n    var t = this.getInputPort(\'input_t\').getValue();\n    var q = this.getOutputPort(\'output_q\');\n    var q_ = this.getOutputPort(\'output_q_not\');\n    var rising = this.last_t === false && t === true;\n    console.log(rising);\n    if (rising === true) {\n        q.setValue(d);\n        q_.setValue(!d);\n    }\n    this.last_t = t;\n}";
-draw2d_circuit_flipflop_D_FlipFLop.github="./shapes/org/draw2d/circuit/flipflop/D_FlipFLop.shape";
-draw2d_circuit_flipflop_D_FlipFLop.markdown="# D-FlipFlop\n\n## Description\n\nThe D �ip-�op is widely used. It is also known as a \n*data* or *delay* flip-flop.\n\nThe D flip-flop captures the value of the `D` input \nat a definite portion of the clock cycle (such \nas the rising edge of the clock). That captured \nvalue becomes the `Q` output. At other times, the \noutput Q does not change. The `D flip-flop` \ncan be viewed as a memory cell, a zero-order hold, \nor a delay line.\n\n\n## Logic table\n\n| Clock        | D       |  **Q***next*   |\n|:------------:|:-------:|:----------:|\n| Rising edge  | Low     |  **Low**       |\n| Rising edge  | High    |  **High**      |\n| non rising   | *       |  **Q***last*   |\n\n";
+draw2d_circuit_flipflop_D_FlipFlop.logic="calculate: function () {\n    var d = this.getInputPort(\'input_d\').getValue();\n    var t = this.getInputPort(\'input_t\').getValue();\n    var q = this.getOutputPort(\'output_q\');\n    var q_ = this.getOutputPort(\'output_q_not\');\n    var rising = this.last_t === false && t === true;\n    console.log(rising);\n    if (rising === true) {\n        q.setValue(d);\n        q_.setValue(!d);\n    }\n    this.last_t = t;\n}";
+draw2d_circuit_flipflop_D_FlipFlop.github="./shapes/org/draw2d/circuit/flipflop/D_FlipFlop.shape";
+draw2d_circuit_flipflop_D_FlipFlop.markdown="# D-FlipFlop\n\n## Description\n\nThe D ûip-ûop is widely used. It is also known as a \n*data* or *delay* flip-flop.\n\nThe D flip-flop captures the value of the `D` input \nat a definite portion of the clock cycle (such \nas the rising edge of the clock). That captured \nvalue becomes the `Q` output. At other times, the \noutput Q does not change. The `D flip-flop` \ncan be viewed as a memory cell, a zero-order hold, \nor a delay line.\n\n\n## Logic table\n\n| Clock        | D       |  **Q***next*   |\n|:------------:|:-------:|:----------:|\n| Rising edge  | Low     |  **Low**       |\n| Rising edge  | High    |  **High**      |\n| non rising   | *       |  **Q***last*   |\n\n";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
