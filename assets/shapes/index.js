@@ -1839,7 +1839,7 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:33.671875,height:49.5},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(117.81902552204176, 70.68282828282794));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(104.45475638051043, 69.67272727272693));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
