@@ -2068,13 +2068,13 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:30,height:32},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:32,height:48.60950000000048},attr), setter, getter);
      var port;
-     // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(120, 48.399999999999466));
+     // circle
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(105.2001953125, 69.8754358715884));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("Port");
+     port.setName("circle");
      port.setMaxFanOut(20);
      this.persistPorts=false;
    },
@@ -2082,8 +2082,8 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 30;
-      this.originalHeight= 32;
+      this.originalWidth = 32;
+      this.originalHeight= 48.60950000000048;
       return shape;
    },
 
@@ -2092,14 +2092,29 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L30,0 L30,32 L0,32");
+        shape = this.canvas.paper.path("M0,0 L32,0 L32,48.60950000000048 L0,48.60950000000048");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
-        // circle
-        shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15,"ry":16,"cx":15,"cy":16,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","circle");
+        // Rectangle
+        shape = this.canvas.paper.path('M1.6640625 18.60950000000048L31.6640625 18.60950000000048L31.6640625 48.60950000000048L1.6640625 48.60950000000048Z');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'50Hz');
+        shape.attr({"x":4,"y":11,"text-anchor":"start","text":"50Hz","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Line_shadow
+        shape = this.canvas.paper.path('M3.393662499999664 41.239300000000185L10.575662499999908,41.239300000000185L10.575662499999908,30.979299999999967L22.066862499999843,30.979299999999967L22.066862499999843,40.828899999999976L28.6332625,40.828899999999976');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.data("name","Line_shadow");
+        
+        // Line
+        shape = this.canvas.paper.path('M3.393662499999664 41.239300000000185L10.575662499999908,41.239300000000185L10.575662499999908,30.979299999999967L22.066862499999843,30.979299999999967L22.066862499999843,40.828899999999976L28.6332625,40.828899999999976');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.data("name","Line");
         
 
         return this.canvas.paper.setFinish();
@@ -2233,19 +2248,43 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
 draw2d_circuit_pulse_50hz = draw2d_circuit_pulse_50hz.extend({
 
     init: function(attr, setter, getter){
-         this._super(attr, setter, getter);
+        this._super(attr, setter, getter);
 
-         this.attr({resizeable:false});
-         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
-         var _this = this;
+        this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+        this.hz = 50;
+        this.running=false;
+// only for test purpose        
+//        this.onStart();
     },
     
-    calculate:function(flag){
-       
+    calculate:function()
+    {
+       this.getOutputPort(0).setValue(this.value);
+    },
+    
+    onStart:function()
+    {
+        var _this = this;
+        this.running=true;
+        var tick = function() {
+            setTimeout(function() {
+                if(_this.running){
+                    requestAnimationFrame(tick);
+                }
+                _this.value = !_this.value;
+            }, 1000 / _this.hz);
+        }
+        tick();
+    },
+    
+    onStop:function()
+    {
+        this.running = false;
     }
 
 });
-draw2d_circuit_pulse_50hz.logic="calculate: function (flag) {\n}";
+draw2d_circuit_pulse_50hz.logic="calculate: function () {\n    this.getOutputPort(0).setValue(this.value);\n}";
 draw2d_circuit_pulse_50hz.github="./shapes/org/draw2d/circuit/pulse/50hz.shape";
 draw2d_circuit_pulse_50hz.markdown="# High / Low Signal display\n\nsimple `HIGH`/ `LOW` display.\n\n    HIGH -> red\n \n    LOW -> gray";
 // Generated Code for the Draw2D touch HTML5 lib
