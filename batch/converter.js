@@ -92,6 +92,7 @@ var scanDirectory = function (path) {
 
 var processFiles=function(path){
 
+    console.log("Processing: "+path);
     var json = fs.read(path);
     var code = fs.read("batch/template.js");
     fs.write("batch/exporter.js", "var json="+json+";\n"+code);
@@ -160,7 +161,7 @@ var processFiles=function(path){
         });
     }
 
-}
+};
 
 page.onConsoleMessage = function(msg, lineNum, sourceId) {
     console.log('CONSOLE: ' + msg + ' (from line #' + lineNum + ' in "' + sourceId + '")');
