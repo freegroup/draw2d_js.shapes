@@ -231,10 +231,11 @@ draw2d_circuit_flipflop_D_FlipFLop = draw2d_circuit_flipflop_D_FlipFLop.extend({
         console.log(rising);
         if(rising===true){
             q.setValue(d);
+            q_.setValue(!d)
         }
         this.last_t = t;
     }
 });
-draw2d_circuit_flipflop_D_FlipFLop.logic="calculate: function () {\n    var d = this.getInputPort(\'input_d\').getValue();\n    var t = this.getInputPort(\'input_t\').getValue();\n    var q = this.getOutputPort(\'output_q\');\n    var q_ = this.getOutputPort(\'output_q_not\');\n    var rising = this.last_t === false && t === true;\n    console.log(rising);\n    if (rising === true) {\n        q.setValue(d);\n    }\n    this.last_t = t;\n}";
+draw2d_circuit_flipflop_D_FlipFLop.logic="calculate: function () {\n    var d = this.getInputPort(\'input_d\').getValue();\n    var t = this.getInputPort(\'input_t\').getValue();\n    var q = this.getOutputPort(\'output_q\');\n    var q_ = this.getOutputPort(\'output_q_not\');\n    var rising = this.last_t === false && t === true;\n    console.log(rising);\n    if (rising === true) {\n        q.setValue(d);\n        q_.setValue(!d);\n    }\n    this.last_t = t;\n}";
 draw2d_circuit_flipflop_D_FlipFLop.github="./shapes/org/draw2d/circuit/flipflop/D_FlipFLop.shape";
 draw2d_circuit_flipflop_D_FlipFLop.markdown="# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\n\n**Therefore, the output is always 0 except when all the inputs are 1.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  `High`    |\n\n";
