@@ -89,6 +89,7 @@ var processFiles=function(path){
             },
             success: function () {
                 var jsCode   = page.evaluate(function () {return code;});
+                var customCode   = page.evaluate(function () {return customCode;});
                 var markdown = page.evaluate(function () {return markdown;});
                 var img      = page.evaluate(function () {return img;});
                 var package = path.replace("./shapes/org/","").replace(/\//g,"_").replace(/\.shape/,"");
@@ -102,7 +103,7 @@ var processFiles=function(path){
                 // itself
                 //
                 (function(){
-                    jsCode = jsCode+"\n"+package+".logic=\""+escapeString(jsCode)+"\";";
+                    jsCode = jsCode+"\n"+package+".logic=\""+escapeString(customCode)+"\";";
 
                     // add the github path as text to the shape
                     //

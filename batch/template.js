@@ -1,13 +1,14 @@
 
 app.fileNew();
 var code = null;
+var customCode="";
 var img  = null;
-var markdown = "";
 
 var reader = new draw2d.io.json.Reader();
 reader.unmarshal(app.view,json);
 
-markdown = app.getConfiguration("markdown");
+var customCode=app.getConfiguration("code");;
+var markdown = app.getConfiguration("markdown");
 markdown = markdown?markdown:"";
 var writer = new shape_designer.FigureWriter();
 try {
