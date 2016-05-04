@@ -57,7 +57,7 @@ module.exports = function(grunt) {
             expand: true,
             flatten: false,
             cwd: 'shapes',
-            src: ['**/*.png', '**/*.js', '**/*.shape'],
+            src: ['**/*.png', '**/*.js', '**/*.shape', "**/*.md", "**/*.custom"],
             dest: './dist/assets/shapes/',
             rename: function(dest, src) {
               // transform the filePath to fileName. /org/draw2d/digital/AND.png -> draw2d_digital_AND.png
