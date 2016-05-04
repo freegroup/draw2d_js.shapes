@@ -1,5 +1,28 @@
 [
   {
+    "name": "draw2d_Basic",
+    "tags": [
+      "draw2d",
+      "Basic"
+    ]
+  },
+  {
+    "name": "draw2d_circuit_HighLowSource",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "HighLowSource"
+    ]
+  },
+  {
+    "name": "draw2d_circuit_Led",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "Led"
+    ]
+  },
+  {
     "name": "draw2d_circuit_display_7Segment",
     "tags": [
       "draw2d",
@@ -70,6 +93,15 @@
       "circuit",
       "gate",
       "OR"
+    ]
+  },
+  {
+    "name": "draw2d_circuit_gate_empty",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "gate",
+      "empty"
     ]
   },
   {
