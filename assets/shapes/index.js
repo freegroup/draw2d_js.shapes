@@ -2946,7 +2946,7 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
         
         // Label
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4.5,"ry":4,"cx":4.5,"cy":22.983999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"rx":4.5,"ry":4,"cx":4.5,"cy":22.983999999999924,"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
         shape.data("name","Label");
         
         // Circle
