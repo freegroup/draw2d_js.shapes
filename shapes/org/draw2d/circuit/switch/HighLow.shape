@@ -3,7 +3,7 @@
     "type": "shape_designer.figure.ExtLabel",
     "id": "12ca8dfe-851d-2d1d-a379-c39edd42bf5a",
     "x": 3979.5,
-    "y": 3978.5,
+    "y": 3978.53125,
     "width": 29.4375,
     "height": 21,
     "alpha": 1,
@@ -11,7 +11,8 @@
     "userData": {
       "baseClass": "draw2d.SetFigure",
       "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n        var _this = this;\n\n        this.attr({resizeable:false});\n        \n        this.value = false;\n        this.on(\"click\",function(){            \n            _this.value = !_this.value;\n            _this.layerShow(\"low\" , !_this.value, 100);\n            _this.layerShow(\"high\",  _this.value, 100);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n\n        this.on(\"added\",function(){\n            _this.layerShow(\"low\" , !_this.value);\n            _this.layerShow(\"high\",  _this.value);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n    },\n    \n    calculate: function()\n    {\n        // do nothing per default;\n    }\n\n});",
-      "name": "Label"
+      "name": "Label",
+      "markdown": "# Push Button\n\ntoggles the output if the user press \nthe mouse button down in the simulation mode."
     },
     "cssClass": "shape_designer_figure_ExtLabel",
     "ports": [],
@@ -24,7 +25,7 @@
     "outlineStroke": 0,
     "outlineColor": "none",
     "fontSize": 11,
-    "fontColor": "#080808",
+    "fontColor": "#C21B7A",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
     "filters": [
@@ -43,7 +44,7 @@
     "type": "shape_designer.figure.ExtLabel",
     "id": "645eb539-f8e8-758b-8dcb-86c234c7ae30",
     "x": 3979,
-    "y": 4000,
+    "y": 4000.03125,
     "width": 29.4375,
     "height": 21,
     "alpha": 1,
@@ -81,7 +82,7 @@
     "type": "shape_designer.figure.ExtPort",
     "id": "91f5e31e-98a2-25ae-2ec2-64ecb245e1ce",
     "x": 4015.5,
-    "y": 3996,
+    "y": 3996.03125,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -102,6 +103,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -113,7 +117,7 @@
     "type": "shape_designer.figure.PolyCircle",
     "id": "ebdd310c-c836-43a2-bb4f-0e3e8e631fb6",
     "x": 4015,
-    "y": 3997.5,
+    "y": 3997.53125,
     "width": 6,
     "height": 7,
     "alpha": 1,
@@ -155,11 +159,11 @@
     "vertex": [
       {
         "x": 4018.298300000001,
-        "y": 4000.9469125000032
+        "y": 4000.9781625000032
       },
       {
         "x": 3992.8573999999994,
-        "y": 3989.5915125000006
+        "y": 3989.6227625000006
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
@@ -187,11 +191,11 @@
     "vertex": [
       {
         "x": 4017.7531999999974,
-        "y": 4001.2083125000004
+        "y": 4001.2395625000004
       },
       {
         "x": 3992.6445000000003,
-        "y": 4010.8513124999986
+        "y": 4010.8825624999986
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
