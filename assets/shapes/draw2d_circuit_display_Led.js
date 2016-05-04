@@ -14,7 +14,7 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:30,height:32},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.3333333333333335, 51.5625));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-3.3333333333333335, 51.5625));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
@@ -45,22 +45,22 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
         shape.data("name","circle");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M5.5221000000005915 5.682400000001508L15.138100000001486,16.49680000000035L24.75410000000238,27.31119999999919');
+        shape = this.canvas.paper.path('M5.5 5.5L15.5,16.5L24.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M5.5221000000005915 5.682400000001508L15.138100000001486,16.49680000000035L24.75410000000238,27.31119999999919');
+        shape = this.canvas.paper.path('M5.5 5.5L15.5,16.5L24.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M25.944300000000567 5.062700000001314L5.283199999999852,27.96369999999979');
+        shape = this.canvas.paper.path('M25.5 5.5L5.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M25.944300000000567 5.062700000001314L5.283199999999852,27.96369999999979');
+        shape = this.canvas.paper.path('M25.5 5.5L5.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
@@ -128,6 +128,15 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**

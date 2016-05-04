@@ -50,12 +50,12 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
         shape.data("name","Label");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M6.119575000000168 41.672399999999925L13.426774999999907,41.672399999999925L13.426774999999907,28.884799999999814L24.387574999999742,28.884799999999814L24.387574999999742,41.21569999999974L30.324674999999843,41.21569999999974');
+        shape = this.canvas.paper.path('M6.5 41.5L13.5,41.5L13.5,28.5L24.5,28.5L24.5,41.5L30.5,41.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M6.119575000000168 41.672399999999925L13.426774999999907,41.672399999999925L13.426774999999907,28.884799999999814L24.387574999999742,28.884799999999814L24.387574999999742,41.21569999999974L30.324674999999843,41.21569999999974');
+        shape = this.canvas.paper.path('M6.5 41.5L13.5,41.5L13.5,28.5L24.5,28.5L24.5,41.5L30.5,41.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
@@ -123,6 +123,15 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**

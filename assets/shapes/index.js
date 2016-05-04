@@ -14,43 +14,43 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:65,height:102},attr), setter, getter);
      var port;
      // port_a
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(4.13923076923031, 5.791568627451031));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(4.13923076923031, 5.791568627451031));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("port_a");
      port.setMaxFanOut(20);
      // port_b
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(2.6007692307687718, 20.098039215686274));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(2.6007692307687718, 20.098039215686274));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("port_b");
      port.setMaxFanOut(20);
      // port_c
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(1.0623076923072334, 34.80392156862745));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(1.0623076923072334, 34.80392156862745));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("port_c");
      port.setMaxFanOut(20);
      // port_d
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0.29307692307646416, 49.509803921568626));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0.29307692307646416, 49.509803921568626));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("port_d");
      port.setMaxFanOut(20);
      // port_e
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-0.4761538461543051, 64.2156862745098));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-0.4761538461543051, 64.2156862745098));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("port_e");
      port.setMaxFanOut(20);
      // port_f
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-2.0146153846158437, 78.92156862745098));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-2.0146153846158437, 78.92156862745098));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("port_f");
      port.setMaxFanOut(20);
      // port_g
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.5530769230773824, 93.62745098039215));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-3.5530769230773824, 93.62745098039215));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("port_g");
@@ -183,6 +183,15 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
 
     /**
      * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
+    },
+
+    /**
+     * @method
      * Return an objects with all important attributes for XML or JSON serialization
      *
      * @returns {Object}
@@ -293,7 +302,7 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:30,height:32},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.3333333333333335, 51.5625));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-3.3333333333333335, 51.5625));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
@@ -324,22 +333,22 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
         shape.data("name","circle");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M5.5221000000005915 5.682400000001508L15.138100000001486,16.49680000000035L24.75410000000238,27.31119999999919');
+        shape = this.canvas.paper.path('M5.5 5.5L15.5,16.5L24.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M5.5221000000005915 5.682400000001508L15.138100000001486,16.49680000000035L24.75410000000238,27.31119999999919');
+        shape = this.canvas.paper.path('M5.5 5.5L15.5,16.5L24.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M25.944300000000567 5.062700000001314L5.283199999999852,27.96369999999979');
+        shape = this.canvas.paper.path('M25.5 5.5L5.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M25.944300000000567 5.062700000001314L5.283199999999852,27.96369999999979');
+        shape = this.canvas.paper.path('M25.5 5.5L5.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
@@ -407,6 +416,15 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**
@@ -525,13 +543,13 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
      port.setName("output_q");
      port.setMaxFanOut(20);
      // input_t
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 79.03304583786486));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 79.03304583786486));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_t");
      port.setMaxFanOut(20);
      // input_d
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 20.281746800363283));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 20.281746800363283));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_d");
@@ -588,12 +606,12 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
         shape.data("name","Label");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M27.8479999999995 36.49839999999767L35.374799999999595,36.49839999999767');
+        shape = this.canvas.paper.path('M27.5 36.5L35.5,36.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M27.8479999999995 36.49839999999767L35.374799999999595,36.49839999999767');
+        shape = this.canvas.paper.path('M27.5 36.5L35.5,36.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
@@ -661,6 +679,15 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**
@@ -771,13 +798,13 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:30,height:40},attr), setter, getter);
      var port;
      // input01
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-1.6666666666666667, 22.5));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.6666666666666667, 22.5));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input01");
      port.setMaxFanOut(20);
      // input02
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-1.6666666666666667, 77.5));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.6666666666666667, 77.5));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input02");
@@ -886,6 +913,15 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
 
     /**
      * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
+    },
+
+    /**
+     * @method
      * Return an objects with all important attributes for XML or JSON serialization
      *
      * @returns {Object}
@@ -983,13 +1019,13 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:41,height:40},attr), setter, getter);
      var port;
      // input01
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 20));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0, 20));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input01");
      port.setMaxFanOut(20);
      // input02
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 80));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0, 80));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input02");
@@ -1103,6 +1139,15 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
 
     /**
      * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
+    },
+
+    /**
+     * @method
      * Return an objects with all important attributes for XML or JSON serialization
      *
      * @returns {Object}
@@ -1200,13 +1245,13 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:40,height:40},attr), setter, getter);
      var port;
      // input01
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 20));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0, 20));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input01");
      port.setMaxFanOut(20);
      // input02
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-2.5, 80));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-2.5, 80));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input02");
@@ -1320,6 +1365,15 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
 
     /**
      * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
+    },
+
+    /**
+     * @method
      * Return an objects with all important attributes for XML or JSON serialization
      *
      * @returns {Object}
@@ -1417,7 +1471,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:40,height:42.5},attr), setter, getter);
      var port;
      // input01
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(0, 54.11764705882353));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0, 54.11764705882353));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input01");
@@ -1531,6 +1585,15 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
 
     /**
      * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
+    },
+
+    /**
+     * @method
      * Return an objects with all important attributes for XML or JSON serialization
      *
      * @returns {Object}
@@ -1627,13 +1690,13 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:31,height:40},attr), setter, getter);
      var port;
      // input01
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 22.5));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 22.5));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input01");
      port.setMaxFanOut(20);
      // input02
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 78.75));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 78.75));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input02");
@@ -1738,6 +1801,15 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**
@@ -1875,12 +1947,12 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
         shape.data("name","Label");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M6.119575000000168 41.672399999999925L13.426774999999907,41.672399999999925L13.426774999999907,28.884799999999814L24.387574999999742,28.884799999999814L24.387574999999742,41.21569999999974L30.324674999999843,41.21569999999974');
+        shape = this.canvas.paper.path('M6.5 41.5L13.5,41.5L13.5,28.5L24.5,28.5L24.5,41.5L30.5,41.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M6.119575000000168 41.672399999999925L13.426774999999907,41.672399999999925L13.426774999999907,28.884799999999814L24.387574999999742,28.884799999999814L24.387574999999742,41.21569999999974L30.324674999999843,41.21569999999974');
+        shape = this.canvas.paper.path('M6.5 41.5L13.5,41.5L13.5,28.5L24.5,28.5L24.5,41.5L30.5,41.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
@@ -1948,6 +2020,15 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**
@@ -2107,12 +2188,12 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
         shape.data("name","Label");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M3.393662499999664 41.239300000000185L10.575662499999908,41.239300000000185L10.575662499999908,30.979299999999967L22.066862499999843,30.979299999999967L22.066862499999843,40.828899999999976L28.6332625,40.828899999999976');
+        shape = this.canvas.paper.path('M3.5 41.5L10.5,41.5L10.5,30.5L22.5,30.5L22.5,40.5L28.5,40.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M3.393662499999664 41.239300000000185L10.575662499999908,41.239300000000185L10.575662499999908,30.979299999999967L22.066862499999843,30.979299999999967L22.066862499999843,40.828899999999976L28.6332625,40.828899999999976');
+        shape = this.canvas.paper.path('M3.5 41.5L10.5,41.5L10.5,30.5L22.5,30.5L22.5,40.5L28.5,40.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
@@ -2180,6 +2261,15 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**
@@ -2344,22 +2434,22 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
         shape.data("name","Circle");
         
         // high_shadow
-        shape = this.canvas.paper.path('M39.298300000000836 22.446912500003236L13.857399999999416,11.09151250000059');
+        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","high_shadow");
         
         // high
-        shape = this.canvas.paper.path('M39.298300000000836 22.446912500003236L13.857399999999416,11.09151250000059');
+        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","high");
         
         // low_shadow
-        shape = this.canvas.paper.path('M38.75319999999738 22.708312500000375L13.644500000000335,32.351312499998585');
+        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","low_shadow");
         
         // low
-        shape = this.canvas.paper.path('M38.75319999999738 22.708312500000375L13.644500000000335,32.351312499998585');
+        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","low");
         
@@ -2427,6 +2517,15 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**
@@ -2715,6 +2814,15 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
 
     /**
      * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
+    },
+
+    /**
+     * @method
      * Return an objects with all important attributes for XML or JSON serialization
      *
      * @returns {Object}
@@ -2866,12 +2974,12 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
         shape.data("name","high");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M30.043224999999893 23.936999999999443L37.69952499999954,23.936999999999443L45.35582499999964,23.936999999999443');
+        shape = this.canvas.paper.path('M30.5 23.5L37.5,23.5L45.5,23.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M30.043224999999893 23.936999999999443L37.69952499999954,23.936999999999443L45.35582499999964,23.936999999999443');
+        shape = this.canvas.paper.path('M30.5 23.5L37.5,23.5L45.5,23.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","Line");
         
@@ -2939,6 +3047,15 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**

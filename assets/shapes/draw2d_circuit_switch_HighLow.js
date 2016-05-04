@@ -55,22 +55,22 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
         shape.data("name","Circle");
         
         // high_shadow
-        shape = this.canvas.paper.path('M39.298300000000836 22.446912500003236L13.857399999999416,11.09151250000059');
+        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","high_shadow");
         
         // high
-        shape = this.canvas.paper.path('M39.298300000000836 22.446912500003236L13.857399999999416,11.09151250000059');
+        shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","high");
         
         // low_shadow
-        shape = this.canvas.paper.path('M38.75319999999738 22.708312500000375L13.644500000000335,32.351312499998585');
+        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
         shape.data("name","low_shadow");
         
         // low
-        shape = this.canvas.paper.path('M38.75319999999738 22.708312500000375L13.644500000000335,32.351312499998585');
+        shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
         shape.data("name","low");
         
@@ -138,6 +138,15 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**

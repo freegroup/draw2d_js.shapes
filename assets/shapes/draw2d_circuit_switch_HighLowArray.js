@@ -189,6 +189,15 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
 
     /**
      * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
+    },
+
+    /**
+     * @method
      * Return an objects with all important attributes for XML or JSON serialization
      *
      * @returns {Object}
