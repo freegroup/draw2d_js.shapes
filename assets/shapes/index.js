@@ -1245,7 +1245,7 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:40,height:40},attr), setter, getter);
      var port;
      // input01
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0, 20));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.25, 20));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input01");
