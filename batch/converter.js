@@ -101,6 +101,7 @@ var processFiles=function(path){
                 // replace the generated "testShape" with the real figure name
                 //
                 jsCode = jsCode.replace(/testShape/g,package);
+                customCode = customCode.replace(/testShape/g,package);
 
                 // add the github path as text to the shape
                 //
