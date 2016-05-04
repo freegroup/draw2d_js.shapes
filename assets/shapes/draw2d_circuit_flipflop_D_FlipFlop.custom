@@ -6,7 +6,7 @@
  *
  *
  */
-testShape = testShape.extend({
+draw2d_circuit_flipflop_D_FlipFlop = draw2d_circuit_flipflop_D_FlipFlop.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);

@@ -6,7 +6,7 @@
  *
  *
  */
-testShape = testShape.extend({
+draw2d_circuit_switch_PushButton = draw2d_circuit_switch_PushButton.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);

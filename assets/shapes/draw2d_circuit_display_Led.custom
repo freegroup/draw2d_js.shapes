@@ -6,7 +6,7 @@
  *
  *
  */
-testShape = testShape.extend({
+draw2d_circuit_display_Led = draw2d_circuit_display_Led.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
