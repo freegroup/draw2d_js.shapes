@@ -497,28 +497,19 @@ draw2d_circuit_display_Led = draw2d_circuit_display_Led.extend({
 
          this.attr({resizeable:false});
          this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
-         var _this = this;
- 
-         this.getInputPort(0).on("change:value", function(emitter, event){
-             _this._state(event.value);
-         });
-         
-         this.on("added",function(){
-            _this._state(false);
-         });
     },
     
-    _state:function(flag){
-         if(flag){
-             this.layerAttr("circle",{fill:"#C21B7A"});
-         }
-         else{
+    calculate: function()
+    {
+        if(this.getInputPort(0).getValue()){
+            this.layerAttr("circle",{fill:"#C21B7A"});
+        }
+        else{
             this.layerAttr("circle",{fill:"#f0f0f0"});
-         }
+        }
     }
-
 });
-draw2d_circuit_display_Led.logic="calculate: function () {\n}";
+draw2d_circuit_display_Led.logic="calculate: function () {\n    if (this.getInputPort(0).getValue()) {\n        this.layerAttr(\'circle\', { fill: \'#C21B7A\' });\n    } else {\n        this.layerAttr(\'circle\', { fill: \'#f0f0f0\' });\n    }\n}";
 draw2d_circuit_display_Led.github="./shapes/org/draw2d/circuit/display/Led.shape";
 draw2d_circuit_display_Led.markdown="# High / Low Signal display\n\nsimple `HIGH`/ `LOW` display.\n\n    HIGH -> red\n \n    LOW -> gray";
 // Generated Code for the Draw2D touch HTML5 lib
