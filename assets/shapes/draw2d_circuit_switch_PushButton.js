@@ -14,7 +14,7 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:45.35582499999964,height:27.483999999999924},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(107.32450021579413, 87.26531800320183));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.81252904119853, 87.26531800320183));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("Port");
