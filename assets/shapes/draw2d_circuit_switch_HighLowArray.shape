@@ -10,7 +10,7 @@
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n\n        this.setResizeable(false);\n        \n        this.on(\"click\",function(emitter, event){\n            var h = emitter.getHeight();\n            var modh = h/8;\n            var index = (event.relY/modh)|0;\n            var port = emitter.getOutputPort(index);\n            port.setValue(!port.getValue());\n            emitter.layerAttr(\"rect0\"+(index+1), {fill:port.getValue()?\"#C21B7A\":null});\n        });\n    },\n    \n    calculate: function()\n    {\n    \n        \n    }\n\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n\n        this.setResizeable(false);\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n\n        this.on(\"click\",function(emitter, event){\n            var h = emitter.getHeight();\n            var modh = h/8;\n            var index = (event.relY/modh)|0;\n            var port = emitter.getOutputPort(index);\n            port.setValue(!port.getValue());\n            emitter.layerAttr(\"rect0\"+(index+1), {fill:port.getValue()?\"#C21B7A\":null});\n        });\n    },\n    \n    calculate: function()\n    {\n    \n        \n    }\n\n});",
       "name": "rect01"
     },
     "cssClass": "shape_designer_figure_PolyRect",
@@ -450,6 +450,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -480,6 +483,9 @@
     "filters": [
       {
         "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
       },
       {
         "name": "shape_designer.filter.PortDirectionFilter"
@@ -514,6 +520,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -544,6 +553,9 @@
     "filters": [
       {
         "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
       },
       {
         "name": "shape_designer.filter.PortDirectionFilter"
@@ -578,6 +590,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -608,6 +623,9 @@
     "filters": [
       {
         "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
       },
       {
         "name": "shape_designer.filter.PortDirectionFilter"
@@ -642,6 +660,9 @@
         "name": "shape_designer.filter.PositionFilter"
       },
       {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
         "name": "shape_designer.filter.PortDirectionFilter"
       },
       {
@@ -672,6 +693,9 @@
     "filters": [
       {
         "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
       },
       {
         "name": "shape_designer.filter.PortDirectionFilter"

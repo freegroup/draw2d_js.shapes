@@ -2882,7 +2882,8 @@ draw2d_circuit_switch_HighLowArray = draw2d_circuit_switch_HighLowArray.extend({
 
 
         this.setResizeable(false);
-        
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+
         this.on("click",function(emitter, event){
             var h = emitter.getHeight();
             var modh = h/8;
