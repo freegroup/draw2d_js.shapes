@@ -3,23 +3,7 @@ var fs      = require('fs');
 var system  = require('system');
 var page    = webPage.create();
 
-var acorn = require('acorn');
-var escodegen = require('escodegen');
-var estraverse = require("estraverse");
 
-
-var calculateNode = null;
-function dumpCalculate(node) {
-    try {
-        if (node.key.name == "calculate") {
-            if (node.value.type = "FunctionExpression") {
-                calculateNode = node;
-            }
-        }
-    }
-    catch(exc){}
-    return node;
-}
 
 function escapeString(string) {
     return ('' + string).replace(/["'\\\n\r\u2028\u2029]/g, function (character) {
@@ -118,25 +102,7 @@ var processFiles=function(path){
                 // itself
                 //
                 (function(){
-                    calculateNode = null;
-                    var ast = acorn.parse(jsCode);
-
-                    estraverse.traverse(ast, {
-                        enter: function (node) {
-                            switch (node.type) {
-                                case "Property":
-                                    dumpCalculate(node);
-                                    break;
-                            }
-                        }
-                    });
-
-                    // add the "calculate" code as text to the shape
-                    //
-                    if (calculateNode != null) {
-                        var modified_code = escodegen.generate(calculateNode);
-                        jsCode = jsCode+"\n"+package+".logic=\""+escapeString(modified_code)+"\";";
-                    }
+                    jsCode = jsCode+"\n"+package+".logic=\""+escapeString(jsCode)+"\";";
 
                     // add the github path as text to the shape
                     //
