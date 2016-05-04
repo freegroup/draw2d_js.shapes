@@ -95,24 +95,21 @@ var processFiles=function(path){
                 var package = path.replace("./shapes/org/","").replace(/\//g,"_").replace(/\.shape/,"");
                 var pngFilePath = path.replace(".shape",".png");
                 var jsFilePath  = path.replace(".shape",".js");
+                var customFilePath  = path.replace(".shape",".custom");
+                var markdownFilePath  = path.replace(".shape",".md");
 
+                // replace the generated "testShape" with the real figure name
+                //
                 jsCode = jsCode.replace(/testShape/g,package);
 
-                // Extract the "calculate" method from the shape and add them as "readable" property to the shape
-                // This property is used in the DigitalTrainingStudio as context information to the shape
-                // itself
+                // add the github path as text to the shape
                 //
-                (function(){
-                    jsCode = jsCode+"\n"+package+".logic=\""+escapeString(customCode)+"\";";
-
-                    // add the github path as text to the shape
-                    //
-                    jsCode = jsCode+"\n"+package+".github=\""+path+"\";";
-                    jsCode = jsCode+"\n"+package+".markdown=\""+escapeString(markdown)+"\";";
-                })();
+                jsCode = jsCode+"\n"+package+".github=\""+path+"\";";
 
 
                 fs.write(jsFilePath, jsCode);
+                fs.write(customFilePath, customCode);
+                fs.write(markdownFilePath, markdown);
                 fs.write(pngFilePath, atob(img), "wb");
 
                 if(filesToProcess.length>0){
