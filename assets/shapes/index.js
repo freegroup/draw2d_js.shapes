@@ -2411,7 +2411,7 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
         
         // Label
         shape = this.canvas.paper.text(0,0,'1');
-        shape.attr({"x":4.5,"y":11,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":11,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":4.5,"y":11,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":11,"stroke":"none","fill":"#C21B7A","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Label
@@ -2613,7 +2613,7 @@ draw2d_circuit_switch_HighLow = draw2d_circuit_switch_HighLow.extend({
 });
 draw2d_circuit_switch_HighLow.logic="calculate: function () {\n}";
 draw2d_circuit_switch_HighLow.github="./shapes/org/draw2d/circuit/switch/HighLow.shape";
-draw2d_circuit_switch_HighLow.markdown="";
+draw2d_circuit_switch_HighLow.markdown="# Push Button\n\ntoggles the output if the user press \nthe mouse button down in the simulation mode.";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
