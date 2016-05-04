@@ -52,7 +52,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
         
         // Label
         shape = this.canvas.paper.text(0,0,'1');
-        shape.attr({"x":10,"y":15,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":20,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":10,"y":16,"text-anchor":"start","text":"1","font-family":"\"Arial\"","font-size":20,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Circle
