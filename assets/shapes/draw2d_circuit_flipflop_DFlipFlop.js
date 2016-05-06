@@ -5,9 +5,9 @@
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_flipflop_D-FlipFlop = draw2d.SetFigure.extend({            
+var draw2d_circuit_flipflop_DFlipFlop = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_flipflop_D-FlipFlop",
+   NAME: "draw2d_circuit_flipflop_DFlipFlop",
 
    init:function(attr, setter, getter)
    {
@@ -230,7 +230,7 @@ var draw2d_circuit_flipflop_D-FlipFlop = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_flipflop_D-FlipFlop = draw2d_circuit_flipflop_D-FlipFlop.extend({
+draw2d_circuit_flipflop_DFlipFlop = draw2d_circuit_flipflop_DFlipFlop.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
@@ -258,4 +258,4 @@ draw2d_circuit_flipflop_D-FlipFlop = draw2d_circuit_flipflop_D-FlipFlop.extend({
         this.last_t = t;
     }
 });
-draw2d_circuit_flipflop_D-FlipFlop.github="./shapes/org/draw2d/circuit/flipflop/D-FlipFlop.shape";
+draw2d_circuit_flipflop_DFlipFlop.github="./shapes/org/draw2d/circuit/flipflop/DFlipFlop.shape";
