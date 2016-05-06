@@ -18,6 +18,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_flipflop_D-FlipFlop",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "flipflop",
+      "D-FlipFlop"
+    ]
+  },
+  {
     "name": "draw2d_circuit_flipflop_D_FlipFlop",
     "tags": [
       "draw2d",
