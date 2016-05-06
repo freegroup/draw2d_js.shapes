@@ -2135,7 +2135,7 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:32,height:48.60950000000048},attr), setter, getter);
      var port;
      // circle
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(105.2001953125, 69.8754358715884));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.0751953125, 69.8754358715884));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("circle");
