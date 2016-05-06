@@ -2579,6 +2579,7 @@ draw2d_circuit_switch_HighLow = draw2d_circuit_switch_HighLow.extend({
         var _this = this;
 
         this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
         
         this.value = false;
         this.on("click",function(){            
