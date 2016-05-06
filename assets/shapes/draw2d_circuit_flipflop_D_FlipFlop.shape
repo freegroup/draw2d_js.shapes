@@ -10,7 +10,7 @@
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.last_t = false;\n    },\n    \n    calculate:function()\n    {\n        var d = this.getInputPort(\"input_d\").getValue();\n        var t = this.getInputPort(\"input_t\").getValue();\n        \n        var q = this.getOutputPort(\"output_q\");\n        var q_ = this.getOutputPort(\"output_q_not\");\n        \n        var rising = this.last_t===false && t===true; \n        \n        if(rising===true){\n            q.setValue(d);\n            q_.setValue(!d)\n        }\n        this.last_t = t;\n    }\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n\n        this.last_t = false;\n    },\n    \n    calculate:function()\n    {\n        var d = this.getInputPort(\"input_d\").getValue();\n        var t = this.getInputPort(\"input_t\").getValue();\n        \n        var q = this.getOutputPort(\"output_q\");\n        var q_ = this.getOutputPort(\"output_q_not\");\n        \n        var rising = this.last_t===false && t===true; \n        \n        if(rising===true){\n            q.setValue(d);\n            q_.setValue(!d)\n        }\n        this.last_t = t;\n    }\n});",
       "name": "Rectangle",
       "markdown": "# D-FlipFlop\n\n## Description\n\nThe D FlipFLop is widely used. It is also known as a \n*data* or *delay* flip-flop.\n\nThe D flip-flop captures the value of the `D` input \nat a definite portion of the clock cycle (such \nas the rising edge of the clock). That captured \nvalue becomes the `Q` output. At other times, the \noutput Q does not change. The `D flip-flop` \ncan be viewed as a memory cell, a zero-order hold, \nor a delay line.\n\n\n## Logic table\n\n| Clock        | D       |  **Q***next*   |\n|:------------:|:-------:|:----------:|\n| Rising edge  | Low     |  **Low**       |\n| Rising edge  | High    |  **High**      |\n| non rising   | *       |  **Q***last*   |\n\n"
     },
@@ -61,7 +61,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "7c8a6215-ce17-6a10-c85b-b97fd0de466c",
-    "x": 4017.258125,
+    "x": 4016.758125,
     "y": 3979.3635124999996,
     "width": 10,
     "height": 10,
@@ -137,7 +137,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "5fc48f01-fecb-0d5f-ed4f-81a4bc26ae63",
-    "x": 3972.25,
+    "x": 3974.25,
     "y": 4010.9091999999996,
     "width": 10,
     "height": 10,
@@ -175,7 +175,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "592a8604-e0a9-8913-445d-621078e5ae97",
-    "x": 3972.25,
+    "x": 3974.25,
     "y": 3979.3635124999996,
     "width": 10,
     "height": 10,
@@ -259,7 +259,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "078497de-04ae-57d8-a141-a3d4afacfe39",
-    "x": 4017.258125,
+    "x": 4016.758125,
     "y": 4010.9091999999996,
     "width": 10,
     "height": 10,

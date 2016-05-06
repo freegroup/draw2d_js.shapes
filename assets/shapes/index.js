@@ -524,25 +524,25 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:41.5,height:53.69360000000006},attr), setter, getter);
      var port;
      // output_q
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(103.63403614457793, 20.281746800363283));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.42921686746949, 20.281746800363283));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output_q");
      port.setMaxFanOut(20);
      // input_t
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 79.03304583786486));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0, 79.03304583786486));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_t");
      port.setMaxFanOut(20);
      // input_d
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 20.281746800363283));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0, 20.281746800363283));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_d");
      port.setMaxFanOut(20);
      // output_q_not
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(103.63403614457793, 79.03304583786486));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.42921686746949, 79.03304583786486));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output_q_not");
@@ -746,6 +746,8 @@ draw2d_circuit_flipflop_D_FlipFlop = draw2d_circuit_flipflop_D_FlipFlop.extend({
          this._super(attr, setter, getter);
 
         this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+
         this.last_t = false;
     },
     
