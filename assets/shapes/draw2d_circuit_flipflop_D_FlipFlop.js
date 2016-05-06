@@ -236,8 +236,6 @@ draw2d_circuit_flipflop_D_FlipFlop = draw2d_circuit_flipflop_D_FlipFlop.extend({
          this._super(attr, setter, getter);
 
         this.attr({resizeable:false});
-        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
-
         this.last_t = false;
     },
     
