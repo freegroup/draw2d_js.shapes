@@ -9,6 +9,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_alu_FullAdder4Bit",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "alu",
+      "FullAdder4Bit"
+    ]
+  },
+  {
     "name": "draw2d_circuit_alu_HalfAdder",
     "tags": [
       "draw2d",
