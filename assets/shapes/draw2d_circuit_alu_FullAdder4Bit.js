@@ -13,11 +13,11 @@ var draw2d_circuit_alu_FullAdder4Bit = draw2d.SetFigure.extend({
    {
      this._super( $.extend({stroke:0, bgColor:null, width:81.71875,height:200},attr), setter, getter);
      var port;
-     // output_a
+     // output_as
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(99.24429827915878, 9.43359375));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("output_a");
+     port.setName("output_as");
      port.setMaxFanOut(20);
      // output_c
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(99.12045889101339, 89.72807499999999));
@@ -79,23 +79,23 @@ var draw2d_circuit_alu_FullAdder4Bit = draw2d.SetFigure.extend({
      port.setBackgroundColor("#37B1DE");
      port.setName("input_cin");
      port.setMaxFanOut(20);
-     // output_b
+     // output_bs
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(99.24429827915878, 19.6171875));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("output_b");
+     port.setName("output_bs");
      port.setMaxFanOut(20);
-     // output_c
+     // output_cs
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(99.24429827915878, 29.687149999999974));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("output_c");
+     port.setName("output_cs");
      port.setMaxFanOut(20);
-     // output_d
+     // output_ds
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(99.24429827915878, 39.67337500000008));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("output_d");
+     port.setName("output_ds");
      port.setMaxFanOut(20);
      this.persistPorts=false;
    },
@@ -365,15 +365,56 @@ draw2d_circuit_alu_FullAdder4Bit = draw2d_circuit_alu_FullAdder4Bit.extend({
      **/
     calculate:function()
     {
-        var a = this.getInputPort("input_a").getValue();
-        var b = this.getInputPort("input_b").getValue();
-        var c = this.getInputPort("input_c").getValue();
+        var input = [];
+
+        input.push(this.getInputPort("input_a1").getValue());
+        input.push(this.getInputPort("input_b1").getValue());
+        input.push(this.getInputPort("input_c1").getValue());
+        input.push(this.getInputPort("input_d1").getValue());
         
-        // s = a XOR b XOR  c
-        this.getOutputPort("output_s").setValue(a ^ b ^ c);
+        input.push(this.getInputPort("input_a2").getValue());
+        input.push(this.getInputPort("input_b2").getValue());
+        input.push(this.getInputPort("input_c2").getValue());
+        input.push(this.getInputPort("input_d2").getValue());
+ 
+        input.push(this.getInputPort("input_cin").getValue());
+ 
+        var carry = input[8];
+       
+        for (var i=0; i<4 ; i++){
+            // calculate with the carry
+            if(carry){
+                if(input[i] && input[i+4]){
+                    output[i]=true;
+                }
+                else if(input[i] || input[i+4]){
+                    output[i]=false;
+                }
+                else{
+                    output[i]=true;
+                    carry=false;
+                }
+            }
+            else{
+                if(input[i] && input[i+4]){
+                    output[i]=0;
+                    carry = 1;
+                }
+                else if(input[i] || input[i+4]){
+                    output[i]=true;
+                }
+                else{
+                    output[i]=false;
+                }
+            }
+        }
+        output[4]=carry;
         
-        // c = (at least two bits are set)
-        this.getOutputPort("output_c").setValue((a+b+c)>1);
+        this.getOutputPort("output_as").setValue(output[0]);
+        this.getOutputPort("output_bs").setValue(output[1]);
+        this.getOutputPort("output_cs").setValue(output[2]);
+        this.getOutputPort("output_ds").setValue(output[3]);
+        this.getOutputPort("output_c").setValue(output[4]);
     },
 
 
