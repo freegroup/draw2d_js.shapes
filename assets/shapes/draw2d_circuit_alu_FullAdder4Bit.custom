@@ -53,8 +53,8 @@ draw2d_circuit_alu_FullAdder4Bit = draw2d_circuit_alu_FullAdder4Bit.extend({
             }
             else{
                 if(input[i] && input[i+4]){
-                    output[i]=0;
-                    carry = 1;
+                    output[i]=false;
+                    carry = true;
                 }
                 else if(input[i] || input[i+4]){
                     output[i]=true;
