@@ -1,5 +1,14 @@
 [
   {
+    "name": "draw2d_circuit_alu_FullAdder",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "alu",
+      "FullAdder"
+    ]
+  },
+  {
     "name": "draw2d_circuit_alu_HalfAdder",
     "tags": [
       "draw2d",
