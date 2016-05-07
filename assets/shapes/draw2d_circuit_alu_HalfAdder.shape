@@ -11,7 +11,8 @@
     "userData": {
       "baseClass": "draw2d.SetFigure",
       "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n        var a = this.getInputPort(\"input_a\").getValue();\n        var b = this.getInputPort(\"input_b\").getValue();\n        \n        // s = a XOR b\n        this.getOutputPort(\"output_s\").setValue(( a ? !b : b ));\n        \n        // c = a AND b\n        this.getOutputPort(\"output_c\").setValue(( a & b ));\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});",
-      "name": "Rectangle"
+      "name": "Rectangle",
+      "markdown": "# Half Adder\n\nHalf adder is a combinational logic circuit with two \ninputs and two outputs. \n\nThe half adder circuit is designed to add two single \nbit binary number `A` and `B`. \n\nIt is the basic building block for addition of two \nsingle bit numbers. This circuit has two outputs \n`carry` and `sum`.\n\n\n|  A    |    B    |     S    |    C   |\n|:-----:|:-------:|:--------:|:-------|\n|   0   |    0    |     0    |     0  |\n|   0   |    1    |     1    |     0  |\n|   1   |    0    |     1    |     0  |\n|   1   |    1    |     0    |     1  |\n"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
