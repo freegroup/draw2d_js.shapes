@@ -2,17 +2,17 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "e72b4754-e04e-21df-6937-669d31471b19",
-    "x": 301,
-    "y": 190,
+    "x": 3962.3905,
+    "y": 3974.67955,
     "width": 70,
-    "height": 60,
+    "height": 70,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n        var a = this.getInputPort(\"input_a\").getValue();\n        var b = this.getInputPort(\"input_b\").getValue();\n        \n        // s = a XOR b\n        this.getOutputPort(\"output_s\").setValue(( a ? !b : b ));\n        \n        // c = a AND b\n        this.getOutputPort(\"output_c\").setValue(( a & b ));\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n        var a = this.getInputPort(\"input_a\").getValue();\n        var b = this.getInputPort(\"input_b\").getValue();\n        var c = this.getInputPort(\"input_c\").getValue();\n        \n        // s = a XOR b XOR  c\n        this.getOutputPort(\"output_s\").setValue(a ^ b ^ c);\n        \n        // c = (at least two bits are set)\n        this.getOutputPort(\"output_c\").setValue((a+b+c)>1);\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});",
       "name": "Rectangle",
-      "markdown": "# Half Adder\n\nHalf adder is a combinational logic circuit with two \ninputs and two outputs. \n\nThe half adder circuit is designed to add two single \nbit binary number `A` and `B`. \n\nIt is the basic building block for addition of two \nsingle bit numbers. This circuit has two outputs \n`carry` and `sum`.\n\n\n|  A    |    B    |     S    |    C   |\n|:-----:|:-------:|:--------:|:-------|\n|   0   |    0    |     0    |     0  |\n|   0   |    1    |     1    |     0  |\n|   1   |    0    |     1    |     0  |\n|   1   |    1    |     0    |     1  |\n"
+      "markdown": "## Full Adder\n\nFull adder is developed to overcome the drawback of \nHalf Adder circuit. It can add two one-bit numbers \nA and B, and carry c. The full adder is a three \ninput and two output combinational circuit.\n\n\n\n|  A    |    B    |  Cin     |    S    |    C   |\n|:-----:|:-------:|:--------:|:--------:|:-------|\n|   0   |    0    |     0    |     0    |     0  |\n|   0   |    0    |     1    |     1    |     0  |\n|   0   |    1    |     0    |     1    |     0  |\n|   0   |    1    |     1    |     0    |     1  |\n|   1   |    0    |     0    |     0    |     1  |\n|   1   |    0    |     1    |     0    |     1  |\n|   1   |    1    |     0    |     0    |     1  |\n|   1   |    1    |     1    |     0    |     1  |\n"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -23,20 +23,20 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 301,
-        "y": 190
+        "x": 3962.3905,
+        "y": 3974.67955
       },
       {
-        "x": 371,
-        "y": 190
+        "x": 4032.3905,
+        "y": 3974.67955
       },
       {
-        "x": 371,
-        "y": 250
+        "x": 4032.3905,
+        "y": 4044.67955
       },
       {
-        "x": 301,
-        "y": 250
+        "x": 3962.3905,
+        "y": 4044.67955
       }
     ],
     "blur": 0,
@@ -61,8 +61,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "aa347e18-3b28-dada-f134-ecac6c2ffa84",
-    "x": 318.65625,
-    "y": 197.9849,
+    "x": 3983.04675,
+    "y": 3992.6644499999998,
     "width": 28.328125,
     "height": 21,
     "alpha": 1,
@@ -77,7 +77,7 @@
     "stroke": 0,
     "radius": 0,
     "dasharray": null,
-    "text": "Half",
+    "text": "Full",
     "outlineStroke": 0,
     "outlineColor": "none",
     "fontSize": 10,
@@ -99,9 +99,9 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "5d534841-5021-4cdb-260b-9229aaa38720",
-    "x": 317.717,
-    "y": 208.2342,
-    "width": 28.328125,
+    "x": 3980.1075,
+    "y": 4005.9137499999997,
+    "width": 34.828125,
     "height": 21,
     "alpha": 1,
     "angle": 0,
@@ -137,8 +137,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "e7565a76-9e96-5cb7-3a96-f888e06f053c",
-    "x": 302,
-    "y": 185.8599,
+    "x": 3963.3905,
+    "y": 3970.5394499999998,
     "width": 28.328125,
     "height": 20.734375,
     "alpha": 1,
@@ -175,8 +175,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "511fb62f-8edb-1b20-4894-3a53b4d1949b",
-    "x": 302,
-    "y": 224.9849,
+    "x": 3964.3905,
+    "y": 3998.6644499999998,
     "width": 28.328125,
     "height": 20.734375,
     "alpha": 1,
@@ -213,8 +213,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "8a2d55b6-32a0-fdfd-68b7-d3df1035e143",
-    "x": 349.34375,
-    "y": 185.8599,
+    "x": 4010.73425,
+    "y": 3976.5394499999998,
     "width": 28.328125,
     "height": 20.734375,
     "alpha": 1,
@@ -251,8 +251,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "a2956abc-b259-7b38-17f9-1bcb2abee403",
-    "x": 349.34375,
-    "y": 224.9849,
+    "x": 4010.73425,
+    "y": 4017.6644499999998,
     "width": 28.328125,
     "height": 20.734375,
     "alpha": 1,
@@ -289,8 +289,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "3e46095d-560c-8139-3ea0-f44e93718983",
-    "x": 366.8256,
-    "y": 194.9224,
+    "x": 4028.2161,
+    "y": 3983.6019499999998,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -325,8 +325,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "71ba1c80-5739-1862-2a6e-fbcca41e28cb",
-    "x": 367.8256,
-    "y": 234.2342,
+    "x": 4029.2161,
+    "y": 4025.9137499999997,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -361,8 +361,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "a4825e75-c25c-5cca-36d3-7aad8c012d1a",
-    "x": 295.0768,
-    "y": 193.9224,
+    "x": 3956.4673,
+    "y": 3978.6019499999998,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -397,8 +397,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "eed37de1-e11c-3573-2e0c-74b7ce7b718e",
-    "x": 294.0768,
-    "y": 235.1099,
+    "x": 3956.4673,
+    "y": 4005.6095,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -427,6 +427,118 @@
       },
       {
         "name": "shape_designer.filter.PortTypeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "075d8dac-2bf8-35d5-c3b1-5c6f9f8116ec",
+    "x": 3956.4673,
+    "y": 4028.9137499999997,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "input_c",
+      "type": "Input",
+      "direction": 3,
+      "fanout": 20
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#37B1DE",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "508db277-22e0-1fbf-9d91-9daa2b47801d",
+    "x": 3964.3905,
+    "y": 4020.9137499999997,
+    "width": 28.328125,
+    "height": 20.734375,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "C",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 16,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "9f9bb68a-3e0e-a2d3-aa6e-b2008f5393c5",
+    "x": 3975.1075,
+    "y": 4026.6644499999998,
+    "width": 28.328125,
+    "height": 20.953125,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "in",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 12,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
       }
     ]
   }
