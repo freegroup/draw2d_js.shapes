@@ -1,5 +1,14 @@
 [
   {
+    "name": "draw2d_circuit_alu_HalfAdder",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "alu",
+      "HalfAdder"
+    ]
+  },
+  {
     "name": "draw2d_circuit_display_7Segment",
     "tags": [
       "draw2d",
