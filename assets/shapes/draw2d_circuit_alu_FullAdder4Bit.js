@@ -222,6 +222,8 @@ var draw2d_circuit_alu_FullAdder4Bit = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -235,6 +237,8 @@ var draw2d_circuit_alu_FullAdder4Bit = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -244,6 +248,8 @@ var draw2d_circuit_alu_FullAdder4Bit = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){

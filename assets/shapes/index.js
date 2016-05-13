@@ -118,6 +118,8 @@ var draw2d_circuit_alu_FullAdder = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -131,6 +133,8 @@ var draw2d_circuit_alu_FullAdder = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -140,6 +144,8 @@ var draw2d_circuit_alu_FullAdder = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -515,6 +521,8 @@ var draw2d_circuit_alu_FullAdder4Bit = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -528,6 +536,8 @@ var draw2d_circuit_alu_FullAdder4Bit = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -537,6 +547,8 @@ var draw2d_circuit_alu_FullAdder4Bit = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -834,6 +846,8 @@ var draw2d_circuit_alu_HalfAdder = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -847,6 +861,8 @@ var draw2d_circuit_alu_HalfAdder = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -856,6 +872,8 @@ var draw2d_circuit_alu_HalfAdder = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -1132,6 +1150,8 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -1145,6 +1165,8 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -1154,6 +1176,8 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -1367,6 +1391,8 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -1380,6 +1406,8 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -1389,6 +1417,8 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -1619,6 +1649,8 @@ var draw2d_circuit_flipflop_DFlipFlop = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -1632,6 +1664,8 @@ var draw2d_circuit_flipflop_DFlipFlop = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -1641,6 +1675,8 @@ var draw2d_circuit_flipflop_DFlipFlop = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -1849,6 +1885,8 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -1862,6 +1900,8 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -1871,6 +1911,8 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -2075,6 +2117,8 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -2088,6 +2132,8 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -2097,6 +2143,8 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -2301,6 +2349,8 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -2314,6 +2364,8 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -2323,6 +2375,8 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -2521,6 +2575,8 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -2534,6 +2590,8 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -2543,6 +2601,8 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -2741,6 +2801,8 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -2754,6 +2816,8 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -2763,6 +2827,8 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -2960,6 +3026,8 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -2973,6 +3041,8 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -2982,6 +3052,8 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -3199,6 +3271,8 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -3212,6 +3286,8 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -3221,6 +3297,8 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -3453,6 +3531,8 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -3466,6 +3546,8 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -3475,6 +3557,8 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -3745,6 +3829,8 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -3758,6 +3844,8 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -3767,6 +3855,8 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -3981,6 +4071,8 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -3994,6 +4086,8 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -4003,6 +4097,8 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
