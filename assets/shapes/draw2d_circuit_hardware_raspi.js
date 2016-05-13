@@ -11,16 +11,52 @@ var draw2d_circuit_hardware_raspi = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:10,height:10},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:74,height:137.99999999999997},attr), setter, getter);
      var port;
+     // gpio_1
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.3513513513513513, 16.835724637681153));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("gpio_1");
+     port.setMaxFanOut(20);
+     // gpio_2
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.3513513513513513, 31.644782608695643));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("gpio_2");
+     port.setMaxFanOut(20);
+     // gpio_3
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.3513513513513513, 45.84985507246377));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("gpio_3");
+     port.setMaxFanOut(20);
+     // gpio_4
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.3513513513513513, 60.44485507246377));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("gpio_4");
+     port.setMaxFanOut(20);
+     // gpio_5
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.3513513513513513, 75.10666666666665));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("gpio_5");
+     port.setMaxFanOut(20);
+     // gpio_6
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.3513513513513513, 89.06905797101449));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("gpio_6");
+     port.setMaxFanOut(20);
      this.persistPorts=false;
    },
 
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 10;
-      this.originalHeight= 10;
+      this.originalWidth = 74;
+      this.originalHeight= 137.99999999999997;
       return shape;
    },
 
@@ -29,9 +65,19 @@ var draw2d_circuit_hardware_raspi = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L10,0 L10,10 L0,10");
+        shape = this.canvas.paper.path("M0,0 L74,0 L74,137.99999999999997 L0,137.99999999999997");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('M74 137.99999999999997L0 137.99999999999997L0 1L74 1Z');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'Raspi');
+        shape.attr({"x":15.33299999999997,"y":14,"text-anchor":"start","text":"Raspi","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
         
 
         return this.canvas.paper.setFinish();
@@ -192,6 +238,9 @@ draw2d_circuit_hardware_raspi = draw2d_circuit_hardware_raspi.extend({
      **/
     calculate:function()
     {
+        this.getInputPorts().each(function(index,port){
+            raspi.gpio(port.getName(), port.getValue());
+        });
     },
 
 
