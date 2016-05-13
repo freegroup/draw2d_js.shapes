@@ -3196,7 +3196,9 @@ draw2d_circuit_hardware_raspi = draw2d_circuit_hardware_raspi.extend({
     calculate:function()
     {
         this.getInputPorts().each(function(index,port){
-            raspi.gpio(port.getName(), port.getValue());
+            if(port.hasChangedValue()){
+                raspi.gpio(port.getName(), port.getValue());
+            }
         });
     },
 
