@@ -11,14 +11,15 @@
     "userData": {
       "baseClass": "draw2d.SetFigure",
       "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n        this.getInputPorts().each(function(index,port){\n            if(port.hasChangedValue() && port.getConnections().getSize()>0){\n                raspi.gpio(port.getName(), port.getValue());\n            }\n        });\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});",
-      "name": "Rectangle"
+      "name": "Rectangle",
+      "markdown": "# RaspBerry Pi GPIO \n\n## About GPIO\nThe Raspberry Pi provides Input/Outport ports \nintended to control or monitor other devices and \nsubsystem modules. These `GPIO` (general purpose I/O) \nsignals on the 2×13 header pins on the RPi  motherboad  \ninclude SPI, I2C, serial UART, 3V3 and 5V power.\n\n## Interaction\nYou can control these GPIO pins on the raspi if you have installed\nthe DigitalTrainingStudio on your Raspberry via node.js\n\n## Install\n\n```\nsudo npm install -g digitalstudio\n````\n\nThis takes a whiule on a raspbery B+ 2 but should success.\n\n## Start the server on the raspi\nafter this you can start the DigitalTrainingStudio server on the raspberry\nwith\n\n```\n> digitalstudio \n```\n\n## Connect with the browser\n\nAfter this the DigitalTrainingStudio echos the url on the console \nhow to connect with your browser to the Raspi.\n\nNow you can drive the GPIO pins on raspi with the DigitalTrainingStudio\n\n"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
     "bgColor": "#FFFFFF",
     "color": "#303030",
     "stroke": 1,
-    "radius": 0,
+    "radius": 2,
     "dasharray": null,
     "vertices": [
       {
@@ -51,6 +52,9 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -67,7 +71,7 @@
       "name": "gpio_1",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -103,7 +107,7 @@
       "name": "gpio_2",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -139,7 +143,7 @@
       "name": "gpio_3",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -175,7 +179,7 @@
       "name": "gpio_4",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -211,7 +215,7 @@
       "name": "gpio_5",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -238,7 +242,7 @@
     "type": "shape_designer.figure.ExtPort",
     "id": "b63caa07-5dc6-5566-62c2-f2975cfa2c99",
     "x": 3963.9632,
-    "y": 4085,
+    "y": 4083.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -247,7 +251,7 @@
       "name": "gpio_6",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -312,16 +316,16 @@
     "type": "shape_designer.figure.ExtPort",
     "id": "1d0b5415-6131-c884-8a84-a8c95f52e4de",
     "x": 3963.9632,
-    "y": 4101.82155,
+    "y": 4105.82155,
     "width": 10,
     "height": 10,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "name": "gpio_7",
-      "type": "Hybrid",
-      "direction": null,
-      "fanout": 20
+      "type": "Input",
+      "direction": 3,
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -348,16 +352,16 @@
     "type": "shape_designer.figure.ExtPort",
     "id": "f3ee5e55-735a-0890-fbd3-817e5c584636",
     "x": 3963.9632,
-    "y": 4125.40625,
+    "y": 4127.90625,
     "width": 10,
     "height": 10,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "name": "Port",
-      "type": "Hybrid",
-      "direction": null,
-      "fanout": 20
+      "type": "Input",
+      "direction": 3,
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -383,7 +387,7 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "e8b1c86f-e639-4ceb-2005-a718a1bfaa89",
-    "x": 3974.9632,
+    "x": 3973.9632,
     "y": 3960.2333,
     "width": 28.328125,
     "height": 21.390625,
@@ -421,7 +425,7 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "095d97b3-aa94-7a52-f908-6b73628ee844",
-    "x": 3974.9632,
+    "x": 3975.9632,
     "y": 3983.6697999999997,
     "width": 28.328125,
     "height": 21.390625,
@@ -459,7 +463,7 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "753d3c24-6196-80a0-b470-4a344361f7df",
-    "x": 3974.9632,
+    "x": 3975.9632,
     "y": 4006.2727999999997,
     "width": 28.328125,
     "height": 21.390625,
@@ -497,7 +501,7 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "69cf1c85-0090-43a9-c52a-3f7626442075",
-    "x": 3974.9632,
+    "x": 3975.9632,
     "y": 4029.2727999999997,
     "width": 28.328125,
     "height": 21.390625,
@@ -535,7 +539,7 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "ff804450-ebd7-bf66-211e-31bce79a379c",
-    "x": 3974.9632,
+    "x": 3975.9632,
     "y": 4052.6472,
     "width": 28.328125,
     "height": 21.390625,
@@ -573,8 +577,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "11559508-7363-cd07-e737-f15858989ae9",
-    "x": 3974.9632,
-    "y": 4074.9152999999997,
+    "x": 3975.9632,
+    "y": 4075.4152999999997,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -611,8 +615,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "9baf5722-89dd-628d-e0d4-39bae1316611",
-    "x": 3974.9632,
-    "y": 4096,
+    "x": 3976.9632,
+    "y": 4097.5,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -649,8 +653,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "2e2aa124-27f2-b41b-71a6-b63b7b325bd1",
-    "x": 3974.9632,
-    "y": 4117.967675,
+    "x": 3976.9632,
+    "y": 4119.967675,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
