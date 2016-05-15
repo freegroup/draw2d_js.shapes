@@ -2,8 +2,8 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "deca748f-5f68-724b-54a1-a8aae5ce28c8",
-    "x": 3963,
-    "y": 3932,
+    "x": 3970.9513397558035,
+    "y": 3952.373925,
     "width": 105,
     "height": 199,
     "alpha": 1,
@@ -11,31 +11,32 @@
     "userData": {
       "baseClass": "draw2d.SetFigure",
       "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n        this.getInputPorts().each(function(index,port){\n            if(port.hasChangedValue() && port.getConnections().getSize()>0){\n                raspi.gpio(port.getName(), port.getValue());\n            }\n        });\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});",
-      "name": "Rectangle"
+      "name": "Rectangle",
+      "markdown": "# RaspBerry Pi GPIO \n\n## About GPIO\nThe Raspberry Pi provides Input/Outport ports \nintended to control or monitor other devices and \nsubsystem modules. These `GPIO` (general purpose I/O) \nsignals on the 2×13 header pins on the RPi  motherboad  \ninclude SPI, I2C, serial UART, 3V3 and 5V power.\n\n## Interaction\nYou can control these GPIO pins on the raspi if you have installed\nthe DigitalTrainingStudio on your Raspberry via node.js\n\n## Install\n\n```\nsudo npm install -g digitalstudio\n````\n\nThis takes a whiule on a raspbery B+ 2 but should success.\n\n## Start the server on the raspi\nafter this you can start the DigitalTrainingStudio server on the raspberry\nwith\n\n```\n> digitalstudio \n```\n\n## Connect with the browser\n\nAfter this the DigitalTrainingStudio echos the url on the console \nhow to connect with your browser to the Raspi.\n\nNow you can drive the GPIO pins on raspi with the DigitalTrainingStudio\n\n"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
     "bgColor": "#FFFFFF",
     "color": "#303030",
     "stroke": 1,
-    "radius": 0,
+    "radius": 2,
     "dasharray": null,
     "vertices": [
       {
-        "x": 4068,
-        "y": 4131
+        "x": 4075.9513397558035,
+        "y": 4151.373925
       },
       {
-        "x": 3963,
-        "y": 4131
+        "x": 3970.9513397558035,
+        "y": 4151.373925
       },
       {
-        "x": 3963,
-        "y": 3932
+        "x": 3970.9513397558035,
+        "y": 3952.373925
       },
       {
-        "x": 4068,
-        "y": 3932
+        "x": 4075.9513397558035,
+        "y": 3952.373925
       }
     ],
     "blur": 0,
@@ -51,14 +52,17 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "374670fc-e214-ae4c-2c21-41eff7d2fb66",
-    "x": 3957,
-    "y": 3949.2333,
+    "x": 3963.9632,
+    "y": 3968.0749,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -67,7 +71,7 @@
       "name": "gpio_1",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -93,8 +97,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "ec1b1a42-9200-8b60-6d78-ce6b9ffb8ff8",
-    "x": 3957,
-    "y": 3972.6697999999997,
+    "x": 3963.9632,
+    "y": 3991.6229249999997,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -103,7 +107,7 @@
       "name": "gpio_2",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -129,8 +133,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "97efc72a-c9ad-f50b-e7ca-ba6a168eda02",
-    "x": 3957,
-    "y": 3995.2727999999997,
+    "x": 3963.9632,
+    "y": 4013.69435,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -139,7 +143,7 @@
       "name": "gpio_3",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -165,8 +169,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "59d900da-9d6d-2389-86b5-cc14d2a24513",
-    "x": 3957,
-    "y": 4018.4139,
+    "x": 3963.9632,
+    "y": 4037.6651,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -175,7 +179,7 @@
       "name": "gpio_4",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -201,8 +205,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "2d728a2e-374a-0ecf-1d20-dd42f0ebf62a",
-    "x": 3957,
-    "y": 4041.6472,
+    "x": 3963.9632,
+    "y": 4060.4888,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -211,7 +215,7 @@
       "name": "gpio_5",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -237,8 +241,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "b63caa07-5dc6-5566-62c2-f2975cfa2c99",
-    "x": 3957,
-    "y": 4063.9152999999997,
+    "x": 3963.9632,
+    "y": 4083.5,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -247,7 +251,7 @@
       "name": "gpio_6",
       "type": "Input",
       "direction": 3,
-      "fanout": 20
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -273,8 +277,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "bb6288f8-25aa-e53b-0457-e8c1135fe7bf",
-    "x": 3991.0574,
-    "y": 3933.373925,
+    "x": 4000.8878,
+    "y": 3956.8104249999997,
     "width": 33.5625,
     "height": 21.015625,
     "alpha": 1,
@@ -311,17 +315,17 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "1d0b5415-6131-c884-8a84-a8c95f52e4de",
-    "x": 3957,
-    "y": 4085,
+    "x": 3963.9632,
+    "y": 4105.82155,
     "width": 10,
     "height": 10,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "name": "gpio_7",
-      "type": "Hybrid",
-      "direction": null,
-      "fanout": 20
+      "type": "Input",
+      "direction": 3,
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -347,17 +351,17 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "f3ee5e55-735a-0890-fbd3-817e5c584636",
-    "x": 3957,
-    "y": 4107,
+    "x": 3963.9632,
+    "y": 4127.90625,
     "width": 10,
     "height": 10,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "name": "Port",
-      "type": "Hybrid",
-      "direction": null,
-      "fanout": 20
+      "type": "Input",
+      "direction": 3,
+      "fanout": 1
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -383,8 +387,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "e8b1c86f-e639-4ceb-2005-a718a1bfaa89",
-    "x": 3967.5,
-    "y": 3940,
+    "x": 3973.9632,
+    "y": 3960.2333,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -421,8 +425,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "095d97b3-aa94-7a52-f908-6b73628ee844",
-    "x": 3969,
-    "y": 3964.7423,
+    "x": 3975.9632,
+    "y": 3983.6697999999997,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -459,8 +463,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "753d3c24-6196-80a0-b470-4a344361f7df",
-    "x": 3969,
-    "y": 3987.2881,
+    "x": 3975.9632,
+    "y": 4006.2727999999997,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -497,8 +501,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "69cf1c85-0090-43a9-c52a-3f7626442075",
-    "x": 3969,
-    "y": 4010.4742,
+    "x": 3975.9632,
+    "y": 4029.2727999999997,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -535,8 +539,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "ff804450-ebd7-bf66-211e-31bce79a379c",
-    "x": 3969,
-    "y": 4033.6603,
+    "x": 3975.9632,
+    "y": 4052.6472,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -573,8 +577,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "11559508-7363-cd07-e737-f15858989ae9",
-    "x": 3969,
-    "y": 4056.1472,
+    "x": 3975.9632,
+    "y": 4075.4152999999997,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -611,8 +615,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "9baf5722-89dd-628d-e0d4-39bae1316611",
-    "x": 3969,
-    "y": 4076.9152999999997,
+    "x": 3976.9632,
+    "y": 4097.5,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -649,8 +653,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "2e2aa124-27f2-b41b-71a6-b63b7b325bd1",
-    "x": 3969,
-    "y": 4098.5,
+    "x": 3976.9632,
+    "y": 4119.967675,
     "width": 28.328125,
     "height": 21.390625,
     "alpha": 1,
@@ -681,6 +685,825 @@
       },
       {
         "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyCircle",
+    "id": "901b96e7-19ba-81f5-9c02-8599dbd64c2b",
+    "x": 4007.9278,
+    "y": 3995.2727999999997,
+    "width": 31,
+    "height": 33,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Circle"
+    },
+    "cssClass": "shape_designer_figure_PolyCircle",
+    "ports": [],
+    "bgColor": "#000000",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "918554d3-5d1a-c476-655d-56fcaa50e03f",
+    "x": 4017.8707000000004,
+    "y": 3992.64855,
+    "width": 11.141119999999773,
+    "height": 9.830400000000282,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#000000",
+    "color": "#303030",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4029.01182,
+        "y": 4002.47895
+      },
+      {
+        "x": 4017.8707000000004,
+        "y": 4002.47895
+      },
+      {
+        "x": 4017.8707000000004,
+        "y": 3992.64855
+      },
+      {
+        "x": 4029.01182,
+        "y": 3992.64855
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "8355e815-33ab-61ee-3f40-fcddb68252fb",
+    "x": 4015.69890130816,
+    "y": 4022.1273236499997,
+    "width": 14.171798691840195,
+    "height": 8.837371771443031,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 5,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4015.69890130816,
+        "y": 4023.695133564318
+      },
+      {
+        "x": 4023.0184502140983,
+        "y": 4022.1273236499997
+      },
+      {
+        "x": 4029.4790056608354,
+        "y": 4023.480091496963
+      },
+      {
+        "x": 4029.8707000000004,
+        "y": 4028.4275599301227
+      },
+      {
+        "x": 4022.4412032704,
+        "y": 4030.9646954214427
+      },
+      {
+        "x": 4016.66620841833,
+        "y": 4028.4275599301227
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "b76f1f2c-4b36-c11e-9972-def4e0c60dc3",
+    "x": 4026.4008127360003,
+    "y": 3984.212524607998,
+    "width": 18.986734080001952,
+    "height": 14.45727539200152,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#6B8E23",
+    "color": "#000000",
+    "stroke": 2,
+    "radius": 4,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4038.991474338652,
+        "y": 3998.6697999999997
+      },
+      {
+        "x": 4026.943624405442,
+        "y": 3998.3153718740014
+      },
+      {
+        "x": 4026.4008127360003,
+        "y": 3989.514938914051
+      },
+      {
+        "x": 4031.2331863117943,
+        "y": 3985.3873367530264
+      },
+      {
+        "x": 4037.139301711587,
+        "y": 3984.212524607998
+      },
+      {
+        "x": 4045.387546816002,
+        "y": 3985.2449082897506
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyCircle",
+    "id": "ec0bfd07-0974-75a8-cec7-26676326f4a1",
+    "x": 4017.8707000000004,
+    "y": 4011.9742,
+    "width": 11,
+    "height": 11,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Circle"
+    },
+    "cssClass": "shape_designer_figure_PolyCircle",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 0,
+    "dasharray": null,
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyCircle",
+    "id": "53a44861-b93e-277a-7230-2b3117b59744",
+    "x": 4024.2902000000004,
+    "y": 4003.69435,
+    "width": 8,
+    "height": 9,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Circle"
+    },
+    "cssClass": "shape_designer_figure_PolyCircle",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyCircle",
+    "id": "7504563b-fb58-e81a-db91-58deaba8e0ff",
+    "x": 4015.7902000000004,
+    "y": 4003.19435,
+    "width": 8,
+    "height": 9,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Circle"
+    },
+    "cssClass": "shape_designer_figure_PolyCircle",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "3237a6cf-13dd-a5b8-66e1-b80c8de4e3c2",
+    "x": 4005.7233084183295,
+    "y": 3983.6697999999997,
+    "width": 22,
+    "height": 15,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#6B8E23",
+    "color": "#000000",
+    "stroke": 2,
+    "radius": 10,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4024.47330841833,
+        "y": 3995.223854054054
+      },
+      {
+        "x": 4016.473308418327,
+        "y": 3998.6697999999997
+      },
+      {
+        "x": 4011.7858084183304,
+        "y": 3996.8454756756746
+      },
+      {
+        "x": 4008.598308418329,
+        "y": 3992.9941243243234
+      },
+      {
+        "x": 4005.7233084183295,
+        "y": 3985.4941243243234
+      },
+      {
+        "x": 4017.473308418329,
+        "y": 3983.6697999999997
+      },
+      {
+        "x": 4027.7233084183295,
+        "y": 3987.7238540540525
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "d5ded4b5-5027-e1f6-f52e-39fddae0735b",
+    "x": 4007.7233084183295,
+    "y": 4011.9742,
+    "width": 10,
+    "height": 13,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 9,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4008.849824334498,
+        "y": 4011.9742
+      },
+      {
+        "x": 4017.1485789422395,
+        "y": 4016.0123307343315
+      },
+      {
+        "x": 4017.7233084183295,
+        "y": 4023.762384498454
+      },
+      {
+        "x": 4012.2156286421587,
+        "y": 4024.9742
+      },
+      {
+        "x": 4007.7233084183295,
+        "y": 4020.7750947432332
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "a6b803b8-ba32-d0ee-99cd-468538588d7e",
+    "x": 4029.114241154387,
+    "y": 4013.5845663482864,
+    "width": 9.717104971893605,
+    "height": 11.453381035394159,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 9,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4030.9882969478513,
+        "y": 4015.731619258241
+      },
+      {
+        "x": 4038.8313461262806,
+        "y": 4013.5845663482864
+      },
+      {
+        "x": 4038.6857561341503,
+        "y": 4015.388883350651
+      },
+      {
+        "x": 4037.3707000000004,
+        "y": 4023.4825344984542
+      },
+      {
+        "x": 4029.114241154387,
+        "y": 4025.0379473836806
+      },
+      {
+        "x": 4029.3463849561626,
+        "y": 4022.0414329697946
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "46ff341a-d7c2-bc18-3345-bedc33f4d125",
+    "x": 4031.8707000000004,
+    "y": 4001.19435,
+    "width": 10,
+    "height": 13,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 9,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4032.997215916169,
+        "y": 4001.19435
+      },
+      {
+        "x": 4041.2959705239105,
+        "y": 4005.2324807343316
+      },
+      {
+        "x": 4041.8707000000004,
+        "y": 4012.9825344984542
+      },
+      {
+        "x": 4036.3630202238296,
+        "y": 4014.19435
+      },
+      {
+        "x": 4031.8707000000004,
+        "y": 4009.9952447432333
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "0c9eb891-48b8-4dd8-6403-65c1415ee66b",
+    "x": 4025.7902000000004,
+    "y": 3995.2727999999997,
+    "width": 10,
+    "height": 9,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 9,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4026.916715916169,
+        "y": 3995.2727999999997
+      },
+      {
+        "x": 4035.2154705239104,
+        "y": 3998.0684289699216
+      },
+      {
+        "x": 4035.7902000000004,
+        "y": 4003.4338508066216
+      },
+      {
+        "x": 4030.2825202238296,
+        "y": 4004.2727999999997
+      },
+      {
+        "x": 4025.7902000000004,
+        "y": 4001.3657271299303
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "8ac7f75a-c167-c3fd-f699-09791f3926af",
+    "x": 4005.7233084183295,
+    "y": 4000.19435,
+    "width": 10.456062674948043,
+    "height": 13.944892805120617,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 9,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4012.9486778948194,
+        "y": 4000.19435
+      },
+      {
+        "x": 4016.1793710932775,
+        "y": 4003.8888833506503
+      },
+      {
+        "x": 4014.0912208458467,
+        "y": 4012.583829919893
+      },
+      {
+        "x": 4007.7245476104745,
+        "y": 4014.139242805121
+      },
+      {
+        "x": 4005.7233084183295,
+        "y": 4004.8720761390746
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "bca87bbc-9e34-23f4-0521-dd7f67ea13cd",
+    "x": 4013.9751753689343,
+    "y": 3994.2727999999997,
+    "width": 12.081641637144912,
+    "height": 8.429496729600942,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#B3003B",
+    "color": "#000000",
+    "stroke": 1,
+    "radius": 9,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 4022.072067903742,
+        "y": 3994.2727999999997
+      },
+      {
+        "x": 4026.056817006079,
+        "y": 3996.392304769111
+      },
+      {
+        "x": 4023.0350738881566,
+        "y": 4001.380480262895
+      },
+      {
+        "x": 4013.9751753689343,
+        "y": 4002.7022967296007
+      },
+      {
+        "x": 4015.056817006079,
+        "y": 3995.581959893416
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLine",
+    "id": "1ab2ef18-5dba-f3e5-a43d-6f32a31efdc8",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Line"
+    },
+    "cssClass": "shape_designer_figure_ExtLine",
+    "stroke": 1,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 4036.121591808003,
+        "y": 3990.8461772799988
+      },
+      {
+        "x": 4033.0086318080043,
+        "y": 3992.5299281919993
+      },
+      {
+        "x": 4030.4640000000018,
+        "y": 3995.9233822720016
+      }
+    ],
+    "router": "draw2d.layout.connection.VertexRouter",
+    "radius": 2,
+    "filters": [
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLine",
+    "id": "3c3dfd1c-cb05-2bb9-f82b-4d515d365750",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Line"
+    },
+    "cssClass": "shape_designer_figure_ExtLine",
+    "stroke": 1,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 4019.650560000002,
+        "y": 3994.4192000000016
+      },
+      {
+        "x": 4017.380392960001,
+        "y": 3991.2826470399978
+      },
+      {
+        "x": 4013.2311777279983,
+        "y": 3988.4145295360004
+      }
+    ],
+    "router": "draw2d.layout.connection.VertexRouter",
+    "radius": 4,
+    "filters": [
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   }
