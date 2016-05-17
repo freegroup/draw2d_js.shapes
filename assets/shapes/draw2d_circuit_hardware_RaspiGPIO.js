@@ -473,6 +473,9 @@ draw2d_circuit_hardware_RaspiGPIO = draw2d_circuit_hardware_RaspiGPIO.extend({
                 raspi.gpio.set(port.getName(), port.getValue());
             }
         });
+        this.getOutputPorts().each(function(index,port){
+            port.setValue(raspi.gpio.get(port.getName()));
+        });
     },
 
 
