@@ -68,7 +68,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "gpio_1",
+      "name": "gpi_1",
       "type": "Input",
       "direction": 3,
       "fanout": 1
@@ -104,7 +104,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "gpio_2",
+      "name": "gpi_2",
       "type": "Input",
       "direction": 3,
       "fanout": 1
@@ -140,7 +140,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "gpio_3",
+      "name": "gpi_3",
       "type": "Input",
       "direction": 3,
       "fanout": 1
@@ -176,7 +176,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "gpio_4",
+      "name": "gpi_4",
       "type": "Input",
       "direction": 3,
       "fanout": 1
@@ -212,7 +212,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "gpio_5",
+      "name": "gpi_5",
       "type": "Input",
       "direction": 3,
       "fanout": 1
@@ -248,7 +248,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "gpio_6",
+      "name": "gpi_6",
       "type": "Input",
       "direction": 3,
       "fanout": 1
@@ -322,7 +322,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "gpio_7",
+      "name": "gpi_7",
       "type": "Input",
       "direction": 3,
       "fanout": 1
@@ -358,7 +358,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Port",
+      "name": "gpi_8",
       "type": "Input",
       "direction": 3,
       "fanout": 1
