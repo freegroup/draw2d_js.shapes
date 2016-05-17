@@ -13,53 +13,53 @@ var draw2d_circuit_hardware_raspi = draw2d.SetFigure.extend({
    {
      this._super( $.extend({stroke:0, bgColor:null, width:105,height:199},attr), setter, getter);
      var port;
-     // gpio_1
+     // gpi_1
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.8934664340984106, 10.4025000000001));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("gpio_1");
+     port.setName("gpi_1");
      port.setMaxFanOut(1);
-     // gpio_2
+     // gpi_2
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.8934664340984106, 22.235678391959695));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("gpio_2");
+     port.setName("gpi_2");
      port.setMaxFanOut(1);
-     // gpio_3
+     // gpi_3
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.8934664340984106, 33.32684673366851));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("gpio_3");
+     port.setName("gpi_3");
      port.setMaxFanOut(1);
-     // gpio_4
+     // gpi_4
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.8934664340984106, 45.37244974874386));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("gpio_4");
+     port.setName("gpi_4");
      port.setMaxFanOut(1);
-     // gpio_5
+     // gpi_5
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.8934664340984106, 56.841645728643314));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("gpio_5");
+     port.setName("gpi_5");
      port.setMaxFanOut(1);
-     // gpio_6
+     // gpi_6
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.8934664340984106, 68.4050628140704));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("gpio_6");
+     port.setName("gpi_6");
      port.setMaxFanOut(1);
-     // gpio_7
+     // gpi_7
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.8934664340984106, 79.62192211055265));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("gpio_7");
+     port.setName("gpi_7");
      port.setMaxFanOut(1);
-     // Port
+     // gpi_8
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.8934664340984106, 90.71976130653272));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("gpi_8");
      port.setMaxFanOut(1);
      this.persistPorts=false;
    },
