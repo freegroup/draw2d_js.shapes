@@ -1,0 +1,50 @@
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_alu_HalfAdder = draw2d_circuit_alu_HalfAdder.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+         // your special code here
+    },
+
+    /**
+     *  Called by the simulator for every calculation
+     *  loop
+     *  @required
+     **/
+    calculate:function()
+    {
+        var a = this.getInputPort("input_a").getValue();
+        var b = this.getInputPort("input_b").getValue();
+        
+        // s = a XOR b
+        this.getOutputPort("output_s").setValue(( a ? !b : b ));
+        
+        // c = a AND b
+        this.getOutputPort("output_c").setValue(( a & b ));
+    },
+
+
+    /**
+     *  Called if the simulation mode is starting
+     *  @required
+     **/
+    onStart:function()
+    {
+    },
+
+    /**
+     *  Called if the simulation mode is stopping
+     *  @required
+     **/
+    onStop:function()
+    {
+    }
+});

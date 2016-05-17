@@ -1,0 +1,38 @@
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_switch_HighLow = draw2d_circuit_switch_HighLow.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+        var _this = this;
+
+        this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+        
+        this.value = false;
+        this.on("click",function(){            
+            _this.value = !_this.value;
+            _this.layerShow("low" , !_this.value, 100);
+            _this.layerShow("high",  _this.value, 100);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+
+        this.on("added",function(){
+            _this.layerShow("low" , !_this.value);
+            _this.layerShow("high",  _this.value);
+            _this.getOutputPort(0).setValue(_this.value);
+        });
+    },
+    
+    calculate: function()
+    {
+        // do nothing per default;
+    }
+
+});
