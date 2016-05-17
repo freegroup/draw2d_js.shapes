@@ -4,7 +4,7 @@
 The Raspberry Pi provides Input/Outport ports 
 intended to control or monitor other devices and 
 subsystem modules. These `GPIO` (general purpose I/O) 
-signals on the 2�13 header pins on the RPi  motherboad  
+signals on the 2×13 header pins on the RPi  motherboad  
 include SPI, I2C, serial UART, 3V3 and 5V power.
 
 ## Interaction
@@ -24,7 +24,7 @@ after this you can start the DigitalTrainingStudio server on the raspberry
 with
 
 ```
-> digitalstudio 
+digitalstudio 
 ```
 
 ## Connect with the browser
