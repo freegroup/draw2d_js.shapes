@@ -108,6 +108,16 @@
     ]
   },
   {
+    "name": "draw2d_circuit_hardware_raspi_gpio",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "hardware",
+      "raspi",
+      "gpio"
+    ]
+  },
+  {
     "name": "draw2d_circuit_pulse_10hz",
     "tags": [
       "draw2d",
