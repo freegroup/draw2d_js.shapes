@@ -99,22 +99,21 @@
     ]
   },
   {
+    "name": "draw2d_circuit_hardware_RaspiGPIO",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "hardware",
+      "RaspiGPIO"
+    ]
+  },
+  {
     "name": "draw2d_circuit_hardware_raspi",
     "tags": [
       "draw2d",
       "circuit",
       "hardware",
       "raspi"
-    ]
-  },
-  {
-    "name": "draw2d_circuit_hardware_raspi_gpio",
-    "tags": [
-      "draw2d",
-      "circuit",
-      "hardware",
-      "raspi",
-      "gpio"
     ]
   },
   {

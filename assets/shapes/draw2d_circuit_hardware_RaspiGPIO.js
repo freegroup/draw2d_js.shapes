@@ -5,9 +5,9 @@
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_hardware_raspi_gpio = draw2d.SetFigure.extend({            
+var draw2d_circuit_hardware_RaspiGPIO = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_hardware_raspi_gpio",
+   NAME: "draw2d_circuit_hardware_RaspiGPIO",
 
    init:function(attr, setter, getter)
    {
@@ -453,7 +453,7 @@ var draw2d_circuit_hardware_raspi_gpio = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_hardware_raspi_gpio = draw2d_circuit_hardware_raspi_gpio.extend({
+draw2d_circuit_hardware_RaspiGPIO = draw2d_circuit_hardware_RaspiGPIO.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
@@ -492,4 +492,4 @@ draw2d_circuit_hardware_raspi_gpio = draw2d_circuit_hardware_raspi_gpio.extend({
     {
     }
 });
-draw2d_circuit_hardware_raspi_gpio.github="./shapes/org/draw2d/circuit/hardware/raspi_gpio.shape";
+draw2d_circuit_hardware_RaspiGPIO.github="./shapes/org/draw2d/circuit/hardware/RaspiGPIO.shape";
