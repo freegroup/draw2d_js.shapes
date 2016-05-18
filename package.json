@@ -1,26 +1,26 @@
 {
   "name": "draw2d-shapes",
-  "version": "1.0.11",
-  "main": [
-    "bower_dist/"
-  ],
+  "version": "1.0.12",
   "author": "Andreas Herz",
-  "engines": {
-    "node": ">= 0.10.0"
-  },
   "devDependencies": {
-    "grunt": "~0.4.5",
+    "grunt": "~0.4.0",
+    "grunt-bump": "^0.4.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-shell": "^1.2.1",
     "grunt-git": "^0.3.7"
   },
   "dependencies": {
-    "grunt-bump": "^0.8.0",
     "grunt-contrib-concat": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-less": "^1.2.0",
     "grunt-gh-pages": "^1.0.0",
     "jshint-stylish": "^2.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freegroup/draw2d_js.shapes.git"
+  },
+  "license":  "MIT"
+
 }
