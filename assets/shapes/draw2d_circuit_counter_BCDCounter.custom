@@ -24,22 +24,21 @@ draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
     calculate:function()
     {
         var t = this.getInputPort(0).getValue();
-        
-        var a = this.getOutputPort("out_a");
-        var b = this.getOutputPort("out_b");
-        var c = this.getOutputPort("out_c");
-        var d = this.getOutputPort("out_d");
-        
+
         var rising = this.last_t===false && t===true; 
         
         if(rising===true){
+            var a = this.getOutputPort("out_a");
+            var b = this.getOutputPort("out_b");
+            var c = this.getOutputPort("out_c");
+            var d = this.getOutputPort("out_d");
             a.setValue(this.counter & 1);
             b.setValue(this.counter & 2);
             c.setValue(this.counter & 4);
             d.setValue(this.counter & 8);
+            this.counter= (this.counter+1)%11;
         }
         this.last_t = t;
-        this.counter= (this.counter+1)%11;
     },
 
 
