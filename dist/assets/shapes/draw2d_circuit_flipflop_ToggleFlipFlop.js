@@ -5,31 +5,31 @@
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({            
+var draw2d_circuit_flipflop_ToggleFlipFlop = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_gate_OR",
+   NAME: "draw2d_circuit_flipflop_ToggleFlipFlop",
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:31,height:40},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:40,height:53.19360000000006},attr), setter, getter);
      var port;
-     // input01
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 22.5));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#1C9BAB");
-     port.setName("input01");
-     port.setMaxFanOut(20);
-     // input02
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-3.225806451612903, 78.75));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#1C9BAB");
-     port.setName("input02");
-     port.setMaxFanOut(20);
-     // output
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(116.12903225806451, 50));
+     // output_q
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.52031249999959, 19.53242495337759));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("output");
+     port.setName("output_q");
+     port.setMaxFanOut(20);
+     // output_q_not
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.52031249999959, 78.83596428893667));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#1C9BAB");
+     port.setName("output_q_not");
+     port.setMaxFanOut(20);
+     // input_t
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-6.207600000000184, 47.9380978162786));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#1C9BAB");
+     port.setName("input_t");
      port.setMaxFanOut(20);
      this.persistPorts=false;
    },
@@ -37,8 +37,8 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 31;
-      this.originalHeight= 40;
+      this.originalWidth = 40;
+      this.originalHeight= 53.19360000000006;
       return shape;
    },
 
@@ -47,19 +47,39 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L31,0 L31,40 L0,40");
+        shape = this.canvas.paper.path("M0,0 L40,0 L40,53.19360000000006 L0,53.19360000000006");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M0,3Q0,0 3, 0L27,0Q30,0 30, 3L30,37Q30,40 27, 40L3,40Q0,40 0, 37L0,3');
+        shape = this.canvas.paper.path('M0,1.5Q0,0.5 1, 0.5L39,0.5Q40,0.5 40, 1.5L40,49.5Q40,50.5 39, 50.5L1,50.5Q0,50.5 0, 49.5L0,1.5');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
         // Label
-        shape = this.canvas.paper.text(0,0,'>1');
-        shape.attr({"x":4,"y":20.5,"text-anchor":"start","text":">1","font-family":"\"Arial\"","font-size":20,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape = this.canvas.paper.text(0,0,'Q');
+        shape.attr({"x":26.78125,"y":11,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'Q');
+        shape.attr({"x":26.28125,"y":42.19360000000006,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('M0.5 20.371000000000095L12.541999999999916 25.276999999999134L0.5 30.628999999999905Z');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Line_shadow
+        shape = this.canvas.paper.path('M26.5 35.5L33.5,35.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.data("name","Line_shadow");
+        
+        // Line
+        shape = this.canvas.paper.path('M26.5 35.5L33.5,35.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.data("name","Line");
         
 
         return this.canvas.paper.setFinish();
@@ -205,23 +225,32 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_gate_OR = draw2d_circuit_gate_OR.extend({
+draw2d_circuit_flipflop_ToggleFlipFlop = draw2d_circuit_flipflop_ToggleFlipFlop.extend({
 
     init: function(attr, setter, getter){
-        this._super(attr, setter, getter);
+         this._super(attr, setter, getter);
 
         this.attr({resizeable:false});
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
 
+        this.last_t = false;
     },
     
     calculate:function()
     {
-        var i1 = this.getInputPort(0);
-        var i2 = this.getInputPort(1);
-        var o1 = this.getOutputPort(0);
+        var t = this.getInputPort("input_t").getValue();
         
-        o1.setValue(i1.getValue() | i2.getValue());
+        var q = this.getOutputPort("output_q");
+        var q_ = this.getOutputPort("output_q_not");
+        
+        var rising = this.last_t===false && t===true; 
+        
+        if(rising===true){
+            var v = q.getValue();
+            q.setValue(!v);
+            q_.setValue(v)
+        }
+        this.last_t = t;
     }
 });
-draw2d_circuit_gate_OR.github="./shapes/org/draw2d/circuit/gate/OR.shape";
+draw2d_circuit_flipflop_ToggleFlipFlop.github="./shapes/org/draw2d/circuit/flipflop/ToggleFlipFlop.shape";

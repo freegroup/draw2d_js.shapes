@@ -64,6 +64,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_flipflop_ToggleFlipFlop",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "flipflop",
+      "ToggleFlipFlop"
+    ]
+  },
+  {
     "name": "draw2d_circuit_gate_AND",
     "tags": [
       "draw2d",
