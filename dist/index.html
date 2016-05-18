@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="assets/stylesheets/main.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,600italic,700,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="./lib/ionicons/css/ionicons.min.css" />
+
+    <SCRIPT src="./assets/javascript/dependencies.js"></SCRIPT>
+    <SCRIPT src="./assets/javascript/app.js"></SCRIPT>
+
+    <script>
+
+        $(document).ready(function() {
+            loadIndex();
+        });
+    </script>
+</head>
+<body class="basic">
+
+<div class="header">
+    <div class="strip">
+        <a href="http://www.draw2d.org" target="_blank" class="project-owner">Draw2D project</a>
+        <a href="http://freegroup.github.io/draw2d_js.app.shape_designer/" target="_blank" class="start">Start drawing now</a>
+        <img  class="logo" src="assets/images/shape_logo.png">
+   </div>
+
+    <div id="title" class="title">Beautiful free Draw2D stencil</div>
+    <input class="filter" id="shape-filter" type="text" placeholder="Filter..." autofocus >
+</div>
+
+    <div id="grid" class="row-fluid m-row">
+
+    </div>
+
+    <a href="https://github.com/freegroup/draw2d_js.shapes" target="_blank"><img  class="github" src="assets/images/octocat.svg" title="clone this site on github"></a>
+</body>
+
+<script id="shapeTemplate" type="text/x-jsrender">
+{{for shapes}}
+
+    <div class="span3 m-span3 figure-wrap">
+        <figure>
+          <div class="keep-ratio four-three">
+            <img src="./assets/shapes/{{:name}}.png" height="120" />
+          </div>
+          <figcaption class="picture-item__title">{{:name}}<br>
+          <a target="code"     href="./assets/shapes/{{:name}}.js" class="ion-code-download"></a>
+          <a target="designer" href="http://freegroup.github.io/draw2d_js.app.shape_designer?file={{:name}}.shape" class="ion-edit"></a>
+          </figcaption>
+        </figure>
+    </div>
+
+
+{{/for}}
+</script>
+
+
+</html>

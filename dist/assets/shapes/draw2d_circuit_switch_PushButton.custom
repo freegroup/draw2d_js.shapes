@@ -1,0 +1,45 @@
+/**
+ * by 'Draw2D Shape Designer'
+ *
+ * Custom JS code to tweak the standard behaviour of the generated
+ * shape. add your custome code and event handler here.
+ *
+ *
+ */
+draw2d_circuit_switch_PushButton = draw2d_circuit_switch_PushButton.extend({
+
+    init: function(attr, setter, getter){
+         this._super(attr, setter, getter);
+
+
+        this.setResizeable(false);
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+        
+        var _this = this;
+        
+        this.value = false;
+        this.on("mousedown",function(){            
+            _this.layerShow("low" , false, 100);
+            _this.layerShow("high", true, 100);
+            _this.getOutputPort(0).setValue(true);
+        });
+        this.on("mouseup",function(){            
+            _this.value = !_this.value;
+            _this.layerShow("low" , true, 100);
+            _this.layerShow("high", false, 100);
+            _this.getOutputPort(0).setValue(false);
+        });
+
+        this.on("added",function(){
+            _this.layerShow("low" , true);
+            _this.layerShow("high", false);
+            _this.getOutputPort(0).setValue(false);
+        });
+    },
+    
+    calculate: function()
+    {
+        // do nothing per default;
+    }
+
+});
