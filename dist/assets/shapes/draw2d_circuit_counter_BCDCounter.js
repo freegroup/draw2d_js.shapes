@@ -63,10 +63,10 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
-        // undefined
+        // Rectangle
         shape = this.canvas.paper.path('M0 0L95 0L95 134L0 134Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","undefined");
+        shape.data("name","Rectangle");
         
         // Label
         shape = this.canvas.paper.text(0,0,'BCD -');
@@ -253,6 +253,8 @@ draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
          this._super(attr, setter, getter);
 
          // your special code here
+         this.last_t=false;
+         this.counter=0;
     },
 
     /**
@@ -262,6 +264,23 @@ draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
      **/
     calculate:function()
     {
+        var t = this.getInputPort(0).getValue();
+        
+        var a = this.getOutputPort("out_a");
+        var b = this.getOutputPort("out_b");
+        var c = this.getOutputPort("out_c");
+        var d = this.getOutputPort("out_d");
+        
+        var rising = this.last_t===false && t===true; 
+        
+        if(rising===true){
+            a.setValue(this.counter & 1);
+            b.setValue(this.counter & 2);
+            c.setValue(this.counter & 4);
+            d.setValue(this.counter & 8);
+        }
+        this.last_t = t;
+        this.counter= (this.counter+1)%11;
     },
 
 
