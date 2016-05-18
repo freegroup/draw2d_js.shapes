@@ -63,6 +63,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_flipflop_SRFlipFlop",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "flipflop",
+      "SRFlipFlop"
+    ]
+  },
+  {
     "name": "draw2d_circuit_flipflop_TFlipFlop",
     "tags": [
       "draw2d",
