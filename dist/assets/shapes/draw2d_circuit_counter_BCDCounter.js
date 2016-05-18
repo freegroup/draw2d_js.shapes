@@ -14,33 +14,33 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:95,height:134},attr), setter, getter);
      var port;
      // input_t
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.347368421051406, 12.313432835820896));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-2.0701775801808253, 12.313432835820896));
      port.setConnectionDirection(3);
-     port.setBackgroundColor("#37B1DE");
+     port.setBackgroundColor("#1C9BAB");
      port.setName("input_t");
      port.setMaxFanOut(1);
      // out_a
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.8210526315802, 16.417910447761194));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(99.6631578947381, 16.417910447761194));
      port.setConnectionDirection(1);
-     port.setBackgroundColor("#37B1DE");
+     port.setBackgroundColor("#1C9BAB");
      port.setName("out_a");
      port.setMaxFanOut(20);
      // out_b
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.76842105263283, 38.507462686567436));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(100.71578947368548, 38.507462686567436));
      port.setConnectionDirection(1);
-     port.setBackgroundColor("#37B1DE");
+     port.setBackgroundColor("#1C9BAB");
      port.setName("out_b");
      port.setMaxFanOut(20);
      // out_c
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.76842105263283, 61.46268656716462));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(100.71578947368548, 61.46268656716462));
      port.setConnectionDirection(1);
-     port.setBackgroundColor("#37B1DE");
+     port.setBackgroundColor("#1C9BAB");
      port.setName("out_c");
      port.setMaxFanOut(20);
      // out_d
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.76842105263283, 83.0746268656721));
      port.setConnectionDirection(1);
-     port.setBackgroundColor("#37B1DE");
+     port.setBackgroundColor("#1C9BAB");
      port.setName("out_d");
      port.setMaxFanOut(20);
      this.persistPorts=false;
@@ -70,12 +70,12 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
         
         // Label
         shape = this.canvas.paper.text(0,0,'BCD -');
-        shape.attr({"x":8.033331298828216,"y":40,"text-anchor":"start","text":"BCD -","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":8.033331298828216,"y":38,"text-anchor":"start","text":"BCD -","font-family":"\"Arial\"","font-size":14,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Label
         shape = this.canvas.paper.text(0,0,'Counter');
-        shape.attr({"x":8.033331298828216,"y":58.600000000000364,"text-anchor":"start","text":"Counter","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":7.033331298828216,"y":52.600000000000364,"text-anchor":"start","text":"Counter","font-family":"\"Arial\"","font-size":14,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Rectangle
