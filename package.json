@@ -1,6 +1,6 @@
 {
   "name": "draw2d-shapes",
-  "version": "1.0.92",
+  "version": "1.0.93",
   "author": "Andreas Herz",
   "devDependencies": {
     "grunt": "~0.4.0",
