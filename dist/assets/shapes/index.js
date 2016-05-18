@@ -1302,7 +1302,7 @@ draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
             b.setValue(this.counter & 2);
             c.setValue(this.counter & 4);
             d.setValue(this.counter & 8);
-            this.counter= (this.counter+1)%11;
+            this.counter= (this.counter+1)%10;
         }
         this.last_t = t;
     },
