@@ -63,19 +63,7 @@ module.exports = function(grunt) {
               // transform the filePath to fileName. /org/draw2d/digital/AND.png -> draw2d_digital_AND.png
               return dest + "/"+src.replace("org/","").replace(/\//g,"_");
             }
-        },
-        bower_dist: {
-            expand: true,
-            flatten: false,
-            cwd: 'shapes',
-            src: ['**/*.png', '**/*.js', '**/*.shape', "**/*.md", "**/*.custom"],
-            dest: './bower_dist/',
-            rename: function(dest, src) {
-                // transform the filePath to fileName. /org/draw2d/digital/AND.png -> draw2d_digital_AND.png
-                return dest + "/"+src.replace("org/","").replace(/\//g,"_");
-            }
         }
-
     },
 
     less: {
@@ -93,16 +81,6 @@ module.exports = function(grunt) {
       }
     },
 
-
-    // configure jshint to validate js files -----------------------------------
-    jshint: {
-      options: {
-        reporter: require('jshint-stylish') // use jshint-stylish to make our errors look and read good
-      },
-
-      // when this task is run, lint the Gruntfile and all js files in src
-      build: ['Grunfile.js', 'src/**/*.js']
-    },
 
     watch: {
       html: {
@@ -148,7 +126,7 @@ module.exports = function(grunt) {
               updateConfigs: [],
               commit: true,
               commitMessage: 'Release v%VERSION%',
-              commitFiles: ['package.json', "bower_dist/*"],
+              commitFiles: ['package.json', "dist/*"],
               createTag: true,
               tagName: 'v%VERSION%',
               tagMessage: 'Version %VERSION%',
@@ -167,7 +145,7 @@ module.exports = function(grunt) {
                   force: true
               },
               files: {
-                  src: ['bower_dist/*']
+                  src: ['dist/*']
               }
           }
       }
@@ -202,6 +180,6 @@ module.exports = function(grunt) {
   });
 
     // Default task.
-    grunt.registerTask('default', ['shell', 'jshint', 'concat', 'less', 'copy','generate',"gitadd", 'bump']);
-    grunt.registerTask('publish', ['shell', 'jshint', 'concat', 'less', 'copy','generate','gh-pages']);
+    grunt.registerTask('default', ['shell', 'concat', 'less', 'copy','generate',"gitadd", 'bump']);
+    grunt.registerTask('publish', ['shell', 'concat', 'less', 'copy','generate',"gitadd", 'bump', 'gh-pages']);
 };
