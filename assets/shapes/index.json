@@ -64,6 +64,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_flipflop_JKFlipFlop",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "flipflop",
+      "JKFlipFlop"
+    ]
+  },
+  {
     "name": "draw2d_circuit_flipflop_ToggleFlipFlop",
     "tags": [
       "draw2d",
