@@ -11,16 +11,46 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:10,height:10},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:95,height:134},attr), setter, getter);
      var port;
+     // input_t
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.347368421051406, 12.313432835820896));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("input_t");
+     port.setMaxFanOut(1);
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.8210526315802, 16.417910447761194));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.76842105263283, 38.507462686567436));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.76842105263283, 61.46268656716462));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.76842105263283, 83.0746268656721));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
      this.persistPorts=false;
    },
 
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 10;
-      this.originalHeight= 10;
+      this.originalWidth = 95;
+      this.originalHeight= 134;
       return shape;
    },
 
@@ -29,9 +59,49 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L10,0 L10,10 L0,10");
+        shape = this.canvas.paper.path("M0,0 L95,0 L95,134 L0,134");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
+        
+        // undefined
+        shape = this.canvas.paper.path('M0 0L95 0L95 134L0 134Z');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.data("name","undefined");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'BCD -');
+        shape.attr({"x":8.033331298828216,"y":40,"text-anchor":"start","text":"BCD -","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'Counter');
+        shape.attr({"x":8.033331298828216,"y":58.600000000000364,"text-anchor":"start","text":"Counter","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Rectangle
+        shape = this.canvas.paper.path('M0 8L18 16.74285714285361L0 25Z');
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.data("name","Rectangle");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'A');
+        shape.attr({"x":75.33066623687864,"y":22,"text-anchor":"start","text":"A","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'B');
+        shape.attr({"x":75.33066623687864,"y":53.23999999999978,"text-anchor":"start","text":"B","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'C');
+        shape.attr({"x":74.33066623687864,"y":81.47999977111795,"text-anchor":"start","text":"C","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'D');
+        shape.attr({"x":75.33066623687864,"y":111.35999977111805,"text-anchor":"start","text":"D","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
         
 
         return this.canvas.paper.setFinish();
