@@ -1,0 +1,182 @@
+[
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "f4d5683a-7c42-8771-5df4-e4e9da5b8b46",
+    "x": 4011.83203125,
+    "y": 4004.66135,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "baseClass": "draw2d.SetFigure",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n        this.hz = 50;\n        this.running=false;\n// only for test purpose        \n//        this.onStart();\n    },\n    \n    calculate:function()\n    {\n       this.getOutputPort(0).setValue(this.value);\n    },\n    \n    onStart:function()\n    {\n        var _this = this;\n        this.running=true;\n        var tick = function() {\n            setTimeout(function() {\n                if(_this.running){\n                    requestAnimationFrame(tick);\n                }\n                _this.value = !_this.value;\n            }, 1000 / _this.hz);\n        }\n        tick();\n    },\n    \n    onStop:function()\n    {\n        this.running = false;\n    }\n\n});",
+      "name": "circle",
+      "markdown": "# Clock Signal\n\nIn electronics and especially synchronous digital circuits, \na clock signal is a particular type of signal that \noscillates between a `high` and a `low` state and is \nutilized like a metronome to coordinate actions \nof digital circuits.\n\nThe hertz (symbol `Hz`) is the unit of frequency in the \nInternational System of Units (SI) and is defined as \none cycle per second. \n\nIt is named for Heinrich Rudolf Hertz, the first person \nto provide conclusive proof of the existence of \nelectromagnetic waves.\n\n",
+      "type": "Output",
+      "direction": 1
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#1C9BAB",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyRect",
+    "id": "a62502cd-0a35-6f21-e7e3-b97974233a1e",
+    "x": 3985.83203125,
+    "y": 3994.3047500000002,
+    "width": 30,
+    "height": 30,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Rectangle"
+    },
+    "cssClass": "shape_designer_figure_PolyRect",
+    "ports": [],
+    "bgColor": "#FFFFFF",
+    "color": "#303030",
+    "stroke": 1,
+    "radius": 0,
+    "dasharray": null,
+    "vertices": [
+      {
+        "x": 3985.83203125,
+        "y": 3994.3047500000002
+      },
+      {
+        "x": 4015.83203125,
+        "y": 3994.3047500000002
+      },
+      {
+        "x": 4015.83203125,
+        "y": 4024.3047500000002
+      },
+      {
+        "x": 3985.83203125,
+        "y": 4024.3047500000002
+      }
+    ],
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.SizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "f174c11d-b796-fe45-2011-71e46b7a48a0",
+    "x": 3984.16796875,
+    "y": 3975.6952499999998,
+    "width": 31.34375,
+    "height": 21.15625,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "50Hz",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 10,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLine",
+    "id": "927cebb7-405f-4e28-fb67-1762432650a1",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Line"
+    },
+    "cssClass": "shape_designer_figure_ExtLine",
+    "stroke": 1,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 3987.5616312499997,
+        "y": 4016.93455
+      },
+      {
+        "x": 3994.74363125,
+        "y": 4016.93455
+      },
+      {
+        "x": 3994.74363125,
+        "y": 4006.6745499999997
+      },
+      {
+        "x": 4006.23483125,
+        "y": 4006.6745499999997
+      },
+      {
+        "x": 4006.23483125,
+        "y": 4016.5241499999997
+      },
+      {
+        "x": 4012.80123125,
+        "y": 4016.5241499999997
+      }
+    ],
+    "router": "draw2d.layout.connection.VertexRouter",
+    "radius": "",
+    "filters": [
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      }
+    ]
+  }
+]

@@ -1,0 +1,209 @@
+[
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "12ca8dfe-851d-2d1d-a379-c39edd42bf5a",
+    "x": 3979.5,
+    "y": 3978.5,
+    "width": 29.4375,
+    "height": 21,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "baseClass": "draw2d.SetFigure",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n        var _this = this;\n\n        this.attr({resizeable:false});\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n        \n        this.value = false;\n        this.on(\"click\",function(){            \n            _this.value = !_this.value;\n            _this.layerShow(\"low\" , !_this.value, 100);\n            _this.layerShow(\"high\",  _this.value, 100);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n\n        this.on(\"added\",function(){\n            _this.layerShow(\"low\" , !_this.value);\n            _this.layerShow(\"high\",  _this.value);\n            _this.getOutputPort(0).setValue(_this.value);\n        });\n    },\n    \n    calculate: function()\n    {\n        // do nothing per default;\n    }\n\n});",
+      "name": "Label",
+      "markdown": "# Push Button\n\ntoggles the output if the user press \nthe mouse button down in the simulation mode."
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "1",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 11,
+    "fontColor": "#C21B7A",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "645eb539-f8e8-758b-8dcb-86c234c7ae30",
+    "x": 3979,
+    "y": 4000,
+    "width": 29.4375,
+    "height": 21,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "0",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 12,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "91f5e31e-98a2-25ae-2ec2-64ecb245e1ce",
+    "x": 4015.5,
+    "y": 3996,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Port",
+      "type": "Output",
+      "direction": 1
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#37B1DE",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.PolyCircle",
+    "id": "ebdd310c-c836-43a2-bb4f-0e3e8e631fb6",
+    "x": 4015,
+    "y": 3997.5,
+    "width": 6,
+    "height": 7,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Circle"
+    },
+    "cssClass": "shape_designer_figure_PolyCircle",
+    "ports": [],
+    "bgColor": "#000000",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "blur": 0,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLine",
+    "id": "f55452eb-ac0f-5674-92c4-0337ae6cc418",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "high"
+    },
+    "cssClass": "shape_designer_figure_ExtLine",
+    "stroke": 2,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 4018.298300000001,
+        "y": 4000.9469125000032
+      },
+      {
+        "x": 3992.8573999999994,
+        "y": 3989.5915125000006
+      }
+    ],
+    "router": "draw2d.layout.connection.VertexRouter",
+    "radius": "",
+    "filters": [
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLine",
+    "id": "a1abbce7-ea8a-540d-71b3-c4096b8f1b5c",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "low"
+    },
+    "cssClass": "shape_designer_figure_ExtLine",
+    "stroke": 2,
+    "color": "#000000",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 4017.7531999999974,
+        "y": 4001.2083125000004
+      },
+      {
+        "x": 3992.6445000000003,
+        "y": 4010.8513124999986
+      }
+    ],
+    "router": "draw2d.layout.connection.VertexRouter",
+    "radius": "",
+    "filters": [
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      }
+    ]
+  }
+]
