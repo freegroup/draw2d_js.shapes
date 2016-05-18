@@ -1,5 +1,5 @@
 {
-  "name": "draw2d-circuit-shapes",
+  "name": "draw2d-shapes",
   "version": "1.0.9",
   "main": [
     "bower_dist/"

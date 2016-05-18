@@ -1,7 +1,7 @@
 {
-  "name": "shapes",
+  "name": "draw2d-shapes",
   "description": "",
-  "main": "",
+  "main": "bower_dist/*",
   "authors": [
     "Andreas Herz <a.herz@freegroup.de>"
   ],

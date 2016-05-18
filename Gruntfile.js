@@ -63,6 +63,17 @@ module.exports = function(grunt) {
               // transform the filePath to fileName. /org/draw2d/digital/AND.png -> draw2d_digital_AND.png
               return dest + "/"+src.replace("org/","").replace(/\//g,"_");
             }
+        },
+        bower_dist: {
+            expand: true,
+            flatten: false,
+            cwd: 'shapes',
+            src: ['**/*.png', '**/*.js', '**/*.shape', "**/*.md", "**/*.custom"],
+            dest: './bower_dist/',
+            rename: function(dest, src) {
+                // transform the filePath to fileName. /org/draw2d/digital/AND.png -> draw2d_digital_AND.png
+                return dest + "/"+src.replace("org/","").replace(/\//g,"_");
+            }
         }
 
     },
@@ -130,7 +141,36 @@ module.exports = function(grunt) {
           }
       },
       src: ['**/*']
-    }
+    },
+      bump: {
+          options: {
+              files: ['package.json'],
+              updateConfigs: [],
+              commit: true,
+              commitMessage: 'Release v%VERSION%',
+              commitFiles: ['package.json', "bower_dist/*"],
+              createTag: true,
+              tagName: 'v%VERSION%',
+              tagMessage: 'Version %VERSION%',
+              push: true,
+              pushTo: 'origin',
+              gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+              globalReplace: true,
+              prereleaseName: false,
+              metadata: '',
+              regExp: false
+          }
+      },
+      gitadd: {
+          shapes: {
+              options: {
+                  force: true
+              },
+              files: {
+                  src: ['bower_dist/*']
+              }
+          }
+      }
   });
 
   // These plugins provide necessary tasks.
@@ -141,6 +181,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.loadNpmTasks('grunt-bump');
+  grunt.loadNpmTasks('grunt-git');
 
   grunt.registerTask('generate', 'Generates JSON file with all shape files', function() {
         // List all SHAPE files in the templates directory.
@@ -160,6 +202,6 @@ module.exports = function(grunt) {
   });
 
     // Default task.
-    grunt.registerTask('default', ['shell', 'jshint', 'concat', 'less', 'copy','generate']);
+    grunt.registerTask('default', ['shell', 'jshint', 'concat', 'less', 'copy','generate',"gitadd", 'bump']);
     grunt.registerTask('publish', ['shell', 'jshint', 'concat', 'less', 'copy','generate','gh-pages']);
 };
