@@ -5,37 +5,31 @@
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({            
+var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_flipflop_D_FlipFlop",
+   NAME: "draw2d_circuit_flipflop_TFlipFlop",
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:41.5,height:53.05297500000006},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:40,height:53.19360000000006},attr), setter, getter);
      var port;
      // output_q
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(103.63403614457793, 20.526652840863044));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.52031249999959, 19.53242495337759));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output_q");
      port.setMaxFanOut(20);
-     // input_t
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 79.9873852503084));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#1C9BAB");
-     port.setName("input_t");
-     port.setMaxFanOut(20);
-     // input_d
-     port = this.createPort("input", new draw2d.layout.locator.XYRelPortLocator(-4.819277108433735, 20.526652840863044));
-     port.setConnectionDirection(3);
-     port.setBackgroundColor("#1C9BAB");
-     port.setName("input_d");
-     port.setMaxFanOut(20);
      // output_q_not
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(103.63403614457793, 79.9873852503084));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.52031249999959, 78.83596428893667));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output_q_not");
+     port.setMaxFanOut(20);
+     // input_t
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-6.207600000000184, 47.9380978162786));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#1C9BAB");
+     port.setName("input_t");
      port.setMaxFanOut(20);
      this.persistPorts=false;
    },
@@ -43,8 +37,8 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 41.5;
-      this.originalHeight= 53.05297500000006;
+      this.originalWidth = 40;
+      this.originalHeight= 53.19360000000006;
       return shape;
    },
 
@@ -53,42 +47,37 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L41.5,0 L41.5,53.05297500000006 L0,53.05297500000006");
+        shape = this.canvas.paper.path("M0,0 L40,0 L40,53.19360000000006 L0,53.19360000000006");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M1.5,2Q1.5,1 2.5, 1L40.5,1Q41.5,1 41.5, 2L41.5,50Q41.5,51 40.5, 51L2.5,51Q1.5,51 1.5, 50L1.5,2');
+        shape = this.canvas.paper.path('M0,1.5Q0,0.5 1, 0.5L39,0.5Q40,0.5 40, 1.5L40,49.5Q40,50.5 39, 50.5L1,50.5Q0,50.5 0, 49.5L0,1.5');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
         // Label
-        shape = this.canvas.paper.text(0,0,'D');
-        shape.attr({"x":4,"y":10.6796875,"text-anchor":"start","text":"D","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape = this.canvas.paper.text(0,0,'Q');
+        shape.attr({"x":26.78125,"y":11,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'Q');
+        shape.attr({"x":26.28125,"y":42.19360000000006,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Rectangle
-        shape = this.canvas.paper.path('M1.5 37.12699999999995L13.541999999999916 42.03299999999899L1.5 47.38499999999976Z');
+        shape = this.canvas.paper.path('M0.5 20.371000000000095L12.541999999999916 25.276999999999134L0.5 30.628999999999905Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","opacity":1});
         shape.data("name","Rectangle");
         
-        // Label
-        shape = this.canvas.paper.text(0,0,'Q');
-        shape.attr({"x":28.28125,"y":11.1796875,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
-        shape.data("name","Label");
-        
-        // Label
-        shape = this.canvas.paper.text(0,0,'Q');
-        shape.attr({"x":27.78125,"y":42.37328750000006,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
-        shape.data("name","Label");
-        
         // Line_shadow
-        shape = this.canvas.paper.path('M27.8479999999995 36.49839999999767L35.374799999999595,36.49839999999767');
+        shape = this.canvas.paper.path('M26.5 35.5L33.5,35.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M27.8479999999995 36.49839999999767L35.374799999999595,36.49839999999767');
+        shape = this.canvas.paper.path('M26.5 35.5L33.5,35.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
@@ -102,6 +91,8 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
 
    layerGet: function(name, attributes)
    {
+      if(this.svgNodes===null) return null;
+
       var result=null;
       this.svgNodes.some(function(shape){
          if(shape.data("name")===name){
@@ -115,6 +106,8 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
 
    layerAttr: function(name, attributes)
    {
+     if(this.svgNodes===null) return;
+
      this.svgNodes.forEach(function(shape){
              if(shape.data("name")===name){
                   shape.attr(attributes);
@@ -124,6 +117,8 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
 
    layerShow: function(name, flag, duration)
    {
+      if(this.svgNodes===null) return;
+
       if(duration){
         this.svgNodes.forEach(function(node){
             if(node.data("name")===name){
@@ -156,6 +151,15 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
 
     onStop:function()
     {
+    },
+
+    /**
+     * @method
+     */
+    addPort: function(port, locator)
+    {
+        this._super(port, locator);
+        return port;
     },
 
     /**
@@ -221,18 +225,19 @@ var draw2d_circuit_flipflop_D_FlipFlop = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_flipflop_D_FlipFlop = draw2d_circuit_flipflop_D_FlipFlop.extend({
+draw2d_circuit_flipflop_TFlipFlop = draw2d_circuit_flipflop_TFlipFlop.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
         this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+
         this.last_t = false;
     },
     
     calculate:function()
     {
-        var d = this.getInputPort("input_d").getValue();
         var t = this.getInputPort("input_t").getValue();
         
         var q = this.getOutputPort("output_q");
@@ -241,12 +246,11 @@ draw2d_circuit_flipflop_D_FlipFlop = draw2d_circuit_flipflop_D_FlipFlop.extend({
         var rising = this.last_t===false && t===true; 
         
         if(rising===true){
-            q.setValue(d);
-            q_.setValue(!d)
+            var v = q.getValue();
+            q.setValue(!v);
+            q_.setValue(v)
         }
         this.last_t = t;
     }
 });
-draw2d_circuit_flipflop_D_FlipFlop.logic="calculate: function () {\n    var d = this.getInputPort(\'input_d\').getValue();\n    var t = this.getInputPort(\'input_t\').getValue();\n    var q = this.getOutputPort(\'output_q\');\n    var q_ = this.getOutputPort(\'output_q_not\');\n    var rising = this.last_t === false && t === true;\n    if (rising === true) {\n        q.setValue(d);\n        q_.setValue(!d);\n    }\n    this.last_t = t;\n}";
-draw2d_circuit_flipflop_D_FlipFlop.github="./shapes/org/draw2d/circuit/flipflop/D_FlipFlop.shape";
-draw2d_circuit_flipflop_D_FlipFlop.markdown="# D-FlipFlop\n\n## Description\n\nThe D FlipFLop is widely used. It is also known as a \n*data* or *delay* flip-flop.\n\nThe D flip-flop captures the value of the `D` input \nat a definite portion of the clock cycle (such \nas the rising edge of the clock). That captured \nvalue becomes the `Q` output. At other times, the \noutput Q does not change. The `D flip-flop` \ncan be viewed as a memory cell, a zero-order hold, \nor a delay line.\n\n\n## Logic table\n\n| Clock        | D       |  **Q***next*   |\n|:------------:|:-------:|:----------:|\n| Rising edge  | Low     |  **Low**       |\n| Rising edge  | High    |  **High**      |\n| non rising   | *       |  **Q***last*   |\n\n";
+draw2d_circuit_flipflop_TFlipFlop.github="./shapes/org/draw2d/circuit/flipflop/TFlipFlop.shape";

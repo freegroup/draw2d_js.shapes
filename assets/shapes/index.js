@@ -2115,9 +2115,9 @@ draw2d_circuit_flipflop_JKFlipFlop.github="./shapes/org/draw2d/circuit/flipflop/
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_flipflop_ToggleFlipFlop = draw2d.SetFigure.extend({            
+var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_flipflop_ToggleFlipFlop",
+   NAME: "draw2d_circuit_flipflop_TFlipFlop",
 
    init:function(attr, setter, getter)
    {
@@ -2335,7 +2335,7 @@ var draw2d_circuit_flipflop_ToggleFlipFlop = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_flipflop_ToggleFlipFlop = draw2d_circuit_flipflop_ToggleFlipFlop.extend({
+draw2d_circuit_flipflop_TFlipFlop = draw2d_circuit_flipflop_TFlipFlop.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
@@ -2363,7 +2363,7 @@ draw2d_circuit_flipflop_ToggleFlipFlop = draw2d_circuit_flipflop_ToggleFlipFlop.
         this.last_t = t;
     }
 });
-draw2d_circuit_flipflop_ToggleFlipFlop.github="./shapes/org/draw2d/circuit/flipflop/ToggleFlipFlop.shape";
+draw2d_circuit_flipflop_TFlipFlop.github="./shapes/org/draw2d/circuit/flipflop/TFlipFlop.shape";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  

@@ -54,16 +54,6 @@
     ]
   },
   {
-    "name": "draw2d_circuit_flipflop_D_FlipFlop",
-    "tags": [
-      "draw2d",
-      "circuit",
-      "flipflop",
-      "D",
-      "FlipFlop"
-    ]
-  },
-  {
     "name": "draw2d_circuit_flipflop_JKFlipFlop",
     "tags": [
       "draw2d",
@@ -73,12 +63,12 @@
     ]
   },
   {
-    "name": "draw2d_circuit_flipflop_ToggleFlipFlop",
+    "name": "draw2d_circuit_flipflop_TFlipFlop",
     "tags": [
       "draw2d",
       "circuit",
       "flipflop",
-      "ToggleFlipFlop"
+      "TFlipFlop"
     ]
   },
   {

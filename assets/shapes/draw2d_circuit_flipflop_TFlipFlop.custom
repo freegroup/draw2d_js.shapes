@@ -6,7 +6,7 @@
  *
  *
  */
-draw2d_circuit_flipflop_ToggleFlipFlop = draw2d_circuit_flipflop_ToggleFlipFlop.extend({
+draw2d_circuit_flipflop_TFlipFlop = draw2d_circuit_flipflop_TFlipFlop.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
