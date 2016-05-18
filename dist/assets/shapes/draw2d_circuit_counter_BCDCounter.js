@@ -64,7 +64,7 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M0 0L95 0L95 134L0 134Z');
+        shape = this.canvas.paper.path('M0,3Q0,0 3, 0L92,0Q95,0 95, 3L95,131Q95,134 92, 134L3,134Q0,134 0, 131L0,3');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
