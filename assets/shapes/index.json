@@ -27,6 +27,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_counter_BCDCounter",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "counter",
+      "BCDCounter"
+    ]
+  },
+  {
     "name": "draw2d_circuit_display_7Segment",
     "tags": [
       "draw2d",
