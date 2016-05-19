@@ -1332,9 +1332,9 @@ draw2d_circuit_counter_BCDCounter.github="./shapes/org/draw2d/circuit/counter/BC
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_decoder_BCDto7Segment = draw2d.SetFigure.extend({            
+var draw2d_circuit_decoder_BCDto7Seg = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_decoder_BCDto7Segment",
+   NAME: "draw2d_circuit_decoder_BCDto7Seg",
 
    init:function(attr, setter, getter)
    {
@@ -1504,7 +1504,7 @@ var draw2d_circuit_decoder_BCDto7Segment = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_decoder_BCDto7Segment = draw2d_circuit_decoder_BCDto7Segment.extend({
+draw2d_circuit_decoder_BCDto7Seg = draw2d_circuit_decoder_BCDto7Seg.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
@@ -1538,7 +1538,7 @@ draw2d_circuit_decoder_BCDto7Segment = draw2d_circuit_decoder_BCDto7Segment.exte
     {
     }
 });
-draw2d_circuit_decoder_BCDto7Segment.github="./shapes/org/draw2d/circuit/decoder/BCDto7Segment.shape";
+draw2d_circuit_decoder_BCDto7Seg.github="./shapes/org/draw2d/circuit/decoder/BCDto7Seg.shape";
 // Generated Code for the Draw2D touch HTML5 lib
 //                                                        
 // http://www.draw2d.org                                  
