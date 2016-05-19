@@ -3,9 +3,9 @@
     "type": "shape_designer.figure.PolyRect",
     "id": "d5eed864-f9ab-239f-6b6b-6d500ff0b2b4",
     "x": 3952.5,
-    "y": 3933,
-    "width": 95,
-    "height": 134,
+    "y": 3930,
+    "width": 80,
+    "height": 108,
     "alpha": 1,
     "angle": 0,
     "userData": {
@@ -24,19 +24,19 @@
     "vertices": [
       {
         "x": 3952.5,
-        "y": 3933
+        "y": 3930
       },
       {
-        "x": 4047.5,
-        "y": 3933
+        "x": 4032.5,
+        "y": 3930
       },
       {
-        "x": 4047.5,
-        "y": 4067
+        "x": 4032.5,
+        "y": 4038
       },
       {
         "x": 3952.5,
-        "y": 4067
+        "y": 4038
       }
     ],
     "blur": 0,
@@ -186,7 +186,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "3b9db0ed-1ba2-a98a-51cb-3a4f5af3550f",
-    "x": 3945.533331298828,
+    "x": 3946.533331298828,
     "y": 3944.5,
     "width": 10,
     "height": 10,
@@ -225,8 +225,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "4f83a764-63b8-7620-b479-a555e7c8f0d0",
-    "x": 4042.180000000001,
-    "y": 3950,
+    "x": 4027.180000000001,
+    "y": 3940,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -264,8 +264,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "543ba80d-b7f4-44a2-0588-734259ce1aa9",
-    "x": 4043.180000000001,
-    "y": 3979.6000000000004,
+    "x": 4028.180000000001,
+    "y": 3965,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -303,8 +303,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "9606e121-295b-5ec7-bcfa-b4ee534f4142",
-    "x": 4043.180000000001,
-    "y": 4010.3600000000006,
+    "x": 4028.180000000001,
+    "y": 3990,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -342,8 +342,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "5eedda0c-72c9-32eb-a653-fa2c22609619",
-    "x": 4044.180000000001,
-    "y": 4039.3200000000006,
+    "x": 4029.180000000001,
+    "y": 4015,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -352,7 +352,7 @@
       "name": "out_d",
       "type": "Output",
       "direction": 1,
-      "fanout": 20
+      "fanout": 25
     },
     "cssClass": "shape_designer_figure_ExtPort",
     "ports": [],
@@ -381,8 +381,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "52e7f5ae-8cfa-054d-5fa5-d642c0839c2f",
-    "x": 4023.8306662368786,
-    "y": 3941,
+    "x": 4011.517706298828,
+    "y": 3935,
     "width": 29.760000228881836,
     "height": 22,
     "alpha": 1,
@@ -400,7 +400,7 @@
     "text": "A",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 16,
+    "fontSize": 10,
     "fontColor": "#080808",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
@@ -419,8 +419,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "9ba647d0-d381-6054-3a88-a2d1729afd03",
-    "x": 4023.8306662368786,
-    "y": 3972.24,
+    "x": 4011.517706298828,
+    "y": 3960.5,
     "width": 29.760000228881836,
     "height": 22,
     "alpha": 1,
@@ -438,7 +438,7 @@
     "text": "B",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 16,
+    "fontSize": 10,
     "fontColor": "#080808",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
@@ -457,8 +457,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "4383cbe5-c972-dc30-b5fc-f2ba855839a5",
-    "x": 4022.8306662368786,
-    "y": 4000.479999771118,
+    "x": 4011.517706298828,
+    "y": 3984.5,
     "width": 29.760000228881836,
     "height": 22,
     "alpha": 1,
@@ -476,7 +476,7 @@
     "text": "C",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 16,
+    "fontSize": 10,
     "fontColor": "#080808",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
@@ -495,8 +495,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "b4d73868-0dfd-060d-7dfb-a9216147df63",
-    "x": 4023.8306662368786,
-    "y": 4030.359999771118,
+    "x": 4011.517706298828,
+    "y": 4009.5,
     "width": 29.760000228881836,
     "height": 22,
     "alpha": 1,
@@ -514,7 +514,7 @@
     "text": "D",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 16,
+    "fontSize": 10,
     "fontColor": "#080808",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
