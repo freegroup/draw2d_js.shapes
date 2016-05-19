@@ -11,22 +11,22 @@ var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:40,height:53.19360000000006},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:40,height:52.55297500000006},attr), setter, getter);
      var port;
      // output_q
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.52031249999959, 19.53242495337759));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.52031249999959, 19.770526787493687));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output_q");
      port.setMaxFanOut(20);
      // output_q_not
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.52031249999959, 78.83596428893667));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.52031249999959, 79.79698104626772));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output_q_not");
      port.setMaxFanOut(20);
      // input_t
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-6.207600000000184, 47.9380978162786));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-6.207600000000184, 48.52246709153948));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_t");
@@ -38,7 +38,7 @@ var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({
    {
       var shape = this._super();
       this.originalWidth = 40;
-      this.originalHeight= 53.19360000000006;
+      this.originalHeight= 52.55297500000006;
       return shape;
    },
 
@@ -47,7 +47,7 @@ var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L40,0 L40,53.19360000000006 L0,53.19360000000006");
+        shape = this.canvas.paper.path("M0,0 L40,0 L40,52.55297500000006 L0,52.55297500000006");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -58,12 +58,12 @@ var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({
         
         // Label
         shape = this.canvas.paper.text(0,0,'Q');
-        shape.attr({"x":26.78125,"y":11,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":26.78125,"y":10.6796875,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Label
         shape = this.canvas.paper.text(0,0,'Q');
-        shape.attr({"x":26.28125,"y":42.19360000000006,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":26.28125,"y":41.87328750000006,"text-anchor":"start","text":"Q","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Rectangle
