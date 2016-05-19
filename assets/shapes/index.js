@@ -5165,7 +5165,6 @@ draw2d_circuit_pulse_10hz = draw2d_circuit_pulse_10hz.extend({
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
         this.hz = 10;
         this.running=false;
-// only for test purpose        
 //        this.onStart();
     },
     
@@ -5181,7 +5180,7 @@ draw2d_circuit_pulse_10hz = draw2d_circuit_pulse_10hz.extend({
         var tick = function() {
             setTimeout(function() {
                 if(_this.running){
-                    requestAnimationFrame(tick);
+                    tick();
                 }
                 _this.value = !_this.value;
             }, 1000 / _this.hz);
@@ -5426,7 +5425,7 @@ draw2d_circuit_pulse_50hz = draw2d_circuit_pulse_50hz.extend({
         var tick = function() {
             setTimeout(function() {
                 if(_this.running){
-                    requestAnimationFrame(tick);
+                    tick();
                 }
                 _this.value = !_this.value;
             }, 1000 / _this.hz);
