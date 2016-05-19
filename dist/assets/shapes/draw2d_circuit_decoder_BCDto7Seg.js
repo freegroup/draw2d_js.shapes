@@ -11,73 +11,67 @@ var draw2d_circuit_decoder_BCDto7Seg = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:80,height:180},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:87,height:160},attr), setter, getter);
      var port;
-     // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 8.333333333333334));
+     // out_a
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.14942528735631, 9.375));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("out_a");
      port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 22.22222222222222));
+     // out_b
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.14942528735631, 25));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("out_b");
      port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(101.25, 36.111111111111114));
+     // out_c
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(101.14942528735631, 40.625));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("out_c");
      port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 50));
+     // out_d
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.14942528735631, 56.25));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("out_d");
      port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 63.88888888888889));
+     // out_e
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.14942528735631, 71.875));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("out_e");
      port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 77.77777777777779));
+     // out_f
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.14942528735631, 87.5));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("out_f");
      port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 91.66666666666667));
-     port.setConnectionDirection(1);
+     // in_a
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.7563218390786532, 9.375));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("in_a");
      port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-1.9099999999980355, 8.333333333333334));
-     port.setConnectionDirection();
+     // in_b
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.7563218390786532, 25));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("in_b");
      port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-1.9099999999980355, 22.22222222222222));
-     port.setConnectionDirection();
+     // in_c
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.7563218390786532, 40.625));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("in_c");
      port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-1.9099999999980355, 36.111111111111114));
-     port.setConnectionDirection();
+     // in_d
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-2.2988505747126435, 56.25));
+     port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-1.9099999999980355, 50));
-     port.setConnectionDirection();
-     port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("in_d");
      port.setMaxFanOut(20);
      this.persistPorts=false;
    },
@@ -85,8 +79,8 @@ var draw2d_circuit_decoder_BCDto7Seg = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 80;
-      this.originalHeight= 180;
+      this.originalWidth = 87;
+      this.originalHeight= 160;
       return shape;
    },
 
@@ -95,32 +89,82 @@ var draw2d_circuit_decoder_BCDto7Seg = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L80,0 L80,180 L0,180");
+        shape = this.canvas.paper.path("M0,0 L87,0 L87,160 L0,160");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // undefined
-        shape = this.canvas.paper.path('M0 0L80 0L80 180L0 180Z');
+        shape = this.canvas.paper.path('M0 0L87 0L87 160L0 160Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","undefined");
         
         // Label
         shape = this.canvas.paper.text(0,0,'BCD');
-        shape.attr({"x":13.472000000001572,"y":21,"text-anchor":"start","text":"BCD","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":22.47200000000157,"y":18.25,"text-anchor":"start","text":"BCD","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Label
         shape = this.canvas.paper.text(0,0,'7-Seg');
-        shape.attr({"x":33.65625,"y":49.5,"text-anchor":"start","text":"7-Seg","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":31.65625,"y":44.2421875,"text-anchor":"start","text":"7-Seg","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'A');
+        shape.attr({"x":72,"y":16,"text-anchor":"start","text":"A","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'B');
+        shape.attr({"x":73,"y":41,"text-anchor":"start","text":"B","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'C');
+        shape.attr({"x":73,"y":66.5,"text-anchor":"start","text":"C","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'D');
+        shape.attr({"x":73,"y":90.5,"text-anchor":"start","text":"D","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'E');
+        shape.attr({"x":73,"y":115.5,"text-anchor":"start","text":"E","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'F');
+        shape.attr({"x":73,"y":140.5,"text-anchor":"start","text":"F","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'A');
+        shape.attr({"x":7.472000000001572,"y":15,"text-anchor":"start","text":"A","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'B');
+        shape.attr({"x":7.472000000001572,"y":40,"text-anchor":"start","text":"B","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'C');
+        shape.attr({"x":7,"y":65.5,"text-anchor":"start","text":"C","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'D');
+        shape.attr({"x":6.472000000001572,"y":90.5,"text-anchor":"start","text":"D","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M60.5 13.5L18.5,55.5');
+        shape = this.canvas.paper.path('M55.5 22.5L27.5,38.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M60.5 13.5L18.5,55.5');
+        shape = this.canvas.paper.path('M55.5 22.5L27.5,38.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#0D0D0D","stroke-width":1,"opacity":1});
         shape.data("name","Line");
         
