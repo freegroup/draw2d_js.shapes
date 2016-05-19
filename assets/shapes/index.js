@@ -1276,6 +1276,8 @@ draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
+        this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
 
          // your special code here
          this.last_t=false;
@@ -1426,10 +1428,10 @@ var draw2d_circuit_decoder_BCDto7Seg = draw2d.SetFigure.extend({
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
-        // undefined
+        // Rectangle
         shape = this.canvas.paper.path('M0 0L87 0L87 185L0 185Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
-        shape.data("name","undefined");
+        shape.data("name","Rectangle");
         
         // Label
         shape = this.canvas.paper.text(0,0,'BCD');
@@ -1650,7 +1652,8 @@ draw2d_circuit_decoder_BCDto7Seg = draw2d_circuit_decoder_BCDto7Seg.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
-         // your special code here
+        this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
     },
 
     /**

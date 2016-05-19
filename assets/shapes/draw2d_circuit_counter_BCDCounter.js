@@ -251,6 +251,8 @@ draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
+        this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
 
          // your special code here
          this.last_t=false;
