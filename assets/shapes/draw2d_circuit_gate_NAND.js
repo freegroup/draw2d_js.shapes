@@ -226,7 +226,7 @@ draw2d_circuit_gate_NAND = draw2d_circuit_gate_NAND.extend({
         var i2 = this.getInputPort(1);
         var o1 = this.getOutputPort(0);
         
-        o1.setValue(!(i1.getValue() & i2.getValue()));
+        o1.setValue(!(i1.getValue() && i2.getValue()));
     }
 });
 draw2d_circuit_gate_NAND.github="./shapes/org/draw2d/circuit/gate/NAND.shape";
