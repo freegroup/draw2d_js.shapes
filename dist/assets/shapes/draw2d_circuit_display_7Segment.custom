@@ -11,8 +11,8 @@ draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
     init: function(attr, setter, getter){
         this._super(attr, setter, getter);
 
-        this.attr({resizeable:false});
-        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+      //  this.attr({resizeable:false});
+    //    this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
 
         // ensure that the ports has the same order as the segments
         //
@@ -24,7 +24,6 @@ draw2d_circuit_display_7Segment = draw2d_circuit_display_7Segment.extend({
         this.portLockup.push({ p:this.getPort("port_e"), s:"seg_e"});
         this.portLockup.push({ p:this.getPort("port_f"), s:"seg_f"});
         this.portLockup.push({ p:this.getPort("port_g"), s:"seg_g"});
-        
     },
     
     calculate:function()
