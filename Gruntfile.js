@@ -3,6 +3,8 @@ module.exports = function(grunt) {
 
     // Project configuration.
   grunt.initConfig({
+    clean: ['dist/'],
+
     shell: {
       phantom: {
         command: 'phantomjs batch/converter.js',
@@ -161,6 +163,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-bump');
   grunt.loadNpmTasks('grunt-git');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.registerTask('generate', 'Generates JSON file with all shape files', function() {
         // List all SHAPE files in the templates directory.
@@ -180,6 +183,6 @@ module.exports = function(grunt) {
   });
 
     // Default task.
-    grunt.registerTask('default', ['shell', 'concat', 'less', 'copy','generate',"gitadd", 'bump']);
-    grunt.registerTask('publish', ['shell', 'concat', 'less', 'copy','generate',"gitadd", 'bump', 'gh-pages']);
+    grunt.registerTask('default', ['clean','shell', 'concat', 'less', 'copy','generate',"gitadd", 'bump']);
+    grunt.registerTask('publish', ['default', 'gh-pages']);
 };
