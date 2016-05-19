@@ -14,43 +14,67 @@ var draw2d_circuit_decoder_BCDto7Seg = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:80,height:180},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(103.75, 8.333333333333334));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 8.333333333333334));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 22.22222222222222));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(101.25, 36.111111111111114));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 50));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 63.88888888888889));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 77.77777777777779));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.25, 91.66666666666667));
+     port.setConnectionDirection(1);
+     port.setBackgroundColor("#37B1DE");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-1.9099999999980355, 8.333333333333334));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      port.setName("Port");
      port.setMaxFanOut(20);
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(103.75, 22.22222222222222));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-1.9099999999980355, 22.22222222222222));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      port.setName("Port");
      port.setMaxFanOut(20);
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(103.75, 36.111111111111114));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-1.9099999999980355, 36.111111111111114));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      port.setName("Port");
      port.setMaxFanOut(20);
      // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(103.75, 50));
-     port.setConnectionDirection();
-     port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(103.75, 63.88888888888889));
-     port.setConnectionDirection();
-     port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(103.75, 77.77777777777779));
-     port.setConnectionDirection();
-     port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
-     port.setMaxFanOut(20);
-     // Port
-     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(103.75, 91.66666666666667));
+     port = this.createPort("hybrid", new draw2d.layout.locator.XYRelPortLocator(-1.9099999999980355, 50));
      port.setConnectionDirection();
      port.setBackgroundColor("#37B1DE");
      port.setName("Port");
@@ -79,6 +103,26 @@ var draw2d_circuit_decoder_BCDto7Seg = draw2d.SetFigure.extend({
         shape = this.canvas.paper.path('M0 0L80 0L80 180L0 180Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","undefined");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'BCD');
+        shape.attr({"x":13.472000000001572,"y":21,"text-anchor":"start","text":"BCD","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'7-Seg');
+        shape.attr({"x":33.65625,"y":49.5,"text-anchor":"start","text":"7-Seg","font-family":"\"Arial\"","font-size":12,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // Line_shadow
+        shape = this.canvas.paper.path('M60.5 13.5L18.5,55.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.data("name","Line_shadow");
+        
+        // Line
+        shape = this.canvas.paper.path('M60.5 13.5L18.5,55.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#0D0D0D","stroke-width":1,"opacity":1});
+        shape.data("name","Line");
         
 
         return this.canvas.paper.setFinish();

@@ -2,7 +2,7 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "1574304f-be96-315f-e8f7-9d7f61da7f1e",
-    "x": 5622,
+    "x": 5624,
     "y": 7170,
     "width": 80,
     "height": 180,
@@ -21,19 +21,19 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 5622,
+        "x": 5624,
         "y": 7170
       },
       {
-        "x": 5702,
+        "x": 5704,
         "y": 7170
       },
       {
-        "x": 5702,
+        "x": 5704,
         "y": 7350
       },
       {
-        "x": 5622,
+        "x": 5624,
         "y": 7350
       }
     ],
@@ -64,8 +64,8 @@
     "angle": 0,
     "userData": {
       "name": "Port",
-      "type": "Hybrid",
-      "direction": null,
+      "type": "Output",
+      "direction": 1,
       "fanout": 20
     },
     "cssClass": "shape_designer_figure_ExtPort",
@@ -100,8 +100,8 @@
     "angle": 0,
     "userData": {
       "name": "Port",
-      "type": "Hybrid",
-      "direction": null,
+      "type": "Output",
+      "direction": 1,
       "fanout": 20
     },
     "cssClass": "shape_designer_figure_ExtPort",
@@ -137,7 +137,7 @@
     "userData": {
       "name": "Port",
       "type": "Hybrid",
-      "direction": null,
+      "direction": 1,
       "fanout": 20
     },
     "cssClass": "shape_designer_figure_ExtPort",
@@ -172,8 +172,8 @@
     "angle": 0,
     "userData": {
       "name": "Port",
-      "type": "Hybrid",
-      "direction": null,
+      "type": "Output",
+      "direction": 1,
       "fanout": 20
     },
     "cssClass": "shape_designer_figure_ExtPort",
@@ -208,8 +208,8 @@
     "angle": 0,
     "userData": {
       "name": "Port",
-      "type": "Hybrid",
-      "direction": null,
+      "type": "Output",
+      "direction": 1,
       "fanout": 20
     },
     "cssClass": "shape_designer_figure_ExtPort",
@@ -244,8 +244,8 @@
     "angle": 0,
     "userData": {
       "name": "Port",
-      "type": "Hybrid",
-      "direction": null,
+      "type": "Output",
+      "direction": 1,
       "fanout": 20
     },
     "cssClass": "shape_designer_figure_ExtPort",
@@ -280,6 +280,42 @@
     "angle": 0,
     "userData": {
       "name": "Port",
+      "type": "Output",
+      "direction": 1,
+      "fanout": 20
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#37B1DE",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "74b34407-344f-30b2-fa71-d379e1d357e4",
+    "x": 5617.472000000002,
+    "y": 7180,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Port",
       "type": "Hybrid",
       "direction": null,
       "fanout": 20
@@ -302,6 +338,222 @@
       },
       {
         "name": "shape_designer.filter.PortTypeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "5c424f28-7923-b3e2-8860-5416f85a64fe",
+    "x": 5617.472000000002,
+    "y": 7205,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Port",
+      "type": "Hybrid",
+      "direction": null,
+      "fanout": 20
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#37B1DE",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "e3ad5b37-8776-f5a0-141c-cb639b66d47b",
+    "x": 5617.472000000002,
+    "y": 7230,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Port",
+      "type": "Hybrid",
+      "direction": null,
+      "fanout": 20
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#37B1DE",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "f63185a3-a3da-6653-a293-96b851a2ebda",
+    "x": 5617.472000000002,
+    "y": 7255,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Port",
+      "type": "Hybrid",
+      "direction": null,
+      "fanout": 20
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#37B1DE",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "f6ebd191-8ba7-3522-588b-85f443286bd2",
+    "x": 5633.472000000002,
+    "y": 7180,
+    "width": 28.328125,
+    "height": 21,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "BCD",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 12,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "889bcced-9826-27a0-c00a-c807ced06323",
+    "x": 5653.65625,
+    "y": 7208.5,
+    "width": 28.328125,
+    "height": 21,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "7-Seg",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 12,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLine",
+    "id": "676f40d6-f7c0-688b-f1bc-916e0e806d48",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Line"
+    },
+    "cssClass": "shape_designer_figure_ExtLine",
+    "stroke": 1,
+    "color": "#0D0D0D",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 5684.904,
+        "y": 7183.6240000000025
+      },
+      {
+        "x": 5642.512000000002,
+        "y": 7225.368000000001
+      }
+    ],
+    "router": "draw2d.layout.connection.VertexRouter",
+    "radius": "",
+    "filters": [
+      {
+        "name": "shape_designer.filter.StrokeFilter"
       }
     ]
   }
