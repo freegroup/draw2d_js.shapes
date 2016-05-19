@@ -36,6 +36,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_decoder_BCDto7Seg",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "decoder",
+      "BCDto7Seg"
+    ]
+  },
+  {
     "name": "draw2d_circuit_decoder_BCDto7Segment",
     "tags": [
       "draw2d",
