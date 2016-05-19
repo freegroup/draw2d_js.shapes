@@ -136,7 +136,7 @@
     "angle": 0,
     "userData": {
       "name": "out_c",
-      "type": "Hybrid",
+      "type": "Output",
       "direction": 1,
       "fanout": 20
     },
