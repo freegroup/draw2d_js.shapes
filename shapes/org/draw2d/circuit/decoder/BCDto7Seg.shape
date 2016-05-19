@@ -5,12 +5,12 @@
     "x": 5617,
     "y": 7170,
     "width": 87,
-    "height": 160,
+    "height": 185,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});"
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n        var e = (this.getInputPort(\"in_a\").getValue()?1:0) +\n                (this.getInputPort(\"in_b\").getValue()?2:0) +\n                (this.getInputPort(\"in_c\").getValue()?4:0) +\n                (this.getInputPort(\"in_d\").getValue()?8:0);\n\n       this.getOutputPort(\"out_a\").setValue( ((e!=1) &&(e!=4)&&(e!=6)&& (e<10)));\n       this.getOutputPort(\"out_b\").setValue( ((e!=5) &&(e!=6)&& (e<10)));\n       this.getOutputPort(\"out_c\").setValue( ((e!=2) &&(e<10)));\n       this.getOutputPort(\"out_d\").setValue( (((e!=1)&&(e!=4)&&(e!=7))||(e>10)));\n       this.getOutputPort(\"out_e\").setValue( (((e==0)||(e==2)||(e==6)||(e==8))||(e>9)));\n       this.getOutputPort(\"out_f\").setValue( ((e!=1) &&(e!=2)&&(e!=3)&&(e!=7)&&(e<10)));\n       this.getOutputPort(\"out_g\").setValue( (((e!=0)&&(e!=1)&&(e!=7))||(e>9))?);\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -30,11 +30,11 @@
       },
       {
         "x": 5704,
-        "y": 7330
+        "y": 7355
       },
       {
         "x": 5617,
-        "y": 7330
+        "y": 7355
       }
     ],
     "blur": 0,
@@ -416,8 +416,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "f6ebd191-8ba7-3522-588b-85f443286bd2",
-    "x": 5635.472000000002,
-    "y": 7177.25,
+    "x": 5642.3359375,
+    "y": 7172.75,
     "width": 28.328125,
     "height": 21,
     "alpha": 1,
@@ -454,8 +454,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "8b4c5e69-c0ab-7ade-14bb-d2440a959070",
-    "x": 5644.65625,
-    "y": 7203.2421875,
+    "x": 5642.3359375,
+    "y": 7198.25,
     "width": 34.671875,
     "height": 21,
     "alpha": 1,
@@ -870,34 +870,114 @@
     ]
   },
   {
-    "type": "shape_designer.figure.ExtLine",
-    "id": "676f40d6-f7c0-688b-f1bc-916e0e806d48",
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "827b34af-4a0e-8663-1867-d050b8488114",
+    "x": 5651.3359375,
+    "y": 7185.9765625,
+    "width": 28.328125,
+    "height": 21.046875,
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Line"
+      "name": "Label"
     },
-    "cssClass": "shape_designer_figure_ExtLine",
-    "stroke": 1,
-    "color": "#0D0D0D",
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "to",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
-    "vertex": [
-      {
-        "x": 5672.248,
-        "y": 7192.232000000002
-      },
-      {
-        "x": 5644.680000000001,
-        "y": 7208.320000000002
-      }
-    ],
-    "router": "draw2d.layout.connection.VertexRouter",
-    "radius": "",
+    "fontSize": 10,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
     "filters": [
       {
-        "name": "shape_designer.filter.StrokeFilter"
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "0aac495d-cfda-9d12-a7f1-eb0b7cdbdf4b",
+    "x": 5700,
+    "y": 7329.6608,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "out_g",
+      "type": "Output",
+      "direction": 1,
+      "fanout": 20
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#37B1DE",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "77eb1cf1-6742-4b91-0ca9-5ec26278b0e7",
+    "x": 5685,
+    "y": 7324.5704,
+    "width": 28.328125,
+    "height": 21,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "G",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 10,
+    "fontColor": "#080808",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
       }
     ]
   }
