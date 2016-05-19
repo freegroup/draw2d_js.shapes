@@ -269,7 +269,7 @@ draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
         var t = this.getInputPort(0).getValue();
 
         var rising = this.last_t===false && t===true; 
-        
+        console.log(rising, this.id);
         if(rising===true){
             var a = this.getOutputPort("out_a");
             var b = this.getOutputPort("out_b");
