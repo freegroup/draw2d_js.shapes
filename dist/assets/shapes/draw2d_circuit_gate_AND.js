@@ -221,7 +221,7 @@ draw2d_circuit_gate_AND = draw2d_circuit_gate_AND.extend({
         var i2 = this.getInputPort(1);
         var o1 = this.getOutputPort(0);
         
-        o1.setValue(i1.getValue() & i2.getValue());
+        o1.setValue(i1.getValue() && i2.getValue());
     }
 });
 draw2d_circuit_gate_AND.github="./shapes/org/draw2d/circuit/gate/AND.shape";
