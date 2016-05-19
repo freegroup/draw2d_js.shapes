@@ -1668,10 +1668,10 @@ draw2d_circuit_decoder_BCDto7Seg = draw2d_circuit_decoder_BCDto7Seg.extend({
        this.getOutputPort("out_a").setValue( ((e!=1) &&(e!=4)&&(e!=6)&& (e<10)));
        this.getOutputPort("out_b").setValue( ((e!=5) &&(e!=6)&& (e<10)));
        this.getOutputPort("out_c").setValue( ((e!=2) &&(e<10)));
-       this.getOutputPort("out_d").setValue( (((e!=1)&&(e!=4)&&(e!=7))||(e>10)));
-       this.getOutputPort("out_e").setValue( (((e==0)||(e==2)||(e==6)||(e==8))||(e>9)));
+       this.getOutputPort("out_d").setValue( (((e!==1)&&(e!==4)&&(e!==7))||(e>10)));
+       this.getOutputPort("out_e").setValue( (((e===0)||(e===2)||(e===6)||(e===8))||(e>9)));
        this.getOutputPort("out_f").setValue( ((e!=1) &&(e!=2)&&(e!=3)&&(e!=7)&&(e<10)));
-       this.getOutputPort("out_g").setValue( (((e!=0)&&(e!=1)&&(e!=7))||(e>9)));
+       this.getOutputPort("out_g").setValue( (((e!==0)&&(e!==1)&&(e!==7))||(e>9)));
     },
 
 
