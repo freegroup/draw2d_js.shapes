@@ -275,10 +275,10 @@ draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
             var b = this.getOutputPort("out_b");
             var c = this.getOutputPort("out_c");
             var d = this.getOutputPort("out_d");
-            a.setValue(this.counter & 1);
-            b.setValue(this.counter & 2);
-            c.setValue(this.counter & 4);
-            d.setValue(this.counter & 8);
+            a.setValue(!!(this.counter & 1));
+            b.setValue(!!(this.counter & 2));
+            c.setValue(!!(this.counter & 4));
+            d.setValue(!!(this.counter & 8));
             this.counter= (this.counter+1)%10;
         }
         this.last_t = t;
