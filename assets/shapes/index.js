@@ -5179,20 +5179,14 @@ draw2d_circuit_pulse_10hz = draw2d_circuit_pulse_10hz.extend({
     {
         var _this = this;
         this.running=true;
-        var tick = function() {
-            setTimeout(function() {
-                if(_this.running){
-                    tick();
-                }
-                _this.value = !_this.value;
-            }, 1000 / _this.hz);
-        }
-        tick();
+        this.timer = setInterval(function() {
+            _this.value = !_this.value;
+        }, 1000 / _this.hz);
     },
-    
     onStop:function()
     {
-        this.running = false;
+        this.running=false;
+        clearInterval( this.timer);
     }
 
 });
@@ -5424,20 +5418,15 @@ draw2d_circuit_pulse_50hz = draw2d_circuit_pulse_50hz.extend({
     {
         var _this = this;
         this.running=true;
-        var tick = function() {
-            setTimeout(function() {
-                if(_this.running){
-                    tick();
-                }
-                _this.value = !_this.value;
-            }, 1000 / _this.hz);
-        }
-        tick();
+        this.timer = setInterval(function() {
+            _this.value = !_this.value;
+        }, 1000 / _this.hz);
     },
     
     onStop:function()
     {
-        this.running = false;
+        this.running=false;
+        clearInterval( this.timer);
     }
 
 });
