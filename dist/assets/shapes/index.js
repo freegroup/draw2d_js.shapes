@@ -758,25 +758,25 @@ var draw2d_circuit_alu_HalfAdder = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:70,height:67.125},attr), setter, getter);
      var port;
      // output_s
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.17942857142859, 20.949720670391063));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.17942857142874, 20.949720670391063));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("output_s");
      port.setMaxFanOut(20);
      // output_c
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.60800000000002, 79.51478584729978));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.60800000000017, 79.51478584729973));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("output_c");
      port.setMaxFanOut(20);
      // input_a
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.318857142857155, 19.459962756052143));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.3188571428573985, 19.459962756052143));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("input_a");
      port.setMaxFanOut(20);
      // input_b
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-2.7474285714285838, 80.8193668528864));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-2.747428571428827, 80.8193668528864));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("input_b");
@@ -802,7 +802,7 @@ var draw2d_circuit_alu_HalfAdder = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M0,5.14009999999999Q0,4.14009999999999 1, 4.14009999999999L69,4.14009999999999Q70,4.14009999999999 70, 5.14009999999999L70,63.14009999999999Q70,64.14009999999999 69, 64.14009999999999L1,64.14009999999999Q0,64.14009999999999 0, 63.14009999999999L0,5.14009999999999');
+        shape = this.canvas.paper.path('M0,5.140100000000075Q0,4.140100000000075 1, 4.140100000000075L69,4.140100000000075Q70,4.140100000000075 70, 5.140100000000075L70,63.140100000000075Q70,64.14010000000007 69, 64.14010000000007L1,64.14010000000007Q0,64.14010000000007 0, 63.140100000000075L0,5.140100000000075');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Rectangle");
         
@@ -813,7 +813,7 @@ var draw2d_circuit_alu_HalfAdder = draw2d.SetFigure.extend({
         
         // Label
         shape = this.canvas.paper.text(0,0,'Adder');
-        shape.attr({"x":20.716999999999985,"y":33.37429999999998,"text-anchor":"start","text":"Adder","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":20.7170000000001,"y":33.37429999999995,"text-anchor":"start","text":"Adder","font-family":"\"Arial\"","font-size":10,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Label
@@ -983,9 +983,10 @@ var draw2d_circuit_alu_HalfAdder = draw2d.SetFigure.extend({
 draw2d_circuit_alu_HalfAdder = draw2d_circuit_alu_HalfAdder.extend({
 
     init: function(attr, setter, getter){
-         this._super(attr, setter, getter);
+        this._super(attr, setter, getter);
 
-         // your special code here
+        this.attr({resizeable:false});
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
     },
 
     /**
