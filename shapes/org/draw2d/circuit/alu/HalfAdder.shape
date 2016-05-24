@@ -2,15 +2,15 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "e72b4754-e04e-21df-6937-669d31471b19",
-    "x": 301,
-    "y": 190,
+    "x": 3965,
+    "y": 3972.07005,
     "width": 70,
     "height": 60,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n        var a = this.getInputPort(\"input_a\").getValue();\n        var b = this.getInputPort(\"input_b\").getValue();\n        \n        // s = a XOR b\n        this.getOutputPort(\"output_s\").setValue(( a ? !b : b ));\n        \n        // c = a AND b\n        this.getOutputPort(\"output_c\").setValue(( a & b ));\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n        var a = this.getInputPort(\"input_a\").getValue();\n        var b = this.getInputPort(\"input_b\").getValue();\n        \n        // s = a XOR b\n        this.getOutputPort(\"output_s\").setValue(( a ? !b : b ));\n        \n        // c = a AND b\n        this.getOutputPort(\"output_c\").setValue(( a & b ));\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});",
       "name": "Rectangle",
       "markdown": "# Half Adder\n\nHalf adder is a combinational logic circuit with two \ninputs and two outputs. \n\nThe half adder circuit is designed to add two single \nbit binary number `A` and `B`. \n\nIt is the basic building block for addition of two \nsingle bit numbers. This circuit has two outputs \n`carry` and `sum`.\n\n\n|  A    |    B    |     S    |    C   |\n|:-----:|:-------:|:--------:|:-------|\n|   0   |    0    |     0    |     0  |\n|   0   |    1    |     1    |     0  |\n|   1   |    0    |     1    |     0  |\n|   1   |    1    |     0    |     1  |\n"
     },
@@ -23,20 +23,20 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 301,
-        "y": 190
+        "x": 3965,
+        "y": 3972.07005
       },
       {
-        "x": 371,
-        "y": 190
+        "x": 4035,
+        "y": 3972.07005
       },
       {
-        "x": 371,
-        "y": 250
+        "x": 4035,
+        "y": 4032.07005
       },
       {
-        "x": 301,
-        "y": 250
+        "x": 3965,
+        "y": 4032.07005
       }
     ],
     "blur": 0,
@@ -61,8 +61,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "aa347e18-3b28-dada-f134-ecac6c2ffa84",
-    "x": 318.65625,
-    "y": 197.9849,
+    "x": 3982.65625,
+    "y": 3980.0549499999997,
     "width": 28.328125,
     "height": 21,
     "alpha": 1,
@@ -99,9 +99,9 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "5d534841-5021-4cdb-260b-9229aaa38720",
-    "x": 317.717,
-    "y": 208.2342,
-    "width": 28.328125,
+    "x": 3981.717,
+    "y": 3990.3042499999997,
+    "width": 34.828125,
     "height": 21,
     "alpha": 1,
     "angle": 0,
@@ -137,8 +137,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "e7565a76-9e96-5cb7-3a96-f888e06f053c",
-    "x": 302,
-    "y": 185.8599,
+    "x": 3966,
+    "y": 3967.9299499999997,
     "width": 28.328125,
     "height": 20.734375,
     "alpha": 1,
@@ -175,8 +175,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "511fb62f-8edb-1b20-4894-3a53b4d1949b",
-    "x": 302,
-    "y": 224.9849,
+    "x": 3966,
+    "y": 4007.0549499999997,
     "width": 28.328125,
     "height": 20.734375,
     "alpha": 1,
@@ -213,8 +213,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "8a2d55b6-32a0-fdfd-68b7-d3df1035e143",
-    "x": 349.34375,
-    "y": 185.8599,
+    "x": 4013.34375,
+    "y": 3967.9299499999997,
     "width": 28.328125,
     "height": 20.734375,
     "alpha": 1,
@@ -251,8 +251,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "a2956abc-b259-7b38-17f9-1bcb2abee403",
-    "x": 349.34375,
-    "y": 224.9849,
+    "x": 4013.34375,
+    "y": 4007.0549499999997,
     "width": 28.328125,
     "height": 20.734375,
     "alpha": 1,
@@ -289,8 +289,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "3e46095d-560c-8139-3ea0-f44e93718983",
-    "x": 366.8256,
-    "y": 194.9224,
+    "x": 4030.8256,
+    "y": 3976.9924499999997,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -325,8 +325,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "71ba1c80-5739-1862-2a6e-fbcca41e28cb",
-    "x": 367.8256,
-    "y": 234.2342,
+    "x": 4031.8256,
+    "y": 4016.3042499999997,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -361,8 +361,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "a4825e75-c25c-5cca-36d3-7aad8c012d1a",
-    "x": 295.0768,
-    "y": 193.9224,
+    "x": 3959.0768,
+    "y": 3975.9924499999997,
     "width": 10,
     "height": 10,
     "alpha": 1,
@@ -397,8 +397,8 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "eed37de1-e11c-3573-2e0c-74b7ce7b718e",
-    "x": 294.0768,
-    "y": 235.1099,
+    "x": 3958.0768,
+    "y": 4017.1799499999997,
     "width": 10,
     "height": 10,
     "alpha": 1,
