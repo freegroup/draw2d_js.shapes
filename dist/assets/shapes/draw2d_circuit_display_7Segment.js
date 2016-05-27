@@ -76,7 +76,7 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // circle
-        shape = this.canvas.paper.path('M0 0L90 0L90 175L0 175Z');
+        shape = this.canvas.paper.path('M0,2Q0,0 2, 0L88,0Q90,0 90, 2L90,173Q90,175 88, 175L2,175Q0,175 0, 173L0,2');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","circle");
         
