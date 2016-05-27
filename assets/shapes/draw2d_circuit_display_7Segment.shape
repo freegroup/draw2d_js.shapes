@@ -18,7 +18,7 @@
     "bgColor": "#FFFFFF",
     "color": "#303030",
     "stroke": 1,
-    "radius": 0,
+    "radius": 2,
     "dasharray": null,
     "vertices": [
       {
@@ -51,6 +51,9 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },

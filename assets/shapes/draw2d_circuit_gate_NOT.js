@@ -11,7 +11,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:40,height:42.5},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:36,height:42.5},attr), setter, getter);
      var port;
      // input01
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0, 54.11764705882353));
@@ -20,7 +20,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
      port.setName("input01");
      port.setMaxFanOut(20);
      // output
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.5, 54.11764705882353));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(100, 50.58823529411765));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output");
@@ -31,7 +31,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 40;
+      this.originalWidth = 36;
       this.originalHeight= 42.5;
       return shape;
    },
@@ -41,7 +41,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L40,0 L40,42.5 L0,42.5");
+        shape = this.canvas.paper.path("M0,0 L36,0 L36,42.5 L0,42.5");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -57,7 +57,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":6,"ry":6,"cx":34,"cy":23,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","opacity":1});
+        shape.attr({"rx":4,"ry":4,"cx":32,"cy":21.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","opacity":1});
         shape.data("name","Circle");
         
 
