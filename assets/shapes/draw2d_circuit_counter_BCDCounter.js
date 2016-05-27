@@ -250,7 +250,7 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
 draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
 
     init: function(attr, setter, getter){
-         this._super(attr, setter, getter);
+        this._super(attr, setter, getter);
         this.attr({resizeable:false});
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
 
@@ -270,7 +270,6 @@ draw2d_circuit_counter_BCDCounter = draw2d_circuit_counter_BCDCounter.extend({
 
         var rising = this.last_t===false && t===true; 
         if(rising===true){
-        console.log(rising, this.counter, this.id);
             var a = this.getOutputPort("out_a");
             var b = this.getOutputPort("out_b");
             var c = this.getOutputPort("out_c");
