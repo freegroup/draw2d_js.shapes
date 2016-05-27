@@ -11,7 +11,7 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:41,height:40},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:35,height:40},attr), setter, getter);
      var port;
      // input01
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(0, 20));
@@ -26,7 +26,7 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
      port.setName("input02");
      port.setMaxFanOut(20);
      // output
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.4390243902439, 48.75));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(101.42857142857143, 48.75));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
      port.setName("output");
@@ -37,7 +37,7 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 41;
+      this.originalWidth = 35;
       this.originalHeight= 40;
       return shape;
    },
@@ -47,7 +47,7 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L41,0 L41,40 L0,40");
+        shape = this.canvas.paper.path("M0,0 L35,0 L35,40 L0,40");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -63,7 +63,7 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":6,"ry":6,"cx":35,"cy":19.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"rx":4,"ry":4,"cx":31,"cy":19.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
         shape.data("name","Circle");
         
 
