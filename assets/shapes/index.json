@@ -144,12 +144,21 @@
     ]
   },
   {
-    "name": "draw2d_circuit_hardware_RaspiGPIO",
+    "name": "draw2d_circuit_hardware_RaspiINPUT",
     "tags": [
       "draw2d",
       "circuit",
       "hardware",
-      "RaspiGPIO"
+      "RaspiINPUT"
+    ]
+  },
+  {
+    "name": "draw2d_circuit_hardware_RaspiOUTPUT",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "hardware",
+      "RaspiOUTPUT"
     ]
   },
   {

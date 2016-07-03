@@ -6,7 +6,7 @@
  *
  *
  */
-draw2d_circuit_hardware_RaspiGPIO = draw2d_circuit_hardware_RaspiGPIO.extend({
+draw2d_circuit_hardware_RaspiINPUT = draw2d_circuit_hardware_RaspiINPUT.extend({
 
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
