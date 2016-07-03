@@ -153,6 +153,24 @@
     ]
   },
   {
+    "name": "draw2d_circuit_hardware_RaspiINPUT",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "hardware",
+      "RaspiINPUT"
+    ]
+  },
+  {
+    "name": "draw2d_circuit_hardware_RaspiOUTPUT",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "hardware",
+      "RaspiOUTPUT"
+    ]
+  },
+  {
     "name": "draw2d_circuit_pulse_10hz",
     "tags": [
       "draw2d",
