@@ -53,7 +53,7 @@ var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,1.5Q0,0.5 1, 0.5L39,0.5Q40,0.5 40, 1.5L40,49.5Q40,50.5 39, 50.5L1,50.5Q0,50.5 0, 49.5L0,1.5');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -68,17 +68,17 @@ var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0.5 20.371000000000095L12.541999999999916 25.276999999999134L0.5 30.628999999999905Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Line_shadow
         shape = this.canvas.paper.path('M26.5 35.5L33.5,35.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M26.5 35.5L33.5,35.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 

@@ -65,7 +65,7 @@ var draw2d_circuit_alu_FullAdder = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,5.140100000000075Q0,4.140100000000075 1, 4.140100000000075L69,4.140100000000075Q70,4.140100000000075 70, 5.140100000000075L70,73.14010000000007Q70,74.14010000000007 69, 74.14010000000007L1,74.14010000000007Q0,74.14010000000007 0, 73.14010000000007L0,5.140100000000075');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -418,7 +418,7 @@ var draw2d_circuit_alu_FullAdder4Bit = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,1Q0,0 1, 0L79,0Q80,0 80, 1L80,199Q80,200 79, 200L1,200Q0,200 0, 199L0,1');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -803,7 +803,7 @@ var draw2d_circuit_alu_HalfAdder = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,5.140100000000075Q0,4.140100000000075 1, 4.140100000000075L69,4.140100000000075Q70,4.140100000000075 70, 5.140100000000075L70,63.140100000000075Q70,64.14010000000007 69, 64.14010000000007L1,64.14010000000007Q0,64.14010000000007 0, 63.140100000000075L0,5.140100000000075');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -1091,7 +1091,7 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,3Q0,0 3, 0L77,0Q80,0 80, 3L80,105Q80,108 77, 108L3,108Q0,108 0, 105L0,3');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -1106,7 +1106,7 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0 11L18 19.74285714285361L0 28Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -1430,7 +1430,7 @@ var draw2d_circuit_decoder_BCDto7Seg = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,3Q0,0 3, 0L84,0Q87,0 87, 3L87,182Q87,185 84, 185L3,185Q0,185 0, 182L0,3');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -1774,42 +1774,42 @@ var draw2d_circuit_display_7Segment = draw2d.SetFigure.extend({
         
         // circle
         shape = this.canvas.paper.path('M0,2Q0,0 2, 0L88,0Q90,0 90, 2L90,173Q90,175 88, 175L2,175Q0,175 0, 173L0,2');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","circle");
         
         // seg_a
         shape = this.canvas.paper.path('M22.5,7.8279999999999745Q22.5,4.8279999999999745 25.5, 4.8279999999999745L79.5,4.8279999999999745Q82.5,4.8279999999999745 82.5, 7.8279999999999745L82.5,11.827999999999975Q82.5,14.827999999999975 79.5, 14.827999999999975L25.5,14.827999999999975Q22.5,14.827999999999975 22.5, 11.827999999999975L22.5,7.8279999999999745');
-        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","opacity":1});
+        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","dasharray":null,"opacity":1});
         shape.data("name","seg_a");
         
         // seg_b
         shape = this.canvas.paper.path('M73.764920771077,22.227039779341887Q73.9887319206191,19.235400000000027 76.98645340387436, 19.35230127813636L81.50227851674474,19.528403604681195Q84.5,19.645304882817527 84.274657968082, 22.636829739583895L80.2366101112989,76.24387514323365Q80.0112680793809,79.23540000000003 77.0112680793809, 79.23540000000003L72.5,79.23540000000003Q69.5,79.23540000000003 69.7238111495421, 76.24376022065817L73.764920771077,22.227039779341887');
-        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","opacity":1});
+        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","dasharray":null,"opacity":1});
         shape.data("name","seg_b");
         
         // seg_c
         shape = this.canvas.paper.path('M67.04142077107649,98.81963977934183Q67.26523192061859,95.82799999999997 70.26295340387382, 95.94490127813683L74.77877851674425,96.12100360468244Q77.77649999999949,96.2379048828193 77.55115796808148, 99.22942973958567L73.51311011129839,152.8364751432336Q73.28776807938038,155.82799999999997 70.28776807938038, 155.82799999999997L65.77649999999949,155.82799999999997Q62.77649999999949,155.82799999999997 63.00031114954158, 152.83636022065812L67.04142077107649,98.81963977934183');
-        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","opacity":1});
+        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","dasharray":null,"opacity":1});
         shape.data("name","seg_c");
         
         // seg_d
         shape = this.canvas.paper.path('M10,161.82799999999997Q10,158.82799999999997 13, 158.82799999999997L67,158.82799999999997Q70,158.82799999999997 70, 161.82799999999997L70,165.82799999999997Q70,168.82799999999997 67, 168.82799999999997L13,168.82799999999997Q10,168.82799999999997 10, 165.82799999999997L10,161.82799999999997');
-        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","opacity":1});
+        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","dasharray":null,"opacity":1});
         shape.data("name","seg_d");
         
         // seg_e
         shape = this.canvas.paper.path('M13.264920771077009,97.81963977934183Q13.488731920619102,94.82799999999997 16.486453403874357, 94.9449012781363L21.002278516744745,95.12100360468115Q24,95.23790488281747 23.774657968082003, 98.22942973958385L19.736610111298894,151.8364751432336Q19.511268079380898,154.82799999999997 16.511268079380898, 154.82799999999997L12,154.82799999999997Q9,154.82799999999997 9.223811149542094, 151.83636022065812L13.264920771077009,97.81963977934183');
-        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","opacity":1});
+        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","dasharray":null,"opacity":1});
         shape.data("name","seg_e");
         
         // seg_f
         shape = this.canvas.paper.path('M18.26492077107701,22.227039779341887Q18.488731920619102,19.235400000000027 21.486453403874393, 19.352301278135453L26.00227851674471,19.528403604678918Q29,19.645304882814344 28.774657968082014, 22.63682973958072L24.736610111298884,76.24387514323365Q24.511268079380898,79.23540000000003 21.511268079380898, 79.23540000000003L17,79.23540000000003Q14,79.23540000000003 14.223811149542094, 76.24376022065817L18.26492077107701,22.227039779341887');
-        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","opacity":1});
+        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","dasharray":null,"opacity":1});
         shape.data("name","seg_f");
         
         // seg_g
         shape = this.canvas.paper.path('M17,85.82799999999997Q17,82.82799999999997 20, 82.82799999999997L74,82.82799999999997Q77,82.82799999999997 77, 85.82799999999997L77,89.82799999999997Q77,92.82799999999997 74, 92.82799999999997L20,92.82799999999997Q17,92.82799999999997 17, 89.82799999999997L17,85.82799999999997');
-        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","opacity":1});
+        shape.attr({"stroke":"#D6D6D6","stroke-width":1,"fill":"#C21B7A","dasharray":null,"opacity":1});
         shape.data("name","seg_g");
         
 
@@ -2029,27 +2029,27 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
         
         // circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15,"ry":16,"cx":15,"cy":16,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"rx":15,"ry":16,"cx":15,"cy":16,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","circle");
         
         // Line_shadow
         shape = this.canvas.paper.path('M5.5 5.5L15.5,16.5L24.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M5.5 5.5L15.5,16.5L24.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
         shape = this.canvas.paper.path('M25.5 5.5L5.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M25.5 5.5L5.5,27.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 
@@ -2277,7 +2277,7 @@ var draw2d_circuit_flipflop_DFlipFlop = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M1.5,2Q1.5,1 2.5, 1L40.5,1Q41.5,1 41.5, 2L41.5,50Q41.5,51 40.5, 51L2.5,51Q1.5,51 1.5, 50L1.5,2');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -2297,17 +2297,17 @@ var draw2d_circuit_flipflop_DFlipFlop = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M1.5 37.12699999999995L13.541999999999916 42.03299999999899L1.5 47.38499999999976Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Line_shadow
         shape = this.canvas.paper.path('M27.5 36.5L35.5,36.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M27.5 36.5L35.5,36.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 
@@ -2550,7 +2550,7 @@ var draw2d_circuit_flipflop_JKFlipFlop = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,1.122399999998379Q0,0.12239999999837892 1, 0.12239999999837892L39,0.12239999999837892Q40,0.12239999999837892 40, 1.122399999998379L40,62.12239999999838Q40,63.12239999999838 39, 63.12239999999838L1,63.12239999999838Q0,63.12239999999838 0, 62.12239999999838L0,1.122399999998379');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -2560,7 +2560,7 @@ var draw2d_circuit_flipflop_JKFlipFlop = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0 25.693454999998266L12.041999999999916 30.59945499999685L0 35.95145499999808Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -2580,12 +2580,12 @@ var draw2d_circuit_flipflop_JKFlipFlop = draw2d.SetFigure.extend({
         
         // Line_shadow
         shape = this.canvas.paper.path('M26.5 45.5L33.5,45.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M26.5 45.5L33.5,45.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 
@@ -2840,7 +2840,7 @@ var draw2d_circuit_flipflop_SRFlipFlop = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,1.122399999998379Q0,0.12239999999837892 1, 0.12239999999837892L39,0.12239999999837892Q40,0.12239999999837892 40, 1.122399999998379L40,62.12239999999838Q40,63.12239999999838 39, 63.12239999999838L1,63.12239999999838Q0,63.12239999999838 0, 62.12239999999838L0,1.122399999998379');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -2865,12 +2865,12 @@ var draw2d_circuit_flipflop_SRFlipFlop = draw2d.SetFigure.extend({
         
         // Line_shadow
         shape = this.canvas.paper.path('M26.5 45.5L33.5,45.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M26.5 45.5L33.5,45.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 
@@ -3111,7 +3111,7 @@ var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,1.5Q0,0.5 1, 0.5L39,0.5Q40,0.5 40, 1.5L40,49.5Q40,50.5 39, 50.5L1,50.5Q0,50.5 0, 49.5L0,1.5');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -3126,17 +3126,17 @@ var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0.5 20.371000000000095L12.541999999999916 25.276999999999134L0.5 30.628999999999905Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"none","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Line_shadow
         shape = this.canvas.paper.path('M26.5 35.5L33.5,35.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M26.5 35.5L33.5,35.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 
@@ -3367,7 +3367,7 @@ var draw2d_circuit_gate_AND = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,3Q0,0 3, 0L27,0Q30,0 30, 3L30,37Q30,40 27, 40L3,40Q0,40 0, 37L0,3');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -3594,7 +3594,7 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,3Q0,0 3, 0L27,0Q30,0 30, 3L30,37Q30,40 27, 40L3,40Q0,40 0, 37L0,3');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -3604,7 +3604,7 @@ var draw2d_circuit_gate_NAND = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4,"ry":4,"cx":31,"cy":19.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"rx":4,"ry":4,"cx":31,"cy":19.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
 
@@ -3826,7 +3826,7 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,3Q0,0 3, 0L27,0Q30,0 30, 3L30,37Q30,40 27, 40L3,40Q0,40 0, 37L0,3');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -3836,7 +3836,7 @@ var draw2d_circuit_gate_NOR = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4,"ry":4,"cx":30.5,"cy":20,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","opacity":1});
+        shape.attr({"rx":4,"ry":4,"cx":30.5,"cy":20,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
 
@@ -4052,7 +4052,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,5.5Q0,2.5 3, 2.5L27,2.5Q30,2.5 30, 5.5L30,39.5Q30,42.5 27, 42.5L3,42.5Q0,42.5 0, 39.5L0,5.5');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -4062,7 +4062,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4,"ry":4,"cx":32,"cy":21.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","opacity":1});
+        shape.attr({"rx":4,"ry":4,"cx":32,"cy":21.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
 
@@ -4283,7 +4283,7 @@ var draw2d_circuit_gate_OR = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,3Q0,0 3, 0L27,0Q30,0 30, 3L30,37Q30,40 27, 40L3,40Q0,40 0, 37L0,3');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -4540,7 +4540,7 @@ var draw2d_circuit_hardware_RaspiINPUT = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M92.80000000000018,48Q92.80000000000018,46 94.80000000000018, 46L104.25999999999931,46Q106.25999999999931,46 106.25999999999931, 44L106.25999999999931,2Q106.25999999999931,0 104.25999999999931, 0L3.259999999999309,0Q1.2599999999993088,0 1.2599999999993088, 2L1.2599999999993088,44Q1.2599999999993088,46 1.2481969268556659, 47.99996517156282L0.011803073143642928,257.5000348284376Q0,259.50000000000045 2, 259.50000000000045L90.80000000000018,259.50000000000045Q92.80000000000018,259.50000000000045 92.80000000000018, 257.50000000000045L92.80000000000018,48');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -4550,72 +4550,72 @@ var draw2d_circuit_hardware_RaspiINPUT = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15.5,"ry":16.5,"cx":38.17006024419561,"cy":69.39887499999986,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"rx":15.5,"ry":16.5,"cx":38.17006024419561,"cy":69.39887499999986,"stroke":"none","stroke-width":0,"fill":"#000000","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // Rectangle
         shape = this.canvas.paper.path('M43.75408024419585 60.105025000000296L32.612960244196074 60.105025000000296L32.612960244196074 50.274625000000015L43.75408024419585 50.274625000000015Z');
-        shape.attr({"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"#000000","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M30.924815107440736,83.68742174722047Q30.44116155235588,81.32120856431811 34.10093600532491, 80.53730360715895L34.10093600532491,80.53730360715895Q37.76071045829394,79.75339864999978 40.99098818166249, 80.42978257348136L40.99098818166249,80.42978257348136Q44.22126590503103,81.10616649696294 44.41711307461355, 83.57990071354288L44.41711307461355,83.57990071354288Q44.612960244196074,86.05363493012283 40.89821187939583, 87.32220267578282L40.89821187939583,87.32220267578282Q37.18346351459559,88.59077042144281 34.29596608856059, 87.32220267578282L34.29596608856059,87.32220267578282Q31.408468662525593,86.05363493012283 30.924815107440736, 83.68742174722047L30.924815107440736,83.68742174722047');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M55.45418518903647,52.684774099766614Q53.733734582847774,56.295874999999796 49.73546434134839, 56.17825240038365L45.684154891136885,56.05906947361763Q41.6858846496375,55.941446874001485 41.439632192430956, 51.9490341038436L41.38932543740248,51.133426684209084Q41.14307298019594,47.1410139140512 43.55925976809294, 45.07721283353885L43.55925976809294,45.07721283353885Q45.97544655598995,43.0134117530265 48.92850425588631, 42.42600568051239L48.92850425588631,42.42600568051239Q51.88156195578267,41.838599607998276 55.85059327786345, 42.33537960391366L56.16077573811711,42.37420329383533Q60.12980706019789,42.87098328975071 58.40935645400919, 46.482084189983894L55.45418518903647,52.684774099766614');
-        shape.attr({"stroke":"#000000","stroke-width":2,"fill":"#6B8E23","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":2,"fill":"#6B8E23","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":5.5,"ry":5.5,"cx":38.112960244196074,"cy":75.10027500000024,"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"rx":5.5,"ry":5.5,"cx":38.112960244196074,"cy":75.10027500000024,"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4,"ry":4.5,"cx":43.032460244196045,"cy":65.82042500000034,"stroke":"none","stroke-width":0,"fill":"#B3003B","opacity":1});
+        shape.attr({"rx":4,"ry":4.5,"cx":43.032460244196045,"cy":65.82042500000034,"stroke":"none","stroke-width":0,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4,"ry":4.5,"cx":34.532460244196045,"cy":65.32042500000034,"stroke":"none","stroke-width":0,"fill":"#B3003B","opacity":1});
+        shape.attr({"rx":4,"ry":4.5,"cx":34.532460244196045,"cy":65.32042500000034,"stroke":"none","stroke-width":0,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // Rectangle
         shape = this.canvas.paper.path('M40.84056866252536,49.09992905405329Q39.215568662525584,52.84992905405397 35.21556866252422, 54.572902027026885L35.21556866252422,54.572902027026885Q31.215568662522855,56.295874999999796 28.871818662524447, 55.383712837837265L28.871818662524447,55.383712837837265Q26.52806866252604,54.471550675674735 24.934318662525357, 52.545874999999114L24.934318662525357,52.545874999999114Q23.340568662524674,50.620199324323494 21.903068662524902, 46.870199324323494L21.903068662524902,46.870199324323494Q20.46556866252513,43.120199324323494 26.340568662524902, 42.208037162161645L26.340568662524902,42.208037162161645Q32.215568662524674,41.295874999999796 37.3405686625249, 43.3229020270262L37.3405686625249,43.3229020270262Q42.46556866252513,45.34992905405261 40.84056866252536, 49.09992905405329L40.84056866252536,49.09992905405329');
-        shape.attr({"stroke":"#000000","stroke-width":2,"fill":"#6B8E23","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":2,"fill":"#6B8E23","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M23.02882662060938,74.0007223716168Q23.59208457869363,69.60027500000024 27.74146188256441, 71.61934036716593L27.74146188256441,71.61934036716593Q31.890839186435187,73.63840573433163 32.17820392448016, 77.51343261639295L32.17820392448016,77.51343261639295Q32.46556866252513,81.38845949845427 29.711728774439734, 81.99436724922725L29.711728774439734,81.99436724922725Q26.95788888635434,82.60027500000024 24.711728774439734, 80.5007223716168L24.711728774439734,80.5007223716168Q22.46556866252513,78.40116974323337 23.02882662060938, 74.0007223716168L23.02882662060938,74.0007223716168');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M44.90960119620263,76.51260111401803Q45.730557192046945,73.35769425824128 49.652081781261586, 72.28416780326393L49.652081781261586,72.28416780326393Q53.57360637047623,71.21064134828657 53.500811374411114, 72.11279984946896L53.500811374411114,72.11279984946896Q53.428016378346,73.01495835065134 52.77048831127104, 77.06178392455286L52.77048831127104,77.06178392455286Q52.112960244196074,81.10860949845437 47.98473082138935, 81.88631594106755L47.98473082138935,81.88631594106755Q43.85650139858262,82.66402238368073 43.97257329947047, 81.16576517673775L43.97257329947047,81.16576517673775Q44.088645200358314,79.66750796979477 44.90960119620263, 76.51260111401803L44.90960119620263,76.51260111401803');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M47.176218202280324,63.220872371616906Q47.739476160364575,58.82042500000034 51.88885346423535, 60.839490367166036L51.88885346423535,60.839490367166036Q56.03823076810613,62.85855573433173 56.3255955061511, 66.73358261639305L56.3255955061511,66.73358261639305Q56.612960244196074,70.60860949845437 53.85912035611068, 71.21451724922736L53.85912035611068,71.21451724922736Q51.105280468025285,71.82042500000034 48.85912035611068, 69.7208723716169L48.85912035611068,69.7208723716169Q46.612960244196074,67.62131974323347 47.176218202280324, 63.220872371616906L47.176218202280324,63.220872371616906');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M41.095718202280295,55.94533856496514Q41.658976160364546,52.89887499999986 45.808353464235324, 54.29668948496078L45.808353464235324,54.29668948496078Q49.9577307681061,55.6945039699217 50.245095506151074, 58.37721488827174L50.245095506151074,58.37721488827174Q50.532460244196045,61.05992580662178 47.77862035611065, 61.47940040331082L47.77862035611065,61.47940040331082Q45.024780468025256,61.89887499999986 42.77862035611065, 60.44533856496514L42.77862035611065,60.44533856496514Q40.532460244196045,58.99180212993042 41.095718202280295, 55.94533856496514L41.095718202280295,55.94533856496514');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M24.07825340077011,60.159288069537524Q27.69093813901509,57.82042500000034 29.30628473824413, 59.667691675325386L29.30628473824413,59.667691675325386Q30.921631337473173,61.51495835065043 29.87755621375777, 65.86243163527183L29.87755621375777,65.86243163527183Q28.83348109004237,70.20990491989323 25.65014447235626, 70.9876113625071L25.65014447235626,70.9876113625071Q22.46680785467015,71.76531780512096 21.46618825859764, 67.13173447209783L21.46618825859764,67.13173447209783Q20.46556866252513,62.49815113907471 24.07825340077011, 60.159288069537524L24.07825340077011,60.159288069537524');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M33.30670269910638,52.553454946707916Q36.814328147937886,51.89887499999986 38.80670269910638, 52.958627384555484L38.80670269910638,52.958627384555484Q40.79907725027488,54.01837976911111 39.28820569131358, 56.5124675160032L39.28820569131358,56.5124675160032Q37.77733413235228,59.00655526289529 33.24738487274112, 59.66746349624805L33.24738487274112,59.66746349624805Q28.717435613129965,60.3283717296008 29.25825643170242, 56.76820331150839L29.25825643170242,56.76820331150839Q29.799077250274877,53.20803489341597 33.30670269910638, 52.553454946707916L33.30670269910638,52.553454946707916');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -4660,22 +4660,22 @@ var draw2d_circuit_hardware_RaspiINPUT = draw2d.SetFigure.extend({
         
         // Line_shadow
         shape = this.canvas.paper.path('M53.5 48.5L52.5,49.5Q50.750892052200015,50.15600319199939 49.5, 51.5L48.5,53.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M53.5 48.5L52.5,49.5Q50.750892052200015,50.15600319199939 49.5, 51.5L48.5,53.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
         shape = this.canvas.paper.path('M37.5 52.5L36.5,50.5Q35.12265320419647,48.90872203999788 33.5, 47.5L30.5,46.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M37.5 52.5L36.5,50.5Q35.12265320419647,48.90872203999788 33.5, 47.5L30.5,46.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 
@@ -4945,7 +4945,7 @@ var draw2d_circuit_hardware_RaspiOUTPUT = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M106.60618588992817,47.99999999907308Q106.60612499999843,46 106.60612499999843, 44L106.60612499999843,2Q106.60612499999843,0 104.60612499999843, 0L3.6061249999984284,0Q1.6061249999984284,0 1.6061249999984284, 2L1.6061249999984284,44Q1.6061249999984284,46 3.6061249999984284, 46L14.34612499999912,46Q16.34612499999912,46 16.34612499999912, 48L16.34612499999912,257.50000000000045Q16.34612499999912,259.50000000000045 18.34612499999912, 259.50000000000045L104.61262500000112,259.50000000000045Q106.61262500000112,259.50000000000045 106.61256411007138, 257.50000000092734L106.60618588992817,47.99999999907308');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -4995,92 +4995,92 @@ var draw2d_circuit_hardware_RaspiOUTPUT = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":15.5,"ry":16.5,"cx":69.08258524419489,"cy":72.39887499999986,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"rx":15.5,"ry":16.5,"cx":69.08258524419489,"cy":72.39887499999986,"stroke":"none","stroke-width":0,"fill":"#000000","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // Rectangle
         shape = this.canvas.paper.path('M74.66660524419513 63.105025000000296L63.52548524419535 63.105025000000296L63.52548524419535 53.274625000000015L74.66660524419513 53.274625000000015Z');
-        shape.attr({"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"stroke":"none","stroke-width":0,"fill":"#000000","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M61.83734010744001,86.68742174722047Q61.35368655235516,84.32120856431811 65.01346100532419, 83.53730360715895L65.01346100532419,83.53730360715895Q68.67323545829322,82.75339864999978 71.90351318166176, 83.42978257348136L71.90351318166176,83.42978257348136Q75.13379090503031,84.10616649696294 75.32963807461283, 86.57990071354288L75.32963807461283,86.57990071354288Q75.52548524419535,89.05363493012283 71.81073687939511, 90.32220267578282L71.81073687939511,90.32220267578282Q68.09598851459486,91.59077042144281 65.20849108855987, 90.32220267578282L65.20849108855987,90.32220267578282Q62.32099366252487,89.05363493012283 61.83734010744001, 86.68742174722047L61.83734010744001,86.68742174722047');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M86.36671018903576,55.684774099766614Q84.64625958284705,59.295874999999796 80.64798934134767, 59.17825240038365L76.59667989113616,59.05906947361763Q72.59840964963678,58.941446874001485 72.35215719243024, 54.9490341038436L72.30185043740175,54.133426684209084Q72.05559798019522,50.1410139140512 74.47178476809222, 48.07721283353885L74.47178476809222,48.07721283353885Q76.88797155598922,46.0134117530265 79.84102925588559, 45.42600568051239L79.84102925588559,45.42600568051239Q82.79408695578195,44.838599607998276 86.76311827786273, 45.33537960391366L87.07330073811639,45.37420329383533Q91.04233206019717,45.87098328975071 89.32188145400846, 49.482084189983894L86.36671018903576,55.684774099766614');
-        shape.attr({"stroke":"#000000","stroke-width":2,"fill":"#6B8E23","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":2,"fill":"#6B8E23","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":5.5,"ry":5.5,"cx":69.02548524419535,"cy":78.10027500000024,"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"rx":5.5,"ry":5.5,"cx":69.02548524419535,"cy":78.10027500000024,"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4,"ry":4.5,"cx":73.94498524419532,"cy":68.82042500000034,"stroke":"none","stroke-width":0,"fill":"#B3003B","opacity":1});
+        shape.attr({"rx":4,"ry":4.5,"cx":73.94498524419532,"cy":68.82042500000034,"stroke":"none","stroke-width":0,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4,"ry":4.5,"cx":65.44498524419532,"cy":68.32042500000034,"stroke":"none","stroke-width":0,"fill":"#B3003B","opacity":1});
+        shape.attr({"rx":4,"ry":4.5,"cx":65.44498524419532,"cy":68.32042500000034,"stroke":"none","stroke-width":0,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // Rectangle
         shape = this.canvas.paper.path('M71.75309366252463,52.09992905405329Q70.12809366252486,55.84992905405397 66.1280936625235, 57.572902027026885L66.1280936625235,57.572902027026885Q62.12809366252213,59.295874999999796 59.784343662523725, 58.383712837837265L59.784343662523725,58.383712837837265Q57.440593662525316,57.471550675674735 55.846843662524634, 55.545874999999114L55.846843662524634,55.545874999999114Q54.25309366252395,53.620199324323494 52.81559366252418, 49.870199324323494L52.81559366252418,49.870199324323494Q51.37809366252441,46.120199324323494 57.25309366252418, 45.208037162161645L57.25309366252418,45.208037162161645Q63.12809366252395,44.295874999999796 68.25309366252418, 46.3229020270262L68.25309366252418,46.3229020270262Q73.3780936625244,48.34992905405261 71.75309366252463, 52.09992905405329L71.75309366252463,52.09992905405329');
-        shape.attr({"stroke":"#000000","stroke-width":2,"fill":"#6B8E23","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":2,"fill":"#6B8E23","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M53.94135162060866,77.0007223716168Q54.50460957869291,72.60027500000024 58.653986882563686, 74.61934036716593L58.653986882563686,74.61934036716593Q62.803364186434465,76.63840573433163 63.090728924479436, 80.51343261639295L63.090728924479436,80.51343261639295Q63.37809366252441,84.38845949845427 60.62425377443901, 84.99436724922725L60.62425377443901,84.99436724922725Q57.87041388635362,85.60027500000024 55.62425377443901, 83.5007223716168L55.62425377443901,83.5007223716168Q53.37809366252441,81.40116974323337 53.94135162060866, 77.0007223716168L53.94135162060866,77.0007223716168');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M75.8221261962019,79.51260111401803Q76.64308219204622,76.35769425824128 80.56460678126086, 75.28416780326393L80.56460678126086,75.28416780326393Q84.4861313704755,74.21064134828657 84.41333637441039, 75.11279984946896L84.41333637441039,75.11279984946896Q84.34054137834528,76.01495835065134 83.68301331127032, 80.06178392455286L83.68301331127032,80.06178392455286Q83.02548524419535,84.10860949845437 78.89725582138863, 84.88631594106755L78.89725582138863,84.88631594106755Q74.7690263985819,85.66402238368073 74.88509829946975, 84.16576517673775L74.88509829946975,84.16576517673775Q75.00117020035759,82.66750796979477 75.8221261962019, 79.51260111401803L75.8221261962019,79.51260111401803');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M78.0887432022796,66.2208723716169Q78.65200116036385,61.82042500000034 82.80137846423463, 63.839490367166036L82.80137846423463,63.839490367166036Q86.95075576810541,65.85855573433173 87.23812050615038, 69.73358261639305L87.23812050615038,69.73358261639305Q87.52548524419535,73.60860949845437 84.77164535610996, 74.21451724922736L84.77164535610996,74.21451724922736Q82.01780546802456,74.82042500000034 79.77164535610996, 72.7208723716169L79.77164535610996,72.7208723716169Q77.52548524419535,70.62131974323347 78.0887432022796, 66.2208723716169L78.0887432022796,66.2208723716169');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M72.00824320227957,58.94533856496514Q72.57150116036382,55.89887499999986 76.7208784642346, 57.29668948496078L76.7208784642346,57.29668948496078Q80.87025576810538,58.6945039699217 81.15762050615035, 61.37721488827174L81.15762050615035,61.37721488827174Q81.44498524419532,64.05992580662178 78.69114535610993, 64.47940040331082L78.69114535610993,64.47940040331082Q75.93730546802453,64.89887499999986 73.69114535610993, 63.44533856496514L73.69114535610993,63.44533856496514Q71.44498524419532,61.99180212993042 72.00824320227957, 58.94533856496514L72.00824320227957,58.94533856496514');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M54.990778400769386,63.159288069537524Q58.603463139014366,60.82042500000034 60.21880973824341, 62.667691675325386L60.21880973824341,62.667691675325386Q61.83415633747245,64.51495835065043 60.79008121375705, 68.86243163527183L60.79008121375705,68.86243163527183Q59.74600609004165,73.20990491989323 56.56266947235554, 73.9876113625071L56.56266947235554,73.9876113625071Q53.37933285466943,74.76531780512096 52.37871325859692, 70.13173447209783L52.37871325859692,70.13173447209783Q51.37809366252441,65.49815113907471 54.990778400769386, 63.159288069537524L54.990778400769386,63.159288069537524');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Rectangle
         shape = this.canvas.paper.path('M64.21922769910566,55.553454946707916Q67.72685314793716,54.89887499999986 69.71922769910566, 55.958627384555484L69.71922769910566,55.958627384555484Q71.71160225027415,57.01837976911111 70.20073069131286, 59.5124675160032L70.20073069131286,59.5124675160032Q68.68985913235156,62.00655526289529 64.1599098727404, 62.66746349624805L64.1599098727404,62.66746349624805Q59.62996061312924,63.3283717296008 60.1707814317017, 59.76820331150839L60.1707814317017,59.76820331150839Q60.711602250274154,56.20803489341597 64.21922769910566, 55.553454946707916L64.21922769910566,55.553454946707916');
-        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","opacity":1});
+        shape.attr({"stroke":"#000000","stroke-width":1,"fill":"#B3003B","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Line_shadow
         shape = this.canvas.paper.path('M81.5 51.5L80.5,52.5Q78.66341705219929,53.15600319199939 77.5, 54.5L76.5,56.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M81.5 51.5L80.5,52.5Q78.66341705219929,53.15600319199939 77.5, 54.5L76.5,56.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
         shape = this.canvas.paper.path('M65.5 55.5L64.5,53.5Q63.035178204195745,51.90872203999788 60.5, 50.5L58.5,49.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M65.5 55.5L64.5,53.5Q63.035178204195745,51.90872203999788 60.5, 50.5L58.5,49.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 
@@ -5313,7 +5313,7 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M33.671875 49.5L3.671875 49.5L3.671875 19.5L33.671875 19.5Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -5323,12 +5323,12 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
         
         // Line_shadow
         shape = this.canvas.paper.path('M6.5 41.5L13.5,41.5L13.5,28.5L24.5,28.5L24.5,41.5L30.5,41.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M6.5 41.5L13.5,41.5L13.5,28.5L24.5,28.5L24.5,41.5L30.5,41.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 
@@ -5555,7 +5555,7 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M1.6640625 18.60950000000048L31.6640625 18.60950000000048L31.6640625 48.60950000000048L1.6640625 48.60950000000048Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -5565,12 +5565,12 @@ var draw2d_circuit_pulse_50hz = draw2d.SetFigure.extend({
         
         // Line_shadow
         shape = this.canvas.paper.path('M3.5 41.5L10.5,41.5L10.5,30.5L22.5,30.5L22.5,40.5L28.5,40.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M3.5 41.5L10.5,41.5L10.5,30.5L22.5,30.5L22.5,40.5L28.5,40.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 
@@ -5802,27 +5802,27 @@ var draw2d_circuit_switch_HighLow = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":3,"ry":3.5,"cx":39,"cy":22.5,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"rx":3,"ry":3.5,"cx":39,"cy":22.5,"stroke":"none","stroke-width":0,"fill":"#000000","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // high_shadow
         shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"dasharray":null,"opacity":1});
         shape.data("name","high_shadow");
         
         // high
         shape = this.canvas.paper.path('M39.5 22.5L13.5,11.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"dasharray":null,"opacity":1});
         shape.data("name","high");
         
         // low_shadow
         shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"dasharray":null,"opacity":1});
         shape.data("name","low_shadow");
         
         // low
         shape = this.canvas.paper.path('M38.5 22.5L13.5,32.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"dasharray":null,"opacity":1});
         shape.data("name","low");
         
 
@@ -6085,42 +6085,42 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
         
         // rect01
         shape = this.canvas.paper.path('M20 20L0 20L0 0L20 0Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect01");
         
         // rect02
         shape = this.canvas.paper.path('M20 40L0 40L0 20L20 20Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect02");
         
         // rect03
         shape = this.canvas.paper.path('M20 60L0 60L0 40L20 40Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect03");
         
         // rect04
         shape = this.canvas.paper.path('M20 80L0 80L0 60L20 60Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect04");
         
         // rect05
         shape = this.canvas.paper.path('M20 100L0 100L0 80L20 80Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect05");
         
         // rect06
         shape = this.canvas.paper.path('M20 120L0 120L0 100L20 100Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect06");
         
         // rect07
         shape = this.canvas.paper.path('M20 140L0 140L0 120L20 120Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect07");
         
         // rect08
         shape = this.canvas.paper.path('M20 160L0 160L0 140L20 140Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect08");
         
 
@@ -6337,32 +6337,32 @@ var draw2d_circuit_switch_PushButton = draw2d.SetFigure.extend({
         
         // Label
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4.5,"ry":4,"cx":4.5,"cy":22.983999999999924,"stroke":"none","stroke-width":0,"fill":"#C21B7A","opacity":1});
+        shape.attr({"rx":4.5,"ry":4,"cx":4.5,"cy":22.983999999999924,"stroke":"none","stroke-width":0,"fill":"#C21B7A","dasharray":null,"opacity":1});
         shape.data("name","Label");
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4.5,"ry":4,"cx":27.5,"cy":23.483999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","opacity":1});
+        shape.attr({"rx":4.5,"ry":4,"cx":27.5,"cy":23.483999999999924,"stroke":"none","stroke-width":0,"fill":"#000000","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
         // low
         shape = this.canvas.paper.path('M26.125825000000077,8.735999999999876Q24.125825000000077,8.735999999999876 24.125825000000077, 6.735999999999876L24.125825000000077,2Q24.125825000000077,0 22.125825000000077, 0L11.125825000000077,0Q9.125825000000077,0 9.125825000000077, 2L9.125825000000077,6.735999999999876Q9.125825000000077,8.735999999999876 7.125825000000077, 8.735999999999876L2.2994250000001557,8.735999999999876Q0.2994250000001557,8.735999999999876 0.2994250000001557, 10.735999999999876L0.2994250000001557,11.735999999999876Q0.2994250000001557,13.735999999999876 2.2994250000001557, 13.735999999999876L30.299425000000156,13.735999999999876Q32.299425000000156,13.735999999999876 32.299425000000156, 11.735999999999876L32.299425000000156,10.735999999999876Q32.299425000000156,8.735999999999876 30.299425000000156, 8.735999999999876L26.125825000000077,8.735999999999876');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","low");
         
         // high
         shape = this.canvas.paper.path('M22.31382500000018,16.235999999999876Q20.50182500000028,16.235999999999876 21.26817190867477, 14.388647187036133L23.359478091325588,9.347352812963743Q24.125825000000077,7.5 22.125825000000077, 7.5L11.125825000000077,7.5Q9.125825000000077,7.5 9.62777239007231, 9.435987814424376L10.888877609927716,14.3000121855755Q11.39082499999995,16.235999999999876 9.39082499999995, 16.235999999999876L2.2994250000001557,16.235999999999876Q0.2994250000001557,16.235999999999876 0.2994250000001557, 18.235999999999876L0.2994250000001557,19.235999999999876Q0.2994250000001557,21.235999999999876 2.2994250000001557, 21.235999999999876L30.299425000000156,21.235999999999876Q32.299425000000156,21.235999999999876 32.299425000000156, 19.235999999999876L32.299425000000156,18.235999999999876Q32.299425000000156,16.235999999999876 30.299425000000156, 16.235999999999876L26.125825000000077,16.235999999999876Q24.125825000000077,16.235999999999876 22.31382500000018, 16.235999999999876L22.31382500000018,16.235999999999876');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","high");
         
         // Line_shadow
         shape = this.canvas.paper.path('M30.5 23.5L37.5,23.5L45.5,23.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M30.5 23.5L37.5,23.5L45.5,23.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":2,"dasharray":null,"opacity":1});
         shape.data("name","Line");
         
 

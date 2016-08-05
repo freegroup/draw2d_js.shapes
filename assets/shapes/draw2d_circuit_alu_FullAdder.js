@@ -65,7 +65,7 @@ var draw2d_circuit_alu_FullAdder = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,5.140100000000075Q0,4.140100000000075 1, 4.140100000000075L69,4.140100000000075Q70,4.140100000000075 70, 5.140100000000075L70,73.14010000000007Q70,74.14010000000007 69, 74.14010000000007L1,74.14010000000007Q0,74.14010000000007 0, 73.14010000000007L0,5.140100000000075');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label

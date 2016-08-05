@@ -47,7 +47,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,5.5Q0,2.5 3, 2.5L27,2.5Q30,2.5 30, 5.5L30,39.5Q30,42.5 27, 42.5L3,42.5Q0,42.5 0, 39.5L0,5.5');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -57,7 +57,7 @@ var draw2d_circuit_gate_NOT = draw2d.SetFigure.extend({
         
         // Circle
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":4,"ry":4,"cx":32,"cy":21.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","opacity":1});
+        shape.attr({"rx":4,"ry":4,"cx":32,"cy":21.5,"stroke":"#1B1B1B","stroke-width":1,"fill":"#FCFFFF","dasharray":null,"opacity":1});
         shape.data("name","Circle");
         
 
