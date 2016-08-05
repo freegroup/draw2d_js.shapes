@@ -14,10 +14,10 @@ the BrainBox as node program on your Raspberry via npm
 ## Install
 
 ```
-sudo npm install -g digitalstudio
+sudo npm install -g brainbox
 ````
 
-This takes a whiule on a raspbery B+ 2 but should success.
+This takes a while on a raspbery B+ 2 but should success.
 
 ## Start the server on the raspi
 after this you can start the BrainBox server on the raspberry
