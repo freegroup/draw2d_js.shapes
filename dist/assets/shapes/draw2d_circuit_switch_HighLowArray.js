@@ -83,42 +83,42 @@ var draw2d_circuit_switch_HighLowArray = draw2d.SetFigure.extend({
         
         // rect01
         shape = this.canvas.paper.path('M20 20L0 20L0 0L20 0Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect01");
         
         // rect02
         shape = this.canvas.paper.path('M20 40L0 40L0 20L20 20Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect02");
         
         // rect03
         shape = this.canvas.paper.path('M20 60L0 60L0 40L20 40Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect03");
         
         // rect04
         shape = this.canvas.paper.path('M20 80L0 80L0 60L20 60Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect04");
         
         // rect05
         shape = this.canvas.paper.path('M20 100L0 100L0 80L20 80Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect05");
         
         // rect06
         shape = this.canvas.paper.path('M20 120L0 120L0 100L20 100Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect06");
         
         // rect07
         shape = this.canvas.paper.path('M20 140L0 140L0 120L20 120Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect07");
         
         // rect08
         shape = this.canvas.paper.path('M20 160L0 160L0 140L20 140Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","rect08");
         
 

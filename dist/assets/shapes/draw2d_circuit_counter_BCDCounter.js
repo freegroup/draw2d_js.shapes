@@ -65,7 +65,7 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0,3Q0,0 3, 0L77,0Q80,0 80, 3L80,105Q80,108 77, 108L3,108Q0,108 0, 105L0,3');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
@@ -80,7 +80,7 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
         
         // Rectangle
         shape = this.canvas.paper.path('M0 11L18 19.74285714285361L0 28Z');
-        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","opacity":1});
+        shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
