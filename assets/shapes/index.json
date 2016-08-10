@@ -180,15 +180,6 @@
     ]
   },
   {
-    "name": "draw2d_circuit_pulse_Delay",
-    "tags": [
-      "draw2d",
-      "circuit",
-      "pulse",
-      "Delay"
-    ]
-  },
-  {
     "name": "draw2d_circuit_switch_HighLow",
     "tags": [
       "draw2d",
@@ -213,6 +204,15 @@
       "circuit",
       "switch",
       "PushButton"
+    ]
+  },
+  {
+    "name": "draw2d_circuit_timer_Delay",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "timer",
+      "Delay"
     ]
   }
 ]

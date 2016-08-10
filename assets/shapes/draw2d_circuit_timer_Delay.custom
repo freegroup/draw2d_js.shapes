@@ -6,7 +6,7 @@
  *
  *
  */
-draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
+draw2d_circuit_timer_Delay = draw2d_circuit_timer_Delay.extend({
 
     init: function(attr, setter, getter){
         var _this = this;
