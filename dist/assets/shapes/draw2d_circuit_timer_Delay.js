@@ -46,68 +46,73 @@ var draw2d_circuit_timer_Delay = draw2d.SetFigure.extend({
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M84 69L0 69L0 0L84 0Z');
+        shape = this.canvas.paper.path('M84,67Q84,69 82, 69L2,69Q0,69 0, 67L0,2Q0,0 2, 0L82,0Q84,0 84, 2L84,67');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
+        // Label
+        shape = this.canvas.paper.text(0,0,'Delay');
+        shape.attr({"x":36,"y":37.5,"text-anchor":"start","text":"Delay","font-family":"\"Arial\"","font-size":11,"stroke":"none","fill":"#D9D9D9","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
+        
+        // pulseline_top_shadow
+        shape = this.canvas.paper.path('M4.5 19.5L9.5,19.5Q11.309437499999149,19.776879999997618 11.5, 17.5L11.5,8.5Q11.309437499998694,6.006239999997433 13.5, 6.5L39.5,6.5Q41.27567749999935,6.333919999997761 41.5, 8.5L41.5,16.5Q41.27567749999935,18.992499999997563 43.5, 19.5L75.5,19.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+        shape.data("name","pulseline_top_shadow");
+        
+        // pulseline_top
+        shape = this.canvas.paper.path('M4.5 19.5L9.5,19.5Q11.309437499999149,19.776879999997618 11.5, 17.5L11.5,8.5Q11.309437499998694,6.006239999997433 13.5, 6.5L39.5,6.5Q41.27567749999935,6.333919999997761 41.5, 8.5L41.5,16.5Q41.27567749999935,18.992499999997563 43.5, 19.5L75.5,19.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+        shape.data("name","pulseline_top");
+        
+        // pulseline_bottom_shadow
+        shape = this.canvas.paper.path('M3.5 59.5L33.5,59.5Q35.642557499997565,59.19479999999612 35.5, 57.5L35.5,48.5Q35.642557499997565,46.40719999999601 37.5, 46.5L63.5,46.5Q65.60879749999776,46.07951999999614 65.5, 48.5L65.5,56.5Q65.60879749999776,58.73809999999594 67.5, 58.5L78.5,58.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+        shape.data("name","pulseline_bottom_shadow");
+        
+        // pulseline_bottom
+        shape = this.canvas.paper.path('M3.5 59.5L33.5,59.5Q35.642557499997565,59.19479999999612 35.5, 57.5L35.5,48.5Q35.642557499997565,46.40719999999601 37.5, 46.5L63.5,46.5Q65.60879749999776,46.07951999999614 65.5, 48.5L65.5,56.5Q65.60879749999776,58.73809999999594 67.5, 58.5L78.5,58.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+        shape.data("name","pulseline_bottom");
+        
         // Line_shadow
-        shape = this.canvas.paper.path('M4.5 19.5L11.5,19.5L11.5,6.5L41.5,6.5L41.5,18.5L75.5,19.5');
+        shape = this.canvas.paper.path('M11.5 33.5L11.5,42.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M4.5 19.5L11.5,19.5L11.5,6.5L41.5,6.5L41.5,18.5L75.5,19.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+        shape = this.canvas.paper.path('M11.5 33.5L11.5,42.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M3.5 59.5L35.5,59.5L35.5,46.5L65.5,46.5L65.5,58.5L78.5,58.5');
+        shape = this.canvas.paper.path('M33.5 38.5L30.5,42.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M3.5 59.5L35.5,59.5L35.5,46.5L65.5,46.5L65.5,58.5L78.5,58.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"stroke-dasharray":null,"opacity":1});
+        shape = this.canvas.paper.path('M33.5 38.5L30.5,42.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M11.5 30.5L11.5,46.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"stroke-dasharray":null,"opacity":1});
+        shape = this.canvas.paper.path('M29.5 34.5L33.5,37.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M11.5 30.5L11.5,46.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":2,"stroke-dasharray":null,"opacity":1});
-        shape.data("name","Line");
-        
-        // Line_shadow
-        shape = this.canvas.paper.path('M32.5 38.5L28.5,45.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"stroke-dasharray":null,"opacity":1});
-        shape.data("name","Line_shadow");
-        
-        // Line
-        shape = this.canvas.paper.path('M32.5 38.5L28.5,45.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":2,"stroke-dasharray":null,"opacity":1});
+        shape = this.canvas.paper.path('M29.5 34.5L33.5,37.5');
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
         shape = this.canvas.paper.path('M11.5 38.5L33.5,38.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"stroke-dasharray":null,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
         shape = this.canvas.paper.path('M11.5 38.5L33.5,38.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":2,"stroke-dasharray":null,"opacity":1});
-        shape.data("name","Line");
-        
-        // Line_shadow
-        shape = this.canvas.paper.path('M25.5 31.5L32.5,37.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"stroke-dasharray":null,"opacity":1});
-        shape.data("name","Line_shadow");
-        
-        // Line
-        shape = this.canvas.paper.path('M25.5 31.5L32.5,37.5');
-        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":2,"stroke-dasharray":null,"opacity":1});
+        shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
@@ -295,14 +300,13 @@ draw2d_circuit_timer_Delay = draw2d_circuit_timer_Delay.extend({
         });
         this.attr({
             resizeable:false,
-            "userData.delay":1500
+            "userData.delay":500
         });
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
     },
     
     /**
-     * called every '10 [ms]' from the application. do a little bit calculation
-     * to change the state every 100ms (10Hz)
+     * called every '10 [ms]' from the application.
      * 
      **/
     calculate:function()
@@ -330,7 +334,7 @@ draw2d_circuit_timer_Delay = draw2d_circuit_timer_Delay.extend({
             property:{
                 type: "integer",
                 min: 10,
-                max: 100,
+                max: 15000,
                 increment:10
         }
         

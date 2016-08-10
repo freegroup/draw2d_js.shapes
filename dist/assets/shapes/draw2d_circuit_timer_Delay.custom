@@ -22,14 +22,13 @@ draw2d_circuit_timer_Delay = draw2d_circuit_timer_Delay.extend({
         });
         this.attr({
             resizeable:false,
-            "userData.delay":1500
+            "userData.delay":500
         });
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
     },
     
     /**
-     * called every '10 [ms]' from the application. do a little bit calculation
-     * to change the state every 100ms (10Hz)
+     * called every '10 [ms]' from the application.
      * 
      **/
     calculate:function()
@@ -57,7 +56,7 @@ draw2d_circuit_timer_Delay = draw2d_circuit_timer_Delay.extend({
             property:{
                 type: "integer",
                 min: 10,
-                max: 100,
+                max: 15000,
                 increment:10
         }
         
