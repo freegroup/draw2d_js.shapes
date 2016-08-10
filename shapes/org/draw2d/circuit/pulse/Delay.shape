@@ -60,8 +60,8 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "3df4507b-1655-c9ae-1df0-94a0892e62df",
-    "x": 3884.53795625,
-    "y": 3957.11393,
+    "x": 3995.67795625,
+    "y": 3989.3932925,
     "width": 28.328125,
     "height": 21.203125,
     "alpha": 1,
@@ -79,8 +79,8 @@
     "text": "delay",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 16,
-    "fontColor": "#FF0569",
+    "fontSize": 13,
+    "fontColor": "#D4D4D4",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
     "filters": [
