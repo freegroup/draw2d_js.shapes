@@ -241,7 +241,24 @@ draw2d_circuit_pulse_10hz = draw2d_circuit_pulse_10hz.extend({
     
     onStop:function()
     {
+    },
+
+    getParameterSettings: function()
+    {
+        return [
+        {
+            name:"interval",
+            label:"Interval",
+            property:{
+                type: "integer",
+                min: 5,
+                max: 100,
+                increment:1
+        }
+        
+        }];
     }
+
 
 });
 draw2d_circuit_pulse_10hz.github="./shapes/org/draw2d/circuit/pulse/10hz.shape";
