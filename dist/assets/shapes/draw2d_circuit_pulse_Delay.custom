@@ -9,11 +9,18 @@
 draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
 
     init: function(attr, setter, getter){
+        var _this = this;
+        
         this._super(attr, setter, getter);
 
-this.on("changed:userData.delay",function(){
-    console.log("change....");
-})
+        this.on("change:userData.delay",function(emitter, event){
+            var value = event.value;
+            _this.delayedValues = []; 
+            console.log(event);
+            _this.delayedValues.length = parseInt(parseInt(value)/10);
+            _this.pointer=0;
+            
+        });
         this.attr({
             resizeable:false,
             "userData.delay":100
@@ -29,12 +36,9 @@ this.on("changed:userData.delay",function(){
      **/
     calculate:function()
     {
-       // 10 ticks every 10ms => 10Hz    
-       this.delay = (this.delay-10); 
-       if(this.delay<=0){
-           this.delay = 500;
-           this.getOutputPort(0).setValue(this.getInputPort(0).getValue());
-       }
+       this.getOutputPort(0).setValue(this.delayedValues[this.pointer]);
+       this.delayedValues[this.pointer] = this.getInputPort(0).getValue();
+       this.pointer = (this.pointer+1)%this.delayedValues.length; 
     },
     
     onStart:function()
