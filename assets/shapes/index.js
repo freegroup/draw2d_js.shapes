@@ -5862,12 +5862,18 @@ var draw2d_circuit_pulse_Delay = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:33.671875,height:49.5},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:34.362537500000144,height:34.27649999999994},attr), setter, getter);
      var port;
      // Port
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(104.45475638051043, 69.67272727272693));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(104.36521895392619, 56.20322961795926));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
+     port.setName("Port");
+     port.setMaxFanOut(20);
+     // Port
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(14.550729846420623, 56.20322961795926));
+     port.setConnectionDirection(3);
+     port.setBackgroundColor("#37B1DE");
      port.setName("Port");
      port.setMaxFanOut(20);
      this.persistPorts=false;
@@ -5876,8 +5882,8 @@ var draw2d_circuit_pulse_Delay = draw2d.SetFigure.extend({
    createShapeElement : function()
    {
       var shape = this._super();
-      this.originalWidth = 33.671875;
-      this.originalHeight= 49.5;
+      this.originalWidth = 34.362537500000144;
+      this.originalHeight= 34.27649999999994;
       return shape;
    },
 
@@ -5886,27 +5892,27 @@ var draw2d_circuit_pulse_Delay = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L33.671875,0 L33.671875,49.5 L0,49.5");
+        shape = this.canvas.paper.path("M0,0 L34.362537500000144,0 L34.362537500000144,34.27649999999994 L0,34.27649999999994");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M33.671875 49.5L3.671875 49.5L3.671875 19.5L33.671875 19.5Z');
+        shape = this.canvas.paper.path('M34.362537500000144 34.27649999999994L4.362537500000144 34.27649999999994L4.362537500000144 4.276499999999942L34.362537500000144 4.276499999999942Z');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // Label
-        shape = this.canvas.paper.text(0,0,'10Hz');
-        shape.attr({"x":4,"y":11,"text-anchor":"start","text":"10Hz","font-family":"\"Arial\"","font-size":11,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape = this.canvas.paper.text(0,0,'T');
+        shape.attr({"x":4,"y":14,"text-anchor":"start","text":"T","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#080808","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M6.5 41.5L13.5,41.5L13.5,28.5L24.5,28.5L24.5,41.5L30.5,41.5');
+        shape = this.canvas.paper.path('M6.5 26.5L14.5,26.5L14.5,13.5L19.5,13.5L25.5,13.5L25.5,25.5L31.5,25.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M6.5 41.5L13.5,41.5L13.5,28.5L24.5,28.5L24.5,41.5L30.5,41.5');
+        shape = this.canvas.paper.path('M6.5 26.5L14.5,26.5L14.5,13.5L19.5,13.5L25.5,13.5L25.5,25.5L31.5,25.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
@@ -6064,10 +6070,15 @@ draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
     init: function(attr, setter, getter){
         this._super(attr, setter, getter);
 
-        this.attr({resizeable:false});
+this.on("changed:userData.delay",function(){
+    console.log("change....");
+})
+        this.attr({
+            resizeable:false,
+            "userData.delay":100
+        });
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
-
-        this.currentTimer=0;
+        this.delay=500;
     },
     
     /**
@@ -6078,10 +6089,10 @@ draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
     calculate:function()
     {
        // 10 ticks every 10ms => 10Hz    
-       this.currentTimer = (this.currentTimer+1)%10; 
-       if(this.currentTimer===0){
-           this.value = !this.value;
-           this.getOutputPort(0).setValue(this.value);
+       this.delay = (this.delay-10); 
+       if(this.delay<=0){
+           this.delay = 500;
+           this.getOutputPort(0).setValue(this.getInputPort(0).getValue());
        }
     },
     
@@ -6092,6 +6103,22 @@ draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
     
     onStop:function()
     {
+    },
+
+    getParameterSettings: function()
+    {
+        return [
+        {
+            name:"delay",
+            label:"Delay [ms]",
+            property:{
+                type: "integer",
+                min: 10,
+                max: 100,
+                increment:10
+        }
+        
+        }];
     }
 
 });

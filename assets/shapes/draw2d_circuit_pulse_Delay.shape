@@ -1,46 +1,5 @@
 [
   {
-    "type": "shape_designer.figure.ExtPort",
-    "id": "f4d5683a-7c42-8771-5df4-e4e9da5b8b46",
-    "x": 4013.3359375,
-    "y": 4004.738,
-    "width": 10,
-    "height": 10,
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n\n        this.currentTimer=0;\n    },\n    \n    /**\n     * called every '10 [ms]' from the application. do a little bit calculation\n     * to change the state every 100ms (10Hz)\n     * \n     **/\n    calculate:function()\n    {\n       // 10 ticks every 10ms => 10Hz    \n       this.currentTimer = (this.currentTimer+1)%10; \n       if(this.currentTimer===0){\n           this.value = !this.value;\n           this.getOutputPort(0).setValue(this.value);\n       }\n    },\n    \n    onStart:function()\n    {\n        this.currentTimer=0;\n    },\n    \n    onStop:function()\n    {\n    }\n\n});",
-      "name": "Port",
-      "markdown": "# Clock Signal\n\nIn electronics and especially synchronous digital circuits, \na clock signal is a particular type of signal that \noscillates between a `high` and a `low` state and is \nutilized like a metronome to coordinate actions \nof digital circuits.\n\nThe hertz (symbol `Hz`) is the unit of frequency in the \nInternational System of Units (SI) and is defined as \none cycle per second. \n\nIt is named for Heinrich Rudolf Hertz, the first person \nto provide conclusive proof of the existence of \nelectromagnetic waves.",
-      "type": "Output",
-      "direction": 1
-    },
-    "cssClass": "shape_designer_figure_ExtPort",
-    "ports": [],
-    "bgColor": "#1C9BAB",
-    "color": "#1B1B1B",
-    "stroke": 1,
-    "dasharray": null,
-    "filters": [
-      {
-        "name": "shape_designer.filter.PositionFilter"
-      },
-      {
-        "name": "shape_designer.filter.FanoutFilter"
-      },
-      {
-        "name": "shape_designer.filter.PortDirectionFilter"
-      },
-      {
-        "name": "shape_designer.filter.PortTypeFilter"
-      },
-      {
-        "name": "shape_designer.filter.FillColorFilter"
-      }
-    ]
-  },
-  {
     "type": "shape_designer.figure.PolyRect",
     "id": "1b71bcf4-939c-5650-8a7e-68514e9d2149",
     "x": 3986.8359375,
@@ -50,7 +9,12 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Rectangle"
+      "baseClass": "draw2d.SetFigure",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\nthis.on(\"changed:userData.delay\",function(){\n    console.log(\"change....\");\n})\n        this.attr({\n            resizeable:false,\n            \"userData.delay\":100\n        });\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n        this.delay=500;\n    },\n    \n    /**\n     * called every '10 [ms]' from the application. do a little bit calculation\n     * to change the state every 100ms (10Hz)\n     * \n     **/\n    calculate:function()\n    {\n       // 10 ticks every 10ms => 10Hz    \n       this.delay = (this.delay-10); \n       if(this.delay<=0){\n           this.delay = 500;\n           this.getOutputPort(0).setValue(this.getInputPort(0).getValue());\n       }\n    },\n    \n    onStart:function()\n    {\n        this.currentTimer=0;\n    },\n    \n    onStop:function()\n    {\n    },\n\n    getParameterSettings: function()\n    {\n        return [\n        {\n            name:\"delay\",\n            label:\"Delay [ms]\",\n            property:{\n                type: \"integer\",\n                min: 10,\n                max: 100,\n                increment:10\n        }\n        \n        }];\n    }\n\n});",
+      "name": "Rectangle",
+      "markdown": "# Clock Signal\n\nIn electronics and especially synchronous digital circuits, \na clock signal is a particular type of signal that \noscillates between a `high` and a `low` state and is \nutilized like a metronome to coordinate actions \nof digital circuits.\n\nThe hertz (symbol `Hz`) is the unit of frequency in the \nInternational System of Units (SI) and is defined as \none cycle per second. \n\nIt is named for Heinrich Rudolf Hertz, the first person \nto provide conclusive proof of the existence of \nelectromagnetic waves.",
+      "type": "Output",
+      "direction": 1
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -95,11 +59,11 @@
   },
   {
     "type": "shape_designer.figure.ExtLabel",
-    "id": "d89e03ee-73ee-6bac-6cb9-059a454f2cb4",
-    "x": 3983.1640625,
-    "y": 3975.25,
-    "width": 32.35000038146973,
-    "height": 21,
+    "id": "3df4507b-1655-c9ae-1df0-94a0892e62df",
+    "x": 3982.4734,
+    "y": 3990.4735,
+    "width": 28.328125,
+    "height": 21.203125,
     "alpha": 1,
     "angle": 0,
     "userData": {
@@ -112,10 +76,10 @@
     "stroke": 0,
     "radius": 0,
     "dasharray": null,
-    "text": "10Hz",
+    "text": "T",
     "outlineStroke": 0,
     "outlineColor": "none",
-    "fontSize": 11,
+    "fontSize": 16,
     "fontColor": "#080808",
     "fontFamily": null,
     "editor": "draw2d.ui.LabelInplaceEditor",
@@ -128,6 +92,83 @@
       },
       {
         "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "f4d5683a-7c42-8771-5df4-e4e9da5b8b46",
+    "x": 4013.3359375,
+    "y": 4004.738,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "baseClass": "draw2d.SetFigure",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n\n        this.currentTimer=0;\n    },\n    \n    /**\n     * called every '10 [ms]' from the application. do a little bit calculation\n     * to change the state every 100ms (10Hz)\n     * \n     **/\n    calculate:function()\n    {\n       // 10 ticks every 10ms => 10Hz    \n       this.currentTimer = (this.currentTimer+1)%10; \n       if(this.currentTimer===0){\n           this.value = !this.value;\n           this.getOutputPort(0).setValue(this.value);\n       }\n    },\n    \n    onStart:function()\n    {\n        this.currentTimer=0;\n    },\n    \n    onStop:function()\n    {\n    },\n\n    getParameterSettings: function()\n    {\n        return [\n        {\n            name:\"delay\",\n            label:\"Delay [ms]\",\n            property:{\n                type: \"integer\",\n                min: 10,\n                max: 100,\n                increment:10\n        }\n        \n        }];\n    }\n\n});",
+      "name": "Port",
+      "markdown": "# Clock Signal\n\nIn electronics and especially synchronous digital circuits, \na clock signal is a particular type of signal that \noscillates between a `high` and a `low` state and is \nutilized like a metronome to coordinate actions \nof digital circuits.\n\nThe hertz (symbol `Hz`) is the unit of frequency in the \nInternational System of Units (SI) and is defined as \none cycle per second. \n\nIt is named for Heinrich Rudolf Hertz, the first person \nto provide conclusive proof of the existence of \nelectromagnetic waves.",
+      "type": "Output",
+      "direction": 1
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#1C9BAB",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FillColorFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtPort",
+    "id": "3dce50be-cb62-93ee-6ae9-8a903ea77fae",
+    "x": 3982.4734,
+    "y": 4004.738,
+    "width": 10,
+    "height": 10,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Port",
+      "type": "Input",
+      "direction": 3,
+      "fanout": 20
+    },
+    "cssClass": "shape_designer_figure_ExtPort",
+    "ports": [],
+    "bgColor": "#37B1DE",
+    "color": "#1B1B1B",
+    "stroke": 1,
+    "dasharray": null,
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FanoutFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortDirectionFilter"
+      },
+      {
+        "name": "shape_designer.filter.PortTypeFilter"
       }
     ]
   },
@@ -156,6 +197,10 @@
       },
       {
         "x": 3996.5908375,
+        "y": 4004.1348
+      },
+      {
+        "x": 4002.0712375,
         "y": 4004.1348
       },
       {

@@ -11,10 +11,15 @@ draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
     init: function(attr, setter, getter){
         this._super(attr, setter, getter);
 
-        this.attr({resizeable:false});
+this.on("changed:userData.delay",function(){
+    console.log("change....");
+})
+        this.attr({
+            resizeable:false,
+            "userData.delay":100
+        });
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
-
-        this.currentTimer=0;
+        this.delay=500;
     },
     
     /**
@@ -25,10 +30,10 @@ draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
     calculate:function()
     {
        // 10 ticks every 10ms => 10Hz    
-       this.currentTimer = (this.currentTimer+1)%10; 
-       if(this.currentTimer===0){
-           this.value = !this.value;
-           this.getOutputPort(0).setValue(this.value);
+       this.delay = (this.delay-10); 
+       if(this.delay<=0){
+           this.delay = 500;
+           this.getOutputPort(0).setValue(this.getInputPort(0).getValue());
        }
     },
     
@@ -39,6 +44,22 @@ draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
     
     onStop:function()
     {
+    },
+
+    getParameterSettings: function()
+    {
+        return [
+        {
+            name:"delay",
+            label:"Delay [ms]",
+            property:{
+                type: "integer",
+                min: 10,
+                max: 100,
+                increment:10
+        }
+        
+        }];
     }
 
 });
