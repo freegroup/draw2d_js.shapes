@@ -21,7 +21,7 @@
     "bgColor": "#FFFFFF",
     "color": "#303030",
     "stroke": 1,
-    "radius": 0,
+    "radius": 2,
     "dasharray": null,
     "vertices": [
       {
@@ -54,6 +54,9 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -101,7 +104,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "3dce50be-cb62-93ee-6ae9-8a903ea77fae",
-    "x": 3949,
+    "x": 3948.5,
     "y": 3996.45952,
     "width": 10,
     "height": 10,
@@ -140,7 +143,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Line"
+      "name": "pulseline_top"
     },
     "cssClass": "shape_designer_figure_ExtLine",
     "stroke": 1,
@@ -175,10 +178,13 @@
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
-    "radius": "",
+    "radius": 2,
     "filters": [
       {
         "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -188,7 +194,7 @@
     "alpha": 1,
     "angle": 0,
     "userData": {
-      "name": "Line"
+      "name": "pulseline_bottom"
     },
     "cssClass": "shape_designer_figure_ExtLine",
     "stroke": 1,
@@ -223,10 +229,13 @@
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
-    "radius": "",
+    "radius": 2,
     "filters": [
       {
         "name": "shape_designer.filter.StrokeFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
@@ -239,7 +248,7 @@
       "name": "Line"
     },
     "cssClass": "shape_designer_figure_ExtLine",
-    "stroke": 2,
+    "stroke": 1,
     "color": "#FF0569",
     "outlineStroke": 0,
     "outlineColor": "none",
@@ -247,11 +256,11 @@
     "vertex": [
       {
         "x": 3969.0862287500013,
-        "y": 3995.718550000001
+        "y": 3999.3450139999954
       },
       {
         "x": 3969.4139087500025,
-        "y": 4012.4302300000027
+        "y": 4007.9302300000027
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
@@ -271,51 +280,19 @@
       "name": "Line"
     },
     "cssClass": "shape_designer_figure_ExtLine",
-    "stroke": 2,
+    "stroke": 1,
     "color": "#FF0569",
     "outlineStroke": 0,
     "outlineColor": "none",
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 3990.7526287500023,
-        "y": 4004.00095
+        "x": 3991.2526287500023,
+        "y": 4003.50095
       },
       {
-        "x": 3986.574708750001,
-        "y": 4011.373749999998
-      }
-    ],
-    "router": "draw2d.layout.connection.VertexRouter",
-    "radius": "",
-    "filters": [
-      {
-        "name": "shape_designer.filter.StrokeFilter"
-      }
-    ]
-  },
-  {
-    "type": "shape_designer.figure.ExtLine",
-    "id": "2c8a2e58-a4a1-1a9f-3db4-173a42aa8d6f",
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "name": "Line"
-    },
-    "cssClass": "shape_designer_figure_ExtLine",
-    "stroke": 2,
-    "color": "#FF0569",
-    "outlineStroke": 0,
-    "outlineColor": "none",
-    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
-    "vertex": [
-      {
-        "x": 3969.1710287500023,
-        "y": 4003.6676700000035
-      },
-      {
-        "x": 3991.1255887500006,
-        "y": 4003.995350000001
+        "x": 3988.3854287500003,
+        "y": 4007.7280220000002
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
@@ -335,19 +312,51 @@
       "name": "Line"
     },
     "cssClass": "shape_designer_figure_ExtLine",
-    "stroke": 2,
+    "stroke": 1,
     "color": "#FF0569",
     "outlineStroke": 0,
     "outlineColor": "none",
     "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
     "vertex": [
       {
-        "x": 3983.6934287500035,
-        "y": 3997.13935
+        "x": 3987.6013007500014,
+        "y": 3999.998645999998
       },
       {
-        "x": 3990.574708750001,
-        "y": 4002.873749999998
+        "x": 3991.074708750001,
+        "y": 4003.373749999998
+      }
+    ],
+    "router": "draw2d.layout.connection.VertexRouter",
+    "radius": "",
+    "filters": [
+      {
+        "name": "shape_designer.filter.StrokeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLine",
+    "id": "2c8a2e58-a4a1-1a9f-3db4-173a42aa8d6f",
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Line"
+    },
+    "cssClass": "shape_designer_figure_ExtLine",
+    "stroke": 1,
+    "color": "#FF0569",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "policy": "draw2d.policy.line.VertexSelectionFeedbackPolicy",
+    "vertex": [
+      {
+        "x": 3969.1710287500023,
+        "y": 4003.6676700000035
+      },
+      {
+        "x": 3991.1255887500006,
+        "y": 4003.995350000001
       }
     ],
     "router": "draw2d.layout.connection.VertexRouter",
