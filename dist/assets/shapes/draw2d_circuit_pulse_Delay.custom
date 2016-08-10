@@ -6,7 +6,7 @@
  *
  *
  */
-draw2d_circuit_pulse_10hz = draw2d_circuit_pulse_10hz.extend({
+draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
 
     init: function(attr, setter, getter){
         this._super(attr, setter, getter);

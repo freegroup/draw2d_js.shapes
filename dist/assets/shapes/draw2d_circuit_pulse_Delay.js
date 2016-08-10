@@ -5,9 +5,9 @@
 // Go to the Designer http://www.draw2d.org               
 // to design your own shape or download user generated    
 //                                                        
-var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({            
+var draw2d_circuit_pulse_Delay = draw2d.SetFigure.extend({            
 
-   NAME: "draw2d_circuit_pulse_10hz",
+   NAME: "draw2d_circuit_pulse_Delay",
 
    init:function(attr, setter, getter)
    {
@@ -208,7 +208,7 @@ var draw2d_circuit_pulse_10hz = draw2d.SetFigure.extend({
  *
  *
  */
-draw2d_circuit_pulse_10hz = draw2d_circuit_pulse_10hz.extend({
+draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
 
     init: function(attr, setter, getter){
         this._super(attr, setter, getter);
@@ -244,4 +244,4 @@ draw2d_circuit_pulse_10hz = draw2d_circuit_pulse_10hz.extend({
     }
 
 });
-draw2d_circuit_pulse_10hz.github="./shapes/org/draw2d/circuit/pulse/10hz.shape";
+draw2d_circuit_pulse_Delay.github="./shapes/org/draw2d/circuit/pulse/Delay.shape";
