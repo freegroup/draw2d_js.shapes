@@ -16,17 +16,15 @@ draw2d_circuit_pulse_Delay = draw2d_circuit_pulse_Delay.extend({
         this.on("change:userData.delay",function(emitter, event){
             var value = event.value;
             _this.delayedValues = []; 
-            console.log(event);
             _this.delayedValues.length = parseInt(parseInt(value)/10);
             _this.pointer=0;
             
         });
         this.attr({
             resizeable:false,
-            "userData.delay":100
+            "userData.delay":1500
         });
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
-        this.delay=500;
     },
     
     /**
