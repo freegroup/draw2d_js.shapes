@@ -138,6 +138,44 @@
     ]
   },
   {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "0203a429-2c1f-4d7e-3a41-61aad199cb61",
+    "x": 3990,
+    "y": 3992,
+    "width": 28.328125,
+    "height": 21.359375,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "Delay",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 11,
+    "fontColor": "#D9D9D9",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
+      }
+    ]
+  },
+  {
     "type": "shape_designer.figure.ExtLine",
     "id": "d3f4301d-7c4a-ed21-8251-50473ab0c628",
     "alpha": 1,
