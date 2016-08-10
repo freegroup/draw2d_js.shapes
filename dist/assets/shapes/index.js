@@ -5864,17 +5864,17 @@ var draw2d_circuit_pulse_Delay = draw2d.SetFigure.extend({
    {
      this._super( $.extend({stroke:0, bgColor:null, width:84,height:69},attr), setter, getter);
      var port;
-     // Port
+     // output_0
      port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(100.59523809523809, 52.11524637681143));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#1C9BAB");
-     port.setName("Port");
+     port.setName("output_0");
      port.setMaxFanOut(20);
-     // Port
+     // input_0
      port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(5.9523809523809526, 52.11524637681143));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
-     port.setName("Port");
+     port.setName("input_0");
      port.setMaxFanOut(20);
      this.persistPorts=false;
    },
@@ -5901,11 +5901,6 @@ var draw2d_circuit_pulse_Delay = draw2d.SetFigure.extend({
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
-        // Label
-        shape = this.canvas.paper.text(0,0,'delay');
-        shape.attr({"x":40.265625,"y":35.2265625,"text-anchor":"start","text":"delay","font-family":"\"Arial\"","font-size":13,"stroke":"none","fill":"#D4D4D4","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
-        shape.data("name","Label");
-        
         // Line_shadow
         shape = this.canvas.paper.path('M4.5 19.5L11.5,19.5L11.5,6.5L41.5,6.5L41.5,18.5L75.5,19.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
@@ -5917,12 +5912,12 @@ var draw2d_circuit_pulse_Delay = draw2d.SetFigure.extend({
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M2.5 59.5L35.5,59.5L35.5,46.5L65.5,46.5L65.5,58.5L78.5,58.5');
+        shape = this.canvas.paper.path('M3.5 59.5L35.5,59.5L35.5,46.5L65.5,46.5L65.5,58.5L78.5,58.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M2.5 59.5L35.5,59.5L35.5,46.5L65.5,46.5L65.5,58.5L78.5,58.5');
+        shape = this.canvas.paper.path('M3.5 59.5L35.5,59.5L35.5,46.5L65.5,46.5L65.5,58.5L78.5,58.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#000000","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
@@ -5937,52 +5932,52 @@ var draw2d_circuit_pulse_Delay = draw2d.SetFigure.extend({
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M35.5 38.5L31.5,45.5');
+        shape = this.canvas.paper.path('M32.5 38.5L28.5,45.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M35.5 38.5L31.5,45.5');
+        shape = this.canvas.paper.path('M32.5 38.5L28.5,45.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":2,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M11.5 38.5L34.5,38.5');
+        shape = this.canvas.paper.path('M11.5 38.5L33.5,38.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M11.5 38.5L34.5,38.5');
+        shape = this.canvas.paper.path('M11.5 38.5L33.5,38.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":2,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M28.5 31.5L35.5,37.5');
+        shape = this.canvas.paper.path('M25.5 31.5L32.5,37.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":2,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M28.5 31.5L35.5,37.5');
+        shape = this.canvas.paper.path('M25.5 31.5L32.5,37.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#FF0569","stroke-width":2,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M10.5 20.5L10.5,28.5');
+        shape = this.canvas.paper.path('M10.5 20.5L10.5,48.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M10.5 20.5L10.5,28.5');
+        shape = this.canvas.paper.path('M10.5 20.5L10.5,48.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#A8A8A8","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
         // Line_shadow
-        shape = this.canvas.paper.path('M35.5 45.5L36.5,27.5');
+        shape = this.canvas.paper.path('M34.5 57.5L34.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"none","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line_shadow");
         
         // Line
-        shape = this.canvas.paper.path('M35.5 45.5L36.5,27.5');
+        shape = this.canvas.paper.path('M34.5 57.5L34.5,27.5');
         shape.attr({"stroke-linecap":"round","stroke-linejoin":"round","stroke":"#C9C9C9","stroke-width":1,"stroke-dasharray":null,"opacity":1});
         shape.data("name","Line");
         
