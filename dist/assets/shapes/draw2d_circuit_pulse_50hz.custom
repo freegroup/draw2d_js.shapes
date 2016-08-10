@@ -14,12 +14,12 @@ draw2d_circuit_pulse_50hz = draw2d_circuit_pulse_50hz.extend({
         this.attr({resizeable:false});
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
         
-         this.currentTimer=0;
+        this.currentTimer=0;
     },
     
     calculate:function()
     {
-      // 2 ticks every 10ms => 50Hz    
+      // 2 ticks => 50Hz    
        this.currentTimer = (this.currentTimer+1)%2; 
        if(this.currentTimer===0){
            this.value = !this.value;
