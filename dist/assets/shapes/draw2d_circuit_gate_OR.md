@@ -14,7 +14,7 @@ inputs to the gate are `High`**
 | INPUT 1   | INPUT   |  OUTPUT    |
 |:---------:|:-------:|:----------:|
 | Low       | Low     |  Low       |
-| `High`      | Low     |  Low       |
-| Low       | `High`    |  Low       |
+| `High`      | Low     |  `High`       |
+| Low       | `High`    |  `High`       |
 | `High`      | `High`    |  `High`    |
 
