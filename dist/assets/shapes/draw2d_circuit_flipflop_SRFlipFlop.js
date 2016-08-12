@@ -26,13 +26,13 @@ var draw2d_circuit_flipflop_SRFlipFlop = draw2d.SetFigure.extend({
      port.setName("output_q_not");
      port.setMaxFanOut(20);
      // input_s
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(12.5, 16.919013694029815));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-3.717999999996664, 16.919013694029815));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_s");
      port.setMaxFanOut(1);
      // input_r
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(12.5, 81.5763777993222));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-5.052799999996296, 81.5763777993222));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_r");

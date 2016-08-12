@@ -26,7 +26,7 @@ var draw2d_circuit_flipflop_TFlipFlop = draw2d.SetFigure.extend({
      port.setName("output_q_not");
      port.setMaxFanOut(20);
      // input_t
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(12.5, 47.9380978162786));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-6.207600000000184, 47.9380978162786));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_t");

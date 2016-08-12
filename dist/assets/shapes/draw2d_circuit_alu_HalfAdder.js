@@ -26,13 +26,13 @@ var draw2d_circuit_alu_HalfAdder = draw2d.SetFigure.extend({
      port.setName("output_c");
      port.setMaxFanOut(20);
      // input_a
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(7.142857142857143, 19.459962756052143));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.3188571428573985, 19.459962756052143));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("input_a");
      port.setMaxFanOut(20);
      // input_b
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(7.142857142857143, 80.8193668528864));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-2.747428571428827, 80.8193668528864));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("input_b");

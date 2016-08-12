@@ -20,7 +20,7 @@ var draw2d_circuit_timer_Delay = draw2d.SetFigure.extend({
      port.setName("output_0");
      port.setMaxFanOut(20);
      // input_0
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(5.9523809523809526, 52.11524637681143));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-5.357142857142857, 52.11524637681143));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("input_0");
