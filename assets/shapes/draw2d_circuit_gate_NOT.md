@@ -9,6 +9,6 @@ gate which implements logical negation.
 
 | INPUT   |  OUTPUT    |
 |:-------:|:----------:|
-| Low     |  High      |
-| High    |  Low       |
+| Low     |  `High`      |
+| `High`    |  Low       |
 

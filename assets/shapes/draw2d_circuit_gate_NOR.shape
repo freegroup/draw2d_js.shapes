@@ -2,7 +2,7 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "c55dd135-15db-7c71-5efa-f6761c073e66",
-    "x": 3980,
+    "x": 3982.75,
     "y": 3980,
     "width": 30,
     "height": 40,
@@ -12,7 +12,7 @@
       "baseClass": "draw2d.SetFigure",
       "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n\n    },\n    \n    calculate:function()\n    {\n        var i1 = this.getInputPort(0);\n        var i2 = this.getInputPort(1);\n        var o1 = this.getOutputPort(0);\n        \n        o1.setValue(!(i1.getValue() || i2.getValue()));\n    }\n});",
       "name": "Rectangle",
-      "markdown": "# AND Gate\n\n## Description\nThe **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.\n\nA HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.\n\n\n**Therefore, the output is always 0 except when all the inputs are 1.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  Low       |\n| High      | Low     |  Low       |\n| Low       | High    |  Low       |\n| High      | High    |  `High`    |\n\n"
+      "markdown": "# NOR Gate\n\n## Description\nA **NOR** gate is logically an inverted OR gate. \nIt behaves according to the truth table on the bottom.\n\n\n**Therefore, the output is always 0 except when all the \ninputs are 0.**\n\n## Logic table\n\n| INPUT 1   | INPUT   |  OUTPUT    |\n|:---------:|:-------:|:----------:|\n| Low       | Low     |  `High`       |\n| `High`      | Low     |  Low       |\n| Low       | `High`    |  Low       |\n| `High`      | `High`    |  Low    |\n\n"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -23,19 +23,19 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 3980,
+        "x": 3982.75,
         "y": 3980
       },
       {
-        "x": 4010,
+        "x": 4012.75,
         "y": 3980
       },
       {
-        "x": 4010,
+        "x": 4012.75,
         "y": 4020
       },
       {
-        "x": 3980,
+        "x": 3982.75,
         "y": 4020
       }
     ],
@@ -61,7 +61,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "592a8604-e0a9-8913-445d-621078e5ae97",
-    "x": 3974.5,
+    "x": 3977.25,
     "y": 3983,
     "width": 10,
     "height": 10,
@@ -99,7 +99,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "5fc48f01-fecb-0d5f-ed4f-81a4bc26ae63",
-    "x": 3974,
+    "x": 3976.75,
     "y": 4007,
     "width": 10,
     "height": 10,
@@ -137,7 +137,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "7c8a6215-ce17-6a10-c85b-b97fd0de466c",
-    "x": 4009,
+    "x": 4011.75,
     "y": 3995,
     "width": 10,
     "height": 10,
@@ -175,7 +175,7 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "0a4705bb-c6fd-7a26-332f-6972e8683949",
-    "x": 3980,
+    "x": 3982.75,
     "y": 3985,
     "width": 30.350000381469727,
     "height": 23,
@@ -213,7 +213,7 @@
   {
     "type": "shape_designer.figure.PolyCircle",
     "id": "f1b01c4d-5bf3-d9d3-0cc3-12857f76229e",
-    "x": 4006.5,
+    "x": 4009.25,
     "y": 3996,
     "width": 8,
     "height": 8,
