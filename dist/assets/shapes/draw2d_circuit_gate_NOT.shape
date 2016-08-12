@@ -2,7 +2,7 @@
   {
     "type": "shape_designer.figure.PolyRect",
     "id": "c55dd135-15db-7c71-5efa-f6761c073e66",
-    "x": 3980,
+    "x": 3982,
     "y": 3981.25,
     "width": 30,
     "height": 40,
@@ -12,7 +12,7 @@
       "baseClass": "draw2d.SetFigure",
       "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n        this._super(attr, setter, getter);\n\n        this.attr({resizeable:false});\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n\n    },\n    \n    calculate:function()\n    {\n        var i1 = this.getInputPort(0);\n        var o1 = this.getOutputPort(0);\n        \n        o1.setValue(!i1.getValue());\n    }\n});",
       "name": "Rectangle",
-      "markdown": "# NOT Gate\n\n## Description\nIn digital logic, an inverter or `NOT gate` is a logic \ngate which implements logical negation.\n\n\n## Logic table\n\n| INPUT   |  OUTPUT    |\n|:-------:|:----------:|\n| Low     |  High      |\n| High    |  Low       |\n\n"
+      "markdown": "# NOT Gate\n\n## Description\nIn digital logic, an inverter or `NOT gate` is a logic \ngate which implements logical negation.\n\n\n## Logic table\n\n| INPUT   |  OUTPUT    |\n|:-------:|:----------:|\n| Low     |  `High`      |\n| `High`    |  Low       |\n\n"
     },
     "cssClass": "shape_designer_figure_PolyRect",
     "ports": [],
@@ -23,19 +23,19 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 3980,
+        "x": 3982,
         "y": 3981.25
       },
       {
-        "x": 4010,
+        "x": 4012,
         "y": 3981.25
       },
       {
-        "x": 4010,
+        "x": 4012,
         "y": 4021.25
       },
       {
-        "x": 3980,
+        "x": 3982,
         "y": 4021.25
       }
     ],
@@ -61,7 +61,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "592a8604-e0a9-8913-445d-621078e5ae97",
-    "x": 3975,
+    "x": 3977,
     "y": 3996.75,
     "width": 10,
     "height": 10,
@@ -99,7 +99,7 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "7c8a6215-ce17-6a10-c85b-b97fd0de466c",
-    "x": 4011,
+    "x": 4013,
     "y": 3995.25,
     "width": 10,
     "height": 10,
@@ -137,7 +137,7 @@
   {
     "type": "shape_designer.figure.ExtLabel",
     "id": "0a4705bb-c6fd-7a26-332f-6972e8683949",
-    "x": 3986,
+    "x": 3988,
     "y": 3978.75,
     "width": 30.350000381469727,
     "height": 23,
@@ -175,7 +175,7 @@
   {
     "type": "shape_designer.figure.PolyCircle",
     "id": "f1b01c4d-5bf3-d9d3-0cc3-12857f76229e",
-    "x": 4008,
+    "x": 4010,
     "y": 3996.25,
     "width": 8,
     "height": 8,
