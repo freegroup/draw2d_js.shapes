@@ -1,19 +1,20 @@
-# AND Gate
+# OR Gate
 
 ## Description
-The **AND** gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table on the bottom.
+The `OR gate` is a digital logic gate that implements logical 
+disjunction - it behaves according to the truth table to the
+ 
+ 
 
-A HIGH output results only if both the inputs to the AND gate are HIGH. If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum.
-
-
-**Therefore, the output is always 0 except when all the inputs are 1.**
+**Therefore, A `High` output results if one or both the 
+inputs to the gate are `High`**
 
 ## Logic table
 
 | INPUT 1   | INPUT   |  OUTPUT    |
 |:---------:|:-------:|:----------:|
 | Low       | Low     |  Low       |
-| High      | Low     |  Low       |
-| Low       | High    |  Low       |
-| High      | High    |  `High`    |
+| `High`      | Low     |  Low       |
+| Low       | `High`    |  Low       |
+| `High`      | `High`    |  `High`    |
 
