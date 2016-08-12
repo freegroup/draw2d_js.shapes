@@ -50,25 +50,25 @@ var draw2d_circuit_decoder_BCDto7Seg = draw2d.SetFigure.extend({
      port.setName("out_f");
      port.setMaxFanOut(20);
      // in_a
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(5.747126436781609, 8.108108108108109));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.7563218390786532, 8.108108108108109));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("in_a");
      port.setMaxFanOut(20);
      // in_b
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(5.747126436781609, 21.62162162162162));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.7563218390786532, 21.62162162162162));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("in_b");
      port.setMaxFanOut(20);
      // in_c
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(5.747126436781609, 35.13513513513514));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.7563218390786532, 35.13513513513514));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("in_c");
      port.setMaxFanOut(20);
      // in_d
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(5.747126436781609, 48.64864864864865));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-2.2988505747126435, 48.64864864864865));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#37B1DE");
      port.setName("in_d");

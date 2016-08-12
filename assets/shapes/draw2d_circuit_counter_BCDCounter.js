@@ -14,7 +14,7 @@ var draw2d_circuit_counter_BCDCounter = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:80,height:108},attr), setter, getter);
      var port;
      // input_t
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(6.25, 18.055555555555557));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-1.20833587646473, 18.055555555555557));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("input_t");

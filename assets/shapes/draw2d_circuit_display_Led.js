@@ -14,7 +14,7 @@ var draw2d_circuit_display_Led = draw2d.SetFigure.extend({
      this._super( $.extend({stroke:0, bgColor:null, width:30,height:32},attr), setter, getter);
      var port;
      // Port
-     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(16.666666666666668, 51.5625));
+     port = this.addPort(new DecoratedInputPort(), new draw2d.layout.locator.XYRelPortLocator(-3.3333333333333335, 51.5625));
      port.setConnectionDirection(3);
      port.setBackgroundColor("#1C9BAB");
      port.setName("Port");
