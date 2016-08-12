@@ -13,7 +13,7 @@ A HIGH output results only if both the inputs to the AND gate are HIGH. If neith
 | INPUT 1   | INPUT   |  OUTPUT    |
 |:---------:|:-------:|:----------:|
 | Low       | Low     |  Low       |
-| High      | Low     |  Low       |
-| Low       | High    |  Low       |
-| High      | High    |  `High`    |
+| `High`    | Low     |  Low       |
+| Low       | `High`  |  Low       |
+| `High`    | `High`  |  `High`    |
 
