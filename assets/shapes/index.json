@@ -144,6 +144,15 @@
     ]
   },
   {
+    "name": "draw2d_circuit_hardware_BlocINPUT",
+    "tags": [
+      "draw2d",
+      "circuit",
+      "hardware",
+      "BlocINPUT"
+    ]
+  },
+  {
     "name": "draw2d_circuit_hardware_RaspiINPUT",
     "tags": [
       "draw2d",
