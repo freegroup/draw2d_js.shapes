@@ -30,7 +30,7 @@ brainbox
 ## Connect with the browser
 
 After this the BrainBox echos the url on the console 
-how to connect with your browser to the Raspi.
+how to connect with your browser to your Hardware.
 
 Now you can drive the GPIO pins on raspi with the DigitalTrainingStudio
 
