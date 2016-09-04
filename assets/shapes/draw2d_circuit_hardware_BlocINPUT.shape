@@ -2,15 +2,15 @@
   {
     "type": "shape_designer.figure.ExtPort",
     "id": "d73d3576-a22c-bddf-3ab8-483ca609ed41",
-    "x": 4010.3036,
-    "y": 3920.7423249999993,
+    "x": 4024.3036,
+    "y": 3995,
     "width": 10,
     "height": 10,
     "alpha": 1,
     "angle": 0,
     "userData": {
       "baseClass": "draw2d.SetFigure",
-      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n         // your special code here\n    },\n\n    /**\n     *  Called by the simulator for every calculation\n     *  loop\n     *  @required\n     **/\n    calculate:function()\n    {\n        this.getOutputPorts().each(function(index,port){\n            port.setValue(hardware.gpio.get(port.getName()));\n        });\n    },\n\n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    }\n});",
+      "code": "/**\n * by 'Draw2D Shape Designer'\n *\n * Custom JS code to tweak the standard behaviour of the generated\n * shape. add your custome code and event handler here.\n *\n *\n */\ntestShape = testShape.extend({\n\n    init: function(attr, setter, getter){\n         this._super(attr, setter, getter);\n\n        this.attr({\n            resizeable:false,\n            \"userData.blockID\":\"-unset-\"\n        });\n        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());\n    },\n    \n    /**\n     * called every '10 [ms]' from the application.\n     * \n     **/\n    calculate:function()\n    {\n        var blocValue = hardware.bloc.get(this.getUserValue().blocId);\n        \n       this.getOutputPort(0).setValue(blocValue);\n    },\n    \n\n    /**\n     *  Called if the simulation mode is starting\n     *  @required\n     **/\n    onStart:function()\n    {\n    },\n\n    /**\n     *  Called if the simulation mode is stopping\n     *  @required\n     **/\n    onStop:function()\n    {\n    },\n    \n    getParameterSettings: function()\n    {\n        return [\n        {\n            name:\"blocId\",\n            label:\"Bloc Id\",\n            property:{\n                type: \"blocid\"\n        }\n        \n        }];\n    }\n});",
       "name": "output_01",
       "markdown": "# Raspberry Pi Input \n\n## About the GPIO of the raspi\nThe Raspberry Pi provides Input/Outport ports \nintended to control or monitor other devices and \nsubsystem modules. These `GPIO` (general purpose I/O) \nsignals on the 2x13 header pins on the RPi motherboad \ninclude SPI, I2C, serial UART, 3V3 and 5V power.\n\n## Interaction\nYou can control these GPIO pins on the raspi if you have installed\nthe BrainBox as node program on your Raspberry via npm\n\n## Install\n\n```\nsudo npm install -g brainbox\n````\n\nThis takes a while on a raspbery B+ 2 but should success.\n\n## Start the server on the raspi\nafter this you can start the BrainBox server on the raspberry\nwith\n\n```\nbrainbox \n```\n\n## Connect with the browser\n\nAfter this the BrainBox echos the url on the console \nhow to connect with your browser to your Hardware.\n\nNow you can drive the GPIO pins on raspi with the DigitalTrainingStudio\n\n",
       "type": "Output",
@@ -40,62 +40,9 @@
   },
   {
     "type": "shape_designer.figure.PolyRect",
-    "id": "35170629-3693-7d2b-8196-0d8dbb4e35d0",
-    "x": null,
-    "y": null,
-    "width": null,
-    "height": null,
-    "alpha": 1,
-    "angle": 0,
-    "userData": {
-      "name": "Rectangle"
-    },
-    "cssClass": "shape_designer_figure_PolyRect",
-    "ports": [],
-    "bgColor": "#FFFFFF",
-    "color": "#303030",
-    "stroke": 1,
-    "radius": 0,
-    "dasharray": null,
-    "vertices": [
-      {
-        "x": null,
-        "y": null
-      },
-      {
-        "x": null,
-        "y": null
-      },
-      {
-        "x": null,
-        "y": null
-      },
-      {
-        "x": null,
-        "y": null
-      }
-    ],
-    "blur": 0,
-    "filters": [
-      {
-        "name": "shape_designer.filter.PositionFilter"
-      },
-      {
-        "name": "shape_designer.filter.SizeFilter"
-      },
-      {
-        "name": "shape_designer.filter.StrokeFilter"
-      },
-      {
-        "name": "shape_designer.filter.FillColorFilter"
-      }
-    ]
-  },
-  {
-    "type": "shape_designer.figure.PolyRect",
     "id": "126fd128-6c7e-28a9-3d5c-b7209268b7d7",
-    "x": 3958,
-    "y": 3892.7423249999993,
+    "x": 3972,
+    "y": 3967,
     "width": 56,
     "height": 66,
     "alpha": 1,
@@ -112,20 +59,20 @@
     "dasharray": null,
     "vertices": [
       {
-        "x": 3958,
-        "y": 3892.7423249999993
+        "x": 3972,
+        "y": 3967
       },
       {
-        "x": 4014,
-        "y": 3892.7423249999993
+        "x": 4028,
+        "y": 3967
       },
       {
-        "x": 4014,
-        "y": 3958.7423249999993
+        "x": 4028,
+        "y": 4033
       },
       {
-        "x": 3958,
-        "y": 3958.7423249999993
+        "x": 3972,
+        "y": 4033
       }
     ],
     "blur": 0,
