@@ -11,21 +11,24 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
     init: function(attr, setter, getter){
          this._super(attr, setter, getter);
 
-         // your special code here
+        this.attr({
+            resizeable:false,
+            "userData.blockID":"-unset-"
+        });
+        this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
     },
-
+    
     /**
-     *  Called by the simulator for every calculation
-     *  loop
-     *  @required
+     * called every '10 [ms]' from the application.
+     * 
      **/
     calculate:function()
     {
-        this.getOutputPorts().each(function(index,port){
-            port.setValue(hardware.gpio.get(port.getName()));
-        });
+        var blocValue = hardware.bloc.get(this.getUserValue().blocId);
+        
+       this.getOutputPort(0).setValue(blocValue);
     },
-
+    
 
     /**
      *  Called if the simulation mode is starting
@@ -41,5 +44,18 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
      **/
     onStop:function()
     {
+    },
+    
+    getParameterSettings: function()
+    {
+        return [
+        {
+            name:"blocId",
+            label:"Bloc Id",
+            property:{
+                type: "blocid"
+        }
+        
+        }];
     }
 });
