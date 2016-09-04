@@ -4748,7 +4748,7 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
      **/
     calculate:function()
     {
-        var blocValue = hardware.bloc.get(this.getUserValue().blocId);
+        var blocValue = hardware.bloc.get(this.getUserData().blocId);
         
        this.getOutputPort(0).setValue(blocValue);
     },
