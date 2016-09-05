@@ -203,6 +203,25 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
             "userData.blockID":"-unset-"
         });
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
+        this.on("added",function(){
+            console.log("added");
+            hardware.bloc.on("bloc:register",function(){
+                console.log("device registered",arguments);
+            });
+            hardware.bloc.on("bloc:unregister",function(){
+                console.log("device registered",arguments);
+            });            
+        });
+        this.on("removed",function(){
+            console.log("removed");
+            hardware.bloc.on("bloc:register",function(){
+                console.log("device registered",arguments);
+            });
+            hardware.bloc.on("bloc:unregister",function(){
+                console.log("device registered",arguments);
+            });            
+        });
+        
     },
     
     /**
