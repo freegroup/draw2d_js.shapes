@@ -9,7 +9,8 @@
 draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
 
     init: function(attr, setter, getter){
-         this._super(attr, setter, getter);
+        var _this = this;
+        this._super(attr, setter, getter);
 
         this.attr({
             resizeable:false,
@@ -20,9 +21,11 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
             console.log("added");
             hardware.bloc.on("bloc:register",function(){
                 console.log("device registered",arguments);
+                _this.layerAttr("indicator",{bgColor:"#00FF00"});
             });
             hardware.bloc.on("bloc:unregister",function(){
                 console.log("device unregistered",arguments);
+                _this.layerAttr("indicator",{bgColor:"#FF0000"});
             });            
         });
         this.on("removed",function(){
