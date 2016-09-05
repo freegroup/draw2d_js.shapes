@@ -213,11 +213,11 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
             console.log("added");
             hardware.bloc.on("bloc:register",function(){
                 console.log("device registered",arguments);
-                _this.layerAttr("indicator",{bgColor:"#00FF00"});
+                _this.layerAttr("indicator",{fill:"#00FF00"});
             });
             hardware.bloc.on("bloc:unregister",function(){
                 console.log("device unregistered",arguments);
-                _this.layerAttr("indicator",{bgColor:"#FF0000"});
+                _this.layerAttr("indicator",{fill:"#FF0000"});
             });            
         });
         this.on("removed",function(){
