@@ -4581,6 +4581,11 @@ var draw2d_circuit_hardware_BlocINPUT = draw2d.SetFigure.extend({
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
+        // indicator
+        shape = this.canvas.paper.ellipse();
+        shape.attr({"rx":11,"ry":11,"cx":15.477199999999812,"cy":50,"stroke":"#1B1B1B","stroke-width":1,"fill":"#95C06A","dasharray":null,"opacity":1});
+        shape.data("name","indicator");
+        
 
         return this.canvas.paper.setFinish();
    },
@@ -4733,7 +4738,8 @@ var draw2d_circuit_hardware_BlocINPUT = draw2d.SetFigure.extend({
 draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
 
     init: function(attr, setter, getter){
-         this._super(attr, setter, getter);
+        var _this = this;
+        this._super(attr, setter, getter);
 
         this.attr({
             resizeable:false,
@@ -4744,9 +4750,11 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
             console.log("added");
             hardware.bloc.on("bloc:register",function(){
                 console.log("device registered",arguments);
+                _this.layerAttr("indicator",{bgColor:"#00FF00"});
             });
             hardware.bloc.on("bloc:unregister",function(){
                 console.log("device unregistered",arguments);
+                _this.layerAttr("indicator",{bgColor:"#FF0000"});
             });            
         });
         this.on("removed",function(){
