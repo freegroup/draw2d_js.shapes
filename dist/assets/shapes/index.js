@@ -4755,7 +4755,7 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
                 console.log("device registered",arguments);
             });
             hardware.bloc.on("bloc:unregister",function(){
-                console.log("device registered",arguments);
+                console.log("device unregistered",arguments);
             });            
         });
         
