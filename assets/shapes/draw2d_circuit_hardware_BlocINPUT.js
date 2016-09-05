@@ -209,17 +209,13 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
                 console.log("device registered",arguments);
             });
             hardware.bloc.on("bloc:unregister",function(){
-                console.log("device registered",arguments);
+                console.log("device unregistered",arguments);
             });            
         });
         this.on("removed",function(){
             console.log("removed");
-            hardware.bloc.on("bloc:register",function(){
-                console.log("device registered",arguments);
-            });
-            hardware.bloc.on("bloc:unregister",function(){
-                console.log("device unregistered",arguments);
-            });            
+            hardware.bloc.off("bloc:register");
+            hardware.bloc.off("bloc:unregister");            
         });
         
     },
