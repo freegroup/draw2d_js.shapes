@@ -18,6 +18,13 @@ draw2d_circuit_hardware_BlocINPUT = draw2d_circuit_hardware_BlocINPUT.extend({
         });
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
         this.on("added",function(){
+
+            if(hardware.bloc.isConnected(_this.getUserData().blocId)){
+               _this.layerAttr("indicator",{fill:"#00FF00"});
+            }
+            else{
+               _this.layerAttr("indicator",{fill:"#FF0000"});
+            }
             hardware.bloc.on("bloc:register",function(device){
                 var blockId = _this.getUserData().blocId;
                 if(blockId === device.blocId){
