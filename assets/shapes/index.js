@@ -4548,10 +4548,10 @@ var draw2d_circuit_hardware_BlocINPUT = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:56,height:66},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:56,height:73.078125},attr), setter, getter);
      var port;
      // output_01
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.32785714285748, 50));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.32785714285748, 45.157152020525984));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("output_01");
@@ -4563,7 +4563,7 @@ var draw2d_circuit_hardware_BlocINPUT = draw2d.SetFigure.extend({
    {
       var shape = this._super();
       this.originalWidth = 56;
-      this.originalHeight= 66;
+      this.originalHeight= 73.078125;
       return shape;
    },
 
@@ -4572,19 +4572,24 @@ var draw2d_circuit_hardware_BlocINPUT = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L56,0 L56,66 L0,66");
+        shape = this.canvas.paper.path("M0,0 L56,0 L56,73.078125 L0,73.078125");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
         // Rectangle
-        shape = this.canvas.paper.path('M0 0L56 0L56 66L0 66Z');
+        shape = this.canvas.paper.path('M0,8Q0,0 8, 0L48,0Q56,0 56, 8L56,58Q56,66 48, 66L8,66Q0,66 0, 58L0,8');
         shape.attr({"stroke":"#303030","stroke-width":1,"fill":"#FFFFFF","dasharray":null,"opacity":1});
         shape.data("name","Rectangle");
         
         // indicator
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":11,"ry":11,"cx":15.477199999999812,"cy":50,"stroke":"#1B1B1B","stroke-width":1,"fill":"#95C06A","dasharray":null,"opacity":1});
+        shape.attr({"rx":5,"ry":5,"cx":6.9771999999998116,"cy":59,"stroke":"#999999","stroke-width":1,"fill":"none","dasharray":null,"opacity":1});
         shape.data("name","indicator");
+        
+        // Label
+        shape = this.canvas.paper.text(0,0,'bloc');
+        shape.attr({"x":12.328125,"y":59.078125,"text-anchor":"start","text":"bloc","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#8C8C8C","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.data("name","Label");
         
 
         return this.canvas.paper.setFinish();

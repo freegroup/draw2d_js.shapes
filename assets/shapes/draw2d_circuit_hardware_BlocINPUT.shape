@@ -55,7 +55,7 @@
     "bgColor": "#FFFFFF",
     "color": "#303030",
     "stroke": 1,
-    "radius": 0,
+    "radius": 8,
     "dasharray": null,
     "vertices": [
       {
@@ -88,16 +88,19 @@
       },
       {
         "name": "shape_designer.filter.FillColorFilter"
+      },
+      {
+        "name": "shape_designer.filter.RadiusFilter"
       }
     ]
   },
   {
     "type": "shape_designer.figure.PolyCircle",
     "id": "13e78f12-388b-8735-fcc5-08362d2fb084",
-    "x": 3976.4772,
-    "y": 4006,
-    "width": 22,
-    "height": 22,
+    "x": 3973.9772,
+    "y": 4021,
+    "width": 10,
+    "height": 10,
     "alpha": 1,
     "angle": 0,
     "userData": {
@@ -105,8 +108,8 @@
     },
     "cssClass": "shape_designer_figure_PolyCircle",
     "ports": [],
-    "bgColor": "#95C06A",
-    "color": "#1B1B1B",
+    "bgColor": "none",
+    "color": "#999999",
     "stroke": 1,
     "radius": 0,
     "dasharray": null,
@@ -119,10 +122,45 @@
         "name": "shape_designer.filter.SizeFilter"
       },
       {
-        "name": "shape_designer.filter.FillColorFilter"
+        "name": "shape_designer.filter.StrokeFilter"
+      }
+    ]
+  },
+  {
+    "type": "shape_designer.figure.ExtLabel",
+    "id": "582681a1-29c2-34fd-2f99-f20ad6e62178",
+    "x": 3980.328125,
+    "y": 4012.078125,
+    "width": 28.328125,
+    "height": 21.125,
+    "alpha": 1,
+    "angle": 0,
+    "userData": {
+      "name": "Label"
+    },
+    "cssClass": "shape_designer_figure_ExtLabel",
+    "ports": [],
+    "bgColor": "none",
+    "color": "#1B1B1B",
+    "stroke": 0,
+    "radius": 0,
+    "dasharray": null,
+    "text": "bloc",
+    "outlineStroke": 0,
+    "outlineColor": "none",
+    "fontSize": 16,
+    "fontColor": "#8C8C8C",
+    "fontFamily": null,
+    "editor": "draw2d.ui.LabelInplaceEditor",
+    "filters": [
+      {
+        "name": "shape_designer.filter.PositionFilter"
       },
       {
-        "name": "shape_designer.filter.StrokeFilter"
+        "name": "shape_designer.filter.FontSizeFilter"
+      },
+      {
+        "name": "shape_designer.filter.FontColorFilter"
       }
     ]
   }
