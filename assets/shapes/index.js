@@ -4548,10 +4548,10 @@ var draw2d_circuit_hardware_BlocINPUT = draw2d.SetFigure.extend({
 
    init:function(attr, setter, getter)
    {
-     this._super( $.extend({stroke:0, bgColor:null, width:56,height:73.078125},attr), setter, getter);
+     this._super( $.extend({stroke:0, bgColor:null, width:56,height:72.27812499999982},attr), setter, getter);
      var port;
      // output_01
-     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.32785714285748, 45.157152020525984));
+     port = this.createPort("output", new draw2d.layout.locator.XYRelPortLocator(102.32785714285748, 45.65696744346935));
      port.setConnectionDirection(1);
      port.setBackgroundColor("#37B1DE");
      port.setName("output_01");
@@ -4563,7 +4563,7 @@ var draw2d_circuit_hardware_BlocINPUT = draw2d.SetFigure.extend({
    {
       var shape = this._super();
       this.originalWidth = 56;
-      this.originalHeight= 73.078125;
+      this.originalHeight= 72.27812499999982;
       return shape;
    },
 
@@ -4572,7 +4572,7 @@ var draw2d_circuit_hardware_BlocINPUT = draw2d.SetFigure.extend({
        this.canvas.paper.setStart();
 
         // BoundingBox
-        shape = this.canvas.paper.path("M0,0 L56,0 L56,73.078125 L0,73.078125");
+        shape = this.canvas.paper.path("M0,0 L56,0 L56,72.27812499999982 L0,72.27812499999982");
         shape.attr({"stroke":"none","stroke-width":0,"fill":"none"});
         shape.data("name","BoundingBox");
         
@@ -4583,12 +4583,12 @@ var draw2d_circuit_hardware_BlocINPUT = draw2d.SetFigure.extend({
         
         // indicator
         shape = this.canvas.paper.ellipse();
-        shape.attr({"rx":5,"ry":5,"cx":6.9771999999998116,"cy":59,"stroke":"#999999","stroke-width":1,"fill":"none","dasharray":null,"opacity":1});
+        shape.attr({"rx":5,"ry":5,"cx":7.9771999999998116,"cy":57.5,"stroke":"#999999","stroke-width":1,"fill":"none","dasharray":null,"opacity":1});
         shape.data("name","indicator");
         
         // Label
         shape = this.canvas.paper.text(0,0,'bloc');
-        shape.attr({"x":12.328125,"y":59.078125,"text-anchor":"start","text":"bloc","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#8C8C8C","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
+        shape.attr({"x":16.328125,"y":58.27812499999982,"text-anchor":"start","text":"bloc","font-family":"\"Arial\"","font-size":16,"stroke":"none","fill":"#8C8C8C","stroke-scale":true,"font-weight":"normal","stroke-width":0,"opacity":1});
         shape.data("name","Label");
         
 
