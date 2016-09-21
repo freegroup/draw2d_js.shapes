@@ -1,10 +1,12 @@
-## Full Adder
+## 4 bit Full Adder
 
-Full adder is developed to overcome the drawback of 
-Half Adder circuit. It can add two one-bit numbers 
-A and B, and carry c. The full adder is a three 
-input and two output combinational circuit.
-
+A full adder adds binary numbers and accounts for values 
+carried in as well as out. A one-bit full adder adds 
+three one-bit numbers, often written as A, B, and Cin; 
+A and B are the operands, and Cin is a bit carried in 
+from the previous less-significant stage.[2] The full 
+adder is usually a component in a cascade of adders, 
+which add 4, 8, 16, 32, etc. bit binary numbers. 
 
 
 |  A    |    B    |  Cin     |    S    |    C   |
