@@ -1,13 +1,7 @@
-# T-FlipFlop
+# BCD to 7 segment decoder
 
-## Description
-
-The D FlipFLop is widely used. It is also known as a 
-*toggle*  flip-flop.
-
-A T flip-flop is a device which swaps or **toggles** state 
-every time it is triggered if the T input is asserted, 
-otherwise it holds the current output.
-
-
-The toggle flip-flop is also a frequency divider.
+A **BCD to 7-segment decoder** driver. Its function is to convert 
+the logic states at the outputs of a BCD, or binary coded decimal, 
+counter like the 4510 into signals which will drive a 7-segment 
+display. The display shows the decimal numbers 0-9 and is easily 
+understood.

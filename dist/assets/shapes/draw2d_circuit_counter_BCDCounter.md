@@ -1,13 +1,12 @@
-# T-FlipFlop
-
-## Description
-
-The D FlipFLop is widely used. It is also known as a 
-*toggle*  flip-flop.
-
-A T flip-flop is a device which swaps or **toggles** state 
-every time it is triggered if the T input is asserted, 
-otherwise it holds the current output.
+# BCD Counter
 
 
-The toggle flip-flop is also a frequency divider.
+BCD = **B**inary **C**oded **D**ecimal = Counts from 0 to 9 and then repeats.
+<br>
+<br>
+
+A binary coded decimal (BCD) is a serial digital counter that counts
+ten digits. And it resets for every new clock input. As it can go 
+through 10 unique combinations of output, it is also called as 
+ Decade counter . A BCD counter can count 0000, 0001, 0010, 
+1000, 1001, 1010, 1011, 1110, 1111, 0000, and 0001 and so on.
